@@ -1,0 +1,362 @@
+{
+  "document-assistant": {
+    "name": "Dokumenten-Assistent",
+    "shortName": "Assistent",
+    "summary": "Text-Helfer im Browser: Aufgaben skizzieren und Ausschnitte aus Ihrem PDF umformulieren.",
+    "description": "Text lokal aus dem PDF extrahieren und leichte Browser-Helfer für Zusammenfassungen oder nächste Schritte nutzen. Kein Dokumentinhalt wird an myonlinepdfeditor.com-Server gesendet.",
+    "howTo": [
+      "PDF hochladen und lesbaren Text extrahieren.",
+      "Assistenten nach Gliederungen oder Umformulierungen zu diesem Text fragen.",
+      "Ergebnisse in den Workflow übernehmen."
+    ],
+    "keywords": ["pdf assistent", "ai pdf hilfe", "dokumenten helfer", "local pdf ai"]
+  },
+  "simplify-document": {
+    "name": "Dokument vereinfachen",
+    "shortName": "Vereinfachen",
+    "summary": "Text-Helfer: dichte Passagen lokal in einfache Sprache umformulieren.",
+    "description": "Technische oder juristische Formulierungen leichter lesbar machen, indem extrahierter Text im Browser vereinfacht wird. Jede Änderung prüfen Sie, bevor sie ins Dokument zurückgeht.",
+    "howTo": [
+      "Text vom PDF auf dem Gerät extrahieren.",
+      "Vereinfachen wählen für eine klarere Fassung.",
+      "Ausgabe in Zusammenfassungen oder Schulungsunterlagen nutzen."
+    ],
+    "keywords": ["pdf vereinfachen", "einfache sprache pdf", "lesbarer pdf text", "simplify document"]
+  },
+  "summarize-key-points": {
+    "name": "Kernpunkte zusammenfassen",
+    "shortName": "Zusammenfassung",
+    "summary": "Text-Helfer: kurze Zusammenfassungen aus extrahiertem PDF-Text.",
+    "description": "Text auf dem Gerät zu Stichpunkt-Zusammenfassungen langer Berichte oder Artikel. Ideal für schnelle Orientierung vor dem Detaillesen.",
+    "howTo": [
+      "PDF öffnen und Text lokal extrahieren.",
+      "Zusammenfassung auf den extrahierten Inhalt anwenden.",
+      "Zusammenfassung für Notizen oder E-Mail kopieren."
+    ],
+    "keywords": ["pdf zusammenfassen", "pdf summary", "tldr pdf", "zusammenfassung dokument"]
+  },
+  "ask-document": {
+    "name": "Fragen zum Dokument",
+    "shortName": "Dokument fragen",
+    "summary": "Text-Helfer: Fragen an extrahierten Dateiinhalt stellen.",
+    "description": "Frage formulieren und extrahierten Seitentext nach passenden Sätzen durchsuchen – ohne das gesamte PDF für Cloud-Q&A hochzuladen.",
+    "howTo": [
+      "PDF laden und Text extrahieren.",
+      "Frage zum Inhalt eingeben.",
+      "Zitierte Ausschnitte aus dem lokalen Textindex prüfen."
+    ],
+    "keywords": ["pdf fragen", "chat with pdf", "pdf frage antwort", "ask pdf"]
+  },
+  "pdf-audit-trail": {
+    "name": "PDF-Audit-Spur",
+    "shortName": "Audit-Spur",
+    "summary": "Version, Datum und Prüfernotizen für einfache Audit-Spuren stempeln.",
+    "description": "Sichtbare Audit-Stempel wie Prüfdatum und Dokument-IDs hinzufügen. Kein vollständiges Compliance-Log, hilft aber Teams, genehmigte Kopien zu kennzeichnen.",
+    "howTo": [
+      "Kontrolliertes Dokument öffnen.",
+      "Audit-Text in Fußzeile oder Deckblatt anwenden.",
+      "Gestempelte Version speichern und verteilen."
+    ],
+    "keywords": ["pdf audit trail", "dokument stempel audit", "version stempel pdf", "compliance markierung"]
+  },
+  "certify-pdf": {
+    "name": "PDF zertifizieren",
+    "shortName": "Zertifizieren",
+    "summary": "PDF als finale zertifizierte Version mit sichtbarem Banner kennzeichnen.",
+    "description": "Zertifizierungshinweis platzieren, dass diese Kopie die maßgebliche Version ist. Mit Ebenen und Schutz für stärkere Übergabe kombinieren.",
+    "howTo": [
+      "Finales PDF hochladen.",
+      "Zertifizierungstext oder Stempel hinzufügen.",
+      "Zertifizierte Datei exportieren und archivieren."
+    ],
+    "keywords": ["pdf zertifizieren", "certify pdf", "finale pdf version", "maßgebliche kopie"]
+  },
+  "set-pdf-password": {
+    "name": "PDF-Passwort setzen",
+    "shortName": "Passwort setzen",
+    "summary": "PDF vor dem Teilen mit Passwort verschlüsseln.",
+    "description": "Öffnungspasswort setzen, damit nur Personen mit dem Kennwort die Datei sehen. Verschlüsselung im Browser; starkes Passwort wählen und sicher mitteilen.",
+    "howTo": [
+      "Zu schützendes PDF hochladen.",
+      "Starkes Passwort eingeben und bestätigen.",
+      "Verschlüsseltes PDF herunterladen."
+    ],
+    "keywords": ["pdf passwort", "pdf verschlüsseln", "encrypt pdf", "pdf schützen"]
+  },
+  "readable-pdf": {
+    "name": "Lesbares PDF",
+    "shortName": "Lesbares PDF",
+    "summary": "Text aus PDF für leichteres Lesen und Weiterverwenden extrahieren.",
+    "description": "Klartext seitenweise aus PDF ziehen zum Kopieren, Suchen oder Umformatieren. Verarbeitung bleibt im Browser.",
+    "howTo": [
+      "PDF hochladen.",
+      "Text lokal extrahieren.",
+      "Lesbaren Text kopieren oder herunterladen."
+    ],
+    "keywords": ["lesbares pdf", "text extrahieren pdf", "pdf to text", "readable pdf"]
+  },
+  "search-for-pdf": {
+    "name": "PDF durchsuchen",
+    "shortName": "PDF suchen",
+    "summary": "Stichwörter im PDF finden ohne Upload.",
+    "description": "Extrahierten PDF-Text nach Treffern durchsuchen und zu Seitenausschnitten springen. Nützlich für Verträge, Handbücher und textbasierte Scans.",
+    "howTo": [
+      "PDF hochladen.",
+      "Suchbegriff eingeben.",
+      "Passende Seitenausschnitte prüfen."
+    ],
+    "keywords": ["pdf suchen", "search pdf", "in pdf finden", "pdf stichwortsuche"]
+  },
+  "export-pdf": {
+    "name": "Exportieren",
+    "shortName": "Export",
+    "summary": "Saubere PDF-Kopie für Archiv oder Austausch exportieren.",
+    "description": "PDF lokal als portable Kopie neu speichern. Optionale leichte Optimierung erleichtert den Wechsel zwischen Anwendungen.",
+    "howTo": [
+      "Zu exportierendes PDF hochladen.",
+      "Export wählen.",
+      "Exportierte Datei herunterladen."
+    ],
+    "keywords": ["pdf exportieren", "export pdf", "pdf kopie speichern", "pdf export online"]
+  },
+  "download-pdf": {
+    "name": "Herunterladen",
+    "shortName": "Download",
+    "summary": "Lokale Kopie eines in myonlinepdfeditor.com geöffneten PDFs speichern.",
+    "description": "PDF in der Browser-Toolkit öffnen und sofort wieder auf dem Gerät speichern – praktisch nach Bearbeitung oder Konvertierung.",
+    "howTo": [
+      "PDF auswählen.",
+      "Download anklicken.",
+      "Datei im Download-Ordner finden."
+    ],
+    "keywords": ["pdf herunterladen", "download pdf", "pdf speichern", "pdf datei"]
+  },
+  "print-out": {
+    "name": "Ausdrucken",
+    "shortName": "Drucken",
+    "summary": "System-Druckdialog für Ihr PDF öffnen.",
+    "description": "PDF laden und den Druckdialog des Browsers für Papierkopien oder „Als PDF speichern“-Drucker auslösen.",
+    "howTo": [
+      "PDF hochladen.",
+      "Drucken anklicken.",
+      "Drucker oder Als PDF speichern wählen."
+    ],
+    "keywords": ["pdf drucken", "print pdf", "pdf ausdruck", "pdf printer"]
+  },
+  "unlock-pdf": {
+    "name": "PDF entsperren",
+    "shortName": "PDF entsperren",
+    "summary": "Öffnungspasswort entfernen, wenn Sie das Kennwort kennen.",
+    "description": "Passwortgeschütztes PDF entschlüsseln, das Sie öffnen dürfen, um es in anderen myonlinepdfeditor.com-Werkzeugen zusammenzuführen, zu drucken oder zu bearbeiten. Korrektes Passwort erforderlich.",
+    "howTo": [
+      "Gesperrtes PDF hochladen.",
+      "Bekanntes Öffnungspasswort eingeben.",
+      "Entsperrtes PDF herunterladen."
+    ],
+    "keywords": ["pdf entsperren", "unlock pdf", "pdf passwort entfernen", "pdf entschlüsseln"]
+  },
+  "compare-pdf": {
+    "name": "PDF vergleichen",
+    "shortName": "PDF vergleichen",
+    "summary": "Zwei PDF-Versionen nebeneinander vergleichen.",
+    "description": "Original und überarbeitetes PDF laden, um Text- und Layoutänderungen seitenweise hervorzuheben. Nützlich für Vertragskorrekturen und Compliance-Prüfungen.",
+    "howTo": [
+      "Zwei PDF-Dateien zum Vergleich hochladen.",
+      "Versionen ausrichten und Vergleich starten.",
+      "Unterschiede prüfen und ggf. Zusammenfassung exportieren."
+    ],
+    "keywords": ["pdf vergleichen", "compare pdf", "pdf diff", "dokumente vergleichen"]
+  },
+  "heic-to-pdf": {
+    "name": "HEIC zu PDF",
+    "shortName": "HEIC → PDF",
+    "summary": "iPhone-HEIC-Fotos im Browser in PDF umwandeln.",
+    "description": "HEIC-/HEIF-Bilder zu einem PDF zusammenführen. Dekodierung nutzt den Browser – bei fehlender HEIC-Unterstützung zuerst JPEG aus Fotos exportieren.",
+    "howTo": [
+      "Eine oder mehrere HEIC-Dateien hochladen.",
+      "Auf lokale Konvertierung warten.",
+      "PDF herunterladen."
+    ],
+    "keywords": ["heic to pdf", "heif zu pdf", "iphone foto pdf"]
+  },
+  "tiff-to-pdf": {
+    "name": "TIFF zu PDF",
+    "shortName": "TIFF → PDF",
+    "summary": "TIFF-Scans in mehrseitige PDFs verwandeln.",
+    "description": "TIFF-/TIF-Scans lokal in PDF-Seiten konvertieren. Mehrseitige TIFFs hängen von Browser-Dekodierung ab; einseitige TIFFs funktionieren am zuverlässigsten.",
+    "howTo": [
+      "TIFF- oder TIF-Dateien hochladen.",
+      "Lokal konvertieren.",
+      "PDF herunterladen."
+    ],
+    "keywords": ["tiff to pdf", "tif zu pdf", "scan tiff pdf"]
+  },
+  "svg-to-pdf": {
+    "name": "SVG zu PDF",
+    "shortName": "SVG → PDF",
+    "summary": "SVG-Grafiken in PDF-Seiten rasterisieren.",
+    "description": "SVG-Dateien im Browser zu PDF-Seiten rendern. Komplexe Filter können ebenen – Vorschau für Logos und Icons prüfen.",
+    "howTo": [
+      "SVG-Dateien hochladen.",
+      "Konvertieren.",
+      "PDF herunterladen."
+    ],
+    "keywords": ["svg to pdf", "vektor zu pdf", "svg konverter"]
+  },
+  "markdown-to-pdf": {
+    "name": "Markdown zu PDF",
+    "shortName": "Markdown → PDF",
+    "summary": "MD-Notizen in druckbares PDF verwandeln.",
+    "description": "Gängige Markdown-Zeichen entfernen und Text in ein PDF legen. Ideal für README-Auszüge und Kurznotizen – kein vollständiger CommonMark-Druckmotor.",
+    "howTo": [
+      "MD-Datei hochladen.",
+      "In PDF konvertieren.",
+      "Herunterladen."
+    ],
+    "keywords": ["markdown to pdf", "md zu pdf", "readme pdf"]
+  },
+  "zip-to-pdf": {
+    "name": "ZIP zu PDF",
+    "shortName": "ZIP → PDF",
+    "summary": "ZIP mit Bildern/PDFs in ein PDF entpacken.",
+    "description": "ZIP mit Bildern und/oder PDFs hochladen. myonlinepdfeditor.com entpackt unterstützte Dateien und führt sie lokal zu einem PDF zusammen.",
+    "howTo": [
+      "ZIP hochladen.",
+      "Lokal entpacken und zusammenführen.",
+      "Kombiniertes PDF herunterladen."
+    ],
+    "keywords": ["zip to pdf", "zip entpacken pdf", "ordner zu pdf"]
+  },
+  "scan-pdf": {
+    "name": "Scan zu PDF",
+    "shortName": "Scan → PDF",
+    "summary": "PDF aus Handy- oder Scannerbildern erstellen.",
+    "description": "JPG/PNG/WebP und weitere browserdekodierbare Scanbilder zu einem mehrseitigen PDF ohne Desktop-Treiber zusammenführen.",
+    "howTo": [
+      "Scanbilder hochladen.",
+      "Reihenfolge über Dateiauswahl steuern.",
+      "PDF herunterladen."
+    ],
+    "keywords": ["scan zu pdf", "scan to pdf", "scanner pdf", "kamera zu pdf"]
+  },
+  "redact-pdf": {
+    "name": "PDF schwärzen",
+    "shortName": "Schwärzen",
+    "summary": "Ganze Seiten vor dem Teilen schwärzen.",
+    "description": "Ausgewählte Seiten mit undurchsichtigen schwarzen Flächen abdecken, damit sensible Seiten in geteilten Kopien verborgen bleiben. Für pixelgenaue Bereichsschwärzung danach Anmerkungen im PDF-Editor nutzen.",
+    "howTo": [
+      "PDF hochladen.",
+      "Seitennummern zum vollständigen Schwärzen eingeben.",
+      "Geschwärztes PDF herunterladen."
+    ],
+    "keywords": ["pdf schwärzen", "redact pdf", "pdf zensieren", "blackout pdf"]
+  },
+  "invert-pdf": {
+    "name": "PDF invertieren",
+    "shortName": "Invertieren",
+    "summary": "Seitenfarben für Nachtlesen oder Druck invertieren.",
+    "description": "Seiten rasterisieren und Farben invertieren. Nützlich für dunkle Hintergründe oder Kontrastexperimente.",
+    "howTo": [
+      "PDF hochladen.",
+      "Invertieren ausführen.",
+      "Herunterladen."
+    ],
+    "keywords": ["pdf invertieren", "negative pdf", "dark mode pdf", "invert pdf"]
+  },
+  "n-up-pdf": {
+    "name": "N-up PDF",
+    "shortName": "Seiten pro Blatt",
+    "summary": "2 oder 4 Seiten auf jedes Blatt legen.",
+    "description": "Mehrere Quellseiten auf ein Ausgabeblatt für Handouts, Proofs und Booklet-Entwürfe (2-up oder 4-up).",
+    "howTo": [
+      "PDF hochladen.",
+      "2-up oder 4-up wählen.",
+      "Herunterladen."
+    ],
+    "keywords": ["n-up pdf", "seiten pro blatt", "2-up pdf", "4-up pdf", "impose pdf"]
+  },
+  "overlay-pdf": {
+    "name": "PDF überlagern",
+    "shortName": "Überlagern",
+    "summary": "Eine PDF-Seite über ein anderes Dokument legen.",
+    "description": "Basis-PDF und Overlay-PDF hochladen. Erste Overlay-Seite wird auf jede Basisseite gezeichnet – praktisch für Briefköpfe und Stempel.",
+    "howTo": [
+      "Zuerst Basis-PDF hochladen.",
+      "Danach Overlay-PDF hochladen.",
+      "Gestempeltes Ergebnis herunterladen."
+    ],
+    "keywords": ["pdf überlagern", "overlay pdf", "briefkopf pdf", "stamp pdf"]
+  },
+  "reverse-pages": {
+    "name": "Seiten umkehren",
+    "shortName": "Seiten umkehren",
+    "summary": "Seitenreihenfolge von hinten nach vorne drehen.",
+    "description": "Seitenfolge eines PDFs umkehren – hilfreich nach verkehrt herum gescanntem Stapel oder für Duplex-Vorbereitung.",
+    "howTo": [
+      "PDF hochladen.",
+      "Umkehren ausführen.",
+      "Herunterladen."
+    ],
+    "keywords": ["pdf seiten umkehren", "seitenreihenfolge drehen", "reverse pdf pages"]
+  },
+  "change-page-size": {
+    "name": "Seitengröße ändern",
+    "shortName": "Seitengröße",
+    "summary": "Seiten auf Letter, A4 oder Legal anpassen.",
+    "description": "Jede Seite skalieren und auf Zielformat zentrieren – ohne Desktop-Druckdialog.",
+    "howTo": [
+      "PDF hochladen.",
+      "Letter, A4 oder Legal wählen.",
+      "Herunterladen."
+    ],
+    "keywords": ["pdf seitengröße ändern", "a4 zu letter", "letter zu a4", "pdf papierformat"]
+  },
+  "rasterize-pdf": {
+    "name": "PDF rasterisieren",
+    "shortName": "Rasterisieren",
+    "summary": "Seiten als Bilder in neuem PDF fest einbetten.",
+    "description": "Jede Seite als Bildebene rendern und PDF neu aufbauen. Hilft vor Druck, Schwärzen oder wenn Schriften nicht eingebettet werden.",
+    "howTo": [
+      "PDF hochladen.",
+      "Lokal rasterisieren.",
+      "Herunterladen."
+    ],
+    "keywords": ["pdf rasterisieren", "pdf zu bildern", "flatten pdf to images", "rasterize pdf"]
+  },
+  "pdf-to-tiff": {
+    "name": "PDF zu TIFF",
+    "shortName": "PDF → TIFF",
+    "summary": "PDF-Seiten als hochwertige Bilder exportieren (PNG-Ersatz).",
+    "description": "Browser schreiben selten mehrseitiges TIFF. myonlinepdfeditor.com exportiert scharfe PNG-Seitenbilder für Scan-Software, die TIFF speichert.",
+    "howTo": [
+      "PDF hochladen.",
+      "Seitenbilder exportieren.",
+      "Jede Datei speichern."
+    ],
+    "keywords": ["pdf to tiff", "pdf to tif", "pdf seitenbilder"]
+  },
+  "pdf-to-pdfa": {
+    "name": "PDF zu PDF/A",
+    "shortName": "PDF/A",
+    "summary": "Archiv-Exportpaket für PDF/A-Workflows vorbereiten.",
+    "description": "Vollständige PDF/A-Validierung braucht Spezialkonverter. myonlinepdfeditor.com packt Ihre Datei mit Metadaten-Hinweisen, damit Sie Archiv-Compliance in einem PDF/A-Validator abschließen können.",
+    "howTo": [
+      "PDF hochladen.",
+      "Bereinigtes Exportpaket herunterladen.",
+      "Bei Bedarf mit PDF/A-Prüfer validieren."
+    ],
+    "keywords": ["pdf to pdfa", "pdf/a", "archiv pdf", "pdfa konverter"]
+  },
+  "translate-pdf": {
+    "name": "PDF übersetzen",
+    "shortName": "PDF übersetzen",
+    "summary": "Text extrahieren und übersetzungsfertige Kopie entwerfen.",
+    "description": "Extrahierbaren PDF-Text in den Dokumenten-Assistenten für Übersetzungsanfragen überführen. Reine Bildscans brauchen zuerst OCR (Lesbares PDF).",
+    "howTo": [
+      "PDF mit wählbarem Text hochladen.",
+      "Assistenten für Übersetzung öffnen.",
+      "Übersetzten Text kopieren oder herunterladen."
+    ],
+    "keywords": ["pdf übersetzen", "translate pdf", "pdf translation", "pdf translate"]
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "word-to-pdf": {
+    "name": "Word-zu-PDF-Konverter",
+    "shortName": "Word → PDF",
+    "summary": "DOCX-Dateien im Browser in saubere PDFs umwandeln.",
+    "description": "Microsoft-Word-Dokumente in PDF konvertieren, ohne sie auf einen Server hochzuladen. myonlinepdfeditor.com liest Ihre DOCX-Datei lokal, erhält das Layout nach Möglichkeit und liefert in Sekunden ein downloadfertiges PDF.",
+    "howTo": [
+      "Word zu PDF öffnen und Ihre DOCX-Datei auswählen.",
+      "Warten, bis die lokale Konvertierung abgeschlossen ist.",
+      "Ergebnis prüfen und das PDF herunterladen."
+    ],
+    "keywords": ["word to pdf", "docx to pdf", "word in pdf umwandeln", "docx konverter"]
+  },
+  "txt-to-pdf": {
+    "name": "Text zu PDF",
+    "shortName": "TXT → PDF",
+    "summary": "Klartext in eine druckfreundliche PDF-Seite packen.",
+    "description": "Text einfügen oder eine TXT-Datei hochladen – myonlinepdfeditor.com erzeugt ein schlichtes PDF mit gut lesbarer Typografie. Ideal für Notizen, Logs und Skripte, die Sie als PDF archivieren oder teilen möchten.",
+    "howTo": [
+      "TXT-Datei hochladen oder Text einfügen.",
+      "Seiteneinstellungen bei Bedarf anpassen.",
+      "Das erzeugte PDF herunterladen."
+    ],
+    "keywords": ["txt to pdf", "text to pdf", "klartext pdf", "notepad to pdf"]
+  },
+  "png-to-pdf": {
+    "name": "PNG zu PDF",
+    "shortName": "PNG → PDF",
+    "summary": "PNG-Bilder zu einem einzelnen PDF zusammenführen.",
+    "description": "Ein oder mehrere PNG-Dateien ablegen und ein PDF erhalten, das die Bildqualität bewahrt. Die Verarbeitung erfolgt vollständig im Browser – Screenshots und Grafiken verlassen Ihr Gerät nicht.",
+    "howTo": [
+      "PNG-Bilddateien auswählen.",
+      "Bei mehreren Bildern die Reihenfolge festlegen.",
+      "PDF herunterladen."
+    ],
+    "keywords": ["png to pdf", "png in pdf", "bild zu pdf", "screenshot to pdf"]
+  },
+  "jpg-to-pdf": {
+    "name": "JPG/JPEG zu PDF",
+    "shortName": "JPG → PDF",
+    "summary": "JPEG-Fotos in ein PDF-Dokument umwandeln.",
+    "description": "JPG- und JPEG-Fotos in ein teilbares PDF verwandeln. Mehrere Aufnahmen lokal zu einer Datei für Druck oder E-Mail zusammenführen.",
+    "howTo": [
+      "JPG- oder JPEG-Dateien hochladen.",
+      "Seiten bei Bedarf neu anordnen.",
+      "Das zusammengeführte PDF speichern."
+    ],
+    "keywords": ["jpg to pdf", "jpeg to pdf", "foto zu pdf", "bild zu pdf"]
+  },
+  "ppt-to-pdf": {
+    "name": "PPT zu PDF",
+    "shortName": "PPT → PDF",
+    "summary": "PowerPoint-Folientext (.pptx) als PDF herunterladen.",
+    "description": "PPTX-Präsentationen lokal konvertieren, indem Folientext in ein übersichtliches PDF extrahiert wird. Für pixelgenaue Folien Bilder aus PowerPoint exportieren und JPG/PNG zu PDF nutzen.",
+    "howTo": [
+      "Eine PPTX-Datei hochladen (ältere PPT-Datei zuerst als PPTX speichern).",
+      "Auf die lokale Textextraktion warten.",
+      "Das erzeugte PDF herunterladen."
+    ],
+    "keywords": ["ppt to pdf", "pptx to pdf", "powerpoint zu pdf", "folien pdf"]
+  },
+  "csv-to-pdf": {
+    "name": "CSV zu PDF",
+    "shortName": "CSV → PDF",
+    "summary": "Tabellendaten als formatierte PDF-Tabelle darstellen.",
+    "description": "CSV-Datei hochladen und Zeilen in ein gut lesbares PDF-Layout überführen. Praktisch für Berichte, die Empfänger nur als feste, druckfreundliche Ansicht brauchen.",
+    "howTo": [
+      "Ihre CSV-Datei hochladen.",
+      "Tabellenvorschau prüfen.",
+      "PDF-Bericht herunterladen."
+    ],
+    "keywords": ["csv to pdf", "tabelle zu pdf", "csv export pdf", "daten zu pdf"]
+  },
+  "html-to-pdf": {
+    "name": "HTML zu PDF",
+    "shortName": "HTML → PDF",
+    "summary": "HTML-Markup als PDF für Druck oder Archiv rendern.",
+    "description": "HTML einfügen oder eine HTML-Datei hochladen – myonlinepdfeditor.com erstellt einen PDF-Snapshot für Ablage, Handouts oder Offline-Lesen, ohne Inhalte in die Cloud zu senden.",
+    "howTo": [
+      "HTML einfügen oder HTML-Datei hochladen.",
+      "Die gerenderte Vorschau prüfen.",
+      "PDF herunterladen."
+    ],
+    "keywords": ["html to pdf", "webseite zu pdf", "html als pdf speichern", "html drucken pdf"]
+  },
+  "rtf-to-pdf": {
+    "name": "RTF zu PDF",
+    "shortName": "RTF → PDF",
+    "summary": "Rich-Text-Format-Dateien in Standard-PDFs konvertieren.",
+    "description": "Ältere RTF-Dokumente öffnen und als PDF für universelle Anzeige speichern. myonlinepdfeditor.com verarbeitet die Datei auf Ihrem Rechner – sensible Entwürfe bleiben privat.",
+    "howTo": [
+      "RTF-Datei vom Computer auswählen.",
+      "Auf die lokale Konvertierung warten.",
+      "PDF herunterladen."
+    ],
+    "keywords": ["rtf to pdf", "rich text zu pdf", "rtf konvertieren", "rtf converter"]
+  },
+  "excel-to-pdf": {
+    "name": "Excel zu PDF",
+    "shortName": "Excel → PDF",
+    "summary": "XLSX-Tabellen als teilbare PDF-Tabellen exportieren.",
+    "description": "Excel-Arbeitsmappen in PDF für Druck, E-Mail oder Archiv umwandeln. myonlinepdfeditor.com liest XLSX lokal und legt Blattdaten in einer festen PDF-Ansicht ab, die Empfänger nicht versehentlich bearbeiten können.",
+    "howTo": [
+      "Ihre XLSX-Tabelle hochladen.",
+      "Blätter oder Bereich auswählen, falls abgefragt.",
+      "Das erzeugte PDF herunterladen."
+    ],
+    "keywords": ["excel to pdf", "xlsx to pdf", "tabelle zu pdf", "excel pdf konverter"]
+  },
+  "webp-to-pdf": {
+    "name": "WebP zu PDF",
+    "shortName": "WebP → PDF",
+    "summary": "WebP-Bilder zu einem PDF zusammenführen.",
+    "description": "Moderne WebP-Grafiken in ein PDF für Anhang oder Druck umwandeln. Mehrere WebP-Dateien in Reihenfolge zusammenführen, ohne Upload auf einen Remote-Server.",
+    "howTo": [
+      "Eine oder mehrere WebP-Dateien auswählen.",
+      "Bilder bei Bedarf neu anordnen.",
+      "PDF herunterladen."
+    ],
+    "keywords": ["webp to pdf", "webp konvertieren", "webp bild pdf"]
+  },
+  "gif-to-pdf": {
+    "name": "GIF zu PDF",
+    "shortName": "GIF → PDF",
+    "summary": "GIF-Bilder in ein druckbares PDF überführen.",
+    "description": "GIF-Einzelbilder oder Standbilder in ein PDF für Ablage und Austausch einbetten. Verarbeitung im Browser – animierte oder markenbezogene GIFs bleiben auf Ihrem Gerät.",
+    "howTo": [
+      "GIF-Bilddateien hochladen.",
+      "Bei mehreren Dateien die Seitenreihenfolge festlegen.",
+      "Zusammengeführtes PDF speichern."
+    ],
+    "keywords": ["gif to pdf", "gif konvertieren", "gif bild zu pdf"]
+  },
+  "bmp-to-pdf": {
+    "name": "BMP zu PDF",
+    "shortName": "BMP → PDF",
+    "summary": "Bitmap-Bilder (BMP) in PDF-Seiten umwandeln.",
+    "description": "Ältere BMP-Scans und Exporte werden zu leicht teilbaren PDFs. Mehrere Bitmaps für Druck oder Upload-Portale in einer Datei stapeln.",
+    "howTo": [
+      "BMP-Dateien vom Computer wählen.",
+      "Miniaturvorschauen bei Bedarf neu anordnen.",
+      "PDF herunterladen."
+    ],
+    "keywords": ["bmp to pdf", "bitmap zu pdf", "bmp pdf konvertieren"]
+  },
+  "images-to-pdf": {
+    "name": "Bilder zu PDF",
+    "shortName": "Bilder → PDF",
+    "summary": "Gemischte Bildformate in ein geordnetes PDF zusammenführen.",
+    "description": "PNG, JPG, WebP, GIF, BMP und weitere unterstützte Bilder ablegen und ein PDF in der gewünschten Reihenfolge erhalten. Ideal für Scan-Stapel und Fotopakete.",
+    "howTo": [
+      "Mehrere Bilddateien beliebiger unterstützter Typen hinzufügen.",
+      "Per Drag-and-drop die Seitenreihenfolge festlegen.",
+      "Zusammengeführtes PDF herunterladen."
+    ],
+    "keywords": ["images to pdf", "fotos zu pdf", "bilder kombinieren pdf", "bild zu pdf"]
+  },
+  "pdf-to-jpg": {
+    "name": "PDF zu JPG",
+    "shortName": "PDF → JPG",
+    "summary": "PDF-Seiten als hochwertige JPEG-Bilder exportieren.",
+    "description": "Jede PDF-Seite als JPG rasterisieren – für Folien, Social-Media oder Systeme ohne PDF-Unterstützung. Seiten oder das ganze Dokument wählen; Downloads bleiben auf Ihrem Gerät.",
+    "howTo": [
+      "Das zu konvertierende PDF hochladen.",
+      "Seiten wählen oder alles exportieren.",
+      "JPG-Dateien oder ein ZIP der Seiten herunterladen."
+    ],
+    "keywords": ["pdf to jpg", "pdf to jpeg", "pdf in bilder", "pdf to image"]
+  },
+  "pdf-to-png": {
+    "name": "PDF zu PNG",
+    "shortName": "PDF → PNG",
+    "summary": "PDF-Seiten als verlustfreie PNG-Bilder speichern.",
+    "description": "Scharfe PNG-Ausschnitte aus PDF-Seiten, wenn Sie transparenzfreundliche Grafiken oder verlustfreie Archivframes brauchen.",
+    "howTo": [
+      "PDF in PDF zu PNG öffnen.",
+      "Auflösung oder Seitenbereich wählen, falls angeboten.",
+      "PNG-Dateien herunterladen."
+    ],
+    "keywords": ["pdf to png", "pdf bild png", "pdf png exportieren"]
+  },
+  "pdf-to-word": {
+    "name": "PDF zu Word",
+    "shortName": "PDF → Word",
+    "summary": "PDF-Text als bearbeitbaren Word-Export herunterladen.",
+    "description": "Lesbaren Text aus einem PDF ziehen und eine DOCX- oder TXT-Datei exportieren, die sich in Word öffnen lässt. Am besten für textreiche Dokumente; gescannte Seiten brauchen ggf. zuerst OCR.",
+    "howTo": [
+      "PDF hochladen.",
+      "Textextraktion lokal ausführen.",
+      "Word- oder Klartext-Export herunterladen."
+    ],
+    "keywords": ["pdf to word", "pdf to docx", "pdf word konvertieren", "pdf bearbeitbar"]
+  },
+  "pdf-to-excel": {
+    "name": "PDF zu Excel",
+    "shortName": "PDF → Excel",
+    "summary": "Tabellendaten aus PDF als CSV für Excel exportieren.",
+    "description": "Tabellarischen Text aus PDFs in kommagetrennte Werte für Excel oder Google Sheets überführen. Nützlich für Rechnungen und Kontoauszüge, wenn das PDF textbasiert ist.",
+    "howTo": [
+      "PDF mit Tabellen hochladen.",
+      "Extrahierte Zeilen prüfen.",
+      "CSV-Tabellenexport herunterladen."
+    ],
+    "keywords": ["pdf to excel", "pdf to csv", "pdf tabelle export", "pdf spreadsheet"]
+  },
+  "pdf-to-text": {
+    "name": "PDF zu Text",
+    "shortName": "PDF → Text",
+    "summary": "Allen extrahierbaren PDF-Text als TXT-Datei speichern.",
+    "description": "PDF-Inhalt in Klartext für Suche, Vergleich oder Weiterverarbeitung umwandeln. myonlinepdfeditor.com extrahiert auf Ihrem Rechner – ohne Cloud-OCR, sofern Sie keine ergänzen.",
+    "howTo": [
+      "PDF auswählen.",
+      "Text seitenweise extrahieren.",
+      "TXT-Datei herunterladen."
+    ],
+    "keywords": ["pdf to text", "pdf text extrahieren", "pdf txt export", "pdf textdatei"]
+  }
+}

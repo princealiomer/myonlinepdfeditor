@@ -1,0 +1,290 @@
+{
+  "xml-invoice-to-pdf": {
+    "name": "XML-Rechnung zu PDF",
+    "shortName": "XML-Rechnung",
+    "summary": "XML-/UBL-Rechnungsdaten als PDF rendern.",
+    "description": "XML-Tags entfernen und Rechnungsfelder in ein lesbares PDF zur Prüfung drucken.",
+    "howTo": [
+      "XML hochladen.",
+      "Konvertieren.",
+      "PDF herunterladen."
+    ],
+    "keywords": ["xml rechnung pdf", "ubl zu pdf", "e-rechnung pdf", "xml invoice to pdf"]
+  },
+  "analyze-pdf": {
+    "name": "PDF analysieren",
+    "shortName": "PDF analysieren",
+    "summary": "Seitenzahl, Größen und Metadaten prüfen.",
+    "description": "PDF-Struktur melden: Seiten, Abmessungen, Metadaten und Statistik zum extrahierbaren Text.",
+    "howTo": [
+      "PDF hochladen.",
+      "Analyse starten.",
+      "Bericht herunterladen oder kopieren."
+    ],
+    "keywords": ["pdf analysieren", "analyze pdf", "pdf info", "pdf eigenschaften"]
+  },
+  "pdf-statistics": {
+    "name": "PDF-Statistik",
+    "shortName": "PDF-Statistik",
+    "summary": "Kurzstatistik zu einer PDF-Datei.",
+    "description": "Wie PDF analysieren – Seitenzahlen, Textabdeckung und Dateigröße auf einen Blick.",
+    "howTo": [
+      "PDF hochladen.",
+      "Statistik ansehen.",
+      "Bericht speichern."
+    ],
+    "keywords": ["pdf statistik", "pdf statistics", "pdf metriken", "pdf stats"]
+  },
+  "change-pdf-doc-info": {
+    "name": "PDF-Dokumentinfo ändern",
+    "shortName": "Dok.-Info",
+    "summary": "PDF-Titel, Autor, Betreff und Stichwörter bearbeiten.",
+    "description": "Felder des Dokumentinformations-Wörterbuchs lokal vor Teilen oder Archivierung aktualisieren.",
+    "howTo": [
+      "PDF hochladen.",
+      "Metadatenfelder eingeben.",
+      "Aktualisiertes PDF herunterladen."
+    ],
+    "keywords": ["pdf metadaten", "pdf titel ändern", "pdf eigenschaften", "doc info"]
+  },
+  "set-pdf-viewer-preferences": {
+    "name": "PDF-Anzeigeeinstellungen",
+    "shortName": "Anzeige",
+    "summary": "Viewer-Metadaten für Erzeuger/Ersteller normalisieren.",
+    "description": "Viewer-orientierte Metadaten auffrischen, damit Downloads in gängigen Lesern sauber öffnen.",
+    "howTo": [
+      "PDF hochladen.",
+      "Einstellungen anwenden.",
+      "Herunterladen."
+    ],
+    "keywords": ["pdf anzeigeeinstellungen", "pdf viewer preferences", "pdf öffnen einstellungen"]
+  },
+  "bookmark-pdf": {
+    "name": "PDF-Lesezeichen",
+    "shortName": "Lesezeichen",
+    "summary": "Seiten-Lesezeichen / Gliederungseinträge hinzufügen.",
+    "description": "Gliederungs-Lesezeichen für Seite 1…N anlegen, wenn die PDF-Engine Outlines unterstützt.",
+    "howTo": [
+      "PDF hochladen.",
+      "Lesezeichen hinzufügen.",
+      "Herunterladen."
+    ],
+    "keywords": ["pdf lesezeichen", "bookmark pdf", "pdf gliederung", "pdf bookmarks"]
+  },
+  "print-pdf-as-poster": {
+    "name": "PDF als Poster drucken",
+    "shortName": "Poster",
+    "summary": "Erste Seite in ein Poster-Raster kacheln.",
+    "description": "Erste Seite über mehrere Blätter für großformatige Wanddrucke aufteilen.",
+    "howTo": [
+      "PDF hochladen.",
+      "Poster-Kacheln erzeugen.",
+      "Heruntergeladene Seiten drucken."
+    ],
+    "keywords": ["pdf poster", "poster drucken pdf", "pdf kacheln", "tile pdf"]
+  },
+  "generate-password": {
+    "name": "Passwort generieren",
+    "shortName": "Passwort-Gen.",
+    "summary": "Starkes Zufallspasswort für PDF-Schutz erzeugen.",
+    "description": "Hoch entropisches Passwort erzeugen zum Einfügen in PDF-Passwort setzen.",
+    "howTo": [
+      "Werkzeug öffnen.",
+      "Generieren.",
+      "Passwort kopieren."
+    ],
+    "keywords": ["passwort generieren", "generate password", "passwort generator", "pdf passwort"]
+  },
+  "embed-pdf": {
+    "name": "PDF einbetten",
+    "shortName": "PDF einbetten",
+    "summary": "HTML zum Einbetten eines PDFs auf einer Website.",
+    "description": "Fertiges HTML-Snippet mit Schaltfläche und iframe zum Hosten Ihres PDFs herunterladen.",
+    "howTo": [
+      "PDF benennen oder hochladen.",
+      "HTML-Snippet herunterladen.",
+      "Neben Ihrer Datei hosten."
+    ],
+    "keywords": ["pdf einbetten", "embed pdf", "pdf iframe", "pdf website"]
+  },
+  "pdf-button": {
+    "name": "PDF-Schaltfläche",
+    "shortName": "PDF-Button",
+    "summary": "Download-/Öffnen-Schaltfläche für ein PDF erzeugen.",
+    "description": "Einbettungs-Toolkit mit Fokus auf gestalteten Link-Button für Ihre PDF-Datei.",
+    "howTo": [
+      "PDF-Namen angeben.",
+      "HTML herunterladen.",
+      "In Ihre Website einfügen."
+    ],
+    "keywords": ["pdf button", "pdf download button", "pdf schaltfläche"]
+  },
+  "accessible-pdf": {
+    "name": "Barrierefreies PDF",
+    "shortName": "Barrierefrei",
+    "summary": "Checkliste zur PDF/UA-orientierten Barrierefreiheit.",
+    "description": "Praktische Barrierefreiheits-Checkliste und Vorbereitungsschritte; vollständige PDF/UA-Zertifizierung braucht einen dedizierten Validator.",
+    "howTo": [
+      "Optional PDF hochladen.",
+      "Checkliste herunterladen.",
+      "Korrekturen in Autorenwerkzeugen anwenden."
+    ],
+    "keywords": ["barrierefreies pdf", "accessible pdf", "pdf ua", "pdf barrierefreiheit"]
+  },
+  "pdf-printer": {
+    "name": "PDF-Drucker",
+    "shortName": "PDF-Drucker",
+    "summary": "System-Druckdialog für ein PDF öffnen.",
+    "description": "PDF laden und Drucken bzw. Als PDF speichern im Browser auslösen.",
+    "howTo": [
+      "PDF hochladen.",
+      "Drucken.",
+      "Drucker oder Als PDF speichern wählen."
+    ],
+    "keywords": ["pdf drucker", "pdf printer", "pdf online drucken"]
+  },
+  "straighten-pdf": {
+    "name": "PDF begradigen",
+    "shortName": "Begradigen",
+    "summary": "Hinweise zum Entzerren schiefer Scans.",
+    "description": "Automatisches Entzerren braucht CV-Modelle. myonlinepdfeditor.com verweist auf PDF drehen und Scanner-Entzerr-Workflows.",
+    "howTo": [
+      "Scan hochladen.",
+      "Hinweise lesen.",
+      "Bei Bedarf drehen oder neu scannen."
+    ],
+    "keywords": ["pdf begradigen", "deskew pdf", "scan entzerren", "straighten pdf"]
+  },
+  "validate-pdfa": {
+    "name": "PDF/A validieren",
+    "shortName": "PDF/A prüfen",
+    "summary": "So validieren Sie PDF/A nach der Vorbereitung.",
+    "description": "Erklärt PDF/A-Validierung mit externen Prüfern nach PDF-zu-PDF/A-Vorbereitung.",
+    "howTo": [
+      "PDF hochladen.",
+      "Validierungsschritte lesen.",
+      "Externen PDF/A-Validator ausführen."
+    ],
+    "keywords": ["pdf/a validieren", "validate pdfa", "pdfa prüfung"]
+  },
+  "verify-pdf-signatures": {
+    "name": "PDF-Signaturen prüfen",
+    "shortName": "Signatur prüfen",
+    "summary": "Hinweise zur Prüfung digitaler Signaturen.",
+    "description": "Kryptografische Prüfung braucht vertrauenswürdige Reader; myonlinepdfeditor.com erläutert den Workflow.",
+    "howTo": [
+      "Signiertes PDF hochladen.",
+      "Prüfhinweise lesen.",
+      "In Signatur-Suite zur Validierung öffnen."
+    ],
+    "keywords": ["pdf signatur prüfen", "verify pdf signature", "digitale signatur validieren"]
+  },
+  "pdf-to-e-invoice": {
+    "name": "PDF zu E-Rechnung",
+    "shortName": "E-Rechnung",
+    "summary": "Hinweise zu strukturiertem E-Rechnungs-Export.",
+    "description": "Erklärt ZUGFeRD/Factur-X/UBL-Pfade; für XML-Nutzdaten XML-Rechnung zu PDF verwenden.",
+    "howTo": [
+      "PDF optional hochladen.",
+      "Hinweise lesen.",
+      "ERP- oder XML-Werkzeuge nach Bedarf nutzen."
+    ],
+    "keywords": ["pdf zu e-rechnung", "zugferd", "factur-x", "pdf to e-invoice"]
+  },
+  "validate-e-invoice": {
+    "name": "E-Rechnung validieren",
+    "shortName": "Rechnung prüfen",
+    "summary": "Auf nationale E-Rechnungs-Validatoren verweisen.",
+    "description": "Schema-Validierung ist länderspezifisch; myonlinepdfeditor.com dokumentiert die nächsten Schritte.",
+    "howTo": [
+      "Optional XML/PDF hochladen.",
+      "Hinweise lesen.",
+      "Nationalen Validator nutzen."
+    ],
+    "keywords": ["e-rechnung validieren", "validate e-invoice", "ubl validieren"]
+  },
+  "hwp-to-pdf": {
+    "name": "HWP zu PDF",
+    "shortName": "HWP → PDF",
+    "summary": "Hangul-HWP-Dateien in PDF überführen.",
+    "description": "HWP wird im Browser nicht gelesen. Hinweise zu Hancom/LibreOffice-Exportwegen.",
+    "howTo": [
+      "HWP-Datei wählen.",
+      "Konvertierungsschritte lesen.",
+      "PDF extern exportieren und myonlinepdfeditor.com nutzen."
+    ],
+    "keywords": ["hwp to pdf", "hangul zu pdf", "hwp pdf"]
+  },
+  "pages-to-pdf": {
+    "name": "Pages zu PDF",
+    "shortName": "Pages → PDF",
+    "summary": "Apple-Pages-Dokumente als PDF exportieren.",
+    "description": "Pages-Dateien brauchen Apple Pages oder iCloud-Export; myonlinepdfeditor.com beschreibt den Weg.",
+    "howTo": [
+      "Pages-Datei wählen.",
+      "Export-Anleitung folgen.",
+      "PDF in weitere Werkzeuge hochladen."
+    ],
+    "keywords": ["pages to pdf", "apple pages pdf", "pages export pdf"]
+  },
+  "ofd-to-pdf": {
+    "name": "OFD zu PDF",
+    "shortName": "OFD → PDF",
+    "summary": "Chinesische OFD-Dokumente über externe Reader konvertieren.",
+    "description": "OFD braucht Spezialkonverter; myonlinepdfeditor.com erklärt, wie Sie zuerst ein PDF erhalten.",
+    "howTo": [
+      "OFD wählen.",
+      "Hinweise lesen.",
+      "Extern konvertieren."
+    ],
+    "keywords": ["ofd to pdf", "ofd zu pdf"]
+  },
+  "pub-to-pdf": {
+    "name": "Publisher zu PDF",
+    "shortName": "PUB → PDF",
+    "summary": "Microsoft Publisher (PUB) als PDF exportieren.",
+    "description": "Publisher-Dateien brauchen Desktop-Export; Anleitung enthalten.",
+    "howTo": [
+      "PUB wählen.",
+      "Exportschritte folgen.",
+      "Mit dem PDF in myonlinepdfeditor.com weitermachen."
+    ],
+    "keywords": ["pub to pdf", "publisher zu pdf", "microsoft publisher pdf"]
+  },
+  "publisher-to-pdf": {
+    "name": "MS Publisher zu PDF",
+    "shortName": "Publisher PDF",
+    "summary": "Microsoft-Publisher-Export-Hinweise.",
+    "description": "Alias-Werkzeug im Stil von PDF24 für Publisher→PDF-Desktop-Export.",
+    "howTo": [
+      "PUB wählen.",
+      "PDF aus Publisher exportieren.",
+      "Weitere Bearbeitung in myonlinepdfeditor.com."
+    ],
+    "keywords": ["publisher to pdf", "microsoft publisher pdf", "pub pdf export"]
+  },
+  "ps-to-pdf": {
+    "name": "PS zu PDF",
+    "shortName": "PS → PDF",
+    "summary": "PostScript mit Desktop-Ghostscript-Klasse konvertieren.",
+    "description": "Browser können Ghostscript nicht ausführen; myonlinepdfeditor.com dokumentiert den Desktop-Weg.",
+    "howTo": [
+      "PS-Datei wählen.",
+      "Hinweise lesen.",
+      "Auf dem Desktop konvertieren."
+    ],
+    "keywords": ["ps to pdf", "postscript zu pdf", "ps pdf konverter"]
+  },
+  "udf-to-pdf": {
+    "name": "UDF zu PDF",
+    "shortName": "UDF → PDF",
+    "summary": "UDF-Dokumente über die Erstellungs-App konvertieren.",
+    "description": "UDF wird hier nicht dekodiert – zuerst PDF oder DOCX in der Quellanwendung exportieren.",
+    "howTo": [
+      "UDF wählen.",
+      "Hinweise lesen.",
+      "Extern exportieren."
+    ],
+    "keywords": ["udf to pdf", "udf zu pdf"]
+  }
+}

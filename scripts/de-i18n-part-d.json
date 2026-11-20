@@ -1,0 +1,242 @@
+{
+  "heic-to-jpg": {
+    "name": "HEIC zu JPG",
+    "shortName": "HEIC → JPG",
+    "summary": "HEIC-Fotos in JPEG umwandeln.",
+    "description": "HEIC/HEIF im Browser dekodieren, wenn unterstützt, und JPG-Dateien herunterladen.",
+    "howTo": [
+      "HEIC-Dateien hochladen.",
+      "Konvertieren.",
+      "JPGs herunterladen."
+    ],
+    "keywords": ["heic to jpg", "heic zu jpeg", "heif to jpg"]
+  },
+  "heic-to-png": {
+    "name": "HEIC zu PNG",
+    "shortName": "HEIC → PNG",
+    "summary": "HEIC-Fotos in PNG umwandeln.",
+    "description": "HEIC/HEIF dekodieren und verlustfreies PNG exportieren, wenn der Browser die Datei lesen kann.",
+    "howTo": [
+      "HEIC hochladen.",
+      "Konvertieren.",
+      "PNG herunterladen."
+    ],
+    "keywords": ["heic to png", "heif zu png"]
+  },
+  "webp-to-jpg": {
+    "name": "WebP zu JPG",
+    "shortName": "WebP → JPG",
+    "summary": "WebP-Bilder in JPEG umwandeln.",
+    "description": "WebP als JPG neu kodieren für Anwendungen ohne WebP-Unterstützung.",
+    "howTo": [
+      "WebP hochladen.",
+      "Konvertieren.",
+      "JPG herunterladen."
+    ],
+    "keywords": ["webp to jpg", "webp zu jpeg"]
+  },
+  "webp-to-png": {
+    "name": "WebP zu PNG",
+    "shortName": "WebP → PNG",
+    "summary": "WebP-Bilder in PNG umwandeln.",
+    "description": "WebP als PNG für transparenzfreundliche Workflows neu kodieren.",
+    "howTo": [
+      "WebP hochladen.",
+      "Konvertieren.",
+      "PNG herunterladen."
+    ],
+    "keywords": ["webp to png", "webp zu png"]
+  },
+  "svg-to-jpg": {
+    "name": "SVG zu JPG",
+    "shortName": "SVG → JPG",
+    "summary": "SVG in JPEG rasterisieren.",
+    "description": "SVG-Grafiken im Browser zu JPG rendern.",
+    "howTo": [
+      "SVG hochladen.",
+      "Konvertieren.",
+      "JPG herunterladen."
+    ],
+    "keywords": ["svg to jpg", "svg zu jpeg"]
+  },
+  "svg-to-png": {
+    "name": "SVG zu PNG",
+    "shortName": "SVG → PNG",
+    "summary": "SVG in PNG rasterisieren.",
+    "description": "SVG-Grafiken mit Transparenzunterstützung zu PNG rendern.",
+    "howTo": [
+      "SVG hochladen.",
+      "Konvertieren.",
+      "PNG herunterladen."
+    ],
+    "keywords": ["svg to png", "svg zu png"]
+  },
+  "compress-images": {
+    "name": "Bilder komprimieren",
+    "shortName": "Bilder komprimieren",
+    "summary": "Bilddateigröße per JPEG-Rekompression verkleinern.",
+    "description": "Bilder lokal als komprimiertes JPEG neu kodieren vor E-Mail oder PDF-Paket.",
+    "howTo": [
+      "Bilder hochladen.",
+      "Komprimieren.",
+      "Kleinere JPGs herunterladen."
+    ],
+    "keywords": ["bilder komprimieren", "compress images", "bildgröße reduzieren"]
+  },
+  "odt-to-pdf": {
+    "name": "ODT zu PDF",
+    "shortName": "ODT → PDF",
+    "summary": "LibreOffice Writer (ODT) in PDF konvertieren.",
+    "description": "OpenDocument-Text extrahieren und lokal ein PDF aufbauen. Komplexe Layouts werden zu Textfluss vereinfacht.",
+    "howTo": [
+      "ODT hochladen.",
+      "Konvertieren.",
+      "PDF herunterladen."
+    ],
+    "keywords": ["odt to pdf", "opendocument zu pdf", "libreoffice writer pdf"]
+  },
+  "ods-to-pdf": {
+    "name": "ODS zu PDF",
+    "shortName": "ODS → PDF",
+    "summary": "LibreOffice Calc (ODS) in PDF konvertieren.",
+    "description": "ODS-Blätter als Tabellentext lesen und PDF-Snapshot veröffentlichen.",
+    "howTo": [
+      "ODS hochladen.",
+      "Konvertieren.",
+      "PDF herunterladen."
+    ],
+    "keywords": ["ods to pdf", "opendocument tabelle pdf", "calc zu pdf"]
+  },
+  "odp-to-pdf": {
+    "name": "ODP zu PDF",
+    "shortName": "ODP → PDF",
+    "summary": "LibreOffice Impress (ODP) in PDF konvertieren.",
+    "description": "Folientext aus ODP extrahieren und in ein PDF legen.",
+    "howTo": [
+      "ODP hochladen.",
+      "Konvertieren.",
+      "PDF herunterladen."
+    ],
+    "keywords": ["odp to pdf", "opendocument präsentation pdf", "impress zu pdf"]
+  },
+  "odg-to-pdf": {
+    "name": "ODG zu PDF",
+    "shortName": "ODG → PDF",
+    "summary": "LibreOffice Draw (ODG) in PDF konvertieren.",
+    "description": "Text aus ODG-Zeichnungen in ein PDF-Notizblatt extrahieren.",
+    "howTo": [
+      "ODG hochladen.",
+      "Konvertieren.",
+      "PDF herunterladen."
+    ],
+    "keywords": ["odg to pdf", "opendocument draw pdf", "draw zu pdf"]
+  },
+  "epub-to-pdf": {
+    "name": "EPUB zu PDF",
+    "shortName": "EPUB → PDF",
+    "summary": "EPUB-E-Books in PDF umwandeln.",
+    "description": "EPUB-HTML-Kapitel entpacken und als druckbaren PDF-Textfluss neu aufbauen.",
+    "howTo": [
+      "EPUB hochladen.",
+      "Konvertieren.",
+      "PDF herunterladen."
+    ],
+    "keywords": ["epub to pdf", "ebook zu pdf", "epub in pdf"]
+  },
+  "pdf-to-epub": {
+    "name": "PDF zu EPUB",
+    "shortName": "PDF → EPUB",
+    "summary": "Extrahierbaren PDF-Text als EPUB exportieren.",
+    "description": "Minimales EPUB aus PDF-Text für E-Reader. Layoutreiche PDFs werden zu fließendem Text.",
+    "howTo": [
+      "PDF hochladen.",
+      "Text extrahieren.",
+      "EPUB herunterladen."
+    ],
+    "keywords": ["pdf to epub", "pdf ebook", "pdf zu epub"]
+  },
+  "eml-to-pdf": {
+    "name": "EML zu PDF",
+    "shortName": "EML → PDF",
+    "summary": "E-Mail-Dateien (EML) in PDF konvertieren.",
+    "description": "Nachrichtenkopf und Textkörper in ein PDF-Archiv der E-Mail parsen.",
+    "howTo": [
+      "EML hochladen.",
+      "Konvertieren.",
+      "PDF herunterladen."
+    ],
+    "keywords": ["eml to pdf", "email zu pdf", "nachricht zu pdf"]
+  },
+  "pdf-to-html": {
+    "name": "PDF zu HTML",
+    "shortName": "PDF → HTML",
+    "summary": "PDF-Text als HTML-Seite exportieren.",
+    "description": "Seitentext in ein einfaches HTML-Dokument für Web oder Weiterbearbeitung extrahieren.",
+    "howTo": [
+      "PDF hochladen.",
+      "Exportieren.",
+      "HTML herunterladen."
+    ],
+    "keywords": ["pdf to html", "pdf html export", "pdf zu html"]
+  },
+  "pdf-to-markdown": {
+    "name": "PDF zu Markdown",
+    "shortName": "PDF → Markdown",
+    "summary": "PDF-Text als Markdown exportieren.",
+    "description": "Extrahierbaren Text in eine MD-Datei mit Seitenüberschriften überführen.",
+    "howTo": [
+      "PDF hochladen.",
+      "Exportieren.",
+      "MD herunterladen."
+    ],
+    "keywords": ["pdf to markdown", "pdf zu md", "pdf markdown"]
+  },
+  "pdf-to-svg": {
+    "name": "PDF zu SVG",
+    "shortName": "PDF → SVG",
+    "summary": "PDF-Seiten als SVG-Hüllen exportieren.",
+    "description": "Jede Seite rendern und in ein SVG-Bildelement für Web-Einbettung packen.",
+    "howTo": [
+      "PDF hochladen.",
+      "Exportieren.",
+      "SVG-Dateien herunterladen."
+    ],
+    "keywords": ["pdf to svg", "pdf vektor export", "pdf zu svg"]
+  },
+  "pdf-to-odt": {
+    "name": "PDF zu ODT",
+    "shortName": "PDF → ODT",
+    "summary": "PDF-Text für LibreOffice Writer exportieren.",
+    "description": "Extrahierbaren Text als TXT herunterladen, in Writer öffnen und als ODT speichern.",
+    "howTo": [
+      "PDF hochladen.",
+      "Text extrahieren.",
+      "In LibreOffice öffnen → Als ODT speichern."
+    ],
+    "keywords": ["pdf to odt", "pdf zu opendocument", "pdf libreoffice"]
+  },
+  "pdf-to-ods": {
+    "name": "PDF zu ODS",
+    "shortName": "PDF → ODS",
+    "summary": "PDF-Tabellen Richtung Calc/ODS exportieren.",
+    "description": "CSV-ähnlichen Text aus dem PDF für LibreOffice Calc exportieren; in Calc als ODS speichern.",
+    "howTo": [
+      "PDF hochladen.",
+      "CSV exportieren.",
+      "In Calc öffnen → Als ODS speichern."
+    ],
+    "keywords": ["pdf to ods", "pdf zu calc", "pdf libreoffice calc"]
+  },
+  "pdf-to-odp": {
+    "name": "PDF zu ODP",
+    "shortName": "PDF → ODP",
+    "summary": "PDF-Text für Impress/ODP-Workflows exportieren.",
+    "description": "Text für Folien in LibreOffice Impress extrahieren und als ODP speichern.",
+    "howTo": [
+      "PDF hochladen.",
+      "Text extrahieren.",
+      "In Impress einfügen."
+    ],
+    "keywords": ["pdf to odp", "pdf zu impress", "pdf opendocument"]
+  }
+}

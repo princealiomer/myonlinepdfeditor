@@ -1,0 +1,2059 @@
+{
+  "word-to-pdf": {
+    "name": "WordをPDFに変換",
+    "shortName": "Word → PDF",
+    "summary": "ブラウザでDOCXをきれいなPDFに変換します。",
+    "description": "Microsoft Word文書をサーバーに送らずPDFに変換できます。myonlinepdfeditor.comは.docxをローカルで読み込み、可能な範囲でレイアウトを保ったまま、すぐにダウンロードできるPDFを作成します。",
+    "howTo": [
+      "WordをPDF変換を開き、.docxファイルを選択します。",
+      "ローカルでの変換が完了するまで待ちます。",
+      "結果をプレビューしてPDFをダウンロードします。"
+    ],
+    "keywords": [
+      "word pdf 変換",
+      "docx pdf",
+      "word to pdf",
+      "ワード pdf 変換"
+    ]
+  },
+  "txt-to-pdf": {
+    "name": "テキストをPDFに",
+    "shortName": "TXT → PDF",
+    "summary": "プレーンテキストを見やすく印刷できるPDFにします。",
+    "description": ".txtをアップロードするかテキストを貼り付けると、読みやすい体裁のシンプルなPDFを作成します。メモ、ログ、スクリプトの保存・共有に便利です。",
+    "howTo": [
+      ".txtをアップロードするかテキストを貼り付けます。",
+      "表示されている場合はページ設定を調整します。",
+      "生成されたPDFをダウンロードします。"
+    ],
+    "keywords": [
+      "テキスト pdf",
+      "txt to pdf",
+      "text to pdf",
+      "メモ pdf"
+    ]
+  },
+  "png-to-pdf": {
+    "name": "PNGをPDFに",
+    "shortName": "PNG → PDF",
+    "summary": "PNG画像を1つのPDFにまとめます。",
+    "description": "PNGを1枚以上ドロップすると、画質を保ったPDFが得られます。処理はすべてブラウザ内で行われ、スクリーンショットや画像が端末から出ません。",
+    "howTo": [
+      "PNG画像ファイルを選択します。",
+      "複数ある場合は順序を並べ替えます。",
+      "PDFをダウンロードします。"
+    ],
+    "keywords": [
+      "png pdf",
+      "png to pdf",
+      "画像 pdf 結合",
+      "スクリーンショット pdf"
+    ]
+  },
+  "jpg-to-pdf": {
+    "name": "JPG/JPEGをPDFに",
+    "shortName": "JPG → PDF",
+    "summary": "JPEG写真をPDFに変換します。",
+    "description": "JPG・JPEG写真を共有しやすいPDFにします。複数枚を1ファイルにまとめて印刷やメール送信に使え、変換はすべてローカルで行います。",
+    "howTo": [
+      "JPGまたはJPEGファイルをアップロードします。",
+      "必要に応じてページ順を並べ替えます。",
+      "結合したPDFを保存します。"
+    ],
+    "keywords": [
+      "jpg pdf",
+      "jpeg pdf",
+      "写真 pdf",
+      "画像 to pdf"
+    ]
+  },
+  "ppt-to-pdf": {
+    "name": "PPTをPDFに",
+    "shortName": "PPT → PDF",
+    "summary": "PowerPoint（.pptx）のスライド内容をPDFでダウンロードします。",
+    "description": "PPTXをローカルで変換し、スライドのテキストを整理したPDFにします。スライドをそのままの見た目で残したい場合は、PowerPointで画像出力してからJPG/PNG→PDFをご利用ください。",
+    "howTo": [
+      ".pptxをアップロードします（旧.pptは先にPPTXで保存）。",
+      "ローカルでのスライドテキスト抽出を待ちます。",
+      "生成されたPDFをダウンロードします。"
+    ],
+    "keywords": [
+      "ppt pdf",
+      "pptx to pdf",
+      "パワーポイント pdf",
+      "スライド pdf"
+    ]
+  },
+  "csv-to-pdf": {
+    "name": "CSVをPDFに",
+    "shortName": "CSV → PDF",
+    "summary": "表データを読みやすいPDF表として出力します。",
+    "description": "CSVをアップロードすると、行を見やすいPDFレイアウトに変換します。印刷向けの固定レイアウトで共有したいレポートに便利です。",
+    "howTo": [
+      ".csvファイルをアップロードします。",
+      "表のプレビューを確認します。",
+      "PDFレポートをダウンロードします。"
+    ],
+    "keywords": [
+      "csv pdf",
+      "表 pdf",
+      "スプレッドシート pdf",
+      "csv to pdf"
+    ]
+  },
+  "html-to-pdf": {
+    "name": "HTMLをPDFに",
+    "shortName": "HTML → PDF",
+    "summary": "HTMLを印刷・アーカイブ用のPDFに変換します。",
+    "description": "HTMLを貼り付けるか.htmlをアップロードすると、記録・配布・オフライン閲覧向けのPDFスナップショットを作成します。コンテンツをクラウドに送りません。",
+    "howTo": [
+      "HTMLを貼り付けるか.htmlファイルをアップロードします。",
+      "レンダリング結果をプレビューします。",
+      "PDFをダウンロードします。"
+    ],
+    "keywords": [
+      "html pdf",
+      "html to pdf",
+      "webページ pdf",
+      "html 印刷"
+    ]
+  },
+  "rtf-to-pdf": {
+    "name": "RTFをPDFに",
+    "shortName": "RTF → PDF",
+    "summary": "リッチテキスト（RTF）を標準PDFに変換します。",
+    "description": "従来の.rtfを開いて、どこでも閲覧できるPDFとして保存できます。myonlinepdfeditor.comは端末上で処理するため、機密ドラフトも外に出ません。",
+    "howTo": [
+      "パソコンから.rtfファイルを選びます。",
+      "ローカル変換が終わるまで待ちます。",
+      "PDFをダウンロードします。"
+    ],
+    "keywords": [
+      "rtf pdf",
+      "rich text pdf",
+      "rtf to pdf",
+      "rtf 変換"
+    ]
+  },
+  "excel-to-pdf": {
+    "name": "ExcelをPDFに",
+    "shortName": "Excel → PDF",
+    "summary": "XLSX表を共有しやすいPDF表にします。",
+    "description": "Excelブックを印刷・メール・保管用のPDFに変換します。myonlinepdfeditor.comは.xlsxをローカルで読み、受け取り側が誤って編集できない固定レイアウトにします。",
+    "howTo": [
+      ".xlsxスプレッドシートをアップロードします。",
+      "表示される場合はシートや範囲を選びます。",
+      "生成されたPDFをダウンロードします。"
+    ],
+    "keywords": [
+      "excel pdf",
+      "xlsx to pdf",
+      "エクセル pdf",
+      "表 pdf 変換"
+    ]
+  },
+  "webp-to-pdf": {
+    "name": "WebPをPDFに",
+    "shortName": "WebP → PDF",
+    "summary": "WebP画像を1つのPDFにまとめます。",
+    "description": "WebP画像を添付や印刷に使えるPDFに変換します。複数ファイルも順序どおりに結合でき、リモートサーバーへのアップロードは不要です。",
+    "howTo": [
+      "WebPファイルを1つ以上選択します。",
+      "複数ある場合は画像の順序を並べ替えます。",
+      "PDFをダウンロードします。"
+    ],
+    "keywords": [
+      "webp pdf",
+      "webp to pdf",
+      "webP 画像 pdf"
+    ]
+  },
+  "gif-to-pdf": {
+    "name": "GIFをPDFに",
+    "shortName": "GIF → PDF",
+    "summary": "GIF画像を印刷可能なPDFにします。",
+    "description": "GIFのフレームや静止画を記録・共有用のPDFに配置します。処理はブラウザ内で行われ、アニメーションGIFも端末上に留まります。",
+    "howTo": [
+      "GIF画像ファイルをアップロードします。",
+      "複数ファイルの場合はページ順を並べます。",
+      "結合したPDFを保存します。"
+    ],
+    "keywords": [
+      "gif pdf",
+      "gif to pdf",
+      "gif 画像 pdf"
+    ]
+  },
+  "bmp-to-pdf": {
+    "name": "BMPをPDFに",
+    "shortName": "BMP → PDF",
+    "summary": "ビットマップ（BMP）をPDFページに変換します。",
+    "description": "古いBMPスキャンやエクスポートを共有しやすいPDFにします。複数枚を1ファイルにまとめ、印刷や提出に使えます。",
+    "howTo": [
+      "BMPファイルを選択します。",
+      "必要ならサムネイルの順序を並べ替えます。",
+      "PDFをダウンロードします。"
+    ],
+    "keywords": [
+      "bmp pdf",
+      "bitmap pdf",
+      "bmp to pdf"
+    ]
+  },
+  "images-to-pdf": {
+    "name": "画像をPDFに",
+    "shortName": "Images → PDF",
+    "summary": "複数形式の画像を1つのPDFにまとめます。",
+    "description": "PNG、JPG、WebP、GIF、BMPなど対応画像を、並べた順どおりに1つのPDFにします。スキャン束や写真セットに最適です。",
+    "howTo": [
+      "対応形式の画像を複数追加します。",
+      "ドラッグでページ順を設定します。",
+      "結合したPDFをダウンロードします。"
+    ],
+    "keywords": [
+      "画像 pdf 結合",
+      "写真 pdf",
+      "images to pdf",
+      "複数画像 pdf"
+    ]
+  },
+  "pdf-to-jpg": {
+    "name": "PDFをJPGに",
+    "shortName": "PDF → JPG",
+    "summary": "PDFページを高品質なJPEG画像として書き出します。",
+    "description": "各ページをJPGにラスタライズし、スライドやSNS、PDF非対応のシステム向けに使えます。ページ単位または全文を選べ、ダウンロードは端末上で完結します。",
+    "howTo": [
+      "変換するPDFをアップロードします。",
+      "ページを選ぶか、すべてをエクスポートします。",
+      "JPGファイルまたはZIPをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf jpg",
+      "pdf to jpg",
+      "pdf 画像 変換",
+      "pdf jpeg"
+    ]
+  },
+  "pdf-to-png": {
+    "name": "PDFをPNGに",
+    "shortName": "PDF → PNG",
+    "summary": "PDFページを可逆PNG画像として保存します。",
+    "description": "透過に近い用途やロスレス保存向けに、PDFページから鮮明なPNGを取得できます。",
+    "howTo": [
+      "PDFをPNG変換で開きます。",
+      "解像度やページ範囲を選べる場合は設定します。",
+      "PNGをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf png",
+      "pdf to png",
+      "pdf 画像 書き出し"
+    ]
+  },
+  "pdf-to-word": {
+    "name": "PDFをWordに",
+    "shortName": "PDF → Word",
+    "summary": "PDFのテキストを編集可能な形式で書き出します。",
+    "description": "PDFから読み取れるテキストを抽出し、Wordで開ける.docx形式または.txtとしてダウンロードできます。テキスト主体の文書向けで、スキャン画像のみのページは別途OCRが必要な場合があります。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "ローカルでテキスト抽出を実行します。",
+      "Wordまたはプレーンテキスト形式でダウンロードします。"
+    ],
+    "keywords": [
+      "pdf word",
+      "pdf docx",
+      "pdf to word",
+      "pdf 編集 変換"
+    ]
+  },
+  "pdf-to-excel": {
+    "name": "PDFをExcelに",
+    "shortName": "PDF → Excel",
+    "summary": "PDFの表データをCSVでExcel向けに出力します。",
+    "description": "PDF内の表形式テキストをCSVに抽出し、ExcelやGoogleスプレッドシートで開けます。テキストベースの請求書や明細表に便利です。",
+    "howTo": [
+      "表を含むPDFをアップロードします。",
+      "抽出された行を確認します。",
+      "CSV形式でダウンロードします。"
+    ],
+    "keywords": [
+      "pdf excel",
+      "pdf csv",
+      "pdf 表 抽出",
+      "pdf to excel"
+    ]
+  },
+  "pdf-to-text": {
+    "name": "PDFをテキストに",
+    "shortName": "PDF → Text",
+    "summary": "抽出可能なPDFテキストを.txtで保存します。",
+    "description": "PDF本文をプレーンテキストに変換し、検索・差分・他ツール連携に使えます。myonlinepdfeditor.comは端末上で抽出し、クラウドOCRは行いません。",
+    "howTo": [
+      "PDFを選択します。",
+      "ページごとにテキストを抽出します。",
+      ".txtファイルをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf テキスト",
+      "pdf to text",
+      "pdf txt",
+      "pdf 文字 抽出"
+    ]
+  },
+  "edit-pdf": {
+    "name": "PDFエディター",
+    "shortName": "Edit PDF",
+    "summary": "ブラウザでPDFのページ・テキスト・マークアップを編集します。",
+    "description": "myonlinepdfeditor.com PDF Editorで文書をアップロードし、ローカルで作業できます。ページ移動、内容の配置、書き出しまで、ファイルは端末から離れません。",
+    "howTo": [
+      "編集したいPDFをアップロードします。",
+      "ツールバーで内容を追加・変更します。",
+      "更新したPDFをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf 編集",
+      "pdf editor",
+      "無料 pdf 編集",
+      "オンライン pdf 編集"
+    ]
+  },
+  "create-pdf": {
+    "name": "PDFを作成",
+    "shortName": "Create PDF",
+    "summary": "白紙から新しいPDFを作成します。",
+    "description": "空のキャンバスやテンプレートからPDFを組み立てます。ページ・テキスト・画像を追加して保存でき、ソフトのインストールは不要です。",
+    "howTo": [
+      "PDF作成を開いて新規ドキュメントを開始します。",
+      "必要に応じてページと内容を追加します。",
+      "新しいPDFをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf 作成",
+      "create pdf",
+      "新規 pdf",
+      "pdf 作る"
+    ]
+  },
+  "add-fillable-fields": {
+    "name": "入力フィールドを追加",
+    "shortName": "Fillable Fields",
+    "summary": "テキスト・チェック・署名欄をPDFに配置します。",
+    "description": "フラットなPDFにフィールドを置いて入力可能なフォームにできます。準備した文書をデータ収集に再利用できます。",
+    "howTo": [
+      "エディターでPDFを開きます。",
+      "入力・署名位置にフィールドを追加します。",
+      "入力可能なPDFをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf フォーム",
+      "入力欄 pdf",
+      "fillable pdf",
+      "pdf フォーム 作成"
+    ]
+  },
+  "flatten-fields": {
+    "name": "フィールドをフラット化",
+    "shortName": "Flatten Fields",
+    "summary": "フォーム欄と注釈をページ内容に焼き付けます。",
+    "description": "インタラクティブなフィールドやマークアップをフラット化し、誤編集を防ぎます。保管・印刷・署名済み最終版の送付前に便利です。",
+    "howTo": [
+      "フィールドまたは注釈付きPDFをアップロードします。",
+      "フラット化を実行してレイヤーをページに統合します。",
+      "フラット化したPDFをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf フラット化",
+      "flatten pdf",
+      "フォーム 焼き付け",
+      "flatten form"
+    ]
+  },
+  "split-pdf": {
+    "name": "PDFを分割",
+    "shortName": "Split PDF",
+    "summary": "ページ範囲の抽出や全ページ個別ファイル化ができます。",
+    "description": "大きなPDFから章・請求書・スキャン1枚ずつを切り出します。範囲指定または全ページ分割で、ZIPや個別ファイルをダウンロードできます。",
+    "howTo": [
+      "分割するPDFをアップロードします。",
+      "抽出するページまたは範囲を選びます。",
+      "分割結果をダウンロードします。"
+    ],
+    "keywords": [
+      "pdf 分割",
+      "split pdf",
+      "ページ 抽出",
+      "pdf 分ける"
+    ]
+  },
+  "merge-pdf": {
+    "name": "PDFを結合",
+    "shortName": "Merge PDFs",
+    "summary": "複数PDFを指定した順で1ファイルにまとめます。",
+    "description": "レポート、スキャン、添付ファイルを1つのPDFに結合します。結合前に並べ替えでき、処理はブラウザ内で完結します。",
+    "howTo": [
+      "PDFを2つ以上追加します。",
+      "ドラッグで希望の順序に並べます。",
+      "結合してPDFをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf 結合",
+      "merge pdf",
+      "pdf まとめる",
+      "pdf 合体"
+    ]
+  },
+  "rotate-pdf": {
+    "name": "ページを回転",
+    "shortName": "Rotate Pages",
+    "summary": "横向きスキャンを90°単位で直します。",
+    "description": "1ページまたは全文書を回転して向きを修正できます。再スキャンせず、結合やメール送信前に手早く調整できます。",
+    "howTo": [
+      "PDFを開きます。",
+      "ページを選び左右に回転します。",
+      "回転後のPDFを保存します。"
+    ],
+    "keywords": [
+      "pdf 回転",
+      "rotate pdf",
+      "横向き pdf",
+      "ページ 向き 修正"
+    ]
+  },
+  "reorder-pdf": {
+    "name": "ページ順を変更",
+    "shortName": "Reorder Pages",
+    "summary": "サムネイルをドラッグして順序を入れ替えます。",
+    "description": "別紙を先頭に、署名を末尾に、混ざったスキャン順を直すなど、視覚的にページを並べ替えてから書き出せます。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "サムネイルをドラッグして新しい順序にします。",
+      "並べ替えたファイルをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf ページ 順序",
+      "reorder pdf",
+      "ページ 並べ替え",
+      "pdf 並び替え"
+    ]
+  },
+  "delete-pages": {
+    "name": "ページを削除",
+    "shortName": "Delete Pages",
+    "summary": "不要なページを数クリックで削除します。",
+    "description": "白紙・重複・不要ページを選んで削除し、共有前にファイルをすっきりさせられます。",
+    "howTo": [
+      "PDFを読み込みます。",
+      "削除するページを選択します。",
+      "トリミング後のPDFを書き出します。"
+    ],
+    "keywords": [
+      "pdf ページ 削除",
+      "delete pdf pages",
+      "pdf トリミング",
+      "ページ 消す"
+    ]
+  },
+  "compress-pdf": {
+    "name": "PDFを圧縮",
+    "shortName": "Compress PDF",
+    "summary": "メール添付やアップロード向けに容量を小さくします。",
+    "description": "画像解像度やストリームを調整し、大きなスキャンも添付上限に収めやすくします。圧縮はローカルで行い、送信前に画質を確認できます。",
+    "howTo": [
+      "圧縮するPDFをアップロードします。",
+      "画質またはサイズ目標を選びます。",
+      "小さくなったPDFをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf 圧縮",
+      "compress pdf",
+      "pdf 容量 削減",
+      "pdf 軽量化"
+    ]
+  },
+  "page-numbers": {
+    "name": "ページ番号を追加",
+    "shortName": "Page Numbers",
+    "summary": "全ページに統一したページ番号を付けます。",
+    "description": "ヘッダーまたはフッターに、開始番号や形式を指定してページ番号を配置できます。説明資料や印刷物に便利です。",
+    "howTo": [
+      "PDFを開きます。",
+      "位置・スタイル・開始番号を選びます。",
+      "適用して番号付きPDFをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf ページ番号",
+      "page numbers pdf",
+      "番号 付与 pdf"
+    ]
+  },
+  "watermark-pdf": {
+    "name": "PDFに透かし",
+    "shortName": "Watermark",
+    "summary": "全ページにテキストまたは画像の透かしを追加します。",
+    "description": "下書きに「CONFIDENTIAL」、ロゴ、レビュー用ブランド表示など、半透明のオーバーレイを付けられます。不透明度と位置を調整してから書き出します。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "透かしテキストを入力するか画像を選びます。",
+      "プレビューして透かし付きファイルをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf 透かし",
+      "watermark pdf",
+      "pdf ウォーターマーク",
+      "下書き 印"
+    ]
+  },
+  "crop-pdf": {
+    "name": "PDFをトリミング",
+    "shortName": "Crop PDF",
+    "summary": "余白やページ枠を内容に合わせて切り取ります。",
+    "description": "スキャナーの枠や広い余白を削り、各ページを内容ぴったりに整えます。ページ単位または全文書に適用できます。",
+    "howTo": [
+      "トリミングツールでPDFを読み込みます。",
+      "サムネイルで枠を描くか、一括余白を指定します。",
+      "トリミング後のPDFを書き出します。"
+    ],
+    "keywords": [
+      "pdf トリミング",
+      "crop pdf",
+      "余白 削除 pdf",
+      "pdf 切り取り"
+    ]
+  },
+  "extract-pages": {
+    "name": "ページを抽出",
+    "shortName": "Extract Pages",
+    "summary": "選んだページだけを新しいPDFにします。",
+    "description": "必要なページ（別紙、署名、章など）だけを別ファイルとしてダウンロードでき、再スキャンは不要です。",
+    "howTo": [
+      "元のPDFをアップロードします。",
+      "抽出するページを選択します。",
+      "選んだページのみの新しいPDFをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf ページ 抽出",
+      "extract pages",
+      "ページ 保存 pdf"
+    ]
+  },
+  "organize-pdf": {
+    "name": "PDFを整理",
+    "shortName": "Organize PDF",
+    "summary": "並べ替え・削除を1つの画面で行えます。",
+    "description": "ページソート用のワークスペースで、サムネイルのドラッグ、不要ページ削除、きれいなパケットの書き出しができます。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "ページをドラッグして不要シートを削除します。",
+      "整理したPDFをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf 整理",
+      "organize pdf",
+      "ページ 管理 pdf",
+      "pdf ソート"
+    ]
+  },
+  "repair-pdf": {
+    "name": "PDFを修復",
+    "shortName": "Repair PDF",
+    "summary": "破損や開けないPDFの修復を試みます。",
+    "description": "壊れた相互参照の再構築やストリームの再保存により、ダウンロードできなかったファイルを開ける場合があります。深刻な破損は元データが必要なこともあります。",
+    "howTo": [
+      "問題のあるPDFをアップロードします。",
+      "修復を実行し、ローカル処理を待ちます。",
+      "修復版をビューアで開いて確認します。"
+    ],
+    "keywords": [
+      "pdf 修復",
+      "repair pdf",
+      "pdf 壊れた",
+      "pdf 復旧"
+    ]
+  },
+  "grayscale-pdf": {
+    "name": "PDFをグレースケール",
+    "shortName": "Grayscale",
+    "summary": "カラーページをグレーにして印刷コストを抑えます。",
+    "description": "カラースキャンや写真をグレースケールPDFに変換し、トナー使用量を減らしたり、白黒提出が必要な手続きに対応できます。",
+    "howTo": [
+      "カラーPDFを選択します。",
+      "全ページにグレースケールを適用します。",
+      "グレー版PDFをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf 白黒",
+      "grayscale pdf",
+      "pdf モノクロ",
+      "カラー pdf 変換"
+    ]
+  },
+  "remove-metadata": {
+    "name": "メタデータを削除",
+    "shortName": "Strip Metadata",
+    "summary": "作者・タイトル・埋め込みXMPなどを除去します。",
+    "description": "公開や開示前に、見えない文書プロパティを洗い出し、識別情報を減らしたPDFを書き出せます。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "クリアされるメタデータ項目を確認します。",
+      "サニタイズしたPDFをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf メタデータ 削除",
+      "remove metadata",
+      "pdf プロパティ 消す"
+    ]
+  },
+  "sign-pdf": {
+    "name": "PDFに署名",
+    "shortName": "Sign PDF",
+    "summary": "PC上で描画または入力して契約書・フォームに署名します。",
+    "description": "マウス、スタylus、入力文字でPDFに署名を追加し、すぐに署名済みコピーを書き出せます。対面や同一端末での署名に適しています。",
+    "howTo": [
+      "署名するPDFをアップロードします。",
+      "ページ上に署名を作成・配置します。",
+      "署名済み文書をダウンロードします。"
+    ],
+    "keywords": [
+      "pdf 署名",
+      "sign pdf",
+      "電子署名 pdf",
+      "pdf サイン"
+    ]
+  },
+  "send-for-signature": {
+    "name": "署名準備",
+    "shortName": "Send to Sign",
+    "summary": "署名欄を配置し、署名用パケットを書き出します。",
+    "description": "署名者が書く位置・日付・イニシャル欄をマークし、相手が記入できるPDFを準備します。myonlinepdfeditor.comはブラウザ上の欄設定に特化し、配信はご自身で行います。",
+    "howTo": [
+      "契約書などをアップロードします。",
+      "署名者ごとに署名欄・日付欄を追加します。",
+      "準備したPDFをダウンロードして共有します。"
+    ],
+    "keywords": [
+      "署名 依頼 pdf",
+      "send for signature",
+      "署名欄 pdf",
+      "電子署名 準備"
+    ]
+  },
+  "send-envelopes": {
+    "name": "e署名用エンベロープ",
+    "shortName": "Envelopes",
+    "summary": "複数PDFを1つの署名パッケージにまとめます。",
+    "description": "複数文書を1つのエンベロープ用チェックリストに束ね、ZIP用PDFセットと署名者リストをダウンロードして、ご自身で送付できます。",
+    "howTo": [
+      "エンベロープ用にPDFを1つ以上アップロードします。",
+      "チェックリストに署名者名とメールを入力します。",
+      "パッケージをダウンロードして送付します。"
+    ],
+    "keywords": [
+      "電子署名 一括",
+      "envelope pdf",
+      "複数文書 署名",
+      "esignature envelopes"
+    ]
+  },
+  "in-person-signing": {
+    "name": "対面署名",
+    "shortName": "In-person Sign",
+    "summary": "同じ端末でその場の署名を集めます。",
+    "description": "端末を署名者に渡し、描画または入力署名を取得して、完了PDFをすぐにダウンロードできます。メールの往復は不要です。",
+    "howTo": [
+      "端末でPDFを開きます。",
+      "署名者に端末を渡します。",
+      "署名後、完成版をダウンロードします。"
+    ],
+    "keywords": [
+      "対面 署名",
+      "in person signing",
+      "同一端末 署名",
+      "窓口 署名 pdf"
+    ]
+  },
+  "kiosk-mode": {
+    "name": "キオスクモード（モバイル）",
+    "shortName": "Kiosk Mode",
+    "summary": "スマホ・タブレット向けの全画面署名レイアウトです。",
+    "description": "ロビーやイベント向けのモバイルファースト署名UIです。PDFを開き、指で署名を取り込み、その場でダウンロードできます。",
+    "howTo": [
+      "スマホまたはタブレットでキオスクモードを開きます。",
+      "署名する文書を読み込みます。",
+      "署名を取得してダウンロードします。"
+    ],
+    "keywords": [
+      "キオスク 署名",
+      "kiosk mode pdf",
+      "タブレット pdf 署名",
+      "モバイル 署名"
+    ]
+  },
+  "bulk-sending": {
+    "name": "一括送付準備",
+    "shortName": "Bulk Send",
+    "summary": "1つのテンプレートを多数の宛先向けに準備します。",
+    "description": "PDFテンプレートと受信者リストから、宛先ごとのチェックリストと配布用コピーを生成します。",
+    "howTo": [
+      "PDFテンプレートをアップロードします。",
+      "受信者の名前とメールを1行ずつ貼り付けます。",
+      "一括パッケージのチェックリストをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf 一括送信",
+      "bulk send pdf",
+      "大量 署名 依頼",
+      "batch send"
+    ]
+  },
+  "add-comments": {
+    "name": "PDFにコメント",
+    "shortName": "Comments",
+    "summary": "レビュー用に付箋や吹き出しを添付します。",
+    "description": "フィードバックが必要な箇所にコメントマーカーを置けます。注釈は埋め込まれ、フラット化するか次のレビュー用に残せます。",
+    "howTo": [
+      "下書きPDFをアップロードします。",
+      "該当ページにコメントを追加します。",
+      "書き出して協力者に送ります。"
+    ],
+    "keywords": [
+      "pdf コメント",
+      "annotate pdf",
+      "pdf レビュー",
+      "付箋 pdf"
+    ]
+  },
+  "share-via-link": {
+    "name": "リンクで共有（書き出し）",
+    "shortName": "Share Link",
+    "summary": "リンク添付向けに最適化したPDFを書き出します。",
+    "description": "編集を仕上げ、必要ならフラット化して、メールやクラウド向けのきれいなPDFを出力します。myonlinepdfeditor.comはファイルをホストしません。共有先はご自身で管理します。",
+    "howTo": [
+      "PDFの編集を完了します。",
+      "書き出しで最終ファイルを生成します。",
+      "お好みの共有サービスにアップロードします。"
+    ],
+    "keywords": [
+      "pdf 共有",
+      "share pdf",
+      "pdf リンク",
+      "pdf 送る"
+    ]
+  },
+  "share-via-email": {
+    "name": "メールで共有",
+    "shortName": "Email Share",
+    "summary": "PDFについてのメール下書きを開きます。",
+    "description": "件名・本文付きのmailto下書きを準備します。添付は端末にダウンロードしたPDFをご自身で付けてください。myonlinepdfeditor.comはファイルをアップロードしません。",
+    "howTo": [
+      "PDFを仕上げてダウンロードします。",
+      "宛先メールとメモを入力します。",
+      "メールクライアントを開き、ダウンロードしたファイルを添付します。"
+    ],
+    "keywords": [
+      "pdf メール",
+      "email pdf",
+      "pdf メール 送信",
+      "share pdf email"
+    ]
+  },
+  "fax": {
+    "name": "FAX用PDF",
+    "shortName": "Fax",
+    "summary": "オンラインFAXサービス向けに印刷品質PDFを準備します。",
+    "description": "myonlinepdfeditor.com自体はFAX回線を提供しません。お使いのオンラインFAXサービス向けに、きれいなPDFをダウンロードしてご利用ください。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "FAX用コピーをダウンロードします。",
+      "利用中のオンラインFAXにそのファイルをアップロードします。"
+    ],
+    "keywords": [
+      "pdf fax",
+      "fax pdf",
+      "オンライン fax",
+      "pdf ファックス"
+    ]
+  },
+  "pdf-status": {
+    "name": "PDFステータス",
+    "shortName": "PDF Status",
+    "summary": "ブラウザ内で文書ステータスとメモを記録します。",
+    "description": "下書き・送信済み・完了などの状態とメモをローカル保存できます。データは端末のブラウザに残り、個人の進捗管理に向いています。",
+    "howTo": [
+      "文書名とステータスを選びます。",
+      "必要ならメモを追加します。",
+      "保存します（このブラウザのみに保持されます）。"
+    ],
+    "keywords": [
+      "pdf 管理",
+      "pdf status",
+      "文書 追跡",
+      "署名 状況"
+    ]
+  },
+  "create-templates": {
+    "name": "テンプレート作成",
+    "shortName": "Templates",
+    "summary": "ラベルとフィールド付きの再利用可能なフォームレイアウトを作ります。",
+    "description": "固定テキスト、フィールド、ブランド要素をマスターテンプレートにまとめ、複製して繰り返し送付できます。設計はすべてmyonlinepdfeditor.com内でローカルに行われます。",
+    "howTo": [
+      "PDFまたは空のエディターから開始します。",
+      "ラベル・フィールド・レイアウトを追加します。",
+      "再利用用にテンプレートを保存します。"
+    ],
+    "keywords": [
+      "pdf テンプレート",
+      "フォーム テンプレート",
+      "再利用 pdf",
+      "template pdf"
+    ]
+  },
+  "create-fillable-forms": {
+    "name": "入力フォームを作成・記入",
+    "shortName": "Fillable Forms",
+    "summary": "ブラウザで既存フォームに回答を入力します。",
+    "description": "印刷せずにインタラクティブPDFフォームを記入できます。テキストボックスやチェックに入力し、完了後に保存またはフラット化します。",
+    "howTo": [
+      "入力可能なPDFをアップロードします。",
+      "各フィールドをクリックして回答します。",
+      "記入済みフォームをダウンロードします。"
+    ],
+    "keywords": [
+      "入力 pdf",
+      "fillable pdf",
+      "pdf フォーム 入力",
+      "フォーム 記入"
+    ]
+  },
+  "document-assistant": {
+    "name": "ドキュメントアシスタント",
+    "shortName": "Assistant",
+    "summary": "PDFから抽出したテキストの整理・推敲をブラウザ内で行います。",
+    "description": "PDFテキストをローカルで抽出し、軽量ヘルパーで要約案や次のステップの下書きを作成できます。文書内容はmyonlinepdfeditor.comサーバーに送信されません。",
+    "howTo": [
+      "PDFをアップロードして読み取れるテキストを抽出します。",
+      "そのテキストでアシスタントにアウトラインや推敲を依頼します。",
+      "結果をコピーしてワークフローに戻します。"
+    ],
+    "keywords": [
+      "pdf アシスタント",
+      "pdf ai",
+      "文書 ヘルパー",
+      "local pdf ai"
+    ]
+  },
+  "simplify-document": {
+    "name": "文書を平易化",
+    "shortName": "Simplify",
+    "summary": "難しい文章をわかりやすい表現に書き換える案をローカルで作成します。",
+    "description": "専門用語や堅い文言を、抽出テキストをブラウザ内で平易化して読みやすくします。文書に反映する前に内容を確認できます。",
+    "howTo": [
+      "端末上でPDFからテキストを抽出します。",
+      "平易化を実行してやさしい版を取得します。",
+      "要約や研修資料などに利用します。"
+    ],
+    "keywords": [
+      "pdf 平易化",
+      "simplify pdf",
+      "やさしい日本語 pdf",
+      "readable pdf"
+    ]
+  },
+  "summarize-key-points": {
+    "name": "要点を要約",
+    "shortName": "Summarize",
+    "summary": "抽出テキストから短い要点リストを作成します。",
+    "description": "端末上でテキストを取り出し、長いレポートや記事の箇条書き要約を作れます。精読前の概要把握に便利です。",
+    "howTo": [
+      "PDFを開きローカルでテキストを抽出します。",
+      "抽出内容で要約を実行します。",
+      "メモやメール用に要約をコピーします。"
+    ],
+    "keywords": [
+      "pdf 要約",
+      "summarize pdf",
+      "pdf まとめ",
+      "tldr pdf"
+    ]
+  },
+  "ask-document": {
+    "name": "文書に質問",
+    "shortName": "Ask Document",
+    "summary": "抽出したテキストに対して質問し、関連箇所を探します。",
+    "description": "質問を入力し、ページテキストから関連する文をローカル検索できます。全文PDFをクラウドQ&Aに送る必要はありません。",
+    "howTo": [
+      "PDFを読み込みテキストを抽出します。",
+      "内容について質問を入力します。",
+      "ローカルインデックスから引用箇所を確認します。"
+    ],
+    "keywords": [
+      "pdf 質問",
+      "chat with pdf",
+      "pdf q&a",
+      "pdf 検索 質問"
+    ]
+  },
+  "pdf-audit-trail": {
+    "name": "PDF監査証跡",
+    "shortName": "Audit Trail",
+    "summary": "版・日付・レビュー情報を簡易監査用に印字します。",
+    "description": "レビュー日や文書IDなどの監査スタンプを追加できます。本格的なコンプライアンスログの代わりではありませんが、承認版の識別に役立ちます。",
+    "howTo": [
+      "管理対象文書を開きます。",
+      "フッターや表紙に監査スタンプを適用します。",
+      "スタンプ付き版を保存・配布します。"
+    ],
+    "keywords": [
+      "pdf 監査",
+      "audit trail pdf",
+      "版 管理 pdf",
+      "承認 スタンプ"
+    ]
+  },
+  "certify-pdf": {
+    "name": "PDFを認定",
+    "shortName": "Certify PDF",
+    "summary": "正本であることを示す認定表示を付けます。",
+    "description": "このコピーが正式版であることを示す認定文・スタンプを文書に配置します。フラット化やパスワード保護と併用すると引き渡しが強くなります。",
+    "howTo": [
+      "最終版PDFをアップロードします。",
+      "認定文言またはスタンプを追加します。",
+      "認定済みファイルを書き出して保管します。"
+    ],
+    "keywords": [
+      "pdf 認定",
+      "certify pdf",
+      "正式版 pdf",
+      "final pdf stamp"
+    ]
+  },
+  "set-pdf-password": {
+    "name": "PDFにパスワード",
+    "shortName": "Set Password",
+    "summary": "共有前にPDFをパスワードで暗号化します。",
+    "description": "開くパスワードを設定し、合言葉を知る人だけが閲覧できるようにします。暗号化はブラウザ内で行われます。強力なパスワードを安全な経路で共有してください。",
+    "howTo": [
+      "保護するPDFをアップロードします。",
+      "強いパスワードを入力し確認します。",
+      "暗号化されたPDFをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf パスワード",
+      "password protect pdf",
+      "pdf 暗号化",
+      "pdf ロック"
+    ]
+  },
+  "readable-pdf": {
+    "name": "読みやすいPDF（テキスト抽出）",
+    "shortName": "Readable PDF",
+    "summary": "PDFからテキストを取り出して読みやすく再利用します。",
+    "description": "ページごとにプレーンテキストを抽出し、コピー・検索・再利用できます。処理はブラウザ内で完結します。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "ローカルでテキストを抽出します。",
+      "テキストをコピーまたはダウンロードします。"
+    ],
+    "keywords": [
+      "pdf テキスト 抽出",
+      "readable pdf",
+      "pdf to text",
+      "pdf 読みやすく"
+    ]
+  },
+  "search-for-pdf": {
+    "name": "PDF内を検索",
+    "shortName": "Search PDF",
+    "summary": "アップロードせずPDF内のキーワードを検索します。",
+    "description": "抽出テキストから一致箇所を探し、ページスニペットへジャンプできます。契約書、マニュアル、テキストPDFに便利です。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "検索語を入力します。",
+      "一致したページの抜粋を確認します。"
+    ],
+    "keywords": [
+      "pdf 検索",
+      "search pdf",
+      "pdf キーワード",
+      "pdf 中 探す"
+    ]
+  },
+  "export-pdf": {
+    "name": "エクスポート",
+    "shortName": "Export",
+    "summary": "共有・保管向けのきれいなPDFコピーを書き出します。",
+    "description": "PDFをローカルでポータブルな形式に再保存します。軽い最適化でアプリ間の移動もしやすくできます。",
+    "howTo": [
+      "エクスポートするPDFをアップロードします。",
+      "エクスポートを選びます。",
+      "書き出したファイルをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf エクスポート",
+      "export pdf",
+      "pdf 書き出し",
+      "pdf 保存"
+    ]
+  },
+  "download-pdf": {
+    "name": "ダウンロード",
+    "shortName": "Download",
+    "summary": "myonlinepdfeditor.comで開いたPDFを端末に保存します。",
+    "description": "ブラウザツールキットでPDFを開き、編集や変換後すぐにデバイスへ保存できます。",
+    "howTo": [
+      "PDFを選択します。",
+      "ダウンロードをクリックします。",
+      "ダウンロードフォルダでファイルを確認します。"
+    ],
+    "keywords": [
+      "pdf ダウンロード",
+      "download pdf",
+      "pdf 保存",
+      "pdf 取得"
+    ]
+  },
+  "print-out": {
+    "name": "印刷",
+    "shortName": "Print",
+    "summary": "システムの印刷ダイアログを開きます。",
+    "description": "PDFを読み込み、ブラウザの印刷ダイアログから紙印刷や「PDFとして保存」プリンターを選べます。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "印刷をクリックします。",
+      "プリンターまたはPDFとして保存を選びます。"
+    ],
+    "keywords": [
+      "pdf 印刷",
+      "print pdf",
+      "pdf プリント",
+      "pdf 印刷 無料"
+    ]
+  },
+  "unlock-pdf": {
+    "name": "PDFのロック解除",
+    "shortName": "Unlock PDF",
+    "summary": "パスワードが分かる場合に開くパスワードを外します。",
+    "description": "閲覧権限のあるパスワード保護PDFを復号し、結合・印刷・他ツール編集に使えるようにします。正しいパスワードの入力が必要です。",
+    "howTo": [
+      "ロックされたPDFをアップロードします。",
+      "開くパスワードを入力します。",
+      "ロック解除したPDFをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf パスワード 解除",
+      "unlock pdf",
+      "pdf 復号",
+      "pdf unlocker"
+    ]
+  },
+  "compare-pdf": {
+    "name": "PDFを比較",
+    "shortName": "Compare PDF",
+    "summary": "2つのPDF版を並べて差分を確認します。",
+    "description": "原版と改訂版を読み込み、ページごとにテキストやレイアウトの変更を確認できます。契約のレッドラインやコンプライアンスレビューに便利です。",
+    "howTo": [
+      "比較するPDFを2つアップロードします。",
+      "版を揃えて比較を実行します。",
+      "差分を確認し、利用可能なら要約を書き出します。"
+    ],
+    "keywords": [
+      "pdf 比較",
+      "compare pdf",
+      "pdf 差分",
+      "pdf diff"
+    ]
+  },
+  "heic-to-pdf": {
+    "name": "HEICをPDFに",
+    "shortName": "HEIC to PDF",
+    "summary": "iPhoneのHEIC写真をブラウザでPDFにします。",
+    "description": "HEIC/HEIF画像からPDFを作成します。ブラウザのデコーダに依存します。HEIC非対応の場合は写真アプリからJPEGを書き出してください。",
+    "howTo": [
+      ".heicを1枚以上アップロードします。",
+      "ローカル変換を待ちます。",
+      "PDFをダウンロードします。"
+    ],
+    "keywords": [
+      "heic pdf",
+      "heic to pdf",
+      "iphone 写真 pdf",
+      "heif pdf"
+    ]
+  },
+  "tiff-to-pdf": {
+    "name": "TIFFをPDFに",
+    "shortName": "TIFF to PDF",
+    "summary": "TIFFスキャンを複数ページPDFにします。",
+    "description": "TIFF/TIFスキャンをローカルでPDFページに変換します。マルチページTIFFはブラウザ依存で、単一ページTIFFが最も安定します。",
+    "howTo": [
+      ".tiffまたは.tifをアップロードします。",
+      "ローカルで変換します。",
+      "PDFをダウンロードします。"
+    ],
+    "keywords": [
+      "tiff pdf",
+      "tif to pdf",
+      "スキャン tiff pdf",
+      "tiff 変換"
+    ]
+  },
+  "svg-to-pdf": {
+    "name": "SVGをPDFに",
+    "shortName": "SVG to PDF",
+    "summary": "SVGグラフィックをPDFページにラスタライズします。",
+    "description": "ブラウザでSVGをPDFページとしてレンダリングします。複雑なフィルタは平坦化されることがあるため、ロゴやアイコンはプレビューで確認してください。",
+    "howTo": [
+      ".svgファイルをアップロードします。",
+      "変換します。",
+      "PDFをダウンロードします。"
+    ],
+    "keywords": [
+      "svg pdf",
+      "svg to pdf",
+      "ベクター pdf",
+      "svg 変換"
+    ]
+  },
+  "markdown-to-pdf": {
+    "name": "MarkdownをPDFに",
+    "shortName": "Markdown to PDF",
+    "summary": ".mdメモを印刷可能なPDFにします。",
+    "description": "一般的なMarkdown記法を整理してPDFに配置します。READMEの書き出しや簡易メモ向けで、完全なCommonMark印刷エンジンではありません。",
+    "howTo": [
+      ".mdファイルをアップロードします。",
+      "PDFに変換します。",
+      "ダウンロードします。"
+    ],
+    "keywords": [
+      "markdown pdf",
+      "md to pdf",
+      "マークダウン pdf",
+      "readme pdf"
+    ]
+  },
+  "zip-to-pdf": {
+    "name": "ZIPをPDFに",
+    "shortName": "ZIP to PDF",
+    "summary": "ZIP内の画像/PDFを1つのPDFにまとめます。",
+    "description": "画像やPDFを含む.zipをアップロードすると、対応ファイルをローカルで展開・結合して1つのPDFにします。",
+    "howTo": [
+      ".zipをアップロードします。",
+      "ローカルで展開・結合します。",
+      "結合PDFをダウンロードします。"
+    ],
+    "keywords": [
+      "zip pdf",
+      "zip to pdf",
+      "フォルダ pdf",
+      "解凍 pdf 結合"
+    ]
+  },
+  "scan-pdf": {
+    "name": "スキャンをPDFに",
+    "shortName": "Scan to PDF",
+    "summary": "スマホやスキャナー画像からPDFを作成します。",
+    "description": "JPG/PNG/WebPなどブラウザが読めるスキャン画像を、ドライバーなしで複数ページPDFにまとめます。",
+    "howTo": [
+      "スキャン画像をアップロードします。",
+      "選択順でページ順を整えます。",
+      "PDFをダウンロードします。"
+    ],
+    "keywords": [
+      "スキャン pdf",
+      "scan to pdf",
+      "カメラ pdf",
+      "画像 スキャン pdf"
+    ]
+  },
+  "redact-pdf": {
+    "name": "PDFを墨消し",
+    "shortName": "Redact PDF",
+    "summary": "共有前にページ全体を黒を黒塗りで隠します。",
+    "description": "選択ページを不透明な黒矩形で覆い、機密ページを丸ごと非表示にします。領域単位の精密墨消しは、その後PDF編集の注釈もご検討ください。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "完全に墨消しするページ番号を入力します。",
+      "墨消し後のPDFをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf 墨消し",
+      "redact pdf",
+      "pdf 黒塗り",
+      "pdf 秘匿"
+    ]
+  },
+  "invert-pdf": {
+    "name": "PDFを反転",
+    "shortName": "Invert PDF",
+    "summary": "ページ色を反転して夜間閲覧や印刷実験に使います。",
+    "description": "各ページをラスタライズして色を反転します。ダーク背景化やアクセシビリティのコントラスト試験に使えます。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "反転を実行します。",
+      "ダウンロードします。"
+    ],
+    "keywords": [
+      "pdf 反転",
+      "invert pdf",
+      "pdf ネガ",
+      "ダークモード pdf"
+    ]
+  },
+  "n-up-pdf": {
+    "name": "N-up PDF",
+    "shortName": "Pages per sheet",
+    "summary": "1枚に2ページまたは4ページを配置します。",
+    "description": "元ページを2-upまたは4-upで1シートにまとめ、配布資料・校正・冊子下書きに使えます。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "2-upまたは4-upを選びます。",
+      "ダウンロードします。"
+    ],
+    "keywords": [
+      "n-up pdf",
+      "2-up pdf",
+      "4-up pdf",
+      "1枚に複数ページ",
+      "impose pdf"
+    ]
+  },
+  "overlay-pdf": {
+    "name": "PDFを重ね合わせ",
+    "shortName": "Overlay PDF",
+    "summary": "別PDFのページをベース文書に重ねます。",
+    "description": "ベースPDFとオーバーレイPDFを読み込み、オーバーレイ1ページ目をベース各ページに描画します。レターヘッドやスタンプに便利です。",
+    "howTo": [
+      "先にベースPDFをアップロードします。",
+      "次にオーバーレイPDFをアップロードします。",
+      "重ね合わせ結果をダウンロードします。"
+    ],
+    "keywords": [
+      "pdf 重ね合わせ",
+      "overlay pdf",
+      "レターヘッド pdf",
+      "pdf スタンプ"
+    ]
+  },
+  "reverse-pages": {
+    "name": "ページ順を反転",
+    "shortName": "Reverse Pages",
+    "summary": "最終ページから先頭へ順序を入れ替えます。",
+    "description": "PDFのページ列を逆順にします。上下逆にスキャンした束や両面印刷の準備に使えます。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "反転を実行します。",
+      "ダウンロードします。"
+    ],
+    "keywords": [
+      "pdf ページ 逆順",
+      "reverse pdf pages",
+      "ページ 順 反転"
+    ]
+  },
+  "change-page-size": {
+    "name": "ページサイズ変更",
+    "shortName": "Page Size",
+    "summary": "Letter・A4・Legalにページを合わせます。",
+    "description": "デスクトップ印刷ダイアログなしで、各ページを指定用紙サイズに拡大縮小・中央配置します。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "Letter、A4、Legalから選びます。",
+      "ダウンロードします。"
+    ],
+    "keywords": [
+      "pdf 用紙サイズ",
+      "a4 letter 変換",
+      "pdf ページ サイズ",
+      "paper size pdf"
+    ]
+  },
+  "rasterize-pdf": {
+    "name": "PDFをラスタライズ",
+    "shortName": "Rasterize",
+    "summary": "各ページを画像化して新しいPDFにします。",
+    "description": "全ページを画像レイヤーとして再構築します。印刷前、墨消し、フォント埋め込み問題の回避に役立つことがあります。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "ローカルでラスタライズします。",
+      "ダウンロードします。"
+    ],
+    "keywords": [
+      "pdf ラスタライズ",
+      "rasterize pdf",
+      "pdf 画像化",
+      "flatten pdf images"
+    ]
+  },
+  "pdf-to-tiff": {
+    "name": "PDFをTIFFに",
+    "shortName": "PDF to TIFF",
+    "summary": "PDFページを高品質画像として書き出します（PNG代替）。",
+    "description": "ブラウザはマルチページTIFFの書き込みに弱いため、myonlinepdfeditor.comは鮮明なPNGページ画像を出力します。TIFF保存はスキャンソフトで行えます。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "ページ画像をエクスポートします。",
+      "各ファイルを保存します。"
+    ],
+    "keywords": [
+      "pdf tiff",
+      "pdf to tiff",
+      "pdf ページ 画像",
+      "pdf tif"
+    ]
+  },
+  "pdf-to-pdfa": {
+    "name": "PDFをPDF/A向けに準備",
+    "shortName": "PDF/A",
+    "summary": "PDF/Aワークフロー向けのアーカイブ書き出しを準備します。",
+    "description": "完全なPDF/A検証には専用コンバーターが必要です。myonlinepdfeditor.comはメタデータ整理のガイド付きパッケージを提供し、PDF/Aチェッカーでの最終確認を支援します。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "クリーンな書き出しパッケージをダウンロードします。",
+      "必要ならPDF/Aチェッカーで検証します。"
+    ],
+    "keywords": [
+      "pdf pdf/a",
+      "pdfa",
+      "アーカイブ pdf",
+      "pdf/a 変換"
+    ]
+  },
+  "translate-pdf": {
+    "name": "PDFを翻訳",
+    "shortName": "Translate PDF",
+    "summary": "テキストを抽出し、翻訳作業用の下書きを作成します。",
+    "description": "選択可能なPDFテキストをドキュメントアシスタントに渡し、翻訳案を作成できます。画像のみのスキャンは先にReadable PDF（テキスト抽出）をご利用ください。",
+    "howTo": [
+      "テキスト選択可能なPDFをアップロードします。",
+      "翻訳用のアシスタントプロンプトを開きます。",
+      "翻訳テキストをコピーまたはダウンロードします。"
+    ],
+    "keywords": [
+      "pdf 翻訳",
+      "translate pdf",
+      "pdf translation",
+      "pdf 英語 日本語"
+    ]
+  },
+  "heic-to-jpg": {
+    "name": "HEICをJPGに",
+    "shortName": "HEIC to JPG",
+    "summary": "HEIC写真をJPEGに変換します。",
+    "description": "ブラウザが対応している場合、HEIC/HEIFをデコードしてJPGファイルをダウンロードできます。",
+    "howTo": [
+      "HEICファイルをアップロードします。",
+      "変換します。",
+      "JPGをダウンロードします。"
+    ],
+    "keywords": [
+      "heic jpg",
+      "heic to jpg",
+      "heic jpeg",
+      "iphone 写真 jpg"
+    ]
+  },
+  "heic-to-png": {
+    "name": "HEICをPNGに",
+    "shortName": "HEIC to PNG",
+    "summary": "HEIC写真をPNGに変換します。",
+    "description": "ブラウザでデコードできるHEIC/HEIFをロスレスPNGとして書き出します。",
+    "howTo": [
+      "HEICをアップロードします。",
+      "変換します。",
+      "PNGをダウンロードします。"
+    ],
+    "keywords": [
+      "heic png",
+      "heic to png",
+      "heif png"
+    ]
+  },
+  "webp-to-jpg": {
+    "name": "WebPをJPGに",
+    "shortName": "WebP to JPG",
+    "summary": "WebP画像をJPEGに変換します。",
+    "description": "WebP非対応のアプリ向けに、WebPをJPGへ再エンコードします。",
+    "howTo": [
+      "WebPをアップロードします。",
+      "変換します。",
+      "JPGをダウンロードします。"
+    ],
+    "keywords": [
+      "webp jpg",
+      "webp to jpg",
+      "webp jpeg"
+    ]
+  },
+  "webp-to-png": {
+    "name": "WebPをPNGに",
+    "shortName": "WebP to PNG",
+    "summary": "WebP画像をPNGに変換します。",
+    "description": "透過を扱いやすいワークフロー向けに、WebPをPNGへ再エンコードします。",
+    "howTo": [
+      "WebPをアップロードします。",
+      "変換します。",
+      "PNGをダウンロードします。"
+    ],
+    "keywords": [
+      "webp png",
+      "webp to png"
+    ]
+  },
+  "svg-to-jpg": {
+    "name": "SVGをJPGに",
+    "shortName": "SVG to JPG",
+    "summary": "SVGをJPEGにラスタライズします。",
+    "description": "ブラウザでSVGグラフィックをJPGとしてレンダリングします。",
+    "howTo": [
+      "SVGをアップロードします。",
+      "変換します。",
+      "JPGをダウンロードします。"
+    ],
+    "keywords": [
+      "svg jpg",
+      "svg to jpg",
+      "svg jpeg"
+    ]
+  },
+  "svg-to-png": {
+    "name": "SVGをPNGに",
+    "shortName": "SVG to PNG",
+    "summary": "SVGをPNGにラスタライズします。",
+    "description": "透過対応でSVGをPNGとしてレンダリングします。",
+    "howTo": [
+      "SVGをアップロードします。",
+      "変換します。",
+      "PNGをダウンロードします。"
+    ],
+    "keywords": [
+      "svg png",
+      "svg to png"
+    ]
+  },
+  "compress-images": {
+    "name": "画像を圧縮",
+    "shortName": "Compress Images",
+    "summary": "JPEG再圧縮で画像ファイルを小さくします。",
+    "description": "メール送信やPDF詰め込み前に、画像をローカルで圧縮JPEGに再エンコードします。",
+    "howTo": [
+      "画像をアップロードします。",
+      "圧縮します。",
+      "小さくなったJPGをダウンロードします。"
+    ],
+    "keywords": [
+      "画像 圧縮",
+      "compress images",
+      "画像 軽量化",
+      "jpeg 圧縮"
+    ]
+  },
+  "odt-to-pdf": {
+    "name": "ODTをPDFに",
+    "shortName": "ODT to PDF",
+    "summary": "LibreOffice Writer（.odt）をPDFに変換します。",
+    "description": "OpenDocumentのテキストを抽出しローカルでPDFを作成します。複雑なレイアウトはテキストフローに簡略化されます。",
+    "howTo": [
+      ".odtをアップロードします。",
+      "変換します。",
+      "PDFをダウンロードします。"
+    ],
+    "keywords": [
+      "odt pdf",
+      "odt to pdf",
+      "libreoffice writer pdf",
+      "オープンドキュメント pdf"
+    ]
+  },
+  "ods-to-pdf": {
+    "name": "ODSをPDFに",
+    "shortName": "ODS to PDF",
+    "summary": "LibreOffice Calc（.ods）をPDFに変換します。",
+    "description": "ODSシートを表形式テキストとして読み取り、PDFスナップショットとして公開します。",
+    "howTo": [
+      ".odsをアップロードします。",
+      "変換します。",
+      "PDFをダウンロードします。"
+    ],
+    "keywords": [
+      "ods pdf",
+      "ods to pdf",
+      "calc pdf",
+      "スプレッドシート ods pdf"
+    ]
+  },
+  "odp-to-pdf": {
+    "name": "ODPをPDFに",
+    "shortName": "ODP to PDF",
+    "summary": "LibreOffice Impress（.odp）をPDFに変換します。",
+    "description": "ODPからスライドテキストを抽出してPDFに配置します。",
+    "howTo": [
+      ".odpをアップロードします。",
+      "変換します。",
+      "PDFをダウンロードします。"
+    ],
+    "keywords": [
+      "odp pdf",
+      "odp to pdf",
+      "impress pdf",
+      "プレゼン pdf"
+    ]
+  },
+  "odg-to-pdf": {
+    "name": "ODGをPDFに",
+    "shortName": "ODG to PDF",
+    "summary": "LibreOffice Draw（.odg）をPDFに変換します。",
+    "description": "ODG図形からテキスト内容を抽出し、PDFメモシートとしてまとめます。",
+    "howTo": [
+      ".odgをアップロードします。",
+      "変換します。",
+      "PDFをダウンロードします。"
+    ],
+    "keywords": [
+      "odg pdf",
+      "odg to pdf",
+      "draw pdf"
+    ]
+  },
+  "epub-to-pdf": {
+    "name": "EPUBをPDFに",
+    "shortName": "EPUB to PDF",
+    "summary": "EPUB電子書籍をPDFに変換します。",
+    "description": "EPUBのHTML章を展開し、印刷向けのテキストフローPDFとして再構成します。",
+    "howTo": [
+      ".epubをアップロードします。",
+      "変換します。",
+      "PDFをダウンロードします。"
+    ],
+    "keywords": [
+      "epub pdf",
+      "epub to pdf",
+      "電子書籍 pdf",
+      "ebook pdf"
+    ]
+  },
+  "pdf-to-epub": {
+    "name": "PDFをEPUBに",
+    "shortName": "PDF to EPUB",
+    "summary": "抽出可能なPDFテキストをEPUBとして書き出します。",
+    "description": "PDFテキストから最小構成のEPUBを作成し、電子リーダー向けに利用できます。レイアウト重視のPDFは流し組みテキストになります。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "テキストを抽出します。",
+      ".epubをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf epub",
+      "pdf to epub",
+      "pdf 電子書籍"
+    ]
+  },
+  "eml-to-pdf": {
+    "name": "EMLをPDFに",
+    "shortName": "EML to PDF",
+    "summary": "メール（.eml）をPDFに変換します。",
+    "description": "メッセージヘッダーと本文を解析し、メール記録としてPDFアーカイブを作成します。",
+    "howTo": [
+      ".emlをアップロードします。",
+      "変換します。",
+      "PDFをダウンロードします。"
+    ],
+    "keywords": [
+      "eml pdf",
+      "email to pdf",
+      "メール pdf 保存",
+      "eml 変換"
+    ]
+  },
+  "pdf-to-html": {
+    "name": "PDFをHTMLに",
+    "shortName": "PDF to HTML",
+    "summary": "PDFテキストをHTMLページとして書き出します。",
+    "description": "ページテキストをシンプルなHTML文書に抽出し、Web公開や追加編集に使えます。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "書き出します。",
+      ".htmlをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf html",
+      "pdf to html",
+      "pdf html 変換"
+    ]
+  },
+  "pdf-to-markdown": {
+    "name": "PDFをMarkdownに",
+    "shortName": "PDF to Markdown",
+    "summary": "PDFテキストをMarkdownとして書き出します。",
+    "description": "抽出可能なテキストをページ見出し付きの.mdファイルにまとめます。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "書き出します。",
+      ".mdをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf markdown",
+      "pdf to md",
+      "pdf マークダウン"
+    ]
+  },
+  "pdf-to-svg": {
+    "name": "PDFをSVGに",
+    "shortName": "PDF to SVG",
+    "summary": "PDFページをSVGラッパーとして書き出します。",
+    "description": "各ページをレンダリングし、Web埋め込み向けにSVG画像要素で包みます。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "書き出します。",
+      ".svgファイルをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf svg",
+      "pdf to svg",
+      "pdf ベクター 書き出し"
+    ]
+  },
+  "pdf-to-odt": {
+    "name": "PDFをODT向けに",
+    "shortName": "PDF to ODT",
+    "summary": "LibreOffice Writer向けにPDFテキストを書き出します。",
+    "description": "抽出テキストを.txtでダウンロードし、Writerで開いてODTとして保存できます。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "テキストを抽出します。",
+      "LibreOfficeで開き→ODTとして保存します。"
+    ],
+    "keywords": [
+      "pdf odt",
+      "pdf to odt",
+      "pdf libreoffice",
+      "pdf opendocument"
+    ]
+  },
+  "pdf-to-ods": {
+    "name": "PDFをODS向けに",
+    "shortName": "PDF to ODS",
+    "summary": "PDF表をCalc/ODS向けに書き出します。",
+    "description": "PDFからCSV風テキストを書き出し、LibreOffice Calcで開いてODS保存する流れを支援します。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "CSVを書き出します。",
+      "Calcで開き→ODSとして保存します。"
+    ],
+    "keywords": [
+      "pdf ods",
+      "pdf calc",
+      "pdf to ods",
+      "pdf 表 calc"
+    ]
+  },
+  "pdf-to-odp": {
+    "name": "PDFをODP向けに",
+    "shortName": "PDF to ODP",
+    "summary": "Impress/ODPワークフロー向けにテキストを書き出します。",
+    "description": "PDFからテキストを抽出し、LibreOffice Impressのスライドに貼り付けてODT保存する手順を支援します。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "テキストを抽出します。",
+      "Impressに貼り付けます。"
+    ],
+    "keywords": [
+      "pdf odp",
+      "pdf impress",
+      "pdf to odp"
+    ]
+  },
+  "xml-invoice-to-pdf": {
+    "name": "XML請求書をPDFに",
+    "shortName": "XML Invoice",
+    "summary": "XML / UBL請求データをPDFとして表示します。",
+    "description": "XMLタグを整理し、請求書フィールドを読みやすいPDFに印刷します。",
+    "howTo": [
+      ".xmlをアップロードします。",
+      "変換します。",
+      "PDFをダウンロードします。"
+    ],
+    "keywords": [
+      "xml 請求書 pdf",
+      "ubl pdf",
+      "電子請求書 pdf",
+      "xml invoice to pdf"
+    ]
+  },
+  "analyze-pdf": {
+    "name": "PDFを分析",
+    "shortName": "Analyze PDF",
+    "summary": "ページ数・サイズ・メタデータを確認します。",
+    "description": "ページ数、寸法、メタデータ、抽出可能テキストの統計などPDF構造をレポートします。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "分析を実行します。",
+      "レポートをダウンロードまたはコピーします。"
+    ],
+    "keywords": [
+      "pdf 情報",
+      "analyze pdf",
+      "pdf プロパティ",
+      "pdf 解析"
+    ]
+  },
+  "pdf-statistics": {
+    "name": "PDF統計",
+    "shortName": "PDF Stats",
+    "summary": "PDFの概要統計をすばやく表示します。",
+    "description": "分析ツールと同系統で、ページ数・テキスト量・ファイルサイズを一覧できます。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "統計を表示します。",
+      "レポートを保存します。"
+    ],
+    "keywords": [
+      "pdf 統計",
+      "pdf stats",
+      "pdf メトリクス"
+    ]
+  },
+  "change-pdf-doc-info": {
+    "name": "PDF文書情報を変更",
+    "shortName": "Doc Info",
+    "summary": "タイトル・作者・件名・キーワードを編集します。",
+    "description": "文書情報辞書のフィールドをローカルで更新し、共有や保管前に整えられます。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "メタデータ項目を入力します。",
+      "更新したPDFをダウンロードします。"
+    ],
+    "keywords": [
+      "pdf メタデータ",
+      "pdf タイトル",
+      "pdf プロパティ 変更",
+      "doc info pdf"
+    ]
+  },
+  "set-pdf-viewer-preferences": {
+    "name": "PDFビューア設定",
+    "shortName": "Viewer Prefs",
+    "summary": "ビューア向けメタデータを整えます。",
+    "description": "閲覧ソフト向けのメタデータを更新し、一般的なリーダーで開きやすくします。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "設定を適用します。",
+      "ダウンロードします。"
+    ],
+    "keywords": [
+      "pdf ビューア 設定",
+      "pdf viewer preferences",
+      "pdf 開く 設定"
+    ]
+  },
+  "bookmark-pdf": {
+    "name": "PDFにブックマーク",
+    "shortName": "Bookmarks",
+    "summary": "ページブックマーク／アウトラインを追加します。",
+    "description": "PDFエンジンが対応する場合、Page 1…N形式のアウトラインを作成できます。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "ブックマークを追加します。",
+      "ダウンロードします。"
+    ],
+    "keywords": [
+      "pdf ブックマーク",
+      "bookmark pdf",
+      "pdf アウトライン",
+      "しおり pdf"
+    ]
+  },
+  "print-pdf-as-poster": {
+    "name": "PDFをポスター印刷",
+    "shortName": "Poster",
+    "summary": "先頭ページをタイル状に分割して大判印刷します。",
+    "description": "1ページ目を複数シートに分割し、壁貼りポスター向けの大判出力を準備します。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "ポスタータイルを生成します。",
+      "ダウンロードしたページを印刷します。"
+    ],
+    "keywords": [
+      "pdf ポスター",
+      "poster pdf",
+      "タイル 印刷 pdf",
+      "pdf 拡大 印刷"
+    ]
+  },
+  "generate-password": {
+    "name": "パスワード生成",
+    "shortName": "Password Gen",
+    "summary": "PDF保護用の強力な乱数パスワードを作成します。",
+    "description": "高エントロピーのパスワードを生成し、PDFパスワード設定にそのまま貼り付けられます。",
+    "howTo": [
+      "ツールを開きます。",
+      "生成します。",
+      "パスワードをコピーします。"
+    ],
+    "keywords": [
+      "パスワード 生成",
+      "password generator",
+      "pdf パスワード 作る"
+    ]
+  },
+  "embed-pdf": {
+    "name": "PDFを埋め込み",
+    "shortName": "Embed PDF",
+    "summary": "WebサイトにPDFを埋め込むHTMLを取得します。",
+    "description": "ボタンとiframe付きのHTMLスニペットをダウンロードし、自前ホストのPDFと併用できます。",
+    "howTo": [
+      "PDF名を指定またはアップロードします。",
+      "HTMLスニペットをダウンロードします。",
+      "ファイルと一緒にホストします。"
+    ],
+    "keywords": [
+      "pdf 埋め込み",
+      "embed pdf",
+      "pdf iframe",
+      "サイト pdf 表示"
+    ]
+  },
+  "pdf-button": {
+    "name": "PDFボタン",
+    "shortName": "PDF Button",
+    "summary": "PDF用のダウンロード／開くボタンHTMLを生成します。",
+    "description": "埋め込みツールキットのボタン特化版で、スタイル付きリンクボタンHTMLを取得できます。",
+    "howTo": [
+      "PDF名を入力します。",
+      "HTMLをダウンロードします。",
+      "サイトに貼り付けます。"
+    ],
+    "keywords": [
+      "pdf ボタン",
+      "pdf download button",
+      "pdf リンク ボタン"
+    ]
+  },
+  "accessible-pdf": {
+    "name": "アクセシブルPDF",
+    "shortName": "Accessible PDF",
+    "summary": "PDF/UAを意識したアクセシビリティ準備チェックリストです。",
+    "description": "実践的なチェックリストと準備手順を提供します。完全なPDF/UA認証には専用バリデーターが必要です。",
+    "howTo": [
+      "任意でPDFをアップロードします。",
+      "チェックリストをダウンロードします。",
+      "作成ツールで修正を適用します。"
+    ],
+    "keywords": [
+      "アクセシブル pdf",
+      "pdf ua",
+      "pdf アクセシビリティ",
+      "accessible pdf"
+    ]
+  },
+  "pdf-printer": {
+    "name": "PDFプリンター",
+    "shortName": "PDF Printer",
+    "summary": "PDFの印刷ダイアログを開きます。",
+    "description": "PDFを読み込み、ブラウザから印刷またはPDFとして保存できます。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "印刷します。",
+      "プリンターまたはPDFとして保存を選びます。"
+    ],
+    "keywords": [
+      "pdf プリンター",
+      "pdf printer",
+      "pdf 印刷 オンライン"
+    ]
+  },
+  "straighten-pdf": {
+    "name": "PDFの傾き補正",
+    "shortName": "Straighten",
+    "summary": "曲がったスキャンの補正ガイドです。",
+    "description": "自動傾き補正には高度な画像処理が必要です。myonlinepdfeditor.comはページ回転やスキャナー補正の手順を案内します。",
+    "howTo": [
+      "スキャンをアップロードします。",
+      "ガイドを読みます。",
+      "回転または再スキャンで調整します。"
+    ],
+    "keywords": [
+      "pdf 傾き 補正",
+      "deskew pdf",
+      "straighten pdf",
+      "スキャン 歪み 修正"
+    ]
+  },
+  "validate-pdfa": {
+    "name": "PDF/Aを検証",
+    "shortName": "Validate PDF/A",
+    "summary": "PDF/A準備後の検証手順を案内します。",
+    "description": "PDF to PDF/A準備の後、外部チェッカーでのPDF/A検証方法を説明します。",
+    "howTo": [
+      "PDFをアップロードします。",
+      "検証手順を読みます。",
+      "外部PDF/Aバリデーターを実行します。"
+    ],
+    "keywords": [
+      "pdf/a 検証",
+      "validate pdfa",
+      "pdfa validation",
+      "アーカイブ pdf 検証"
+    ]
+  },
+  "verify-pdf-signatures": {
+    "name": "PDF署名を検証",
+    "shortName": "Verify Signatures",
+    "summary": "デジタル署名の検証手順を案内します。",
+    "description": "暗号学的検証には信頼できるリーダーが必要です。myonlinepdfeditor.comは一般的なワークフローを説明します。",
+    "howTo": [
+      "署名済みPDFをアップロードします。",
+      "検証ガイドを読みます。",
+      "署名スイートで開いて検証します。"
+    ],
+    "keywords": [
+      "pdf 署名 検証",
+      "verify pdf signature",
+      "デジタル署名 確認"
+    ]
+  },
+  "pdf-to-e-invoice": {
+    "name": "PDFを電子請求書向けに",
+    "shortName": "E-Invoice",
+    "summary": "構造化電子請求書書き出しの解説です。",
+    "description": "ZUGFeRD/Factur-X/UBLなどの経路を説明します。XMLペイロードはXML請求書→PDFをご利用ください。",
+    "howTo": [
+      "任意でPDFをアップロードまたはスキップします。",
+      "ガイドを読みます。",
+      "必要に応じてERPやXMLツールを使用します。"
+    ],
+    "keywords": [
+      "電子請求書 pdf",
+      "pdf to e-invoice",
+      "zugferd",
+      "factur-x"
+    ]
+  },
+  "validate-e-invoice": {
+    "name": "電子請求書を検証",
+    "shortName": "Validate Invoice",
+    "summary": "各国の電子請求書バリデーターへの案内です。",
+    "description": "スキーマ検証は国・制度ごとに異なります。myonlinepdfeditor.comは次のステップを文書化します。",
+    "howTo": [
+      "任意でXML/PDFをアップロードします。",
+      "ガイドを読みます。",
+      "該当国のバリデーターを使用します。"
+    ],
+    "keywords": [
+      "電子請求書 検証",
+      "validate e-invoice",
+      "ubl 検証"
+    ]
+  },
+  "hwp-to-pdf": {
+    "name": "HWPをPDFに",
+    "shortName": "HWP to PDF",
+    "summary": "Hangul HWPをPDF化する手順を案内します。",
+    "description": "HWPはブラウザでは読み込めません。Hancom／LibreOfficeなどでの書き出し方法をご案内します。",
+    "howTo": [
+      ".hwpを選択します。",
+      "変換手順を確認します。",
+      "外部でPDFを書き出してからmyonlinepdfeditor.comをご利用ください。"
+    ],
+    "keywords": [
+      "hwp pdf",
+      "hwp to pdf",
+      "ハンガル pdf",
+      "hangul pdf"
+    ]
+  },
+  "pages-to-pdf": {
+    "name": "PagesをPDFに",
+    "shortName": "Pages to PDF",
+    "summary": "Apple Pages文書をPDFに書き出す手順です。",
+    "description": "Pages形式はApple PagesまたはiCloudでのエクスポートが必要です。myonlinepdfeditor.comはその手順を説明します。",
+    "howTo": [
+      ".pagesを選択します。",
+      "エクスポート手順に従います。",
+      "得たPDFを他ツールにアップロードします。"
+    ],
+    "keywords": [
+      "pages pdf",
+      "pages to pdf",
+      "apple pages pdf",
+      "pages 書き出し"
+    ]
+  },
+  "ofd-to-pdf": {
+    "name": "OFDをPDFに",
+    "shortName": "OFD to PDF",
+    "summary": "中国OFD文書を外部リーダー経由でPDF化する案内です。",
+    "description": "OFDは専用コンバーターが必要です。先にPDFを取得する方法を説明します。",
+    "howTo": [
+      ".ofdを選択します。",
+      "ガイドを読みます。",
+      "外部で変換します。"
+    ],
+    "keywords": [
+      "ofd pdf",
+      "ofd to pdf"
+    ]
+  },
+  "pub-to-pdf": {
+    "name": "PublisherをPDFに",
+    "shortName": "PUB to PDF",
+    "summary": "Microsoft Publisher（.pub）のPDF書き出し案内です。",
+    "description": "Publisherファイルはデスクトップでの書き出しが必要です。手順を含みます。",
+    "howTo": [
+      ".pubを選択します。",
+      "書き出し手順に従います。",
+      "PDFでmyonlinepdfeditor.comの作業を続けます。"
+    ],
+    "keywords": [
+      "pub pdf",
+      "publisher to pdf",
+      "パブリッシャー pdf"
+    ]
+  },
+  "publisher-to-pdf": {
+    "name": "MS PublisherをPDFに",
+    "shortName": "Publisher PDF",
+    "summary": "Microsoft PublisherのPDFエクスポート案内です。",
+    "description": "PDF24命名に合わせたPublisher→PDFデスクトップ書き出しの説明ツールです。",
+    "howTo": [
+      ".pubを選択します。",
+      "PublisherからPDFを書き出します。",
+      "myonlinepdfeditor.comで追加編集します。"
+    ],
+    "keywords": [
+      "publisher pdf",
+      "microsoft publisher pdf",
+      "publisher to pdf"
+    ]
+  },
+  "ps-to-pdf": {
+    "name": "PSをPDFに",
+    "shortName": "PS to PDF",
+    "summary": "PostScriptをGhostscript系ツールで変換する案内です。",
+    "description": "ブラウザではGhostscriptを実行できません。デスクトップでの変換手順を記載します。",
+    "howTo": [
+      ".psを選択します。",
+      "ガイドを読みます。",
+      "デスクトップで変換します。"
+    ],
+    "keywords": [
+      "ps pdf",
+      "postscript to pdf",
+      "ps to pdf"
+    ]
+  },
+  "udf-to-pdf": {
+    "name": "UDFをPDFに",
+    "shortName": "UDF to PDF",
+    "summary": "UDF文書を作成アプリからPDF化する案内です。",
+    "description": "UDFはここではデコードしません。先にPDFまたはDOCXを書き出してください。",
+    "howTo": [
+      ".udfを選択します。",
+      "ガイドを読みます。",
+      "外部で書き出します。"
+    ],
+    "keywords": [
+      "udf pdf",
+      "udf to pdf"
+    ]
+  }
+}

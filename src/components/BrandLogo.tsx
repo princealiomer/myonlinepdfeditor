@@ -1,0 +1,79 @@
+"use client";
+
+import { useId } from "react";
+
+type BrandLogoProps = {
+  className?: string;
+  title?: string;
+};
+
+export function BrandLogo({
+  className = "h-8 w-8",
+  title = "myonlinepdfeditor.com",
+}: BrandLogoProps) {
+  const reactId = useId().replace(/:/g, "");
+  const gradientId = `mopeditor-logo-bg-${reactId}`;
+  const labeled = Boolean(title);
+
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 64 64"
+      xmlns="http://www.w3.org/2000/svg"
+      role={labeled ? "img" : "presentation"}
+      aria-hidden={labeled ? undefined : true}
+      focusable="false"
+    >
+      {labeled ? <title>{title}</title> : null}
+      <defs>
+        <linearGradient
+          id={gradientId}
+          x1="12"
+          y1="4"
+          x2="52"
+          y2="60"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#8A1E44" />
+          <stop offset="1" stopColor="#5A0F2E" />
+        </linearGradient>
+      </defs>
+      <rect width="64" height="64" rx="14" fill={`url(#${gradientId})`} />
+      <path
+        fill="#FFF7F8"
+        d="M18 12h20l10 10v30a4 4 0 0 1-4 4H18a4 4 0 0 1-4-4V16a4 4 0 0 1 4-4z"
+      />
+      <path fill="#F2D7D9" d="M38 12v8a2 2 0 0 0 2 2h8l-10-10z" />
+      <rect
+        x="20"
+        y="28"
+        width="18"
+        height="2.5"
+        rx="1.25"
+        fill="#8A1E44"
+        opacity=".85"
+      />
+      <rect x="20" y="34" width="14" height="2.5" rx="1.25" fill="#C76B7A" />
+      <rect
+        x="20"
+        y="40"
+        width="16"
+        height="2.5"
+        rx="1.25"
+        fill="#C76B7A"
+        opacity=".75"
+      />
+      <path
+        fill="#FFF7F8"
+        stroke="#5A0F2E"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+        d="M42.5 36.5 50 48l-4.2-1.1-1.1-4.2z"
+      />
+      <path
+        fill="#C76B7A"
+        d="M49.2 48.8c.4 1.4-1 2.8-2.4 2.4l-1.6-.5 2.1-2.1.5-.5.4.4.5.5.5.2z"
+      />
+    </svg>
+  );
+}

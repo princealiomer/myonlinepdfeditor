@@ -1,0 +1,27 @@
+{
+  "oursCount": 123,
+  "sites": {
+    "ilovepdf": {
+      "url": "https://www.ilovepdf.com/sitemap.xml",
+      "englishPaths": 68,
+      "covered": 68,
+      "missingCount": 0,
+      "missing": []
+    },
+    "smallpdf": {
+      "url": "https://smallpdf.com/sitemap.xml",
+      "englishPaths": 100,
+      "covered": 100,
+      "missingCount": 0,
+      "missing": []
+    },
+    "pdf24": {
+      "url": "https://tools.pdf24.org/sitemap.xml",
+      "englishPaths": 173,
+      "covered": 173,
+      "missingCount": 0,
+      "missing": []
+    }
+  },
+  "unionMissing": []
+}

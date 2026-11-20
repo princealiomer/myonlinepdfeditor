@@ -1,0 +1,374 @@
+{
+  "edit-pdf": {
+    "name": "PDF-Editor",
+    "shortName": "PDF bearbeiten",
+    "summary": "PDFs im Browser öffnen und Seiten, Text sowie Markierungen anpassen.",
+    "description": "Mit dem myonlinepdfeditor.com PDF-Editor laden Sie ein Dokument hoch und arbeiten lokal: Seiten navigieren, Inhalte platzieren und exportieren, wenn Sie fertig sind. Die Datei bleibt durchgehend auf Ihrem Gerät.",
+    "howTo": [
+      "Das zu bearbeitende PDF hochladen.",
+      "Symbolleiste nutzen, um Inhalte hinzuzufügen oder zu ändern.",
+      "Aktualisiertes PDF herunterladen."
+    ],
+    "keywords": ["pdf editor", "pdf bearbeiten online", "kostenloser pdf editor", "pdf ändern"]
+  },
+  "create-pdf": {
+    "name": "PDF erstellen",
+    "shortName": "PDF erstellen",
+    "summary": "Mit einer leeren Seite ein neues PDF aufbauen.",
+    "description": "Mit leerer Arbeitsfläche oder Vorlage ein PDF von Grund auf zusammenstellen. Seiten, Text und Bilder hinzufügen und speichern – ohne Softwareinstallation.",
+    "howTo": [
+      "PDF erstellen öffnen und ein leeres Dokument starten.",
+      "Seiten und Inhalte nach Bedarf ergänzen.",
+      "Neues PDF herunterladen."
+    ],
+    "keywords": ["create pdf", "neues pdf", "leeres pdf", "pdf online erstellen"]
+  },
+  "add-fillable-fields": {
+    "name": "Ausfüllbare Felder hinzufügen",
+    "shortName": "Formularfelder",
+    "summary": "Text-, Kontrollkästchen- und Signaturfelder auf PDFs platzieren.",
+    "description": "Ein flaches PDF per Feldmarkierungen in ein ausfüllbares Formular verwandeln. Vorbereitetes Dokument exportieren und für Datenerfassung wiederverwenden.",
+    "howTo": [
+      "PDF im Editor öffnen.",
+      "Feldmarkierungen setzen, wo getippt oder unterschrieben werden soll.",
+      "Ausfüllbares PDF herunterladen."
+    ],
+    "keywords": ["ausfüllbare pdf felder", "pdf formularfelder", "pdf ausfüllbar machen", "fillable pdf"]
+  },
+  "flatten-fields": {
+    "name": "Felder ebenen",
+    "shortName": "Felder ebenen",
+    "summary": "Formularfelder und Anmerkungen in den Seiteninhalt einbetten.",
+    "description": "Interaktive Felder und Markierungen ebenen, damit sie nicht versehentlich geändert werden. Nützlich vor Archivierung, Druck oder Versand einer finalen signierten Kopie.",
+    "howTo": [
+      "PDF mit Feldern oder Anmerkungen hochladen.",
+      "Ebenen per Ebenen-Befehl in die Seite überführen.",
+      "Geebnetes PDF herunterladen."
+    ],
+    "keywords": ["pdf ebenen", "formularfelder ebenen", "flatten pdf", "pdf ebenen tool"]
+  },
+  "split-pdf": {
+    "name": "PDF teilen",
+    "shortName": "PDF teilen",
+    "summary": "Seitenbereiche extrahieren oder jede Seite als eigene Datei.",
+    "description": "Kapitel, Rechnungen oder Einzelscans aus einem großen PDF herauslösen. Bereiche definieren oder alle Seiten trennen, dann ZIP oder Einzeldateien laden.",
+    "howTo": [
+      "Zu teilendes PDF hochladen.",
+      "Seiten oder Bereiche zum Extrahieren wählen.",
+      "Teilergebnis herunterladen."
+    ],
+    "keywords": ["pdf teilen", "split pdf", "pdf seiten extrahieren", "pdf aufteilen"]
+  },
+  "merge-pdf": {
+    "name": "PDFs zusammenführen",
+    "shortName": "PDF zusammenführen",
+    "summary": "Mehrere PDFs in einer Datei in gewählter Reihenfolge verbinden.",
+    "description": "Berichte, Scans und Anlagen zu einem PDF stapeln. Dateien vor dem Zusammenführen neu anordnen – alles lokal im Browser.",
+    "howTo": [
+      "Zwei oder mehr PDF-Dateien hinzufügen.",
+      "Dateien per Drag-and-drop in die gewünschte Reihenfolge bringen.",
+      "Zusammenführen und kombiniertes PDF herunterladen."
+    ],
+    "keywords": ["merge pdf", "pdf zusammenführen", "pdf kombinieren", "pdf verbinden"]
+  },
+  "rotate-pdf": {
+    "name": "Seiten drehen",
+    "shortName": "Seiten drehen",
+    "summary": "Seitwärts gescannte Seiten in 90°-Schritten korrigieren.",
+    "description": "Eine Seite oder das ganze Dokument wählen und drehen, bis die Ausrichtung stimmt. Kein erneutes Scannen – schnelle Korrektur vor Zusammenführen oder Versand.",
+    "howTo": [
+      "PDF öffnen.",
+      "Seiten wählen und links oder rechts drehen.",
+      "Gedrehtes PDF speichern."
+    ],
+    "keywords": ["pdf drehen", "rotate pdf", "pdf seiten drehen", "seitwärts pdf korrigieren"]
+  },
+  "reorder-pdf": {
+    "name": "Seiten neu anordnen",
+    "shortName": "Seiten sortieren",
+    "summary": "Miniaturen per Drag-and-drop in neue Reihenfolge bringen.",
+    "description": "Anhänge nach vorne, Unterschriften ans Ende oder gemischte Scan-Reihenfolge mit visuellem Seitensortierer korrigieren. Änderungen gelten beim PDF-Export.",
+    "howTo": [
+      "PDF hochladen.",
+      "Miniaturen in die neue Reihenfolge ziehen.",
+      "Neu sortierte Datei herunterladen."
+    ],
+    "keywords": ["pdf seiten sortieren", "seiten neu anordnen", "pdf anordnen", "reorder pdf"]
+  },
+  "delete-pages": {
+    "name": "Seiten löschen",
+    "shortName": "Seiten löschen",
+    "summary": "Unerwünschte PDF-Seiten mit wenigen Klicks entfernen.",
+    "description": "Leere, doppelte oder überflüssige Seiten vor dem Teilen auswählen und löschen. Das verbleibende Dokument wird als schlankeres PDF exportiert.",
+    "howTo": [
+      "PDF laden.",
+      "Zu entfernende Seiten wählen.",
+      "Gestutztes PDF exportieren."
+    ],
+    "keywords": ["pdf seiten löschen", "seiten entfernen pdf", "pdf kürzen", "delete pdf pages"]
+  },
+  "compress-pdf": {
+    "name": "PDF komprimieren",
+    "shortName": "PDF komprimieren",
+    "summary": "PDF-Dateigröße für E-Mail und Uploads verkleinern.",
+    "description": "Bildauflösung und Stream-Overhead reduzieren, damit große Scans in Anhangslimits passen. Kompression lokal; Qualität in der Vorschau prüfen vor dem Versand.",
+    "howTo": [
+      "Zu komprimierendes PDF hochladen.",
+      "Qualitäts- oder Größenziel wählen.",
+      "Kleinere PDF-Datei herunterladen."
+    ],
+    "keywords": ["pdf komprimieren", "compress pdf", "pdf verkleinern", "pdf optimieren"]
+  },
+  "page-numbers": {
+    "name": "Seitenzahlen hinzufügen",
+    "shortName": "Seitenzahlen",
+    "summary": "Einheitliche Seitenzahlen auf jedes Blatt setzen.",
+    "description": "Seitenzahlen in Kopf- oder Fußzeile mit Startwert und Format Ihrer Wahl. Ideal für Schriftsätze, Unterlagenpakete und gedruckte Handbücher.",
+    "howTo": [
+      "PDF öffnen.",
+      "Position, Stil und Startnummer wählen.",
+      "Anwenden und nummeriertes PDF herunterladen."
+    ],
+    "keywords": ["seitenzahlen pdf", "pdf nummerieren", "page numbers pdf", "seiten nummerieren"]
+  },
+  "watermark-pdf": {
+    "name": "PDF-Wasserzeichen",
+    "shortName": "Wasserzeichen",
+    "summary": "Text- oder Bildwasserzeichen über Seiten legen.",
+    "description": "Entwürfe als VERTRAULICH markieren, Logo ergänzen oder Review-Kopien mit halbtransparentem Overlay branden. Deckkraft und Platzierung vor dem Export steuern.",
+    "howTo": [
+      "PDF hochladen.",
+      "Wasserzeichentext eingeben oder Bild wählen.",
+      "Vorschau und mit Wasserzeichen versehene Datei herunterladen."
+    ],
+    "keywords": ["wasserzeichen pdf", "watermark pdf", "entwurf stempel pdf", "pdf brand"]
+  },
+  "crop-pdf": {
+    "name": "PDF zuschneiden",
+    "shortName": "PDF zuschneiden",
+    "summary": "Ränder trimmen und Seitenboxen auf Inhalt zuschneiden.",
+    "description": "Scanner-Ränder oder überflüssigen Weißraum entfernen, damit jede Seite eng am Inhalt sitzt. Pro Seite oder für das ganze Dokument.",
+    "howTo": [
+      "PDF in PDF zuschneiden laden.",
+      "Zuschnittboxen auf Miniaturen zeichnen oder einheitliche Ränder nutzen.",
+      "Zugeschnittenes PDF exportieren."
+    ],
+    "keywords": ["pdf zuschneiden", "crop pdf", "pdf ränder trimmen", "pdf rand entfernen"]
+  },
+  "extract-pages": {
+    "name": "Seiten extrahieren",
+    "shortName": "Seiten extrahieren",
+    "summary": "Ausgewählte Seiten in eine neue PDF-Datei übernehmen.",
+    "description": "Nur benötigte Seiten behalten – Anlagen, Unterschriften oder Kapitel – als separates Dokument ohne erneutes Scannen.",
+    "howTo": [
+      "Quell-PDF hochladen.",
+      "Zu extrahierende Seiten wählen.",
+      "Neues PDF nur mit diesen Seiten herunterladen."
+    ],
+    "keywords": ["pdf seiten extrahieren", "seiten speichern pdf", "extract pdf pages"]
+  },
+  "organize-pdf": {
+    "name": "PDF organisieren",
+    "shortName": "PDF organisieren",
+    "summary": "Seiten sortieren, löschen und in einer Ansicht aufräumen.",
+    "description": "Fokussierter Seitensortierer: Miniaturen ziehen, überflüssige Blätter entfernen und ein sauberes Paket exportieren. Organisieren, Löschen und Sortieren in einem Werkzeug.",
+    "howTo": [
+      "PDF hochladen.",
+      "Seiten ziehen, unerwünschte Blätter löschen.",
+      "Organisiertes PDF herunterladen."
+    ],
+    "keywords": ["pdf organisieren", "pdf seiten sortieren", "pdf anordnen", "pdf organizer"]
+  },
+  "repair-pdf": {
+    "name": "PDF reparieren",
+    "shortName": "PDF reparieren",
+    "summary": "Beschädigte oder nicht lesbare PDFs reparieren versuchen.",
+    "description": "Defekte Querverweise neu aufbauen und Streams neu speichern, damit kaputte Downloads wieder öffnen. Schwer beschädigte Dateien brauchen ggf. die Originalquelle.",
+    "howTo": [
+      "Problematisches PDF hochladen.",
+      "Reparatur ausführen und auf lokale Verarbeitung warten.",
+      "Reparierte Datei im Viewer öffnen."
+    ],
+    "keywords": ["pdf reparieren", "repair pdf", "defektes pdf", "pdf wiederherstellen"]
+  },
+  "grayscale-pdf": {
+    "name": "PDF Graustufen",
+    "shortName": "Graustufen",
+    "summary": "Farbseiten in Graustufen für Druckersparnis umwandeln.",
+    "description": "Farbscans und Fotos in Graustufen-PDFs für weniger Toner und Vorgaben, die Schwarz-Weiß-Einreichungen verlangen.",
+    "howTo": [
+      "Farbiges PDF auswählen.",
+      "Graustufen auf alle Seiten anwenden.",
+      "Grauton-PDF herunterladen."
+    ],
+    "keywords": ["graustufen pdf", "pdf schwarz weiß", "grayscale pdf", "pdf in grau"]
+  },
+  "remove-metadata": {
+    "name": "Metadaten entfernen",
+    "shortName": "Metadaten löschen",
+    "summary": "Autor, Titel und eingebettetes XMP aus PDF entfernen.",
+    "description": "Versteckte Dokumenteigenschaften vor Veröffentlichung oder Freigabe bereinigen. Sauberes PDF mit weniger identifizierenden Metadaten exportieren.",
+    "howTo": [
+      "PDF hochladen.",
+      "Prüfen, welche Metadatenfelder gelöscht werden.",
+      "Bereinigtes PDF herunterladen."
+    ],
+    "keywords": ["pdf metadaten entfernen", "metadaten löschen pdf", "strip pdf metadata"]
+  },
+  "sign-pdf": {
+    "name": "PDF unterschreiben",
+    "shortName": "PDF signieren",
+    "summary": "Verträge und Formulare am Desktop zeichnen oder tippen.",
+    "description": "Mit Maus, Stift oder getippter Schrift auf jedem PDF signieren. Signierte Kopie sofort exportieren – ideal vor Ort oder auf demselben Gerät.",
+    "howTo": [
+      "Zu signierendes PDF hochladen.",
+      "Signatur erstellen oder auf der Seite platzieren.",
+      "Signiertes Dokument herunterladen."
+    ],
+    "keywords": ["pdf unterschreiben", "sign pdf", "pdf signatur", "dokument online signieren"]
+  },
+  "send-for-signature": {
+    "name": "Zur Signatur vorbereiten",
+    "shortName": "Zur Signatur",
+    "summary": "Signaturfelder platzieren und signierfertiges Paket exportieren.",
+    "description": "Markieren, wo Unterzeichner signieren, datieren oder paraphieren sollen, dann PDF exportieren, das andere ausfüllen können. myonlinepdfeditor.com konzentriert sich auf Feldvorbereitung im Browser; Versand liegt bei Ihnen.",
+    "howTo": [
+      "Vereinbarung hochladen.",
+      "Signatur- und Datumsfelder pro Unterzeichner hinzufügen.",
+      "Vorbereitetes PDF herunterladen und teilen."
+    ],
+    "keywords": ["zur signatur senden", "signaturfelder pdf", "esign vorbereiten", "send for signature"]
+  },
+  "send-envelopes": {
+    "name": "Signatur-Umschläge senden",
+    "shortName": "Umschläge",
+    "summary": "Mehrere PDFs in ein Signatur-Umschlag-Paket bündeln.",
+    "description": "Mehrere Dokumente in eine Umschlag-Checkliste packen und ZIP-fertiges PDF-Set plus Unterzeichner-Checkliste zum selbst Versenden herunterladen.",
+    "howTo": [
+      "Ein oder mehrere PDFs für den Umschlag hochladen.",
+      "Namen und E-Mails in der Checkliste ergänzen.",
+      "Umschlag-Paket herunterladen und auf Ihrem Weg versenden."
+    ],
+    "keywords": ["esignature umschläge", "umschlag pdf senden", "mehrere dokumente signieren"]
+  },
+  "in-person-signing": {
+    "name": "Unterschrift vor Ort",
+    "shortName": "Vor-Ort-Signatur",
+    "summary": "Signatur auf demselben Gerät persönlich erfassen.",
+    "description": "Gerät an Unterzeichner übergeben, gezeichnete oder getippte Signatur erfassen und fertiges PDF sofort laden – ohne E-Mail-Hin und Her.",
+    "howTo": [
+      "PDF auf dem Gerät öffnen.",
+      "Gerät an die unterzeichnende Person übergeben.",
+      "Nach der Signatur die fertige Kopie herunterladen."
+    ],
+    "keywords": ["unterschrift vor ort", "signatur gleiches gerät", "counter sign pdf", "in person signing"]
+  },
+  "kiosk-mode": {
+    "name": "Kiosk-Modus (Mobil)",
+    "shortName": "Kiosk-Modus",
+    "summary": "Vollbildfreundliche Signatur für Smartphones und Tablets.",
+    "description": "Mobil optimiertes Signatur-Layout für Empfang und Events. PDF öffnen, Signatur mit dem Finger erfassen und vor Ort herunterladen.",
+    "howTo": [
+      "Kiosk-Modus auf Smartphone oder Tablet öffnen.",
+      "Zu signierendes Dokument laden.",
+      "Signatur erfassen und herunterladen."
+    ],
+    "keywords": ["kiosk modus pdf", "mobil pdf signieren", "tablet signatur"]
+  },
+  "bulk-sending": {
+    "name": "Massenversand",
+    "shortName": "Massenversand",
+    "summary": "Eine Vorlage für viele Empfänger gleichzeitig vorbereiten.",
+    "description": "PDF-Vorlage und Empfängerliste hochladen, pro Empfänger Checkliste erzeugen und verteilfertige Kopien herunterladen.",
+    "howTo": [
+      "PDF-Vorlage hochladen.",
+      "Empfängernamen und E-Mails einfügen (je Zeile einer).",
+      "Massenversand-Checkliste herunterladen."
+    ],
+    "keywords": ["massenversand pdf", "bulk send pdf", "signatur anfrage massen", "batch dokumente"]
+  },
+  "add-comments": {
+    "name": "Kommentare zu PDF",
+    "shortName": "Kommentare",
+    "summary": "Haftnotizen und Hinweise für Prüfer setzen.",
+    "description": "Kommentarmarkierungen an Stellen mit Feedback-Bedarf. Kommentare bleiben als Anmerkungen, die Sie ebenen oder für den nächsten Prüfer behalten können.",
+    "howTo": [
+      "Entwurfs-PDF hochladen.",
+      "Kommentare auf relevanten Seiten hinzufügen.",
+      "Exportieren und an Mitwirkende senden."
+    ],
+    "keywords": ["pdf kommentare", "pdf annotieren", "pdf review", "haftnotizen pdf"]
+  },
+  "share-via-link": {
+    "name": "Per Link teilen",
+    "shortName": "Link teilen",
+    "summary": "Teilbares PDF für Links und Anhänge optimiert exportieren.",
+    "description": "Bearbeitungen abschließen, ggf. ebenen und sauberes PDF für E-Mail oder Cloud exportieren. myonlinepdfeditor.com hostet keine Dateien – Sie entscheiden, wo geteilt wird.",
+    "howTo": [
+      "PDF-Bearbeitung abschließen.",
+      "Export für die finale Datei nutzen.",
+      "Download bei Ihrem bevorzugten Sharing-Dienst hochladen."
+    ],
+    "keywords": ["pdf teilen", "pdf exportieren", "pdf link senden", "share pdf"]
+  },
+  "share-via-email": {
+    "name": "Per E-Mail teilen",
+    "shortName": "E-Mail",
+    "summary": "E-Mail-App mit fertiger Nachricht zum PDF öffnen.",
+    "description": "Mailto-Entwurf mit Betreff und Text vorbereiten. PDF vom Gerät anhängen – myonlinepdfeditor.com lädt die Datei nicht hoch.",
+    "howTo": [
+      "PDF bearbeiten oder fertigstellen und herunterladen.",
+      "Empfänger-E-Mail und optional Notiz eingeben.",
+      "E-Mail-Programm öffnen und heruntergeladene Datei anhängen."
+    ],
+    "keywords": ["pdf per email", "email pdf", "pdf versenden email", "share pdf email"]
+  },
+  "fax": {
+    "name": "PDF faxen",
+    "shortName": "Fax",
+    "summary": "Druckfertiges PDF für Online-Faxdienste vorbereiten.",
+    "description": "myonlinepdfeditor.com betreibt kein Fax-Gateway. Sauberes PDF für Drittanbieter-Fax herunterladen, die Sie bereits nutzen.",
+    "howTo": [
+      "PDF hochladen.",
+      "Faxfertige Kopie herunterladen.",
+      "Datei bei Ihrem Online-Faxdienst hochladen."
+    ],
+    "keywords": ["pdf faxen", "fax pdf", "online fax dokument", "send pdf fax"]
+  },
+  "pdf-status": {
+    "name": "PDF-Status",
+    "shortName": "PDF-Status",
+    "summary": "Lokale Statusnotizen zu Dokumenten im Browser verfolgen.",
+    "description": "Dokumente als Entwurf, gesendet oder abgeschlossen markieren und Notizen im lokalen Speicher halten. Status bleibt auf Ihrem Gerät – für persönliche Workflow-Übersicht.",
+    "howTo": [
+      "Dokument benennen und Status wählen.",
+      "Optionale Notizen ergänzen.",
+      "Speichern – Status gilt nur in diesem Browser."
+    ],
+    "keywords": ["pdf status", "dokumenten tracking", "signatur status"]
+  },
+  "create-templates": {
+    "name": "Vorlagen erstellen",
+    "shortName": "Vorlagen",
+    "summary": "Wiederverwendbares Formularlayout mit Feldern und Beschriftungen.",
+    "description": "Statischen Text, Felder und Branding in einer Mastervorlage kombinieren, die Sie duplizieren und erneut senden können. Die Gestaltung bleibt lokal in myonlinepdfeditor.com.",
+    "howTo": [
+      "Mit PDF oder leerer Editorsitzung starten.",
+      "Beschriftungen, Felder und Layoutelemente hinzufügen.",
+      "Vorlage für Wiederverwendung speichern."
+    ],
+    "keywords": ["pdf vorlage", "formularvorlage", "wiederverwendbares pdf formular", "pdf template"]
+  },
+  "create-fillable-forms": {
+    "name": "Ausfüllbare Formulare",
+    "shortName": "Formulare ausfüllen",
+    "summary": "Bestehende Formulare im Browser ausfüllen.",
+    "description": "Interaktive PDF-Formulare ohne Druck ausfüllen. Textfelder und Kontrollkästchen bearbeiten, danach speichern oder ebenen.",
+    "howTo": [
+      "Ausfüllbares PDF hochladen.",
+      "Felder anklicken und Antworten eintragen.",
+      "Ausgefülltes Formular herunterladen."
+    ],
+    "keywords": ["ausfüllbares pdf", "pdf formular ausfüllen", "fillable pdf", "interaktives pdf"]
+  }
+}

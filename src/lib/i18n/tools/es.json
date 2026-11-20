@@ -1,0 +1,2106 @@
+{
+  "word-to-pdf": {
+    "name": "Convertidor de Word a PDF",
+    "shortName": "Word → PDF",
+    "summary": "Convierte archivos DOCX en PDF pulidos en tu navegador.",
+    "description": "Convierte documentos de Microsoft Word a PDF sin subirlos a un servidor. myonlinepdfeditor.com lee tu .docx de forma local, conserva el diseño cuando es posible y te entrega un PDF listo para descargar en segundos.",
+    "howTo": [
+      "Abre Word a PDF y elige tu archivo .docx.",
+      "Espera a que termine la conversión local.",
+      "Revisa el resultado y descarga tu PDF."
+    ],
+    "keywords": [
+      "word a pdf",
+      "docx a pdf",
+      "convertir documento word",
+      "convertidor docx",
+      "word to pdf"
+    ]
+  },
+  "txt-to-pdf": {
+    "name": "Texto a PDF",
+    "shortName": "TXT → PDF",
+    "summary": "Convierte texto plano en una página PDF limpia e imprimible.",
+    "description": "Pega o sube un archivo .txt y myonlinepdfeditor.com crea un PDF sencillo con tipografía legible. Ideal para notas, registros y scripts que quieras archivar o compartir como PDF.",
+    "howTo": [
+      "Sube un archivo .txt o pega tu texto.",
+      "Ajusta la configuración de página si está disponible.",
+      "Descarga el PDF generado."
+    ],
+    "keywords": [
+      "txt a pdf",
+      "texto a pdf",
+      "texto plano pdf",
+      "bloc de notas a pdf",
+      "txt to pdf"
+    ]
+  },
+  "png-to-pdf": {
+    "name": "PNG a PDF",
+    "shortName": "PNG → PDF",
+    "summary": "Combina imágenes PNG en un solo PDF.",
+    "description": "Arrastra uno o más archivos PNG y obtén un PDF que mantiene la calidad de tus imágenes. El procesamiento ocurre por completo en el navegador: las capturas y gráficos no salen de tu dispositivo.",
+    "howTo": [
+      "Selecciona archivos de imagen PNG.",
+      "Ordena las páginas si agregaste varias imágenes.",
+      "Descarga tu PDF."
+    ],
+    "keywords": [
+      "png a pdf",
+      "convertir png",
+      "imagen a pdf",
+      "captura a pdf",
+      "png to pdf"
+    ]
+  },
+  "jpg-to-pdf": {
+    "name": "JPG/JPEG a PDF",
+    "shortName": "JPG → PDF",
+    "summary": "Convierte fotos JPEG en un documento PDF.",
+    "description": "Transforma fotos JPG y JPEG en un PDF fácil de compartir. Une varias fotos en un solo archivo para imprimir o enviar por correo, con toda la conversión hecha de forma local.",
+    "howTo": [
+      "Sube archivos JPG o JPEG.",
+      "Reordena las páginas si hace falta.",
+      "Guarda el PDF combinado."
+    ],
+    "keywords": [
+      "jpg a pdf",
+      "jpeg a pdf",
+      "foto a pdf",
+      "imagen a pdf",
+      "jpg to pdf"
+    ]
+  },
+  "ppt-to-pdf": {
+    "name": "PPT a PDF",
+    "shortName": "PPT → PDF",
+    "summary": "Convierte el texto de diapositivas PowerPoint (.pptx) en un PDF descargable.",
+    "description": "Convierte presentaciones PPTX de forma local extrayendo el texto de las diapositivas en un PDF limpio. Para diapositivas idénticas al original, exporta imágenes desde PowerPoint y usa JPG/PNG a PDF.",
+    "howTo": [
+      "Sube un archivo .pptx (guarda .ppt antiguos como PPTX primero).",
+      "Espera la extracción local del texto de las diapositivas.",
+      "Descarga el PDF generado."
+    ],
+    "keywords": [
+      "ppt a pdf",
+      "pptx a pdf",
+      "powerpoint a pdf",
+      "convertir diapositivas pdf",
+      "ppt to pdf"
+    ]
+  },
+  "csv-to-pdf": {
+    "name": "CSV a PDF",
+    "shortName": "CSV → PDF",
+    "summary": "Presenta datos de hoja de cálculo como una tabla PDF con formato.",
+    "description": "Sube un archivo CSV y convierte las filas en un diseño PDF legible. Útil para compartir reportes con quienes solo necesitan una vista fija y lista para imprimir.",
+    "howTo": [
+      "Sube tu archivo .csv.",
+      "Revisa la vista previa de la tabla.",
+      "Descarga el reporte en PDF."
+    ],
+    "keywords": [
+      "csv a pdf",
+      "hoja de cálculo a pdf",
+      "exportar csv pdf",
+      "datos a pdf",
+      "csv to pdf"
+    ]
+  },
+  "html-to-pdf": {
+    "name": "HTML a PDF",
+    "shortName": "HTML → PDF",
+    "summary": "Renderiza marcado HTML como PDF para imprimir o archivar.",
+    "description": "Pega HTML o sube un archivo .html y myonlinepdfeditor.com genera una instantánea PDF apta para registros, folletos o lectura sin conexión, sin enviar tu contenido a la nube.",
+    "howTo": [
+      "Pega HTML o sube un archivo .html.",
+      "Revisa la vista previa renderizada.",
+      "Descarga el PDF."
+    ],
+    "keywords": [
+      "html a pdf",
+      "página web a pdf",
+      "guardar html como pdf",
+      "imprimir html pdf",
+      "html to pdf"
+    ]
+  },
+  "rtf-to-pdf": {
+    "name": "RTF a PDF",
+    "shortName": "RTF → PDF",
+    "summary": "Convierte archivos de texto enriquecido (RTF) en PDF estándar.",
+    "description": "Abre documentos .rtf antiguos y guárdalos como PDF para verlos en cualquier lugar. myonlinepdfeditor.com procesa el archivo en tu equipo para que los borradores sensibles sigan siendo privados.",
+    "howTo": [
+      "Elige un archivo .rtf en tu computadora.",
+      "Espera la conversión local.",
+      "Descarga el PDF."
+    ],
+    "keywords": [
+      "rtf a pdf",
+      "texto enriquecido a pdf",
+      "convertir rtf",
+      "convertidor rtf",
+      "rtf to pdf"
+    ]
+  },
+  "excel-to-pdf": {
+    "name": "Excel a PDF",
+    "shortName": "Excel → PDF",
+    "summary": "Convierte hojas XLSX en tablas PDF para compartir.",
+    "description": "Pasa libros de Excel a PDF para imprimir, enviar por correo o archivar. myonlinepdfeditor.com lee .xlsx de forma local y presenta los datos en una vista PDF fija que los destinatarios no pueden editar por accidente.",
+    "howTo": [
+      "Sube tu hoja de cálculo .xlsx.",
+      "Elige hojas o rango si se te pide.",
+      "Descarga el PDF generado."
+    ],
+    "keywords": [
+      "excel a pdf",
+      "xlsx a pdf",
+      "hoja de cálculo a pdf",
+      "convertir excel pdf",
+      "excel to pdf"
+    ]
+  },
+  "webp-to-pdf": {
+    "name": "WebP a PDF",
+    "shortName": "WebP → PDF",
+    "summary": "Combina imágenes WebP en un solo PDF.",
+    "description": "Convierte gráficos WebP modernos en un PDF que puedes adjuntar o imprimir. Fusiona varios archivos WebP en orden sin subirlos a un servidor remoto.",
+    "howTo": [
+      "Selecciona uno o más archivos WebP.",
+      "Reordena las imágenes si agregaste varias.",
+      "Descarga tu PDF."
+    ],
+    "keywords": [
+      "webp a pdf",
+      "convertir webp",
+      "imagen webp pdf",
+      "webp to pdf"
+    ]
+  },
+  "gif-to-pdf": {
+    "name": "GIF a PDF",
+    "shortName": "GIF → PDF",
+    "summary": "Convierte imágenes GIF en un PDF imprimible.",
+    "description": "Coloca fotogramas o stills de GIF en un documento PDF para registros y envíos. El procesamiento corre en tu navegador para que los GIF animados o con marca sigan en tu dispositivo.",
+    "howTo": [
+      "Sube archivos de imagen GIF.",
+      "Ordena las páginas cuando uses varios archivos.",
+      "Guarda el PDF combinado."
+    ],
+    "keywords": [
+      "gif a pdf",
+      "convertir gif",
+      "gif imagen a pdf",
+      "gif to pdf"
+    ]
+  },
+  "bmp-to-pdf": {
+    "name": "BMP a PDF",
+    "shortName": "BMP → PDF",
+    "summary": "Convierte imágenes bitmap (BMP) en páginas PDF.",
+    "description": "Los BMP heredados y exportaciones de escáner pasan a ser PDF fáciles de compartir. Apila varios bitmap en un solo archivo para imprimir o portales de envío.",
+    "howTo": [
+      "Elige archivos BMP en tu computadora.",
+      "Reordena las miniaturas si hace falta.",
+      "Descarga el PDF."
+    ],
+    "keywords": [
+      "bmp a pdf",
+      "bitmap a pdf",
+      "convertir bmp pdf",
+      "bmp to pdf"
+    ]
+  },
+  "images-to-pdf": {
+    "name": "Imágenes a PDF",
+    "shortName": "Imágenes → PDF",
+    "summary": "Une formatos de imagen mixtos en un PDF ordenado.",
+    "description": "Arrastra PNG, JPG, WebP, GIF, BMP y otras imágenes compatibles y obtén un solo PDF en el orden que definas. Ideal para lotes de escaneos y paquetes de fotos.",
+    "howTo": [
+      "Agrega varias imágenes de cualquier tipo compatible.",
+      "Arrastra para definir el orden de páginas.",
+      "Descarga el PDF fusionado."
+    ],
+    "keywords": [
+      "imágenes a pdf",
+      "fotos a pdf",
+      "combinar imágenes pdf",
+      "foto a pdf",
+      "images to pdf"
+    ]
+  },
+  "pdf-to-jpg": {
+    "name": "PDF a JPG",
+    "shortName": "PDF → JPG",
+    "summary": "Exporta páginas PDF como imágenes JPEG de alta calidad.",
+    "description": "Rasteriza cada página del PDF a JPG para presentaciones, redes sociales o sistemas que no aceptan PDF. Elige páginas o el documento completo; las descargas permanecen en tu dispositivo.",
+    "howTo": [
+      "Sube el PDF a convertir.",
+      "Selecciona páginas o exporta todas.",
+      "Descarga archivos JPG o un ZIP de páginas."
+    ],
+    "keywords": [
+      "pdf a jpg",
+      "pdf a jpeg",
+      "convertir pdf imágenes",
+      "pdf a imagen",
+      "pdf to jpg"
+    ]
+  },
+  "pdf-to-png": {
+    "name": "PDF a PNG",
+    "shortName": "PDF → PNG",
+    "summary": "Guarda páginas PDF como imágenes PNG sin pérdida.",
+    "description": "Obtén capturas PNG nítidas de páginas PDF cuando necesites gráficos compatibles con transparencia o fotogramas de archivo sin pérdida.",
+    "howTo": [
+      "Abre tu PDF en PDF a PNG.",
+      "Elige resolución o rango de páginas si se ofrece.",
+      "Descarga los archivos PNG."
+    ],
+    "keywords": [
+      "pdf a png",
+      "pdf a imagen png",
+      "exportar pdf png",
+      "pdf to png"
+    ]
+  },
+  "pdf-to-word": {
+    "name": "PDF a Word",
+    "shortName": "PDF → Word",
+    "summary": "Extrae texto del PDF en un archivo editable compatible con Word.",
+    "description": "Saca texto legible de un PDF y exporta un archivo estilo .docx o .txt que puedas abrir en Word. Funciona mejor en documentos con mucho texto; páginas escaneadas pueden necesitar OCR antes.",
+    "howTo": [
+      "Sube el PDF.",
+      "Ejecuta la extracción de texto de forma local.",
+      "Descarga la exportación a Word o texto plano."
+    ],
+    "keywords": [
+      "pdf a word",
+      "pdf a docx",
+      "convertir pdf word",
+      "pdf editable",
+      "pdf to word"
+    ]
+  },
+  "pdf-to-excel": {
+    "name": "PDF a Excel",
+    "shortName": "PDF → Excel",
+    "summary": "Exporta tablas del PDF como CSV para Excel.",
+    "description": "Extrae texto tabular de PDF en valores separados por comas que puedas abrir en Excel o Google Sheets. Útil para facturas y estados de cuenta cuando el PDF tiene texto seleccionable.",
+    "howTo": [
+      "Sube un PDF con tablas.",
+      "Revisa las filas extraídas.",
+      "Descarga la exportación CSV para hoja de cálculo."
+    ],
+    "keywords": [
+      "pdf a excel",
+      "pdf a csv",
+      "exportar tablas pdf",
+      "pdf hoja de cálculo",
+      "pdf to excel"
+    ]
+  },
+  "pdf-to-text": {
+    "name": "PDF a texto",
+    "shortName": "PDF → Texto",
+    "summary": "Guarda todo el texto extraíble del PDF en un archivo .txt.",
+    "description": "Convierte el contenido del PDF en texto plano para buscar, comparar o usar en otras herramientas. myonlinepdfeditor.com extrae en tu equipo sin OCR en la nube, salvo que lo agregues después.",
+    "howTo": [
+      "Selecciona tu PDF.",
+      "Extrae el texto página por página.",
+      "Descarga el archivo .txt."
+    ],
+    "keywords": [
+      "pdf a texto",
+      "extraer texto pdf",
+      "exportar pdf txt",
+      "archivo texto pdf",
+      "pdf to text"
+    ]
+  },
+  "edit-pdf": {
+    "name": "Editor de PDF",
+    "shortName": "Editar PDF",
+    "summary": "Abre cualquier PDF y ajusta páginas, texto y marcas en el navegador.",
+    "description": "El editor de PDF de myonlinepdfeditor.com te permite subir un documento y trabajar de forma local: navegar páginas, colocar contenido y exportar al terminar. Tu archivo permanece en tu dispositivo todo el tiempo.",
+    "howTo": [
+      "Sube el PDF que quieres editar.",
+      "Usa la barra de herramientas para agregar o cambiar contenido.",
+      "Descarga el PDF actualizado."
+    ],
+    "keywords": [
+      "editor pdf",
+      "editar pdf en línea",
+      "editor pdf gratis",
+      "modificar pdf",
+      "pdf editor"
+    ]
+  },
+  "create-pdf": {
+    "name": "Crear PDF",
+    "shortName": "Crear PDF",
+    "summary": "Empieza desde una página en blanco y arma un PDF nuevo.",
+    "description": "Comienza con un lienzo vacío o plantilla y ensambla un PDF desde cero. Agrega páginas, texto e imágenes y guarda, sin instalar software.",
+    "howTo": [
+      "Abre Crear PDF para iniciar un documento en blanco.",
+      "Agrega páginas y contenido según necesites.",
+      "Descarga tu PDF nuevo."
+    ],
+    "keywords": [
+      "crear pdf",
+      "pdf nuevo",
+      "pdf en blanco",
+      "hacer pdf en línea",
+      "create pdf"
+    ]
+  },
+  "add-fillable-fields": {
+    "name": "Agregar campos rellenables",
+    "shortName": "Campos rellenables",
+    "summary": "Coloca campos de texto, casilla y firma en cualquier PDF.",
+    "description": "Convierte un PDF plano en un formulario rellenable marcando campos en la página. Exporta y reutiliza el documento preparado para capturar datos.",
+    "howTo": [
+      "Abre tu PDF en el editor.",
+      "Agrega marcadores de campo donde la gente debe escribir o firmar.",
+      "Descarga el PDF rellenable."
+    ],
+    "keywords": [
+      "agregar campos rellenables",
+      "campos formulario pdf",
+      "hacer pdf rellenable",
+      "fillable pdf fields"
+    ]
+  },
+  "flatten-fields": {
+    "name": "Aplanar campos",
+    "shortName": "Aplanar campos",
+    "summary": "Integra campos de formulario y anotaciones en el contenido de la página.",
+    "description": "Aplana campos interactivos y marcas para que no se editen por accidente. Útil antes de archivar, imprimir o enviar una copia firmada final.",
+    "howTo": [
+      "Sube un PDF con campos o anotaciones.",
+      "Ejecuta aplanar para fusionar capas en la página.",
+      "Descarga el PDF aplanado."
+    ],
+    "keywords": [
+      "aplanar pdf",
+      "aplanar campos formulario",
+      "herramienta aplanar pdf",
+      "fusionar capas pdf",
+      "flatten pdf"
+    ]
+  },
+  "split-pdf": {
+    "name": "Dividir PDF",
+    "shortName": "Dividir PDF",
+    "summary": "Extrae rangos de páginas o divide cada página en archivos separados.",
+    "description": "Saca capítulos, facturas o escaneos individuales de un PDF grande. Define rangos o divide todas las páginas y descarga ZIP o archivos por separado.",
+    "howTo": [
+      "Sube el PDF a dividir.",
+      "Elige páginas o rangos a extraer.",
+      "Descarga el resultado dividido."
+    ],
+    "keywords": [
+      "dividir pdf",
+      "extraer páginas pdf",
+      "separar pdf",
+      "partir pdf",
+      "split pdf"
+    ]
+  },
+  "merge-pdf": {
+    "name": "Combinar PDF",
+    "shortName": "Combinar PDF",
+    "summary": "Une varios PDF en un solo archivo en el orden que elijas.",
+    "description": "Apila reportes, escaneos y adjuntos en un solo PDF. Reordena archivos antes de combinar; todo se ensambla de forma local en tu navegador.",
+    "howTo": [
+      "Agrega dos o más archivos PDF.",
+      "Arrastra los archivos al orden deseado.",
+      "Combina y descarga el PDF unificado."
+    ],
+    "keywords": [
+      "combinar pdf",
+      "unir pdf",
+      "juntar archivos pdf",
+      "fusionar pdf",
+      "merge pdf"
+    ]
+  },
+  "rotate-pdf": {
+    "name": "Rotar páginas",
+    "shortName": "Rotar páginas",
+    "summary": "Corrige escaneos de lado rotando páginas de 90° en 90°.",
+    "description": "Selecciona una página o todo el documento y rota hasta que la orientación sea correcta. Sin volver a escanear: arreglos rápidos antes de combinar o enviar por correo.",
+    "howTo": [
+      "Abre tu PDF.",
+      "Selecciona páginas y rota a la izquierda o derecha.",
+      "Guarda el PDF rotado."
+    ],
+    "keywords": [
+      "rotar pdf",
+      "girar páginas pdf",
+      "corregir pdf de lado",
+      "orientación pdf",
+      "rotate pdf"
+    ]
+  },
+  "reorder-pdf": {
+    "name": "Reordenar páginas",
+    "shortName": "Reordenar páginas",
+    "summary": "Arrastra y suelta miniaturas para cambiar el orden de páginas.",
+    "description": "Pon anexos al inicio, mueve firmas al final o corrige un escaneo mezclado con un clasificador visual. Los cambios se aplican al exportar el PDF.",
+    "howTo": [
+      "Sube tu PDF.",
+      "Arrastra las miniaturas al nuevo orden.",
+      "Descarga el archivo reordenado."
+    ],
+    "keywords": [
+      "reordenar páginas pdf",
+      "ordenar pdf",
+      "organizar páginas pdf",
+      "mover páginas pdf",
+      "reorder pdf"
+    ]
+  },
+  "delete-pages": {
+    "name": "Eliminar páginas",
+    "shortName": "Eliminar páginas",
+    "summary": "Quita páginas no deseadas de un PDF en pocos clics.",
+    "description": "Selecciona páginas en blanco, duplicadas u obsoletas y elimínalas antes de compartir. El documento restante se exporta como un PDF más liviano.",
+    "howTo": [
+      "Carga el PDF.",
+      "Selecciona las páginas a quitar.",
+      "Exporta el PDF recortado."
+    ],
+    "keywords": [
+      "eliminar páginas pdf",
+      "quitar páginas pdf",
+      "recortar pdf",
+      "borrar páginas pdf",
+      "delete pdf pages"
+    ]
+  },
+  "compress-pdf": {
+    "name": "Comprimir PDF",
+    "shortName": "Comprimir PDF",
+    "summary": "Reduce el tamaño del PDF para correo y cargas.",
+    "description": "Baja resolución de imágenes y sobrecarga del flujo para que escaneos grandes entren en los límites de adjuntos. La compresión corre de forma local; compara la calidad en vista previa antes de enviar.",
+    "howTo": [
+      "Sube el PDF a comprimir.",
+      "Elige calidad u objetivo de tamaño.",
+      "Descarga el PDF más pequeño."
+    ],
+    "keywords": [
+      "comprimir pdf",
+      "reducir tamaño pdf",
+      "achicar pdf",
+      "optimizar pdf",
+      "compress pdf"
+    ]
+  },
+  "page-numbers": {
+    "name": "Agregar números de página",
+    "shortName": "Números de página",
+    "summary": "Estampa números de página consistentes en cada hoja.",
+    "description": "Coloca números en encabezado o pie con el valor inicial y formato que elijas. Ideal para escritos, paquetes y manuales impresos.",
+    "howTo": [
+      "Abre el PDF.",
+      "Elige posición, estilo y número inicial.",
+      "Aplica y descarga el PDF numerado."
+    ],
+    "keywords": [
+      "números de página pdf",
+      "agregar números de página",
+      "numerar páginas pdf",
+      "page numbers pdf"
+    ]
+  },
+  "watermark-pdf": {
+    "name": "Marca de agua en PDF",
+    "shortName": "Marca de agua",
+    "summary": "Agrega marcas de agua de texto o imagen en todas las páginas.",
+    "description": "Marca borradores como CONFIDENCIAL, agrega un logotipo o identifica copias de revisión con una superposición semitransparente. Controla opacidad y ubicación antes de exportar.",
+    "howTo": [
+      "Sube el PDF.",
+      "Escribe el texto de marca de agua o elige una imagen.",
+      "Previsualiza y descarga el archivo con marca de agua."
+    ],
+    "keywords": [
+      "marca de agua pdf",
+      "watermark pdf",
+      "sello borrador pdf",
+      "marcar pdf"
+    ]
+  },
+  "crop-pdf": {
+    "name": "Recortar PDF",
+    "shortName": "Recortar PDF",
+    "summary": "Recorta márgenes y cajas de página al contenido.",
+    "description": "Quita bordes del escáner o márgenes blancos de más para que cada página quede ajustada al contenido. Aplica por página o a todo el documento.",
+    "howTo": [
+      "Carga el PDF en Recortar PDF.",
+      "Dibuja cajas de recorte en miniaturas o usa márgenes uniformes.",
+      "Exporta el PDF recortado."
+    ],
+    "keywords": [
+      "recortar pdf",
+      "recortar márgenes pdf",
+      "cortar borde pdf",
+      "crop pdf"
+    ]
+  },
+  "extract-pages": {
+    "name": "Extraer páginas",
+    "shortName": "Extraer páginas",
+    "summary": "Saca páginas seleccionadas en un PDF nuevo.",
+    "description": "Conserva solo las páginas que necesitas —anexos, firmas o capítulos— y descárgalas como documento aparte sin volver a escanear.",
+    "howTo": [
+      "Sube el PDF de origen.",
+      "Selecciona las páginas a extraer.",
+      "Descarga el PDF nuevo solo con esas páginas."
+    ],
+    "keywords": [
+      "extraer páginas pdf",
+      "guardar páginas pdf",
+      "sacar páginas pdf",
+      "extract pdf pages"
+    ]
+  },
+  "organize-pdf": {
+    "name": "Organizar PDF",
+    "shortName": "Organizar PDF",
+    "summary": "Reordena, elimina y ordena páginas en un solo espacio.",
+    "description": "Un clasificador de páginas enfocado: arrastra miniaturas, quita páginas sobrantes y exporta un paquete limpio. Combina organizar, eliminar y reordenar en una sola herramienta.",
+    "howTo": [
+      "Sube tu PDF.",
+      "Arrastra páginas y elimina hojas no deseadas.",
+      "Descarga el PDF organizado."
+    ],
+    "keywords": [
+      "organizar pdf",
+      "ordenar páginas pdf",
+      "arreglar pdf",
+      "organizador pdf",
+      "organize pdf"
+    ]
+  },
+  "repair-pdf": {
+    "name": "Reparar PDF",
+    "shortName": "Reparar PDF",
+    "summary": "Intenta corregir PDF corruptos o ilegibles.",
+    "description": "Reconstruye referencias cruzadas rotas y vuelve a guardar flujos para que descargas dañadas vuelvan a abrirse. Archivos muy corruptos pueden seguir necesitando el original.",
+    "howTo": [
+      "Sube el PDF problemático.",
+      "Ejecuta reparar y espera el procesamiento local.",
+      "Abre la descarga reparada en tu visor."
+    ],
+    "keywords": [
+      "reparar pdf",
+      "arreglar pdf",
+      "pdf corrupto",
+      "recuperar pdf",
+      "repair pdf"
+    ]
+  },
+  "grayscale-pdf": {
+    "name": "PDF en escala de grises",
+    "shortName": "Escala de grises",
+    "summary": "Convierte páginas a color en escala de grises para ahorrar tinta al imprimir.",
+    "description": "Pasa escaneos y fotos a color a PDF en escala de grises para gastar menos tóner y cumplir normas que exigen envíos en blanco y negro.",
+    "howTo": [
+      "Selecciona el PDF a color.",
+      "Aplica escala de grises a todas las páginas.",
+      "Descarga el PDF en tonos grises."
+    ],
+    "keywords": [
+      "pdf escala de grises",
+      "pdf blanco y negro",
+      "convertir pdf gris",
+      "grayscale pdf"
+    ]
+  },
+  "remove-metadata": {
+    "name": "Quitar metadatos",
+    "shortName": "Quitar metadatos",
+    "summary": "Elimina autor, título y XMP incrustado de un PDF.",
+    "description": "Limpia propiedades ocultas del documento antes de publicar o liberar un archivo. Exporta un PDF limpio con menos metadatos identificadores.",
+    "howTo": [
+      "Sube el PDF.",
+      "Revisa qué campos de metadatos se borrarán.",
+      "Descarga el PDF depurado."
+    ],
+    "keywords": [
+      "quitar metadatos pdf",
+      "eliminar metadatos pdf",
+      "limpiar propiedades pdf",
+      "strip pdf metadata"
+    ]
+  },
+  "sign-pdf": {
+    "name": "Firmar un PDF",
+    "shortName": "Firmar PDF",
+    "summary": "Firma contratos y formularios en la computadora con dibujo o texto.",
+    "description": "Agrega tu firma a cualquier PDF con mouse, lápiz o texto escrito. Exporta una copia firmada al instante: ideal para firmas en persona o en el mismo dispositivo.",
+    "howTo": [
+      "Sube el PDF a firmar.",
+      "Crea o coloca tu firma en la página.",
+      "Descarga el documento firmado."
+    ],
+    "keywords": [
+      "firmar pdf",
+      "firma pdf",
+      "firmar documento en línea",
+      "esign pdf",
+      "sign pdf"
+    ]
+  },
+  "send-for-signature": {
+    "name": "Preparar para firma",
+    "shortName": "Enviar a firmar",
+    "summary": "Coloca campos de firma y exporta un paquete listo para firmar.",
+    "description": "Marca dónde deben firmar, fechar o poner iniciales los firmantes y exporta un PDF que otros puedan completar. myonlinepdfeditor.com se enfoca en preparar campos en el navegador; el envío queda a tu cargo.",
+    "howTo": [
+      "Sube el acuerdo.",
+      "Agrega campos de firma y fecha para cada firmante.",
+      "Descarga y comparte el PDF preparado."
+    ],
+    "keywords": [
+      "enviar para firma",
+      "campos firma pdf",
+      "preparar firma electrónica",
+      "flujo de firmas",
+      "send for signature"
+    ]
+  },
+  "send-envelopes": {
+    "name": "Enviar sobres para firma electrónica",
+    "shortName": "Sobres",
+    "summary": "Agrupa varios PDF en un paquete tipo sobre para firmar.",
+    "description": "Combina varios documentos en una sola lista de sobre, luego descarga un conjunto listo para ZIP con PDF y lista de firmantes que puedes enviar por tu cuenta.",
+    "howTo": [
+      "Sube uno o más PDF para el sobre.",
+      "Agrega nombres y correos de firmantes en la lista.",
+      "Descarga el paquete del sobre y envíalo como prefieras."
+    ],
+    "keywords": [
+      "sobres firma electrónica",
+      "enviar sobre pdf",
+      "firma varios documentos",
+      "esignature envelopes"
+    ]
+  },
+  "in-person-signing": {
+    "name": "Firma presencial",
+    "shortName": "Firma presencial",
+    "summary": "Recoge una firma en el mismo dispositivo, en persona.",
+    "description": "Entrega el dispositivo al firmante, captura su firma dibujada o escrita y descarga el PDF completado al instante, sin ida y vuelta por correo.",
+    "howTo": [
+      "Abre el PDF en tu dispositivo.",
+      "Pásale el dispositivo al firmante.",
+      "Firma y luego descargas la copia terminada."
+    ],
+    "keywords": [
+      "firma en persona",
+      "firma mismo dispositivo",
+      "firmar en mostrador pdf",
+      "in person signing"
+    ]
+  },
+  "kiosk-mode": {
+    "name": "Modo quiosco (móvil)",
+    "shortName": "Modo quiosco",
+    "summary": "Firma a pantalla completa para teléfonos y tablets.",
+    "description": "Diseño de firma pensado para móvil en recepciones y eventos. Abre el PDF, captura la firma con el dedo y descarga en el momento.",
+    "howTo": [
+      "Abre Modo quiosco en teléfono o tablet.",
+      "Carga el documento a firmar.",
+      "Captura la firma y descarga."
+    ],
+    "keywords": [
+      "modo quiosco pdf",
+      "firmar pdf móvil",
+      "firma en tablet",
+      "kiosk mode pdf"
+    ]
+  },
+  "bulk-sending": {
+    "name": "Envío masivo",
+    "shortName": "Envío masivo",
+    "summary": "Prepara una plantilla para muchos destinatarios a la vez.",
+    "description": "Sube una plantilla PDF y una lista de destinatarios, luego genera una lista por persona y descarga copias listas para distribuir.",
+    "howTo": [
+      "Sube la plantilla PDF.",
+      "Pega nombres y correos de destinatarios (uno por línea).",
+      "Descarga la lista del paquete masivo."
+    ],
+    "keywords": [
+      "envío masivo pdf",
+      "solicitud firma masiva",
+      "enviar documentos por lote",
+      "bulk send pdf"
+    ]
+  },
+  "add-comments": {
+    "name": "Agregar comentarios al PDF",
+    "shortName": "Comentarios",
+    "summary": "Adjunta notas adhesivas y llamadas para revisores.",
+    "description": "Coloca marcadores de comentario en pasajes que necesitan retroalimentación. Los comentarios quedan como anotaciones que puedes aplanar o conservar para el siguiente revisor.",
+    "howTo": [
+      "Sube el borrador PDF.",
+      "Agrega comentarios en las páginas relevantes.",
+      "Exporta y envía a colaboradores."
+    ],
+    "keywords": [
+      "comentarios pdf",
+      "anotar pdf",
+      "revisar pdf",
+      "notas adhesivas pdf",
+      "annotate pdf"
+    ]
+  },
+  "share-via-link": {
+    "name": "Compartir por enlace",
+    "shortName": "Enlace",
+    "summary": "Descarga un PDF listo para compartir, optimizado para enlaces y adjuntos.",
+    "description": "Termina ediciones, aplana si hace falta y exporta un PDF limpio con tamaño apto para correo o nube. myonlinepdfeditor.com no aloja tus archivos: tú decides dónde compartirlos.",
+    "howTo": [
+      "Completa las ediciones en tu PDF.",
+      "Usa exportar para generar el archivo final.",
+      "Sube la descarga al servicio de compartición que prefieras."
+    ],
+    "keywords": [
+      "compartir pdf",
+      "exportar pdf",
+      "enviar enlace pdf",
+      "descargar compartir pdf",
+      "share pdf"
+    ]
+  },
+  "share-via-email": {
+    "name": "Compartir por correo",
+    "shortName": "Correo",
+    "summary": "Abre tu app de correo con un mensaje listo sobre el PDF.",
+    "description": "Prepara un borrador mailto con asunto y cuerpo. Adjunta el PDF descargado desde tu dispositivo: myonlinepdfeditor.com nunca sube el archivo.",
+    "howTo": [
+      "Sube o termina de editar tu PDF y descárgalo.",
+      "Ingresa correo del destinatario y nota opcional.",
+      "Abre tu cliente de correo y adjunta el archivo descargado."
+    ],
+    "keywords": [
+      "compartir pdf correo",
+      "enviar pdf por correo",
+      "correo pdf",
+      "email pdf"
+    ]
+  },
+  "fax": {
+    "name": "Fax PDF",
+    "shortName": "Fax",
+    "summary": "Prepara un PDF listo para imprimir para servicios de fax en línea.",
+    "description": "myonlinepdfeditor.com no opera una pasarela de fax. Descarga un PDF limpio optimizado para herramientas de fax en línea de terceros que ya uses.",
+    "howTo": [
+      "Sube tu PDF.",
+      "Descarga la copia lista para fax.",
+      "Sube ese archivo a tu servicio de fax en línea preferido."
+    ],
+    "keywords": [
+      "fax pdf",
+      "enviar pdf por fax",
+      "documento fax en línea",
+      "fax pdf online"
+    ]
+  },
+  "pdf-status": {
+    "name": "Estado del PDF",
+    "shortName": "Estado PDF",
+    "summary": "Registra notas de estado del documento de forma local en tu navegador.",
+    "description": "Marca documentos como borrador, enviado o completado y guarda notas en almacenamiento local. El estado queda en tu dispositivo: ideal para seguimiento personal.",
+    "howTo": [
+      "Nombra tu documento y elige un estado.",
+      "Agrega notas opcionales.",
+      "Guarda: los estados persisten solo en este navegador."
+    ],
+    "keywords": [
+      "estado pdf",
+      "seguimiento documentos",
+      "estado firmas",
+      "pdf status"
+    ]
+  },
+  "create-templates": {
+    "name": "Crear plantillas",
+    "shortName": "Plantillas",
+    "summary": "Diseña un diseño de formulario reutilizable con campos y etiquetas.",
+    "description": "Combina texto fijo, campos e identidad visual en una plantilla maestra que puedes duplicar y enviar otra vez. Todo el diseño permanece de forma local en myonlinepdfeditor.com.",
+    "howTo": [
+      "Empieza desde un PDF o sesión en blanco del editor.",
+      "Agrega etiquetas, campos y elementos de diseño.",
+      "Guarda la plantilla para reutilizar."
+    ],
+    "keywords": [
+      "plantilla pdf",
+      "plantilla formulario",
+      "formulario pdf reutilizable",
+      "crear formulario pdf",
+      "pdf template"
+    ]
+  },
+  "create-fillable-forms": {
+    "name": "Crear formularios rellenables",
+    "shortName": "Formularios rellenables",
+    "summary": "Abre formularios existentes y escribe respuestas en el navegador.",
+    "description": "Completa formularios PDF interactivos sin imprimir. Llena cuadros de texto y casillas, luego guarda o aplana al terminar.",
+    "howTo": [
+      "Sube un PDF rellenable.",
+      "Haz clic en los campos e ingresa tus respuestas.",
+      "Descarga el formulario completado."
+    ],
+    "keywords": [
+      "pdf rellenable",
+      "llenar formulario pdf",
+      "rellenar pdf",
+      "pdf interactivo",
+      "fillable pdf"
+    ]
+  },
+  "document-assistant": {
+    "name": "Asistente de documentos",
+    "shortName": "Asistente",
+    "summary": "Ayudante de texto en el navegador: esquematiza tareas y reescribe fragmentos del PDF.",
+    "description": "Extrae texto de forma local de tu PDF y usa ayudantes ligeros en el navegador para borradores de resúmenes o siguientes pasos. Ningún contenido del documento se envía a servidores de myonlinepdfeditor.com.",
+    "howTo": [
+      "Sube un PDF y extrae texto legible.",
+      "Pide al asistente esquemas o reescrituras de ese texto.",
+      "Copia los resultados a tu flujo de trabajo."
+    ],
+    "keywords": [
+      "asistente pdf",
+      "ayuda pdf ia",
+      "ayudante documentos",
+      "pdf assistant",
+      "ai pdf help"
+    ]
+  },
+  "simplify-document": {
+    "name": "Simplificar documento",
+    "shortName": "Simplificar",
+    "summary": "Ayudante de texto en el navegador: reescribe pasajes densos en lenguaje claro, de forma local.",
+    "description": "Haz más fácil de leer redacción técnica o legal simplificando el texto extraído en el navegador. Revisas cada cambio antes de volver a ponerlo en un documento.",
+    "howTo": [
+      "Extrae el texto del PDF en tu dispositivo.",
+      "Elige simplificar para obtener una versión más clara.",
+      "Usa el resultado en resúmenes o materiales de capacitación."
+    ],
+    "keywords": [
+      "simplificar pdf",
+      "lenguaje claro pdf",
+      "texto pdf legible",
+      "simplificar documento",
+      "simplify pdf"
+    ]
+  },
+  "summarize-key-points": {
+    "name": "Resumir puntos clave",
+    "shortName": "Resumir",
+    "summary": "Ayudante de texto en el navegador: genera resúmenes cortos del texto extraído del PDF.",
+    "description": "Obtén texto en tu dispositivo y produce resúmenes en viñetas para reportes o artículos largos. Ideal para orientarte antes de una lectura profunda.",
+    "howTo": [
+      "Abre tu PDF y extrae texto de forma local.",
+      "Ejecuta resumir sobre el contenido extraído.",
+      "Copia el resumen para notas o correo."
+    ],
+    "keywords": [
+      "resumir pdf",
+      "resumen pdf",
+      "síntesis pdf",
+      "abstract pdf",
+      "summarize pdf"
+    ]
+  },
+  "ask-document": {
+    "name": "Respuestas sobre el documento",
+    "shortName": "Preguntar al PDF",
+    "summary": "Ayudante de texto en el navegador: haz preguntas sobre el texto extraído de tu archivo.",
+    "description": "Escribe una pregunta y busca en el texto de las páginas las oraciones relevantes, sin subir el PDF completo para preguntas y respuestas en la nube.",
+    "howTo": [
+      "Carga el PDF y extrae su texto.",
+      "Escribe una pregunta sobre el contenido.",
+      "Revisa los fragmentos citados del índice local de texto."
+    ],
+    "keywords": [
+      "preguntar pdf",
+      "chat con pdf",
+      "preguntas y respuestas pdf",
+      "consultar documento pdf",
+      "ask pdf"
+    ]
+  },
+  "pdf-audit-trail": {
+    "name": "Rastro de auditoría PDF",
+    "shortName": "Auditoría",
+    "summary": "Estampa versión, fecha y notas de revisor para rastros de auditoría simples.",
+    "description": "Agrega sellos visibles de auditoría como fechas de revisión e IDs de documento. No es un registro de cumplimiento completo, pero ayuda a equipos a mostrar qué copia se aprobó.",
+    "howTo": [
+      "Abre el documento controlado.",
+      "Aplica texto de sello de auditoría en pie o portada.",
+      "Guarda y distribuye la versión sellada."
+    ],
+    "keywords": [
+      "rastro auditoría pdf",
+      "sello auditoría documento",
+      "sello versión pdf",
+      "marca cumplimiento",
+      "pdf audit trail"
+    ]
+  },
+  "certify-pdf": {
+    "name": "Certificar PDF",
+    "shortName": "Certificar PDF",
+    "summary": "Marca un PDF como versión final certificada con un banner visible.",
+    "description": "Coloca un aviso de certificación en el documento para indicar que esta copia es la versión autoritativa. Combínalo con aplanar y proteger para una entrega más sólida.",
+    "howTo": [
+      "Sube el PDF final.",
+      "Agrega texto o sello de certificación.",
+      "Exporta y archiva el archivo certificado."
+    ],
+    "keywords": [
+      "certificar pdf",
+      "documento certificado pdf",
+      "sello final pdf",
+      "copia autoritativa",
+      "certify pdf"
+    ]
+  },
+  "set-pdf-password": {
+    "name": "Establecer contraseña PDF",
+    "shortName": "Contraseña",
+    "summary": "Cifra un PDF con contraseña antes de compartirlo.",
+    "description": "Define una contraseña de apertura para que solo quien tenga la clave pueda ver el archivo. El cifrado se aplica en el navegador; elige una contraseña fuerte y compártela de forma segura.",
+    "howTo": [
+      "Sube el PDF a proteger.",
+      "Ingresa y confirma una contraseña segura.",
+      "Descarga el PDF cifrado."
+    ],
+    "keywords": [
+      "proteger pdf con contraseña",
+      "cifrar pdf",
+      "bloquear pdf",
+      "pdf seguro",
+      "password protect pdf"
+    ]
+  },
+  "readable-pdf": {
+    "name": "PDF legible",
+    "shortName": "PDF legible",
+    "summary": "Extrae texto de un PDF para leerlo y reutilizarlo con facilidad.",
+    "description": "Saca texto plano página por página para copiar, buscar o refluir contenido. El procesamiento permanece en tu navegador.",
+    "howTo": [
+      "Sube un PDF.",
+      "Extrae texto de forma local.",
+      "Copia o descarga el texto legible."
+    ],
+    "keywords": [
+      "pdf legible",
+      "extraer texto pdf",
+      "pdf a texto",
+      "readable pdf"
+    ]
+  },
+  "search-for-pdf": {
+    "name": "Buscar en PDF",
+    "shortName": "Buscar PDF",
+    "summary": "Encuentra palabras clave dentro de un PDF sin subirlo.",
+    "description": "Busca en el texto extraído del PDF coincidencias y salta a fragmentos de página. Útil para contratos, manuales y PDF escaneados con texto.",
+    "howTo": [
+      "Sube un PDF.",
+      "Ingresa un término de búsqueda.",
+      "Revisa los fragmentos de página coincidentes."
+    ],
+    "keywords": [
+      "buscar pdf",
+      "encontrar en pdf",
+      "búsqueda palabras pdf",
+      "search pdf"
+    ]
+  },
+  "export-pdf": {
+    "name": "Exportar",
+    "shortName": "Exportar",
+    "summary": "Exporta una copia limpia de tu PDF para archivo o compartición.",
+    "description": "Vuelve a guardar tu PDF de forma local como exportación portable. Una optimización ligera opcional facilita mover el archivo entre apps.",
+    "howTo": [
+      "Sube el PDF a exportar.",
+      "Elige exportar.",
+      "Descarga el archivo exportado."
+    ],
+    "keywords": [
+      "exportar pdf",
+      "guardar copia pdf",
+      "exportar pdf en línea",
+      "export pdf"
+    ]
+  },
+  "download-pdf": {
+    "name": "Descargar",
+    "shortName": "Descargar",
+    "summary": "Descarga una copia local de un PDF que abres en myonlinepdfeditor.com.",
+    "description": "Abre un PDF en el kit del navegador y guárdalo de vuelta en tu dispositivo al instante, útil después de ediciones o conversiones.",
+    "howTo": [
+      "Selecciona un PDF.",
+      "Haz clic en descargar.",
+      "Busca el archivo en tu carpeta de descargas."
+    ],
+    "keywords": [
+      "descargar pdf",
+      "guardar pdf",
+      "obtener archivo pdf",
+      "download pdf"
+    ]
+  },
+  "print-out": {
+    "name": "Imprimir",
+    "shortName": "Imprimir",
+    "summary": "Abre el diálogo de impresión del sistema para tu PDF.",
+    "description": "Carga un PDF y activa el diálogo de impresión del navegador para copias en papel o impresoras \"Guardar como PDF\".",
+    "howTo": [
+      "Sube un PDF.",
+      "Haz clic en Imprimir.",
+      "Elige impresora o Guardar como PDF."
+    ],
+    "keywords": [
+      "imprimir pdf",
+      "sacar impresión pdf",
+      "impresora pdf",
+      "print pdf"
+    ]
+  },
+  "unlock-pdf": {
+    "name": "Desbloquear PDF",
+    "shortName": "Desbloquear PDF",
+    "summary": "Quita contraseñas de apertura cuando conoces la clave.",
+    "description": "Descifra un PDF protegido al que tienes permiso de acceso para combinarlo, imprimirlo o editarlo en otras herramientas de myonlinepdfeditor.com. Debes ingresar la contraseña correcta.",
+    "howTo": [
+      "Sube el PDF bloqueado.",
+      "Ingresa la contraseña de apertura conocida.",
+      "Descarga el PDF desbloqueado."
+    ],
+    "keywords": [
+      "desbloquear pdf",
+      "quitar contraseña pdf",
+      "descifrar pdf",
+      "unlock pdf"
+    ]
+  },
+  "compare-pdf": {
+    "name": "Comparar PDF",
+    "shortName": "Comparar PDF",
+    "summary": "Diferencias lado a lado entre dos versiones de PDF.",
+    "description": "Carga un PDF original y otro revisado para resaltar cambios de texto y diseño página por página. Útil para contratos con marcas rojas y revisiones de cumplimiento.",
+    "howTo": [
+      "Sube dos archivos PDF a comparar.",
+      "Alinea versiones y ejecuta la comparación.",
+      "Revisa diferencias y exporta un resumen si está disponible."
+    ],
+    "keywords": [
+      "comparar pdf",
+      "diferencias pdf",
+      "comparación pdf",
+      "comparar documentos",
+      "compare pdf"
+    ]
+  },
+  "heic-to-pdf": {
+    "name": "HEIC a PDF",
+    "shortName": "HEIC a PDF",
+    "summary": "Convierte fotos HEIC de iPhone a PDF en el navegador.",
+    "description": "Arrastra imágenes HEIC/HEIF para armar un PDF. La conversión usa el decodificador del navegador; si HEIC no es compatible, exporta JPEG desde Fotos primero.",
+    "howTo": [
+      "Sube uno o más archivos .heic.",
+      "Espera la conversión local.",
+      "Descarga el PDF."
+    ],
+    "keywords": [
+      "heic a pdf",
+      "heif a pdf",
+      "foto iphone pdf",
+      "heic to pdf"
+    ]
+  },
+  "tiff-to-pdf": {
+    "name": "TIFF a PDF",
+    "shortName": "TIFF a PDF",
+    "summary": "Convierte escaneos TIFF en PDF multipágina.",
+    "description": "Pasa escaneos TIFF/TIF a páginas PDF de forma local. Los TIFF multipágina dependen del soporte del navegador; los TIFF de una página funcionan mejor.",
+    "howTo": [
+      "Sube archivos .tiff o .tif.",
+      "Convierte de forma local.",
+      "Descarga el PDF."
+    ],
+    "keywords": [
+      "tiff a pdf",
+      "tif a pdf",
+      "escaneo tiff pdf",
+      "tiff to pdf"
+    ]
+  },
+  "svg-to-pdf": {
+    "name": "SVG a PDF",
+    "shortName": "SVG a PDF",
+    "summary": "Rasteriza gráficos SVG en páginas PDF.",
+    "description": "Renderiza archivos SVG en páginas PDF en el navegador. Filtros complejos pueden aplanarse; revisa la vista previa de logotipos e íconos.",
+    "howTo": [
+      "Sube archivos .svg.",
+      "Convierte.",
+      "Descarga el PDF."
+    ],
+    "keywords": [
+      "svg a pdf",
+      "vector a pdf",
+      "convertidor svg",
+      "svg to pdf"
+    ]
+  },
+  "markdown-to-pdf": {
+    "name": "Markdown a PDF",
+    "shortName": "Markdown a PDF",
+    "summary": "Convierte notas .md en un PDF imprimible.",
+    "description": "Elimina marcadores comunes de Markdown y coloca el texto en un PDF. Ideal para volcados de README y notas rápidas, no un motor de impresión CommonMark completo.",
+    "howTo": [
+      "Sube un archivo .md.",
+      "Convierte a PDF.",
+      "Descarga."
+    ],
+    "keywords": [
+      "markdown a pdf",
+      "md a pdf",
+      "readme pdf",
+      "markdown to pdf"
+    ]
+  },
+  "zip-to-pdf": {
+    "name": "ZIP a PDF",
+    "shortName": "ZIP a PDF",
+    "summary": "Desempaqueta un ZIP de imágenes/PDF en un solo PDF.",
+    "description": "Sube un .zip con imágenes y/o PDF. myonlinepdfeditor.com extrae archivos compatibles y los fusiona en un solo PDF de forma local.",
+    "howTo": [
+      "Sube un .zip.",
+      "Extrae y fusiona de forma local.",
+      "Descarga el PDF combinado."
+    ],
+    "keywords": [
+      "zip a pdf",
+      "descomprimir a pdf",
+      "carpeta a pdf",
+      "zip to pdf"
+    ]
+  },
+  "scan-pdf": {
+    "name": "Escanear a PDF",
+    "shortName": "Escanear a PDF",
+    "summary": "Arma un PDF desde imágenes de teléfono o escáner.",
+    "description": "Combina imágenes de escaneo JPG/PNG/WebP (y otros que el navegador decodifique) en un PDF multipágina sin controlador de escritorio.",
+    "howTo": [
+      "Sube imágenes del escaneo.",
+      "Ordena según el orden de selección de archivos.",
+      "Descarga el PDF."
+    ],
+    "keywords": [
+      "escanear a pdf",
+      "escáner pdf",
+      "cámara a pdf",
+      "imagen escaneo pdf",
+      "scan to pdf"
+    ]
+  },
+  "redact-pdf": {
+    "name": "Redactar PDF",
+    "shortName": "Redactar PDF",
+    "summary": "Tapa páginas completas antes de compartir.",
+    "description": "Cubre páginas seleccionadas con rectángulos negros opacos para ocultar páginas sensibles completas en copias compartidas. Para redacción por región exacta, usa anotaciones en Editar PDF después.",
+    "howTo": [
+      "Sube un PDF.",
+      "Ingresa los números de página a redactar por completo.",
+      "Descarga el PDF redactado."
+    ],
+    "keywords": [
+      "redactar pdf",
+      "censurar pdf",
+      "tapar pdf",
+      "redacción pdf",
+      "redact pdf"
+    ]
+  },
+  "invert-pdf": {
+    "name": "Invertir PDF",
+    "shortName": "Invertir PDF",
+    "summary": "Invierte colores de página para lectura nocturna o impresión.",
+    "description": "Rasteriza e invierte colores en cada página. Útil para fondos oscuros o pruebas de contraste por accesibilidad.",
+    "howTo": [
+      "Sube un PDF.",
+      "Ejecuta invertir.",
+      "Descarga."
+    ],
+    "keywords": [
+      "invertir pdf",
+      "negativo pdf",
+      "modo oscuro pdf",
+      "invert pdf"
+    ]
+  },
+  "n-up-pdf": {
+    "name": "PDF N-up",
+    "shortName": "Páginas por hoja",
+    "summary": "Coloca 2 o 4 páginas en cada hoja.",
+    "description": "Imprime varias páginas de origen en una hoja de salida para folletos, pruebas y borradores de libretos (2-up o 4-up).",
+    "howTo": [
+      "Sube un PDF.",
+      "Elige 2-up o 4-up.",
+      "Descarga."
+    ],
+    "keywords": [
+      "n-up pdf",
+      "páginas por hoja",
+      "2-up pdf",
+      "4-up pdf",
+      "imponer pdf"
+    ]
+  },
+  "overlay-pdf": {
+    "name": "Superponer PDF",
+    "shortName": "Superponer PDF",
+    "summary": "Estampa una página PDF sobre otro documento.",
+    "description": "Sube un PDF base y otro de superposición. La primera página del overlay se dibuja en cada página base: útil para membretes y sellos.",
+    "howTo": [
+      "Sube primero el PDF base.",
+      "Sube segundo el PDF de superposición.",
+      "Descarga el resultado sellado."
+    ],
+    "keywords": [
+      "superponer pdf",
+      "estampar pdf",
+      "membrete pdf",
+      "overlay pdf"
+    ]
+  },
+  "reverse-pages": {
+    "name": "Invertir orden de páginas",
+    "shortName": "Invertir páginas",
+    "summary": "Invierte el orden de páginas de la última a la primera.",
+    "description": "Invierte la secuencia de páginas de un PDF: útil después de escanear una pila al revés o para preparar impresión a doble cara.",
+    "howTo": [
+      "Sube un PDF.",
+      "Invierte.",
+      "Descarga."
+    ],
+    "keywords": [
+      "invertir páginas pdf",
+      "voltear orden páginas",
+      "orden inverso páginas",
+      "reverse pdf pages"
+    ]
+  },
+  "change-page-size": {
+    "name": "Cambiar tamaño de página",
+    "shortName": "Tamaño página",
+    "summary": "Ajusta páginas a Carta, A4 o Legal.",
+    "description": "Escala y centra cada página en un tamaño de papel objetivo sin el diálogo de impresión de escritorio.",
+    "howTo": [
+      "Sube un PDF.",
+      "Elige Carta, A4 o Legal.",
+      "Descarga."
+    ],
+    "keywords": [
+      "cambiar tamaño página pdf",
+      "a4 a carta",
+      "carta a a4",
+      "tamaño papel pdf",
+      "change pdf page size"
+    ]
+  },
+  "rasterize-pdf": {
+    "name": "Rasterizar PDF",
+    "shortName": "Rasterizar",
+    "summary": "Aplana páginas a imágenes dentro de un PDF nuevo.",
+    "description": "Renderiza cada página como capa de imagen y reconstruye el PDF. Ayuda antes de imprimir, redactar o cuando las fuentes no se incrustan.",
+    "howTo": [
+      "Sube un PDF.",
+      "Rasteriza de forma local.",
+      "Descarga."
+    ],
+    "keywords": [
+      "rasterizar pdf",
+      "aplanar pdf a imágenes",
+      "pdf a imagen pdf",
+      "rasterize pdf"
+    ]
+  },
+  "pdf-to-tiff": {
+    "name": "PDF a TIFF",
+    "shortName": "PDF a TIFF",
+    "summary": "Exporta páginas PDF como imágenes de alta calidad (sustituto PNG).",
+    "description": "Los navegadores rara vez escriben TIFF multipágina. myonlinepdfeditor.com exporta imágenes PNG nítidas por página que puedes abrir en software de escaneo que guarde TIFF.",
+    "howTo": [
+      "Sube un PDF.",
+      "Exporta imágenes de página.",
+      "Guarda cada archivo."
+    ],
+    "keywords": [
+      "pdf a tiff",
+      "pdf a tif",
+      "imágenes página pdf",
+      "pdf to tiff"
+    ]
+  },
+  "pdf-to-pdfa": {
+    "name": "PDF a PDF/A",
+    "shortName": "PDF/A",
+    "summary": "Prepara un paquete de exportación archivística para flujos PDF/A.",
+    "description": "La validación PDF/A completa requiere convertidores especializados. myonlinepdfeditor.com empaqueta tu archivo con guía de limpieza de metadatos para que termines el cumplimiento archivístico en un validador PDF/A.",
+    "howTo": [
+      "Sube un PDF.",
+      "Descarga el paquete de exportación limpio.",
+      "Valida con un verificador PDF/A si se requiere."
+    ],
+    "keywords": [
+      "pdf a pdfa",
+      "pdf/a",
+      "pdf archivístico",
+      "convertidor pdfa",
+      "pdf to pdfa"
+    ]
+  },
+  "translate-pdf": {
+    "name": "Traducir PDF",
+    "shortName": "Traducir PDF",
+    "summary": "Extrae texto y prepara una copia lista para traducir.",
+    "description": "Saca texto extraíble del PDF al Asistente de documentos para pedir traducciones. Escaneos solo imagen necesitan OCR primero (PDF legible).",
+    "howTo": [
+      "Sube un PDF con texto seleccionable.",
+      "Abre el asistente con la opción de traducción.",
+      "Copia o descarga el texto traducido."
+    ],
+    "keywords": [
+      "traducir pdf",
+      "traducción pdf",
+      "pdf traducir",
+      "translate pdf"
+    ]
+  },
+  "heic-to-jpg": {
+    "name": "HEIC a JPG",
+    "shortName": "HEIC a JPG",
+    "summary": "Convierte fotos HEIC a JPEG.",
+    "description": "Decodifica HEIC/HEIF en el navegador cuando hay soporte y descarga archivos JPG.",
+    "howTo": [
+      "Sube archivos HEIC.",
+      "Convierte.",
+      "Descarga los JPG."
+    ],
+    "keywords": [
+      "heic a jpg",
+      "heic a jpeg",
+      "heif a jpg",
+      "heic to jpg"
+    ]
+  },
+  "heic-to-png": {
+    "name": "HEIC a PNG",
+    "shortName": "HEIC a PNG",
+    "summary": "Convierte fotos HEIC a PNG.",
+    "description": "Decodifica HEIC/HEIF y exporta PNG sin pérdida cuando el navegador puede decodificar el archivo.",
+    "howTo": [
+      "Sube HEIC.",
+      "Convierte.",
+      "Descarga PNG."
+    ],
+    "keywords": [
+      "heic a png",
+      "heif a png",
+      "heic to png"
+    ]
+  },
+  "webp-to-jpg": {
+    "name": "WebP a JPG",
+    "shortName": "WebP a JPG",
+    "summary": "Convierte imágenes WebP a JPEG.",
+    "description": "Vuelve a codificar WebP como JPG para apps que aún no aceptan WebP.",
+    "howTo": [
+      "Sube WebP.",
+      "Convierte.",
+      "Descarga JPG."
+    ],
+    "keywords": [
+      "webp a jpg",
+      "webp a jpeg",
+      "webp to jpg"
+    ]
+  },
+  "webp-to-png": {
+    "name": "WebP a PNG",
+    "shortName": "WebP a PNG",
+    "summary": "Convierte imágenes WebP a PNG.",
+    "description": "Vuelve a codificar WebP como PNG para flujos que necesitan transparencia.",
+    "howTo": [
+      "Sube WebP.",
+      "Convierte.",
+      "Descarga PNG."
+    ],
+    "keywords": [
+      "webp a png",
+      "webp to png"
+    ]
+  },
+  "svg-to-jpg": {
+    "name": "SVG a JPG",
+    "shortName": "SVG a JPG",
+    "summary": "Rasteriza SVG a JPEG.",
+    "description": "Renderiza gráficos SVG a JPG en el navegador.",
+    "howTo": [
+      "Sube SVG.",
+      "Convierte.",
+      "Descarga JPG."
+    ],
+    "keywords": [
+      "svg a jpg",
+      "svg a jpeg",
+      "svg to jpg"
+    ]
+  },
+  "svg-to-png": {
+    "name": "SVG a PNG",
+    "shortName": "SVG a PNG",
+    "summary": "Rasteriza SVG a PNG.",
+    "description": "Renderiza gráficos SVG a PNG con soporte de transparencia.",
+    "howTo": [
+      "Sube SVG.",
+      "Convierte.",
+      "Descarga PNG."
+    ],
+    "keywords": [
+      "svg a png",
+      "svg to png"
+    ]
+  },
+  "compress-images": {
+    "name": "Comprimir imágenes",
+    "shortName": "Comprimir imágenes",
+    "summary": "Reduce el tamaño de imágenes con recompresión JPEG.",
+    "description": "Vuelve a codificar imágenes como JPEG comprimido de forma local antes de correo o empaquetado en PDF.",
+    "howTo": [
+      "Sube imágenes.",
+      "Comprime.",
+      "Descarga JPG más pequeños."
+    ],
+    "keywords": [
+      "comprimir imágenes",
+      "compresor imágenes",
+      "reducir tamaño imagen",
+      "compress images"
+    ]
+  },
+  "odt-to-pdf": {
+    "name": "ODT a PDF",
+    "shortName": "ODT a PDF",
+    "summary": "Convierte LibreOffice Writer (.odt) a PDF.",
+    "description": "Extrae texto OpenDocument y arma un PDF de forma local. Diseños complejos se aplanan a flujo de texto.",
+    "howTo": [
+      "Sube .odt.",
+      "Convierte.",
+      "Descarga PDF."
+    ],
+    "keywords": [
+      "odt a pdf",
+      "opendocument a pdf",
+      "libreoffice writer pdf",
+      "odt to pdf"
+    ]
+  },
+  "ods-to-pdf": {
+    "name": "ODS a PDF",
+    "shortName": "ODS a PDF",
+    "summary": "Convierte LibreOffice Calc (.ods) a PDF.",
+    "description": "Lee hojas ODS como texto tabular y publica una instantánea PDF.",
+    "howTo": [
+      "Sube .ods.",
+      "Convierte.",
+      "Descarga PDF."
+    ],
+    "keywords": [
+      "ods a pdf",
+      "hoja opendocument pdf",
+      "ods to pdf"
+    ]
+  },
+  "odp-to-pdf": {
+    "name": "ODP a PDF",
+    "shortName": "ODP a PDF",
+    "summary": "Convierte LibreOffice Impress (.odp) a PDF.",
+    "description": "Extrae texto de diapositivas ODP y lo coloca en un PDF.",
+    "howTo": [
+      "Sube .odp.",
+      "Convierte.",
+      "Descarga PDF."
+    ],
+    "keywords": [
+      "odp a pdf",
+      "presentación opendocument pdf",
+      "odp to pdf"
+    ]
+  },
+  "odg-to-pdf": {
+    "name": "ODG a PDF",
+    "shortName": "ODG a PDF",
+    "summary": "Convierte LibreOffice Draw (.odg) a PDF.",
+    "description": "Extrae contenido de texto de dibujos ODG en una hoja de notas PDF.",
+    "howTo": [
+      "Sube .odg.",
+      "Convierte.",
+      "Descarga PDF."
+    ],
+    "keywords": [
+      "odg a pdf",
+      "dibujo opendocument pdf",
+      "odg to pdf"
+    ]
+  },
+  "epub-to-pdf": {
+    "name": "EPUB a PDF",
+    "shortName": "EPUB a PDF",
+    "summary": "Convierte libros EPUB a PDF.",
+    "description": "Desempaqueta capítulos HTML de EPUB y los reconstruye como flujo de texto PDF imprimible.",
+    "howTo": [
+      "Sube .epub.",
+      "Convierte.",
+      "Descarga PDF."
+    ],
+    "keywords": [
+      "epub a pdf",
+      "ebook a pdf",
+      "epub to pdf"
+    ]
+  },
+  "pdf-to-epub": {
+    "name": "PDF a EPUB",
+    "shortName": "PDF a EPUB",
+    "summary": "Exporta texto extraíble del PDF como EPUB.",
+    "description": "Arma un EPUB mínimo a partir del texto del PDF para lectores electrónicos. PDF con mucho diseño pasa a texto fluido.",
+    "howTo": [
+      "Sube PDF.",
+      "Extrae texto.",
+      "Descarga .epub."
+    ],
+    "keywords": [
+      "pdf a epub",
+      "pdf ebook",
+      "pdf to epub"
+    ]
+  },
+  "eml-to-pdf": {
+    "name": "EML a PDF",
+    "shortName": "EML a PDF",
+    "summary": "Convierte correos (.eml) a PDF.",
+    "description": "Analiza encabezados y cuerpo del mensaje en un PDF archivo del correo.",
+    "howTo": [
+      "Sube .eml.",
+      "Convierte.",
+      "Descarga PDF."
+    ],
+    "keywords": [
+      "eml a pdf",
+      "correo a pdf",
+      "mensaje a pdf",
+      "email to pdf"
+    ]
+  },
+  "pdf-to-html": {
+    "name": "PDF a HTML",
+    "shortName": "PDF a HTML",
+    "summary": "Exporta texto del PDF como página HTML.",
+    "description": "Extrae texto de páginas en un documento HTML sencillo para la web o más edición.",
+    "howTo": [
+      "Sube PDF.",
+      "Exporta.",
+      "Descarga .html."
+    ],
+    "keywords": [
+      "pdf a html",
+      "exportar pdf html",
+      "pdf to html"
+    ]
+  },
+  "pdf-to-markdown": {
+    "name": "PDF a Markdown",
+    "shortName": "PDF a Markdown",
+    "summary": "Exporta texto del PDF como Markdown.",
+    "description": "Extrae texto seleccionable en un archivo .md con encabezados por página.",
+    "howTo": [
+      "Sube PDF.",
+      "Exporta.",
+      "Descarga .md."
+    ],
+    "keywords": [
+      "pdf a markdown",
+      "pdf a md",
+      "pdf to markdown"
+    ]
+  },
+  "pdf-to-svg": {
+    "name": "PDF a SVG",
+    "shortName": "PDF a SVG",
+    "summary": "Exporta páginas PDF como contenedores SVG.",
+    "description": "Renderiza cada página y la envuelve en un elemento imagen SVG para incrustar en la web.",
+    "howTo": [
+      "Sube PDF.",
+      "Exporta.",
+      "Descarga archivos .svg."
+    ],
+    "keywords": [
+      "pdf a svg",
+      "exportar vector pdf",
+      "pdf to svg"
+    ]
+  },
+  "pdf-to-odt": {
+    "name": "PDF a ODT",
+    "shortName": "PDF a ODT",
+    "summary": "Exporta texto del PDF para LibreOffice Writer.",
+    "description": "Descarga texto extraíble como .txt que puedes abrir en Writer y guardar como ODT.",
+    "howTo": [
+      "Sube PDF.",
+      "Extrae texto.",
+      "Abre en LibreOffice → Guardar como ODT."
+    ],
+    "keywords": [
+      "pdf a odt",
+      "pdf a opendocument",
+      "pdf to odt"
+    ]
+  },
+  "pdf-to-ods": {
+    "name": "PDF a ODS",
+    "shortName": "PDF a ODS",
+    "summary": "Exporta tablas del PDF hacia Calc/ODS.",
+    "description": "Exporta texto tipo CSV del PDF para LibreOffice Calc; guarda como ODS en Calc.",
+    "howTo": [
+      "Sube PDF.",
+      "Exporta CSV.",
+      "Abre en Calc → Guardar como ODS."
+    ],
+    "keywords": [
+      "pdf a ods",
+      "pdf a libreoffice calc",
+      "pdf to ods"
+    ]
+  },
+  "pdf-to-odp": {
+    "name": "PDF a ODP",
+    "shortName": "PDF a ODP",
+    "summary": "Exporta texto del PDF para flujos Impress/ODP.",
+    "description": "Extrae texto para pegarlo en diapositivas de LibreOffice Impress y guardar como ODP.",
+    "howTo": [
+      "Sube PDF.",
+      "Extrae texto.",
+      "Pega en Impress."
+    ],
+    "keywords": [
+      "pdf a odp",
+      "pdf a impress",
+      "pdf to odp"
+    ]
+  },
+  "xml-invoice-to-pdf": {
+    "name": "Factura XML a PDF",
+    "shortName": "Factura XML",
+    "summary": "Renderiza cargas de factura XML / UBL como PDF.",
+    "description": "Quita etiquetas XML e imprime campos de factura en un PDF legible para revisión.",
+    "howTo": [
+      "Sube .xml.",
+      "Convierte.",
+      "Descarga PDF."
+    ],
+    "keywords": [
+      "factura xml a pdf",
+      "ubl a pdf",
+      "factura electrónica pdf",
+      "xml invoice to pdf"
+    ]
+  },
+  "analyze-pdf": {
+    "name": "Analizar PDF",
+    "shortName": "Analizar PDF",
+    "summary": "Revisa cantidad de páginas, tamaños y metadatos.",
+    "description": "Informa la estructura del PDF: páginas, dimensiones, metadatos y estadísticas de texto extraíble.",
+    "howTo": [
+      "Sube PDF.",
+      "Ejecuta el análisis.",
+      "Descarga o copia el reporte."
+    ],
+    "keywords": [
+      "analizar pdf",
+      "info pdf",
+      "propiedades pdf",
+      "analyze pdf"
+    ]
+  },
+  "pdf-statistics": {
+    "name": "Estadísticas PDF",
+    "shortName": "Estadísticas PDF",
+    "summary": "Estadísticas rápidas de un archivo PDF.",
+    "description": "Misma familia que Analizar PDF: conteo de páginas, cobertura de texto y tamaño de archivo de un vistazo.",
+    "howTo": [
+      "Sube PDF.",
+      "Consulta las estadísticas.",
+      "Guarda el reporte."
+    ],
+    "keywords": [
+      "estadísticas pdf",
+      "métricas pdf",
+      "pdf stats",
+      "pdf statistics"
+    ]
+  },
+  "change-pdf-doc-info": {
+    "name": "Cambiar información del PDF",
+    "shortName": "Info documento",
+    "summary": "Edita título, autor, asunto y palabras clave del PDF.",
+    "description": "Actualiza campos del diccionario de información del documento de forma local antes de compartir o archivar.",
+    "howTo": [
+      "Sube PDF.",
+      "Ingresa campos de metadatos.",
+      "Descarga el PDF actualizado."
+    ],
+    "keywords": [
+      "metadatos pdf",
+      "título pdf",
+      "cambiar propiedades pdf",
+      "doc info",
+      "pdf metadata"
+    ]
+  },
+  "set-pdf-viewer-preferences": {
+    "name": "Preferencias del visor PDF",
+    "shortName": "Prefs visor",
+    "summary": "Normaliza metadatos de productor/creador del visor.",
+    "description": "Actualiza metadatos orientados al visor para que las descargas se abran limpiamente en lectores comunes.",
+    "howTo": [
+      "Sube PDF.",
+      "Aplica preferencias.",
+      "Descarga."
+    ],
+    "keywords": [
+      "preferencias visor pdf",
+      "configuración apertura pdf",
+      "pdf viewer preferences"
+    ]
+  },
+  "bookmark-pdf": {
+    "name": "Marcadores PDF",
+    "shortName": "Marcadores",
+    "summary": "Agrega marcadores de página / entradas de esquema.",
+    "description": "Crea marcadores de esquema Página 1…N cuando el motor PDF admite esquemas.",
+    "howTo": [
+      "Sube PDF.",
+      "Agrega marcadores.",
+      "Descarga."
+    ],
+    "keywords": [
+      "marcadores pdf",
+      "esquema pdf",
+      "outline pdf",
+      "bookmark pdf"
+    ]
+  },
+  "print-pdf-as-poster": {
+    "name": "Imprimir PDF como póster",
+    "shortName": "Póster",
+    "summary": "Divide la primera página en una cuadrícula de póster.",
+    "description": "Parte la primera página en varias hojas para impresiones de gran formato en pared.",
+    "howTo": [
+      "Sube PDF.",
+      "Genera los mosaicos del póster.",
+      "Imprime las páginas descargadas."
+    ],
+    "keywords": [
+      "póster pdf",
+      "imprimir póster pdf",
+      "mosaico pdf",
+      "pdf poster"
+    ]
+  },
+  "generate-password": {
+    "name": "Generar contraseña",
+    "shortName": "Gen. contraseña",
+    "summary": "Crea una contraseña aleatoria fuerte para proteger PDF.",
+    "description": "Genera una contraseña de alta entropía que puedes pegar en Establecer contraseña PDF.",
+    "howTo": [
+      "Abre la herramienta.",
+      "Genera.",
+      "Copia la contraseña."
+    ],
+    "keywords": [
+      "generar contraseña",
+      "generador contraseñas",
+      "contraseña pdf",
+      "password generator"
+    ]
+  },
+  "embed-pdf": {
+    "name": "Incrustar PDF",
+    "shortName": "Incrustar PDF",
+    "summary": "Obtén HTML para incrustar un PDF en un sitio web.",
+    "description": "Descarga un fragmento HTML con botón e iframe listo para alojar tu PDF.",
+    "howTo": [
+      "Sube o nombra tu PDF.",
+      "Descarga el fragmento HTML.",
+      "Aloja junto a tu archivo."
+    ],
+    "keywords": [
+      "incrustar pdf",
+      "iframe pdf",
+      "pdf en sitio web",
+      "embed pdf"
+    ]
+  },
+  "pdf-button": {
+    "name": "Botón PDF",
+    "shortName": "Botón PDF",
+    "summary": "Genera un botón de descarga/apertura para un PDF.",
+    "description": "El mismo kit de incrustación enfocado en un enlace con estilo para tu archivo PDF.",
+    "howTo": [
+      "Indica el nombre del PDF.",
+      "Descarga HTML.",
+      "Pega en tu sitio."
+    ],
+    "keywords": [
+      "botón pdf",
+      "botón descarga pdf",
+      "pdf button"
+    ]
+  },
+  "accessible-pdf": {
+    "name": "PDF accesible",
+    "shortName": "PDF accesible",
+    "summary": "Lista de verificación para preparación de accesibilidad tipo PDF/UA.",
+    "description": "Obtén una lista práctica de accesibilidad y pasos de preparación; la certificación PDF/UA completa requiere un validador dedicado.",
+    "howTo": [
+      "Sube PDF opcional.",
+      "Descarga la lista de verificación.",
+      "Aplica correcciones en herramientas de autoría."
+    ],
+    "keywords": [
+      "pdf accesible",
+      "pdf ua",
+      "accesibilidad pdf",
+      "accessible pdf"
+    ]
+  },
+  "pdf-printer": {
+    "name": "Impresora PDF",
+    "shortName": "Impresora PDF",
+    "summary": "Abre el diálogo de impresión del sistema para un PDF.",
+    "description": "Carga un PDF y activa imprimir / Guardar como PDF desde tu navegador.",
+    "howTo": [
+      "Sube PDF.",
+      "Imprime.",
+      "Elige impresora o Guardar como PDF."
+    ],
+    "keywords": [
+      "impresora pdf",
+      "imprimir pdf en línea",
+      "pdf printer"
+    ]
+  },
+  "straighten-pdf": {
+    "name": "Enderezar PDF",
+    "shortName": "Enderezar",
+    "summary": "Guía para enderezar escaneos torcidos.",
+    "description": "El enderezado automático requiere modelos de visión. myonlinepdfeditor.com te orienta a Rotar PDF y flujos de enderezado del escáner.",
+    "howTo": [
+      "Sube el escaneo.",
+      "Lee la guía.",
+      "Rota o vuelve a escanear según haga falta."
+    ],
+    "keywords": [
+      "enderezar pdf",
+      "corregir inclinación pdf",
+      "arreglar escaneo torcido",
+      "deskew pdf",
+      "straighten pdf"
+    ]
+  },
+  "validate-pdfa": {
+    "name": "Validar PDF/A",
+    "shortName": "Validar PDF/A",
+    "summary": "Cómo validar PDF/A después de la preparación.",
+    "description": "Explica la validación PDF/A con verificadores externos tras usar la preparación PDF a PDF/A.",
+    "howTo": [
+      "Sube PDF.",
+      "Lee los pasos de validación.",
+      "Ejecuta un validador PDF/A externo."
+    ],
+    "keywords": [
+      "validar pdfa",
+      "validación pdf/a",
+      "validate pdfa"
+    ]
+  },
+  "verify-pdf-signatures": {
+    "name": "Verificar firmas PDF",
+    "shortName": "Verificar firmas",
+    "summary": "Guía para verificar firmas digitales.",
+    "description": "La verificación criptográfica requiere lectores de confianza; myonlinepdfeditor.com explica el flujo.",
+    "howTo": [
+      "Sube el PDF firmado.",
+      "Lee la guía de verificación.",
+      "Ábrelo en una suite de firmas para validar."
+    ],
+    "keywords": [
+      "verificar firma pdf",
+      "validar firma digital",
+      "verify pdf signature"
+    ]
+  },
+  "pdf-to-e-invoice": {
+    "name": "PDF a factura electrónica",
+    "shortName": "Factura electrónica",
+    "summary": "Notas sobre exportación de factura electrónica estructurada.",
+    "description": "Explica rutas ZUGFeRD/Factur-X/UBL; usa Factura XML a PDF para cargas XML.",
+    "howTo": [
+      "Sube PDF o omite.",
+      "Lee la guía.",
+      "Usa ERP o herramientas XML según necesites."
+    ],
+    "keywords": [
+      "pdf a factura electrónica",
+      "zugferd",
+      "factur-x",
+      "pdf to e-invoice"
+    ]
+  },
+  "validate-e-invoice": {
+    "name": "Validar factura electrónica",
+    "shortName": "Validar factura",
+    "summary": "Apunta a validadores nacionales de factura electrónica.",
+    "description": "La validación de esquema depende de la jurisdicción; myonlinepdfeditor.com documenta los siguientes pasos.",
+    "howTo": [
+      "Sube XML/PDF opcional.",
+      "Lee la guía.",
+      "Usa el validador nacional correspondiente."
+    ],
+    "keywords": [
+      "validar factura electrónica",
+      "validar ubl",
+      "validate e-invoice"
+    ]
+  },
+  "hwp-to-pdf": {
+    "name": "HWP a PDF",
+    "shortName": "HWP a PDF",
+    "summary": "Cómo pasar archivos Hangul HWP a PDF.",
+    "description": "HWP no se decodifica en el navegador. La guía cubre rutas de exportación con Hancom/LibreOffice.",
+    "howTo": [
+      "Selecciona tu .hwp.",
+      "Lee los pasos de conversión.",
+      "Exporta PDF externamente y luego usa myonlinepdfeditor.com."
+    ],
+    "keywords": [
+      "hwp a pdf",
+      "hangul a pdf",
+      "hwp to pdf"
+    ]
+  },
+  "pages-to-pdf": {
+    "name": "Pages a PDF",
+    "shortName": "Pages a PDF",
+    "summary": "Exporta documentos Apple Pages a PDF.",
+    "description": "Los archivos Pages requieren Apple Pages o exportación iCloud; myonlinepdfeditor.com documenta el camino.",
+    "howTo": [
+      "Selecciona .pages.",
+      "Sigue la guía de exportación.",
+      "Sube el PDF a otras herramientas."
+    ],
+    "keywords": [
+      "pages a pdf",
+      "apple pages pdf",
+      "pages to pdf"
+    ]
+  },
+  "ofd-to-pdf": {
+    "name": "OFD a PDF",
+    "shortName": "OFD a PDF",
+    "summary": "Convierte documentos OFD chinos con lectores externos.",
+    "description": "OFD requiere convertidores especializados; myonlinepdfeditor.com explica cómo obtener un PDF primero.",
+    "howTo": [
+      "Selecciona .ofd.",
+      "Lee la guía.",
+      "Convierte externamente."
+    ],
+    "keywords": [
+      "ofd a pdf",
+      "ofd to pdf"
+    ]
+  },
+  "pub-to-pdf": {
+    "name": "Publisher a PDF",
+    "shortName": "PUB a PDF",
+    "summary": "Exporta Microsoft Publisher (.pub) a PDF.",
+    "description": "Los archivos Publisher requieren exportación de escritorio; incluye guía.",
+    "howTo": [
+      "Selecciona .pub.",
+      "Sigue los pasos de exportación.",
+      "Continúa en myonlinepdfeditor.com con el PDF."
+    ],
+    "keywords": [
+      "pub a pdf",
+      "publisher a pdf",
+      "pub to pdf"
+    ]
+  },
+  "publisher-to-pdf": {
+    "name": "MS Publisher a PDF",
+    "shortName": "Publisher PDF",
+    "summary": "Guía de exportación de Microsoft Publisher.",
+    "description": "Herramienta equivalente al nombre PDF24 para exportación Publisher → PDF en escritorio.",
+    "howTo": [
+      "Selecciona .pub.",
+      "Exporta PDF desde Publisher.",
+      "Usa myonlinepdfeditor.com para más ediciones."
+    ],
+    "keywords": [
+      "publisher a pdf",
+      "microsoft publisher pdf",
+      "publisher to pdf"
+    ]
+  },
+  "ps-to-pdf": {
+    "name": "PS a PDF",
+    "shortName": "PS a PDF",
+    "summary": "Convierte PostScript con herramientas tipo Ghostscript en escritorio.",
+    "description": "Los navegadores no ejecutan Ghostscript; myonlinepdfeditor.com documenta la ruta de conversión en escritorio.",
+    "howTo": [
+      "Selecciona .ps.",
+      "Lee la guía.",
+      "Convierte en escritorio."
+    ],
+    "keywords": [
+      "ps a pdf",
+      "postscript a pdf",
+      "ps to pdf"
+    ]
+  },
+  "udf-to-pdf": {
+    "name": "UDF a PDF",
+    "shortName": "UDF a PDF",
+    "summary": "Convierte documentos UDF mediante la app de autoría.",
+    "description": "UDF no se decodifica aquí: exporta PDF o DOCX primero.",
+    "howTo": [
+      "Selecciona .udf.",
+      "Lee la guía.",
+      "Exporta externamente."
+    ],
+    "keywords": [
+      "udf a pdf",
+      "udf to pdf"
+    ]
+  }
+}
