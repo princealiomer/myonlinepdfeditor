@@ -58,7 +58,7 @@ export function toolMetaDescription(input: {
     text = `${text.replace(/\.$/, "")}. Use ${input.name} free on ${site.name}.`;
   }
   if (text.length < 140) {
-    text = `${text.replace(/\.$/, "")} Open the tool, upload a PDF, and download your result.`;
+    text = `${text.replace(/\.$/, "")} Upload a file, run the tool in your browser, and download the result.`;
   }
 
   if (text.length > 160) {
@@ -187,19 +187,31 @@ export function webApplicationJsonLd({
   name,
   description,
   url,
+  image,
+  featureList,
+  locale,
 }: {
   name: string;
   description: string;
   url: string;
+  image?: string;
+  featureList?: string[];
+  locale?: Locale;
 }) {
+  const id = `${url}#webapp`;
   return {
     "@context": "https://schema.org",
     "@type": "WebApplication",
+    "@id": id,
     name,
     applicationCategory: "BusinessApplication",
-    operatingSystem: "Web",
+    applicationSubCategory: "PDFConverter",
+    operatingSystem: "Any",
     url,
     description,
+    image: image || absoluteUrl("/opengraph-image"),
+    screenshot: image || absoluteUrl("/opengraph-image"),
+    inLanguage: locale ? LOCALE_LABELS[locale].hreflang : "en",
     offers: {
       "@type": "Offer",
       price: "0",
@@ -207,6 +219,24 @@ export function webApplicationJsonLd({
     },
     isAccessibleForFree: true,
     browserRequirements: "Requires JavaScript. Runs in modern browsers.",
+    provider: {
+      "@type": "Organization",
+      name: site.name,
+      url: site.url,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: site.name,
+      url: site.url,
+    },
+    ...(featureList?.length
+      ? { featureList: featureList.slice(0, 12) }
+      : {}),
+    potentialAction: {
+      "@type": "ConsumeAction",
+      target: url,
+      name: `Use ${name}`,
+    },
   };
 }
 
@@ -227,10 +257,13 @@ export function breadcrumbJsonLd(
 
 export function faqJsonLd(
   items: { question: string; answer: string }[],
+  opts?: { url?: string; name?: string },
 ) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    ...(opts?.url ? { "@id": `${opts.url}#faq`, url: opts.url } : {}),
+    ...(opts?.name ? { name: opts.name } : {}),
     mainEntity: items.map((item) => ({
       "@type": "Question",
       name: item.question,
@@ -242,32 +275,117 @@ export function faqJsonLd(
   };
 }
 
+export type HowToStepInput =
+  | string
+  | {
+      name: string;
+      text: string;
+    };
+
 export function howToJsonLd({
   name,
   description,
   steps,
+  url,
 }: {
   name: string;
   description: string;
-  steps: string[];
+  steps: HowToStepInput[];
+  url?: string;
 }) {
   return {
     "@context": "https://schema.org",
     "@type": "HowTo",
+    ...(url ? { "@id": `${url}#howto`, url } : {}),
     name,
     description,
-    step: steps.map((text, index) => {
-      const cleaned = text.replace(/^\s*\d+[\.)]\s*/, "").trim();
-      const title =
-        cleaned.length > 60
-          ? `${cleaned.slice(0, 57).replace(/\s+\S*$/, "")}…`
-          : cleaned || `Step ${index + 1}`;
+    step: steps.map((step, index) => {
+      if (typeof step === "string") {
+        const cleaned = step.replace(/^\s*\d+[\.)]\s*/, "").trim();
+        const title =
+          cleaned.length > 60
+            ? `${cleaned.slice(0, 57).replace(/\s+\S*$/, "")}…`
+            : cleaned || `Step ${index + 1}`;
+        return {
+          "@type": "HowToStep",
+          position: index + 1,
+          name: title,
+          text: cleaned || title,
+          ...(url ? { url } : {}),
+        };
+      }
       return {
         "@type": "HowToStep",
         position: index + 1,
-        name: title,
-        text: cleaned || title,
+        name: step.name,
+        text: step.text || step.name,
+        ...(url ? { url } : {}),
       };
     }),
+  };
+}
+
+/** Combined WebApplication + HowTo + FAQPage for a tool converter page. */
+export function toolConverterJsonLd({
+  name,
+  description,
+  url,
+  image,
+  featureList,
+  locale,
+  howToName,
+  howToDescription,
+  howToSteps,
+  faqs,
+  faqName,
+}: {
+  name: string;
+  description: string;
+  url: string;
+  image?: string;
+  featureList?: string[];
+  locale?: Locale;
+  howToName: string;
+  howToDescription: string;
+  howToSteps: HowToStepInput[];
+  faqs: { question: string; answer: string }[];
+  faqName?: string;
+}) {
+  const webApp = webApplicationJsonLd({
+    name,
+    description,
+    url,
+    image,
+    featureList,
+    locale,
+  });
+  // Nested nodes inside @graph should not repeat @context.
+  const { "@context": _c1, ...webAppNode } = webApp as Record<string, unknown> & {
+    "@context": string;
+  };
+  const howTo = howToJsonLd({
+    name: howToName,
+    description: howToDescription,
+    steps: howToSteps,
+    url,
+  });
+  const { "@context": _c2, ...howToNode } = howTo as Record<string, unknown> & {
+    "@context": string;
+  };
+  const faq = faqJsonLd(faqs, { url, name: faqName });
+  const { "@context": _c3, ...faqNode } = faq as Record<string, unknown> & {
+    "@context": string;
+  };
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      webAppNode,
+      {
+        ...howToNode,
+        mainEntityOfPage: { "@id": `${url}#webapp` },
+      },
+      faqNode,
+    ],
   };
 }

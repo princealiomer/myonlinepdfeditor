@@ -69,7 +69,15 @@ export function SiteFooter({
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-5 text-sm text-mist sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <p>
-            © 2026 {site.name}. {dict.footer.copyright}
+            © 2026 {site.name}. {dict.footer.copyright}{" "}
+            <a
+              href="https://icons8.com"
+              className="no-underline hover:text-white"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Icons by Icons8
+            </a>
           </p>
           <div className="flex flex-wrap gap-4">
             <Link

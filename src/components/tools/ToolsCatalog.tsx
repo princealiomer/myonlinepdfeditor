@@ -2,6 +2,7 @@
 
 import { useDeferredValue, useMemo, useState } from "react";
 import Link from "next/link";
+import { CategoryIcons8Icon } from "@/components/Icons8Icon";
 import { ToolCard } from "@/components/ToolCard";
 import { NAV_TOOL_GROUPS } from "@/lib/catalog/nav-tools";
 import type { Dictionary, Locale } from "@/lib/i18n";
@@ -114,7 +115,12 @@ export function ToolsCatalog({
               key={group.key}
               id={group.label.toLowerCase().replace(/\s+/g, "-")}
             >
-              <h2 className="display text-2xl font-semibold">{group.label}</h2>
+              <h2 className="display flex items-center gap-3 text-2xl font-semibold">
+                {group.category ? (
+                  <CategoryIcons8Icon category={group.category} size={32} />
+                ) : null}
+                {group.label}
+              </h2>
               <div className="tool-grid mt-4">
                 {group.items.map((tool) => (
                   <ToolCard

@@ -6,9 +6,12 @@ import type { Dictionary, Locale } from "@/lib/i18n";
 
 function Loading({ label }: { label: string }) {
   return (
-    <p className="text-sm text-muted" role="status">
-      {label}
-    </p>
+    <div
+      className="flex min-h-[24rem] items-center justify-center rounded-2xl border border-dashed border-mist bg-paper px-4"
+      role="status"
+    >
+      <p className="text-sm text-muted">{label}</p>
+    </div>
   );
 }
 

@@ -83,7 +83,7 @@ export function getLocalizedToolCopy(
   if (!tool) return undefined;
 
   if (locale === "en") {
-    return getEnglishToolCopy(slug);
+    return getEnglishToolCopy(slug) || synthesizeLocalizedCopy(tool, dict);
   }
 
   return synthesizeLocalizedCopy(tool, dict);

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { ToolIcons8Icon } from "@/components/Icons8Icon";
 import { JsonLd } from "@/components/JsonLd";
 import { ToolCopySections } from "@/components/tools/ToolCopySections";
 import { ToolWorkspace } from "@/components/tools/ToolWorkspace";
@@ -13,10 +14,8 @@ import {
 import {
   absoluteUrl,
   breadcrumbJsonLd,
-  faqJsonLd,
-  howToJsonLd,
+  toolConverterJsonLd,
   toolMetaDescription,
-  webApplicationJsonLd,
 } from "@/lib/seo";
 
 export function ToolPageView({
@@ -37,7 +36,18 @@ export function ToolPageView({
     .slice(0, 4);
 
   const howToSteps =
-    copy?.howToUse.map((step) => `${step.title}: ${step.detail}`) || tool.howTo;
+    copy?.howToUse.map((step) => ({
+      name: step.title,
+      text: step.detail,
+    })) ||
+    tool.howTo.map((step, index) => ({
+      name: dict.synthesize.howToUseTitles[
+        Math.min(index, dict.synthesize.howToUseTitles.length - 1)
+      ],
+      text: step,
+    }));
+
+  const faqs = copy?.faqs?.length ? copy.faqs : dict.synthesize.faqs;
 
   const categoryLabel = dict.categories[tool.category] || tool.category;
   const toolPath = localePath(locale, `/tools/${tool.slug}`);
@@ -48,14 +58,29 @@ export function ToolPageView({
     description: tool.description,
     headline: copy?.headline,
   });
+  const ogImage = absoluteUrl(`${toolPath}/opengraph-image`);
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
       <JsonLd
-        data={webApplicationJsonLd({
+        data={toolConverterJsonLd({
           name: tool.name,
           description,
           url: toolUrl,
+          image: ogImage,
+          locale,
+          featureList: [
+            tool.summary,
+            ...(copy?.whyUse?.slice(0, 4) || []),
+            "Free",
+            "No signup",
+            "Files stay in your browser",
+          ],
+          howToName: fillHowTo(dict, tool.name),
+          howToDescription: copy?.whatItIs || tool.description,
+          howToSteps,
+          faqs,
+          faqName: dict.toolPage.faqs.replace("{name}", tool.name),
         })}
       />
       <JsonLd
@@ -67,14 +92,6 @@ export function ToolPageView({
           { name: tool.name, url: toolUrl },
         ])}
       />
-      <JsonLd
-        data={howToJsonLd({
-          name: fillHowTo(dict, tool.name),
-          description: copy?.whatItIs || tool.description,
-          steps: howToSteps,
-        })}
-      />
-      {copy?.faqs?.length ? <JsonLd data={faqJsonLd(copy.faqs)} /> : null}
 
       <nav aria-label="Breadcrumb" className="mb-4 text-sm text-muted">
         <Link
@@ -88,7 +105,8 @@ export function ToolPageView({
       </nav>
 
       <header className="max-w-3xl">
-        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-teal">
+        <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-teal">
+          <ToolIcons8Icon tool={tool} size={22} />
           {categoryLabel}
           {tool.availability === "guide" ? " · Guide" : null}
         </p>
@@ -107,12 +125,13 @@ export function ToolPageView({
         ) : null}
       </header>
 
-      <AdSlot className="my-8 rounded-xl" />
-
-      {/* Client island: deferred PDF engine — H1 above is the LCP candidate */}
+      {/* Client island: deferred PDF engine — H1 above is the LCP candidate.
+          Ads sit below the fold so AdSense does not compete with LCP. */}
       <div className="min-h-[28rem]">
         <ToolWorkspace tool={tool} dict={dict} locale={locale} />
       </div>
+
+      <AdSlot className="my-8 rounded-xl" />
 
       {copy ? (
         <ToolCopySections tool={tool} copy={copy} labels={dict.toolPage} />

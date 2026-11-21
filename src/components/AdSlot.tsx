@@ -40,10 +40,14 @@ export function AdSlot({
   }
 
   return (
-    <aside className={`ad-slot ${className}`} aria-label={label}>
+    <aside
+      className={`ad-slot ${className}`}
+      aria-label={label}
+      style={{ minHeight: 280 }}
+    >
       <ins
         className="adsbygoogle"
-        style={{ display: "block", width: "100%" }}
+        style={{ display: "block", width: "100%", minHeight: 250 }}
         data-ad-client={client}
         data-ad-slot={slot}
         data-ad-format={format}

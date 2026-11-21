@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
+import { CategoryIcons8Icon } from "@/components/Icons8Icon";
 import { JsonLd } from "@/components/JsonLd";
 import { ToolCard } from "@/components/ToolCard";
 import { TOOLS } from "@/lib/catalog";
@@ -214,7 +215,10 @@ export function HomePageView({
                 (cat && dict.categories[cat]) || group.label;
               return (
                 <div key={group.label} className="surface rounded-2xl p-5">
-                  <h3 className="text-lg font-semibold">{label}</h3>
+                  <h3 className="flex items-center gap-2 text-lg font-semibold">
+                    {cat ? <CategoryIcons8Icon category={cat} size={28} /> : null}
+                    {label}
+                  </h3>
                   <ul className="mt-3 space-y-2 text-sm">
                     {group.items.map((item) => {
                       const tool = getLocalizedTool(item.slug, locale);
