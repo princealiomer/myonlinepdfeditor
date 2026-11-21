@@ -238,6 +238,9 @@ export const de: Dictionary = {
     resultsCount: "{count} Tools",
     noResults: "Keine Treffer. Kürzeres Wort oder andere Kategorie versuchen.",
   },
+  featuresPage: {
+    howItWorks: "so funktioniert es",
+  },
   workspace: {
     options: "Optionen",
     uploadFor: "Hochladen für {name}",
@@ -303,6 +306,11 @@ export const de: Dictionary = {
     noOptions: "Keine Extra-Optionen. Datei hochladen und starten.",
     readyTitle: "Download bereit",
     downloadAgain: "Erneut herunterladen",
+    guideReadyTitle: "Anleitung bereit",
+    guideDownloadAgain: "Anleitung erneut herunterladen",
+    guideRun: "Anleitung holen",
+    guideDone:
+      "Anleitung bereit — keine Konvertierung. Folgen Sie den Desktop-Schritten und öffnen Sie danach das PDF hier.",
   },
   toolPage: {
     freeBadge: "für immer kostenlos",

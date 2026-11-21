@@ -9,7 +9,7 @@ import {
   isLocale,
   type Locale,
 } from "@/lib/i18n";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, toolMetaDescription } from "@/lib/seo";
 
 export function generateStaticParams() {
   const slugs = allToolSlugs();
@@ -28,13 +28,17 @@ export async function generateMetadata({
   const tool = getLocalizedTool(slug, locale);
   const copy = getLocalizedToolCopy(slug, locale, dict);
   if (!tool) return {};
-  const description = (copy?.headline || tool.description || "").slice(0, 160);
+
+  const description = toolMetaDescription({
+    name: tool.name,
+    summary: tool.summary,
+    description: tool.description,
+    headline: copy?.headline,
+  });
+
   return buildMetadata({
     title: tool.name,
-    description:
-      description.length >= 70
-        ? description
-        : `${tool.name} online in your browser. No signup. Files stay on your device.`,
+    description,
     path: `/tools/${tool.slug}`,
     keywords: tool.keywords,
     locale,

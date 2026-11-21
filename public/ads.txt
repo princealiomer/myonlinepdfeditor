@@ -1,2 +1,1 @@
-# Publish your AdSense seller line before enabling ads, e.g.:
-# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+google.com, pub-6101881301674084, DIRECT, f08c47fec0942fa0

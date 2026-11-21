@@ -1,4 +1,5 @@
 import { PDFDocument, StandardFonts, rgb, type RGB } from "@cantoo/pdf-lib";
+import { copyPdfBytes } from "./bytes";
 import { fileToUint8Array } from "./read-file";
 
 export type Annotation =
@@ -78,8 +79,8 @@ function dataUrlToBytes(dataUrl: string): { bytes: Uint8Array; mime: string } {
 }
 
 async function loadPdfBytes(file: File | Uint8Array): Promise<Uint8Array> {
-  if (file instanceof Uint8Array) return file;
-  return fileToUint8Array(file);
+  if (file instanceof Uint8Array) return copyPdfBytes(file);
+  return copyPdfBytes(await fileToUint8Array(file));
 }
 
 export async function applyAnnotations(
@@ -89,9 +90,11 @@ export async function applyAnnotations(
   const bytes = await loadPdfBytes(file);
   let pdfDoc: PDFDocument;
   try {
-    pdfDoc = await PDFDocument.load(bytes);
-  } catch {
-    throw new Error("Could not load PDF for annotations.");
+    // ignoreEncryption: signed/locked docs should still accept baked markup when possible
+    pdfDoc = await PDFDocument.load(bytes, { ignoreEncryption: true });
+  } catch (err) {
+    const detail = err instanceof Error ? err.message : "unknown error";
+    throw new Error(`Could not load PDF for annotations (${detail}).`);
   }
 
   const pageCount = pdfDoc.getPageCount();

@@ -4,6 +4,7 @@ export const site = {
   description:
     "Free online PDF editor, eSign, merge, split, convert, and form tools. No signup. Files never leave your browser. Supported by ads.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://myonlinepdfeditor.com",
-  adsenseClient: process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "",
+  adsenseClient:
+    process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "ca-pub-6101881301674084",
   supportEmail: "hello@myonlinepdfeditor.com",
 };

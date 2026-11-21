@@ -10,7 +10,14 @@ import {
   getLocalizedTools,
   localePath,
 } from "@/lib/i18n";
-import { faqJsonLd, howToJsonLd } from "@/lib/seo";
+import {
+  absoluteUrl,
+  breadcrumbJsonLd,
+  faqJsonLd,
+  howToJsonLd,
+  toolMetaDescription,
+  webApplicationJsonLd,
+} from "@/lib/seo";
 
 export function ToolPageView({
   slug,
@@ -33,9 +40,33 @@ export function ToolPageView({
     copy?.howToUse.map((step) => `${step.title}: ${step.detail}`) || tool.howTo;
 
   const categoryLabel = dict.categories[tool.category] || tool.category;
+  const toolPath = localePath(locale, `/tools/${tool.slug}`);
+  const toolUrl = absoluteUrl(toolPath);
+  const description = toolMetaDescription({
+    name: tool.name,
+    summary: tool.summary,
+    description: tool.description,
+    headline: copy?.headline,
+  });
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
+      <JsonLd
+        data={webApplicationJsonLd({
+          name: tool.name,
+          description,
+          url: toolUrl,
+        })}
+      />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          {
+            name: dict.common.breadcrumbTools,
+            url: absoluteUrl(localePath(locale, "/tools")),
+          },
+          { name: tool.name, url: toolUrl },
+        ])}
+      />
       <JsonLd
         data={howToJsonLd({
           name: fillHowTo(dict, tool.name),
@@ -78,7 +109,10 @@ export function ToolPageView({
 
       <AdSlot className="my-8 rounded-xl" />
 
-      <ToolWorkspace tool={tool} dict={dict} locale={locale} />
+      {/* Client island: deferred PDF engine — H1 above is the LCP candidate */}
+      <div className="min-h-[28rem]">
+        <ToolWorkspace tool={tool} dict={dict} locale={locale} />
+      </div>
 
       {copy ? (
         <ToolCopySections tool={tool} copy={copy} labels={dict.toolPage} />

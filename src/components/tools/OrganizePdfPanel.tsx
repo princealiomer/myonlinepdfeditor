@@ -9,6 +9,7 @@ import {
   type ToolDownload,
 } from "@/components/tools/ToolResultBanner";
 import {
+  copyPdfBytes,
   downloadBytes,
   fileToUint8Array,
   getPageCount,
@@ -43,13 +44,14 @@ export function OrganizePdfPanel({ tool, dict }: OrganizePdfPanelProps) {
     setMessage(null);
     setLoadingThumbs(true);
     try {
-      const bytes = await fileToUint8Array(file);
+      // Own a stable copy — pdf.js workers must never see a shared/detached buffer.
+      const bytes = copyPdfBytes(await fileToUint8Array(file));
       const count = await getPageCount(bytes);
       if (count < 1) throw new Error(w.organizeEmpty);
       const limit = Math.min(count, 60);
       const next: PageThumb[] = [];
       for (let pageNumber = 1; pageNumber <= limit; pageNumber++) {
-        const rendered = await renderPdfPage(bytes, pageNumber, 0.35);
+        const rendered = await renderPdfPage(copyPdfBytes(bytes), pageNumber, 0.35);
         next.push({
           id: `p-${pageNumber}-${Math.random().toString(36).slice(2, 7)}`,
           pageNumber,

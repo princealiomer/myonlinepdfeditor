@@ -6,7 +6,11 @@ import { TOOLS } from "@/lib/catalog";
 import { NAV_TOOL_GROUPS } from "@/lib/catalog/nav-tools";
 import type { Dictionary, Locale } from "@/lib/i18n";
 import { getLocalizedTool, localePath } from "@/lib/i18n";
-import { faqJsonLd } from "@/lib/seo";
+import {
+  faqJsonLd,
+  organizationJsonLd,
+  websiteJsonLd,
+} from "@/lib/seo";
 import { site } from "@/lib/site";
 
 const FEATURED = [
@@ -33,6 +37,8 @@ export function HomePageView({
 
   return (
     <>
+      <JsonLd data={organizationJsonLd()} />
+      <JsonLd data={websiteJsonLd()} />
       <JsonLd data={faqJsonLd(h.faqs)} />
 
       <section className="relative overflow-hidden">

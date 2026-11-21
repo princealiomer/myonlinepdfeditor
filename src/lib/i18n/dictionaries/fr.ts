@@ -238,6 +238,9 @@ export const fr: Dictionary = {
     resultsCount: "{count} outils",
     noResults: "Aucun outil ne correspond. Essayez un mot plus court ou une autre catégorie.",
   },
+  featuresPage: {
+    howItWorks: "comment ça marche",
+  },
   workspace: {
     options: "Options",
     uploadFor: "Téléverser pour {name}",
@@ -303,6 +306,11 @@ export const fr: Dictionary = {
     noOptions: "Pas d’options supplémentaires. Téléversez un fichier et lancez.",
     readyTitle: "Téléchargement prêt",
     downloadAgain: "Télécharger à nouveau",
+    guideReadyTitle: "Guide prêt",
+    guideDownloadAgain: "Télécharger le guide à nouveau",
+    guideRun: "Obtenir le guide",
+    guideDone:
+      "Guide prêt — ce n’est pas un fichier converti. Suivez les étapes sur ordinateur, puis ouvrez le PDF ici.",
   },
   toolPage: {
     freeBadge: "gratuit pour toujours",

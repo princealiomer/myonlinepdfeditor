@@ -238,6 +238,9 @@ export const es: Dictionary = {
     resultsCount: "{count} herramientas",
     noResults: "Ninguna herramienta coincide. Prueba una palabra más corta u otra categoría.",
   },
+  featuresPage: {
+    howItWorks: "cómo funciona",
+  },
   workspace: {
     options: "Opciones",
     uploadFor: "Subir para {name}",
@@ -303,6 +306,11 @@ export const es: Dictionary = {
     noOptions: "Sin opciones extra. Sube un archivo y ejecuta.",
     readyTitle: "Descarga lista",
     downloadAgain: "Descargar de nuevo",
+    guideReadyTitle: "Guía lista",
+    guideDownloadAgain: "Descargar la guía de nuevo",
+    guideRun: "Obtener guía",
+    guideDone:
+      "Guía lista — no es un archivo convertido. Sigue los pasos en escritorio y luego abre el PDF aquí.",
   },
   toolPage: {
     freeBadge: "gratis para siempre",

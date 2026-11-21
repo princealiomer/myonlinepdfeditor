@@ -238,6 +238,9 @@ export const en: Dictionary = {
     resultsCount: "{count} tools",
     noResults: "No tools match that search. Try a shorter word or another category.",
   },
+  featuresPage: {
+    howItWorks: "how it works",
+  },
   workspace: {
     options: "Options",
     uploadFor: "Upload for {name}",
@@ -307,6 +310,11 @@ export const en: Dictionary = {
     noOptions: "No extra options for this tool. Upload a file and run.",
     readyTitle: "Download ready",
     downloadAgain: "Download again",
+    guideReadyTitle: "Guidance ready",
+    guideDownloadAgain: "Download guidance again",
+    guideRun: "Get guidance",
+    guideDone:
+      "Guidance note ready — this is not a converted file. Follow the desktop steps, then open the PDF here.",
   },
   toolPage: {
     freeBadge: "free forever",

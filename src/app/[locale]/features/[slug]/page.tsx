@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/AdSlot";
-import { allFeatureSlugs, getFeature, getTool } from "@/lib/catalog";
+import { allFeatureSlugs } from "@/lib/catalog";
 import {
-  DEFAULT_LOCALE,
   LOCALES,
   getDictionary,
+  getLocalizedFeature,
+  getLocalizedTool,
+  hasFeatureTranslations,
   isLocale,
   localePath,
   type Locale,
@@ -24,19 +26,17 @@ export async function generateMetadata({
   const { locale: raw, slug } = await params;
   if (!isLocale(raw)) return {};
   const locale = raw as Locale;
-  const feature = getFeature(slug);
+  const dict = await getDictionary(locale);
+  const feature = getLocalizedFeature(slug, locale);
   if (!feature) return {};
-  const translated = locale === DEFAULT_LOCALE;
+  const translated = hasFeatureTranslations(locale);
   return {
     ...buildMetadata({
-      title: `${feature.name} — how it works`,
-      description: translated
-        ? feature.description
-        : `${feature.name}: browser PDF workflow. Open the matching tool to edit files on your device.`,
+      title: `${feature.name} — ${dict.featuresPage.howItWorks}`,
+      description: feature.description,
       path: `/features/${feature.slug}`,
       locale,
     }),
-    // Feature copy is English-only today — avoid indexing thin locale duplicates.
     robots: translated
       ? { index: true, follow: true }
       : { index: false, follow: true },
@@ -50,9 +50,9 @@ export default async function FeaturePage({
   if (!isLocale(raw)) notFound();
   const locale = raw as Locale;
   const dict = await getDictionary(locale);
-  const feature = getFeature(slug);
+  const feature = getLocalizedFeature(slug, locale);
   if (!feature) notFound();
-  const tool = getTool(feature.toolSlug);
+  const tool = getLocalizedTool(feature.toolSlug, locale);
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">

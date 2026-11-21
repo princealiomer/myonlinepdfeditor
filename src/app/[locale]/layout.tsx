@@ -1,7 +1,6 @@
 import Script from "next/script";
 import { notFound } from "next/navigation";
 import { Fraunces, Figtree, Noto_Sans_JP } from "next/font/google";
-import { JsonLd } from "@/components/JsonLd";
 import { LocaleShell } from "@/components/LocaleShell";
 import {
   LOCALES,
@@ -9,7 +8,6 @@ import {
   isLocale,
   type Locale,
 } from "@/lib/i18n";
-import { softwareJsonLd } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 const display = Fraunces({
@@ -55,7 +53,6 @@ export default async function LocaleLayout({
       className={`${display.variable} ${body.variable} ${japanese.variable} h-full`}
     >
       <body className="flex min-h-dvh flex-col antialiased">
-        <JsonLd data={softwareJsonLd()} />
         <LocaleShell locale={locale} dict={dict}>
           {children}
         </LocaleShell>

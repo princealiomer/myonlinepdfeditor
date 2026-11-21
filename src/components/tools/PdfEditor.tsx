@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState, useTransition } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, useTransition } from "react";
 import type { Tool } from "@/lib/catalog";
 import type { Dictionary } from "@/lib/i18n";
 import { FileDropzone } from "@/components/FileDropzone";
@@ -10,6 +10,7 @@ import {
 } from "@/components/tools/ToolResultBanner";
 import {
   applyAnnotations,
+  copyPdfBytes,
   createBlankPdf,
   downloadBytes,
   fileToUint8Array,
@@ -31,28 +32,61 @@ type EditorTool =
   | "comment"
   | "field";
 
+type EditorMode = {
+  defaultTool: EditorTool;
+  tools: EditorTool[];
+  hint: string;
+  banner: string | null;
+  kiosk: boolean;
+  /** Auto-stamp certify / audit text on export when no annotations yet */
+  autoStamp: "certify" | "audit" | null;
+};
+
 type PdfEditorProps = {
   tool: Tool;
   dict?: Dictionary;
 };
 
+const ALL_TOOLS: { id: EditorTool; label: string }[] = [
+  { id: "text", label: "Text" },
+  { id: "highlight", label: "Highlight" },
+  { id: "whiteout", label: "Whiteout" },
+  { id: "redact", label: "Redact" },
+  { id: "draw", label: "Draw" },
+  { id: "sign", label: "Sign" },
+  { id: "initials", label: "Initials" },
+  { id: "image", label: "Image sig" },
+  { id: "comment", label: "Comment" },
+  { id: "field", label: "Field" },
+];
+
 export function PdfEditor({ tool, dict }: PdfEditorProps) {
+  const mode = useMemo(() => editorModeFor(tool.slug), [tool.slug]);
   const [files, setFiles] = useState<File[]>([]);
   const [pdfBytes, setPdfBytes] = useState<Uint8Array | null>(null);
   const [page, setPage] = useState(1);
   const [pageCount, setPageCount] = useState(0);
-  const [activeTool, setActiveTool] = useState<EditorTool>(guessTool(tool.slug));
+  const [activeTool, setActiveTool] = useState<EditorTool>(mode.defaultTool);
   const [annotations, setAnnotations] = useState<Annotation[]>([]);
-  const [textValue, setTextValue] = useState("Sample text");
+  const [textValue, setTextValue] = useState(
+    mode.defaultTool === "sign" ? "Signature" : "Sample text",
+  );
   const [signatureDataUrl, setSignatureDataUrl] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
   const [lastDownload, setLastDownload] = useState<ToolDownload | null>(null);
+  const [kioskOn, setKioskOn] = useState(mode.kiosk);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const overlayRef = useRef<HTMLDivElement | null>(null);
   const drawStart = useRef<{ x: number; y: number } | null>(null);
   const [canvasSize, setCanvasSize] = useState({ width: 0, height: 0 });
+
+  useEffect(() => {
+    setActiveTool(mode.defaultTool);
+    setKioskOn(mode.kiosk);
+    setTextValue(mode.defaultTool === "sign" ? "Signature" : "Sample text");
+  }, [mode]);
 
   const loadFile = useCallback(async (file: File | null, blank = false) => {
     setError(null);
@@ -66,8 +100,10 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
         if (!file) return;
         bytes = await fileToUint8Array(file);
       }
-      const count = await getPageCount(bytes);
-      setPdfBytes(bytes);
+      // Store an owned copy so later pdf.js / pdf-lib calls cannot detach React state.
+      const owned = copyPdfBytes(bytes);
+      const count = await getPageCount(owned);
+      setPdfBytes(owned);
       setPageCount(count);
       setPage(1);
       setAnnotations([]);
@@ -85,7 +121,7 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
     let cancelled = false;
     (async () => {
       try {
-        const result = await renderPdfPage(pdfBytes, page, 1.25);
+        const result = await renderPdfPage(copyPdfBytes(pdfBytes), page, 1.25);
         if (cancelled || !canvasRef.current) return;
         const ctx = canvasRef.current.getContext("2d");
         if (!ctx) return;
@@ -104,6 +140,15 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
       cancelled = true;
     };
   }, [pdfBytes, page]);
+
+  useEffect(() => {
+    if (!mode.kiosk || !kioskOn) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setKioskOn(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [mode.kiosk, kioskOn]);
 
   function relativePoint(clientX: number, clientY: number) {
     const el = overlayRef.current;
@@ -189,7 +234,10 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
           pageIndex,
           x,
           y: pdfY - 18,
-          text: activeTool === "initials" ? textValue.slice(0, 3).toUpperCase() || "JD" : textValue || "Signature",
+          text:
+            activeTool === "initials"
+              ? textValue.slice(0, 3).toUpperCase() || "JD"
+              : textValue || "Signature",
           size: activeTool === "initials" ? 16 : 22,
           color: "#8A1E44",
         },
@@ -226,14 +274,42 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
     ]);
   }
 
+  function withModeStamps(list: Annotation[]): Annotation[] {
+    if (!mode.autoStamp || !pdfBytes || canvasSize.height <= 0) return list;
+    const stampText =
+      mode.autoStamp === "certify"
+        ? `CERTIFIED · ${new Date().toISOString().slice(0, 10)} · myonlinepdfeditor.com`
+        : `AUDIT · reviewed ${new Date().toISOString().slice(0, 10)} · myonlinepdfeditor.com`;
+    const hasStamp = list.some(
+      (a) => a.type === "text" && a.text.startsWith(mode.autoStamp === "certify" ? "CERTIFIED" : "AUDIT"),
+    );
+    if (hasStamp) return list;
+    return [
+      ...list,
+      {
+        type: "text",
+        pageIndex: 0,
+        x: 36,
+        y: 36,
+        text: stampText,
+        size: 10,
+        color: "#8A1E44",
+      },
+    ];
+  }
+
   function exportPdf() {
     if (!pdfBytes) return;
     startTransition(async () => {
       try {
         setError(null);
         setLastDownload(null);
-        const bytes = await applyAnnotations(pdfBytes, annotations);
-        const download = downloadBytes(bytes, "myonlinepdfeditor-edited.pdf");
+        const toApply = withModeStamps(annotations);
+        const bytes = await applyAnnotations(copyPdfBytes(pdfBytes), toApply);
+        const download = downloadBytes(
+          bytes,
+          `myonlinepdfeditor-${tool.slug}.pdf`,
+        );
         setLastDownload(download);
         setMessage(
           dict?.workspace.done ||
@@ -245,21 +321,49 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
     });
   }
 
-  const tools: { id: EditorTool; label: string }[] = [
-    { id: "text", label: "Text" },
-    { id: "highlight", label: "Highlight" },
-    { id: "whiteout", label: "Whiteout" },
-    { id: "redact", label: "Redact" },
-    { id: "draw", label: "Draw" },
-    { id: "sign", label: "Sign" },
-    { id: "initials", label: "Initials" },
-    { id: "image", label: "Image sig" },
-    { id: "comment", label: "Comment" },
-    { id: "field", label: "Field" },
-  ];
+  const visibleTools = ALL_TOOLS.filter((item) => mode.tools.includes(item.id));
+  const shellClass = kioskOn
+    ? "fixed inset-0 z-50 overflow-auto p-3 sm:p-6"
+    : "grid gap-5";
+  const shellStyle = kioskOn
+    ? { background: "var(--paper)" }
+    : undefined;
 
   return (
-    <div className="grid gap-5">
+    <div className={shellClass} style={shellStyle}>
+      {mode.banner ? (
+        <div
+          className="rounded-xl border border-mist px-4 py-3 text-sm text-ink"
+          style={{ background: "var(--paper-elevated)" }}
+          role="status"
+        >
+          {mode.banner}
+        </div>
+      ) : null}
+
+      {kioskOn ? (
+        <div className="mb-2 flex items-center justify-between gap-3">
+          <p className="text-sm font-semibold">{tool.name} · Kiosk</p>
+          <button
+            type="button"
+            className="btn btn-ghost min-h-11"
+            onClick={() => setKioskOn(false)}
+          >
+            Exit kiosk (Esc)
+          </button>
+        </div>
+      ) : mode.kiosk ? (
+        <div className="flex justify-end">
+          <button
+            type="button"
+            className="btn btn-ghost min-h-11"
+            onClick={() => setKioskOn(true)}
+          >
+            Enter full-screen kiosk
+          </button>
+        </div>
+      ) : null}
+
       {!pdfBytes ? (
         <div className="grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
           <FileDropzone
@@ -267,16 +371,16 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
             files={files}
             onFiles={setFiles}
             label={`Open PDF — ${tool.shortName}`}
-            hint="Edit, annotate, and sign entirely in your browser."
+            hint={mode.hint}
           />
           <section className="surface rounded-2xl p-5">
             <h2 className="text-lg font-semibold">Or start blank</h2>
             <p className="mt-1 text-sm text-muted">
-              Create an empty page, then add text, signatures, and fields.
+              Create an empty page, then place {mode.defaultTool} marks.
             </p>
             <button
               type="button"
-              className="btn btn-accent mt-4"
+              className="btn btn-accent mt-4 min-h-11"
               onClick={() => void loadFile(null, true)}
             >
               New blank PDF
@@ -289,13 +393,13 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
             <div
               className="toolbar-scroll"
               role="toolbar"
-              aria-label="PDF editor tools"
+              aria-label={`${tool.shortName} tools`}
             >
-              {tools.map((item) => (
+              {visibleTools.map((item) => (
                 <button
                   key={item.id}
                   type="button"
-                  className={`btn min-h-11 px-3 py-2 text-sm ${
+                  className={`btn min-h-11 shrink-0 px-3 py-2 text-sm ${
                     activeTool === item.id ? "btn-accent" : "btn-ghost"
                   }`}
                   onClick={() => setActiveTool(item.id)}
@@ -305,14 +409,14 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
               ))}
               <button
                 type="button"
-                className="btn btn-ghost min-h-11 px-3 py-2 text-sm"
+                className="btn btn-ghost min-h-11 shrink-0 px-3 py-2 text-sm"
                 onClick={() => setAnnotations((prev) => prev.slice(0, -1))}
               >
                 Undo
               </button>
               <button
                 type="button"
-                className="btn btn-accent min-h-11 px-4 py-2 text-sm font-semibold"
+                className="btn btn-accent min-h-11 shrink-0 px-4 py-2 text-sm font-semibold"
                 disabled={pending}
                 onClick={exportPdf}
               >
@@ -332,8 +436,10 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
             }}
           />
 
-          <div className="grid gap-5 lg:grid-cols-[240px_1fr]">
-            <aside className="surface rounded-2xl p-4">
+          <div
+            className={`grid gap-5 ${kioskOn ? "" : "lg:grid-cols-[240px_1fr]"}`}
+          >
+            <aside className={`surface rounded-2xl p-4 ${kioskOn ? "order-2" : ""}`}>
               <div className="field">
                 <label htmlFor="editor-text">Text / signature label</label>
                 <input
@@ -343,27 +449,34 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
                   onChange={(event) => setTextValue(event.target.value)}
                 />
               </div>
-              <div className="field">
-                <label htmlFor="sig-image">Upload signature image</label>
-                <input
-                  id="sig-image"
-                  name="sig-image"
-                  type="file"
-                  accept="image/png,image/jpeg"
-                  onChange={async (event) => {
-                    const file = event.target.files?.[0];
-                    if (!file) return;
-                    const reader = new FileReader();
-                    reader.onload = () => setSignatureDataUrl(String(reader.result));
-                    reader.readAsDataURL(file);
-                  }}
-                />
-                <span className="hint">PNG or JPG with transparent background works best.</span>
-              </div>
+              {(mode.tools.includes("sign") ||
+                mode.tools.includes("initials") ||
+                mode.tools.includes("image")) && (
+                <div className="field">
+                  <label htmlFor="sig-image">Upload signature image</label>
+                  <input
+                    id="sig-image"
+                    name="sig-image"
+                    type="file"
+                    accept="image/png,image/jpeg"
+                    onChange={async (event) => {
+                      const file = event.target.files?.[0];
+                      if (!file) return;
+                      const reader = new FileReader();
+                      reader.onload = () =>
+                        setSignatureDataUrl(String(reader.result));
+                      reader.readAsDataURL(file);
+                    }}
+                  />
+                  <span className="hint">
+                    PNG or JPG with transparent background works best.
+                  </span>
+                </div>
+              )}
               <div className="flex items-center justify-between gap-2">
                 <button
                   type="button"
-                  className="btn btn-ghost"
+                  className="btn btn-ghost min-h-11"
                   disabled={page <= 1}
                   onClick={() => setPage((p) => Math.max(1, p - 1))}
                 >
@@ -374,19 +487,17 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
                 </span>
                 <button
                   type="button"
-                  className="btn btn-ghost"
+                  className="btn btn-ghost min-h-11"
                   disabled={page >= pageCount}
                   onClick={() => setPage((p) => Math.min(pageCount, p + 1))}
                 >
                   Next
                 </button>
               </div>
-              <p className="mt-4 text-sm text-muted">
-                Click the page to place the active tool. Draw tool: press, drag, release.
-              </p>
+              <p className="mt-4 text-sm text-muted">{mode.hint}</p>
               <button
                 type="button"
-                className="btn btn-ghost mt-4 w-full"
+                className="btn btn-ghost mt-4 min-h-11 w-full"
                 onClick={() => {
                   setPdfBytes(null);
                   setFiles([]);
@@ -409,7 +520,10 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
                 onPointerDown={onPointerDown}
                 onPointerUp={onPointerUp}
               >
-                <canvas ref={canvasRef} className="max-w-full rounded-md shadow-sm" />
+                <canvas
+                  ref={canvasRef}
+                  className="max-w-full rounded-md shadow-sm"
+                />
                 <div className="pointer-events-none absolute inset-0">
                   {annotations
                     .filter((item) => item.pageIndex === page - 1)
@@ -428,7 +542,10 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
       )}
 
       {(error || message) && (
-        <p className={`text-sm ${error ? "text-ember" : "text-teal"}`} role="status">
+        <p
+          className={`text-sm ${error ? "text-ember" : "text-teal"}`}
+          role="status"
+        >
           {error || message}
         </p>
       )}
@@ -490,6 +607,107 @@ function AnnotationPreview({
   return null;
 }
 
+function editorModeFor(slug: string): EditorMode {
+  const full: EditorTool[] = [
+    "text",
+    "highlight",
+    "whiteout",
+    "redact",
+    "draw",
+    "sign",
+    "initials",
+    "image",
+    "comment",
+    "field",
+  ];
+  const signTools: EditorTool[] = ["sign", "initials", "image", "text", "draw"];
+  const formTools: EditorTool[] = ["field", "text", "highlight", "draw"];
+  const commentTools: EditorTool[] = ["comment", "highlight", "draw", "text"];
+
+  switch (slug) {
+    case "sign-pdf":
+    case "send-for-signature":
+      return {
+        defaultTool: "sign",
+        tools: signTools,
+        hint: "Sign tool is preselected. Click the page to place your signature, then download.",
+        banner: "Signature mode — place a drawn, typed, or image signature on the PDF.",
+        kiosk: false,
+        autoStamp: null,
+      };
+    case "in-person-signing":
+      return {
+        defaultTool: "sign",
+        tools: signTools,
+        hint: "Hand the device to the signer. They tap to place a signature, then you download.",
+        banner:
+          "In-person signing — pass the device to the signer, capture their mark, then download immediately.",
+        kiosk: false,
+        autoStamp: null,
+      };
+    case "kiosk-mode":
+      return {
+        defaultTool: "sign",
+        tools: ["sign", "initials", "image"],
+        hint: "Full-screen kiosk for lobbies and events. Esc exits kiosk.",
+        banner: "Kiosk mode — large signing surface for phones and tablets.",
+        kiosk: true,
+        autoStamp: null,
+      };
+    case "add-comments":
+      return {
+        defaultTool: "comment",
+        tools: commentTools,
+        hint: "Comment tool is preselected. Click to drop review notes on the page.",
+        banner: "Comments mode — place feedback markers for the next reviewer.",
+        kiosk: false,
+        autoStamp: null,
+      };
+    case "add-fillable-fields":
+    case "create-fillable-forms":
+    case "create-templates":
+      return {
+        defaultTool: "field",
+        tools: formTools,
+        hint: "Field tool is preselected. Click to place labeled field markers, then download the template.",
+        banner:
+          "Forms / templates mode — place field placeholders on the page (browser markup, not AcroForm widgets).",
+        kiosk: false,
+        autoStamp: null,
+      };
+    case "pdf-audit-trail":
+      return {
+        defaultTool: "comment",
+        tools: ["comment", "text", "highlight"],
+        hint: "Add review notes. Download stamps a lightweight AUDIT line on page 1.",
+        banner:
+          "Audit trail mode — review notes plus an automatic AUDIT stamp on export (local markup, not a cryptographic ledger).",
+        kiosk: false,
+        autoStamp: "audit",
+      };
+    case "certify-pdf":
+      return {
+        defaultTool: "text",
+        tools: ["text", "sign", "draw"],
+        hint: "Download adds a CERTIFIED stamp on page 1. This is a visible mark, not a PKI certificate.",
+        banner:
+          "Certify mode — export adds a visible CERTIFIED banner. Not a cryptographic digital certificate.",
+        kiosk: false,
+        autoStamp: "certify",
+      };
+    case "edit-pdf":
+    default:
+      return {
+        defaultTool: guessTool(slug),
+        tools: full,
+        hint: "Edit, annotate, and sign entirely in your browser. Click the page to place the active tool.",
+        banner: null,
+        kiosk: false,
+        autoStamp: null,
+      };
+  }
+}
+
 function guessTool(slug: string): EditorTool {
   if (slug.includes("sign")) return "sign";
   if (slug.includes("initial")) return "initials";
@@ -498,7 +716,8 @@ function guessTool(slug: string): EditorTool {
   if (slug.includes("redact")) return "redact";
   if (slug.includes("draw")) return "draw";
   if (slug.includes("comment")) return "comment";
-  if (slug.includes("field") || slug.includes("form") || slug.includes("template")) return "field";
+  if (slug.includes("field") || slug.includes("form") || slug.includes("template"))
+    return "field";
   if (slug.includes("image")) return "image";
   return "text";
 }

@@ -16,4 +16,15 @@ export {
   getLocalizedTools,
   getLocalizedToolCopy,
 } from "./localize-tool";
-export type { Dictionary, ToolLocaleFields, ToolsLocaleMap } from "./types";
+export {
+  getLocalizedFeature,
+  getLocalizedFeatures,
+  hasFeatureTranslations,
+} from "./localize-feature";
+export type {
+  Dictionary,
+  FeatureLocaleFields,
+  FeaturesLocaleMap,
+  ToolLocaleFields,
+  ToolsLocaleMap,
+} from "./types";

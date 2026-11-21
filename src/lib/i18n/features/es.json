@@ -1,0 +1,487 @@
+{
+  "create-a-new-pdf-document": {
+    "name": "Crear un documento PDF nuevo",
+    "summary": "Empieza desde cero y guarda un PDF nuevo.",
+    "description": "Abre un lienzo en blanco, añade páginas y arma un PDF para folletos, listas de verificación o documentos internos sin instalar software de escritorio."
+  },
+  "upload-a-pdf-document": {
+    "name": "Subir un documento PDF",
+    "summary": "Abre cualquier PDF de tu equipo en myonlinepdfeditor.com.",
+    "description": "Arrastra un archivo al editor para verlo, anotarlo y exportarlo. Las subidas permanecen en la memoria del navegador; no se almacenan en los servidores de myonlinepdfeditor.com."
+  },
+  "add-images-to-a-pdf": {
+    "name": "Añadir imágenes a un PDF",
+    "summary": "Inserta fotos y gráficos en cualquier página.",
+    "description": "Añade recursos PNG o JPG para logotipos, diagramas o firmas escaneadas. Cambia el tamaño y la posición antes de aplanar o exportar."
+  },
+  "convert-pdf-document-into-template": {
+    "name": "Convertir un PDF en plantilla",
+    "summary": "Convierte un PDF estático en un diseño de formulario reutilizable.",
+    "description": "Añade campos y etiquetas sobre un PDF existente para poder enviar la misma estructura una y otra vez."
+  },
+  "add-text-to-a-pdf": {
+    "name": "Añadir texto a un PDF",
+    "summary": "Escribe texto nuevo directamente en la página.",
+    "description": "Coloca cuadros de texto para nombres, direcciones o instrucciones donde necesites contenido editable superpuesto."
+  },
+  "add-checkmark-to-a-pdf": {
+    "name": "Añadir una marca de verificación a un PDF",
+    "summary": "Marca elementos completados con palomitas.",
+    "description": "Usa campos de casilla o herramientas de dibujo para indicar tareas terminadas en formularios impresos o digitales."
+  },
+  "add-date-to-a-pdf": {
+    "name": "Añadir una fecha a un PDF",
+    "summary": "Sella la fecha de hoy o una fecha personalizada.",
+    "description": "Escribe una fecha en un cuadro de texto para que contratos, registros y recibos muestren cuándo se completaron."
+  },
+  "add-rectangle-to-a-pdf": {
+    "name": "Añadir un rectángulo a un PDF",
+    "summary": "Dibuja cajas para enmarcar contenido o resaltar zonas.",
+    "description": "Usa el dibujo de formas para delinear tablas, enfatizar secciones o ocultar regiones antes de compartir."
+  },
+  "add-circle-to-a-pdf": {
+    "name": "Añadir un círculo a un PDF",
+    "summary": "Rodea cifras clave o partes de un diagrama.",
+    "description": "Las herramientas de forma o trazo libre ayudan a los revisores a señalar números, porciones de gráficos o ubicaciones en mapas."
+  },
+  "add-line-to-a-pdf": {
+    "name": "Añadir una línea a un PDF",
+    "summary": "Subraya conexiones con líneas rectas.",
+    "description": "Une etiquetas con objetos o separa secciones con líneas vectoriales limpias en la página."
+  },
+  "add-arrow-to-a-pdf": {
+    "name": "Añadir una flecha a un PDF",
+    "summary": "Dirige al lector al siguiente paso.",
+    "description": "Las flechas aclaran flujos de trabajo en diagramas, planos y capturas anotadas."
+  },
+  "draw-on-a-pdf": {
+    "name": "Dibujar en un PDF",
+    "summary": "Esboza libremente con marcado estilo bolígrafo.",
+    "description": "Marca PDFs como en papel: rodea errores, anota comentarios o firma aprobaciones informales."
+  },
+  "whiteout-text-in-a-pdf": {
+    "name": "Corregir texto en blanco en un PDF",
+    "summary": "Oculta texto obsoleto bajo una cubierta blanca.",
+    "description": "Tapa números de cuenta antiguos o erratas antes de enviar una versión actualizada a los clientes."
+  },
+  "redact-pdf": {
+    "name": "Redactar un PDF",
+    "summary": "Tapa en negro contenido sensible de forma permanente.",
+    "description": "Aplica bloques de redacción opacos para que los datos privados no puedan recuperarse del archivo compartido."
+  },
+  "highlight-text-in-a-pdf": {
+    "name": "Resaltar texto en un PDF",
+    "summary": "Destaca citas y plazos con color.",
+    "description": "Los resaltados translúcidos facilitan localizar notas de estudio y cláusulas de contratos más adelante."
+  },
+  "underline-text-in-a-pdf": {
+    "name": "Subrayar texto en un PDF",
+    "summary": "Subraya frases para darles énfasis.",
+    "description": "Subraya encabezados o términos para que los revisores vean qué cambió en el último borrador."
+  },
+  "strikeout-text-in-a-pdf": {
+    "name": "Tachar texto en un PDF",
+    "summary": "Tacha el lenguaje que ya no aplica.",
+    "description": "Muestra cláusulas eliminadas o instrucciones obsoletas sin borrar el texto original."
+  },
+  "add-a-stamp-to-a-pdf": {
+    "name": "Añadir un sello a un PDF",
+    "summary": "Aplica sellos APROBADO, PAGADO o personalizados.",
+    "description": "Los sellos visibles agilizan cuentas por pagar, RR. HH. y flujos legales cuando no hay sello físico disponible."
+  },
+  "add-text-field-in-a-pdf": {
+    "name": "Añadir un campo de texto en un PDF",
+    "summary": "Permite que el lector escriba respuestas en un cuadro.",
+    "description": "Los campos de una línea recogen nombres, identificadores y respuestas breves en formularios digitales."
+  },
+  "add-paragraph-field-in-a-pdf": {
+    "name": "Añadir un campo de párrafo en un PDF",
+    "summary": "Áreas de varias líneas para respuestas más largas.",
+    "description": "Las áreas de texto amplias capturan descripciones, comentarios y respuestas abiertas de encuestas."
+  },
+  "add-dropdown-field-in-a-pdf": {
+    "name": "Añadir un campo desplegable en un PDF",
+    "summary": "Ofrece opciones fijas en una lista.",
+    "description": "Los campos desplegables reducen erratas cuando los encuestados eligen entre opciones predefinidas."
+  },
+  "add-signature-field-in-a-pdf": {
+    "name": "Añadir un campo de firma en un PDF",
+    "summary": "Indica exactamente dónde deben firmar.",
+    "description": "Los cuadros de firma reservados hacen la firma electrónica más rápida y clara."
+  },
+  "add-initials-field-in-a-pdf": {
+    "name": "Añadir un campo de iniciales en un PDF",
+    "summary": "Recoge iniciales en cada sección.",
+    "description": "Los campos de iniciales recuerdan a los firmantes que deben confirmar cada página o anexo."
+  },
+  "add-date-field-in-a-pdf": {
+    "name": "Añadir un campo de fecha en un PDF",
+    "summary": "Pide a los firmantes la fecha de la firma.",
+    "description": "Combina campos de fecha con firmas para bloques de reconocimiento completos en contratos."
+  },
+  "add-checkbox-field-in-a-pdf": {
+    "name": "Añadir un campo de casilla en un PDF",
+    "summary": "Casillas de sí/no cliqueables en formularios.",
+    "description": "Las casillas estructuradas sustituyen la escritura a mano en permisos, exenciones y encuestas."
+  },
+  "append-blank-page-in-a-pdf": {
+    "name": "Añadir una página en blanco a un PDF",
+    "summary": "Agrega páginas vacías al final o en medio.",
+    "description": "Inserta hojas para notas, anexos o firmas que se añadirán después."
+  },
+  "insert-and-merge-pdf": {
+    "name": "Insertar y combinar PDF",
+    "summary": "Incorpora otro archivo a tu paquete.",
+    "description": "Adjunta apéndices, facturas o cartas de presentación combinando PDF en orden."
+  },
+  "reorder-pages-in-a-pdf": {
+    "name": "Reordenar páginas en un PDF",
+    "summary": "Corrige el orden de las páginas arrastrando y soltando.",
+    "description": "Coloca los términos antes de las firmas o junta el reverso escaneado con su anverso."
+  },
+  "rotate-pages-in-a-pdf": {
+    "name": "Rotar páginas en un PDF",
+    "summary": "Pon en vertical los escaneos girados.",
+    "description": "Rota una página o todo el documento antes de imprimir o combinar."
+  },
+  "duplicate-pages-in-a-pdf": {
+    "name": "Duplicar páginas en un PDF",
+    "summary": "Copia una página dentro del mismo archivo.",
+    "description": "Repite hojas de términos o copias de W-9 sin mantener archivos fuente separados."
+  },
+  "delete-pages-from-a-pdf": {
+    "name": "Eliminar páginas de un PDF",
+    "summary": "Quita páginas en blanco y escaneos basura.",
+    "description": "Recorta etiquetas de envío, escaneos fallidos o apéndices obsoletos de un lote."
+  },
+  "number-and-label-pages-on-a-pdf": {
+    "name": "Numerar y etiquetar páginas en un PDF",
+    "summary": "Pies de página automáticos con numeración.",
+    "description": "Facilita la consulta de expedientes largos y manuales en reuniones y tribunales."
+  },
+  "add-comments-on-a-pdf": {
+    "name": "Añadir comentarios en un PDF",
+    "summary": "Deja notas para colaboradores.",
+    "description": "Los comentarios fijos explican por qué cambió una cláusula sin alterar el texto subyacente."
+  },
+  "send-pdf-via-shareable-link": {
+    "name": "Enviar un PDF mediante enlace compartible",
+    "summary": "Exporta un archivo final para tu enlace en la nube.",
+    "description": "Descarga un PDF limpio y súbelo a Drive, Dropbox o correo; myonlinepdfeditor.com nunca aloja tu documento."
+  },
+  "bulk-sending": {
+    "name": "Envío masivo de PDF",
+    "summary": "Prepara varios paquetes para distribución.",
+    "description": "Combina y etiqueta campos en lotes de acuerdos similares para que cada destinatario reciba un diseño coherente."
+  },
+  "track-pdf-document-status": {
+    "name": "Seguir el estado de un documento PDF",
+    "summary": "Sella versiones para mostrar el estado de revisión.",
+    "description": "Usa sellos de auditoría y comentarios para marcar borradores frente a copias aprobadas en tu equipo."
+  },
+  "add-signature-on-desktop-to-a-pdf": {
+    "name": "Añadir firma en escritorio a un PDF",
+    "summary": "Firma con ratón o trackpad en tu equipo.",
+    "description": "Dibuja una firma natural directamente en la página del PDF y exporta en una sola sesión."
+  },
+  "add-an-image-of-your-signature-to-a-pdf": {
+    "name": "Añadir una imagen de tu firma",
+    "summary": "Pega un PNG de firma escaneada.",
+    "description": "Sube una imagen de firma con fondo transparente y colócala en cada formulario que envíes."
+  },
+  "add-initials-to-a-pdf": {
+    "name": "Añadir iniciales a un PDF",
+    "summary": "Iniciales en anexos y páginas adicionales.",
+    "description": "Las iniciales pequeñas demuestran que cada sección se revisó antes de la firma final."
+  },
+  "add-multiple-signers-to-a-pdf": {
+    "name": "Añadir varios firmantes a un PDF",
+    "summary": "Asigna campos a cada parte.",
+    "description": "Organiza bloques de firma para clientes, testigos y cofirmantes de una vez."
+  },
+  "set-signing-order-for-a-pdf": {
+    "name": "Definir el orden de firma de un PDF",
+    "summary": "Indica quién firma primero y después.",
+    "description": "Numera los campos de firmantes para que la ruta coincida con tu política antes de exportar el paquete."
+  },
+  "document-audit": {
+    "name": "Registro de auditoría del documento",
+    "summary": "Muestra cuándo se revisó un PDF.",
+    "description": "Los sellos de auditoría visibles documentan revisor y fecha para una gobernanza ligera."
+  },
+  "password-protect-document": {
+    "name": "Proteger un documento con contraseña",
+    "summary": "Exige una contraseña para abrir el PDF.",
+    "description": "Cifra archivos con datos financieros, médicos o personales antes de enviarlos por correo."
+  },
+  "certify-document": {
+    "name": "Certificar un documento",
+    "summary": "Marca el PDF final autorizado.",
+    "description": "Las bandas de certificación indican a los destinatarios que esta copia es la versión aprobada."
+  },
+  "convert-word-to-pdf": {
+    "name": "Convertir Word a PDF",
+    "summary": "Exporta archivos DOCX como PDF.",
+    "description": "Comparte currículums, políticas y propuestas en un formato que cualquiera puede abrir."
+  },
+  "convert-txt-to-pdf": {
+    "name": "Convertir TXT a PDF",
+    "summary": "Convierte archivos de texto plano en páginas PDF.",
+    "description": "Archiva registros y configuraciones como PDF paginados para almacenamiento a largo plazo."
+  },
+  "convert-html-to-pdf": {
+    "name": "Convertir HTML a PDF",
+    "summary": "Guarda fragmentos web como PDF.",
+    "description": "Captura artículos HTML o recibos como documentos portátiles."
+  },
+  "convert-csv-to-pdf": {
+    "name": "Convertir CSV a PDF",
+    "summary": "Tablas imprimibles desde exportaciones de hojas de cálculo.",
+    "description": "Entrega a finanzas u operaciones un PDF fijo en lugar de hojas editables."
+  },
+  "convert-rtf-to-pdf": {
+    "name": "Convertir RTF a PDF",
+    "summary": "Moderniza archivos de texto enriquecido antiguos.",
+    "description": "Abre correspondencia RTF heredada y guarda copias PDF universales."
+  },
+  "convert-jpgjpeg-to-pdf": {
+    "name": "Convertir JPG/JPEG a PDF",
+    "summary": "Álbumes de fotos como PDF multipágina.",
+    "description": "Combina JPEG de cámara en un solo archivo para reclamos de seguro o portafolios."
+  },
+  "convert-png-to-pdf": {
+    "name": "Convertir PNG a PDF",
+    "summary": "Capturas sin pérdida en formato PDF.",
+    "description": "Conserva capturas de interfaz y diagramas nítidos en un solo adjunto PDF."
+  },
+  "print-out-pdf": {
+    "name": "Imprimir un PDF",
+    "summary": "Prepara un PDF para tu impresora.",
+    "description": "Corrige rotación y orden de páginas en myonlinepdfeditor.com y luego imprime desde el navegador o el visor del sistema."
+  },
+  "download-pdf": {
+    "name": "Descargar un PDF",
+    "summary": "Guarda los archivos editados en tu dispositivo.",
+    "description": "Cada herramienta termina con una descarga local; no hace falta cuenta ni almacén en la nube."
+  },
+  "export-pdf": {
+    "name": "Exportar un PDF",
+    "summary": "Aplana y exporta una copia finalizada.",
+    "description": "La exportación fusiona anotaciones y campos en un PDF estándar que otros pueden abrir en cualquier sitio."
+  },
+  "flatten-fields-on-a-pdf": {
+    "name": "Aplanar campos en un PDF",
+    "summary": "Fija los valores del formulario en la página.",
+    "description": "Evita ediciones accidentales después de firmar y enviar un formulario."
+  },
+  "send-out-pdf-documents-for-signature": {
+    "name": "Enviar documentos PDF para firma",
+    "summary": "Prepara acuerdos listos para firmar.",
+    "description": "Etiqueta campos de firma y fecha, luego comparte el PDF por el canal que prefieras."
+  },
+  "send-envelopes-for-esignature": {
+    "name": "Enviar sobres para firma electrónica",
+    "summary": "Agrupa varios documentos para firmar.",
+    "description": "Combina PDF relacionados y añade campos una vez para que los firmantes vean un solo sobre coherente."
+  },
+  "ai-document-assistant": {
+    "name": "Asistente de documentos con IA",
+    "summary": "Ayudante de texto local para contenido PDF.",
+    "description": "Extrae texto en el navegador y redacta esquemas o reescrituras sin almacenar el documento en la nube."
+  },
+  "simplify-pdf-documents-with-ai": {
+    "name": "Simplificar documentos PDF con IA",
+    "summary": "Versiones en lenguaje claro de textos densos.",
+    "description": "Simplifica el texto extraído para clientes, pacientes o estudiantes que necesitan claridad."
+  },
+  "summarize-documents-with-ai": {
+    "name": "Resumir documentos con IA",
+    "summary": "Resúmenes rápidos en viñetas de PDF largos.",
+    "description": "Oriéntate antes de reuniones con resúmenes generados a partir de extracción local de texto."
+  },
+  "get-answers-from-documents-with-ai": {
+    "name": "Obtener respuestas de documentos con IA",
+    "summary": "Haz preguntas sobre el texto extraído.",
+    "description": "Encuentra frases relevantes en políticas o manuales sin subir el PDF completo."
+  },
+  "in-person-signing": {
+    "name": "Firma en persona",
+    "summary": "Firma en el mismo dispositivo durante reuniones.",
+    "description": "Pasa el portátil o la tableta y captura firmas al instante en el PDF."
+  },
+  "edit-pdf-text-online": {
+    "name": "Editar texto PDF en línea",
+    "summary": "Cambia texto visible y superposiciones en el navegador.",
+    "description": "Añade y ajusta capas de texto para formularios, etiquetas y correcciones rápidas."
+  },
+  "visual-edit": {
+    "name": "Edición visual de PDF",
+    "summary": "Ve los cambios mientras colocas contenido.",
+    "description": "Colocación WYSIWYG de texto, imágenes y marcado en cada página."
+  },
+  "signature-assistant": {
+    "name": "Asistente de firma",
+    "summary": "Pasos guiados para colocar tu firma.",
+    "description": "Crea, previsualiza y posiciona una firma con menos clics."
+  },
+  "create-a-pdf-form": {
+    "name": "Crear un formulario PDF",
+    "summary": "Construye formularios interactivos desde cero.",
+    "description": "Combina campos y etiquetas fijas en un formulario que los destinatarios pueden completar en digital."
+  },
+  "create-a-new-template": {
+    "name": "Crear una plantilla nueva",
+    "summary": "Guarda un diseño maestro para uso repetido.",
+    "description": "Diseña una vez y vuelve a abrir la plantilla cuando necesites la misma estructura."
+  },
+  "manage-fields-in-a-pdf": {
+    "name": "Gestionar campos en un PDF",
+    "summary": "Añade, mueve y cambia el tamaño de campos del formulario.",
+    "description": "Ajusta la ubicación de los campos hasta que el formulario sea fácil de completar en escritorio y móvil."
+  },
+  "make-fields-required-in-a-pdf": {
+    "name": "Hacer campos obligatorios en un PDF",
+    "summary": "Resalta las entradas que deben completarse.",
+    "description": "Usa etiquetas y diseño para mostrar qué campos los firmantes no pueden omitir."
+  },
+  "public-viewing-of-documents": {
+    "name": "Visualización pública de documentos",
+    "summary": "Comparte exportaciones PDF de solo lectura.",
+    "description": "Aplana y exporta PDF aptos para folletos públicos y descargas en sitios web."
+  },
+  "share-forms-via-email": {
+    "name": "Compartir formularios por correo",
+    "summary": "Adjunta PDF rellenables completados.",
+    "description": "Descarga el formulario y adjúntalo al correo desde tu propio buzón."
+  },
+  "template-distribution-via-url": {
+    "name": "Distribución de plantillas por URL",
+    "summary": "Aloja plantillas en tu sitio tras exportar.",
+    "description": "Exporta el PDF de plantilla y enlázalo desde tu portal o base de conocimiento."
+  },
+  "set-expiration-date-for-a-pdf": {
+    "name": "Definir fecha de vencimiento de un PDF",
+    "summary": "Anota fechas de fin de oferta o política en el archivo.",
+    "description": "Añade texto visible de vencimiento y protege con contraseña las ofertas sensibles al tiempo cuando haga falta."
+  },
+  "set-automated-reminders-for-a-pdf": {
+    "name": "Configurar recordatorios automáticos para un PDF",
+    "summary": "Prepara paquetes que los firmantes deben devolver pronto.",
+    "description": "Etiqueta fechas de vencimiento en el PDF y combínalas con recordatorios del calendario fuera de myonlinepdfeditor.com."
+  },
+  "esign-compliance": {
+    "name": "Ayudas de cumplimiento de firma electrónica",
+    "summary": "Certifica y audita firmas finalizadas.",
+    "description": "Combina sellos de certificación, aplanado y marcas de auditoría para registros más sólidos."
+  },
+  "readable-document": {
+    "name": "Documento legible",
+    "summary": "Mejora la claridad del texto denso en PDF.",
+    "description": "Simplifica el contenido extraído y vuelve a exportar resúmenes para lectores que priorizan la accesibilidad."
+  },
+  "group-documents-into-folders": {
+    "name": "Agrupar documentos en carpetas",
+    "summary": "Combina PDF relacionados en un paquete.",
+    "description": "Organiza archivos de proyecto combinando PDF por categoría en tu dispositivo antes de archivarlos en la nube."
+  },
+  "split-large-pdf-into-chapters": {
+    "name": "Dividir un PDF grande en capítulos",
+    "summary": "Separa libros y manuales en partes.",
+    "description": "Extrae rangos de páginas para que cada capítulo se suba más rápido a un LMS o por correo."
+  },
+  "extract-single-page-from-pdf": {
+    "name": "Extraer una página de un PDF",
+    "summary": "Saca una página en su propio archivo.",
+    "description": "Guarda un certificado, factura o página de firma sin el resto del escaneo."
+  },
+  "compress-pdf-for-email": {
+    "name": "Comprimir PDF para correo",
+    "summary": "Reduce adjuntos por debajo de los límites del buzón.",
+    "description": "Reduce el tamaño del escaneo manteniendo el texto legible para envío por correo."
+  },
+  "combine-images-into-one-pdf": {
+    "name": "Combinar imágenes en un PDF",
+    "summary": "Varios formatos de imagen en una exportación.",
+    "description": "Apila escaneos PNG y JPG del móvil en un solo PDF profesional."
+  },
+  "scan-to-pdf-workflow": {
+    "name": "Flujo de escaneo a PDF",
+    "summary": "Rota, combina y comprime escaneos del móvil.",
+    "description": "Corrige la orientación, combina escaneos multipágina y comprime antes de enviar."
+  },
+  "fill-existing-government-pdf-forms": {
+    "name": "Rellenar formularios PDF gubernamentales",
+    "summary": "Completa PDF oficiales en digital.",
+    "description": "Escribe en PDF de hacienda, inmigración o permisos y descarga una copia cumplimentada."
+  },
+  "add-watermark-style-stamp": {
+    "name": "Añadir sello estilo marca de agua",
+    "summary": "Marca borradores como confidenciales o de muestra.",
+    "description": "Los sellos en diagonal indican que un documento no es definitivo antes de una difusión amplia."
+  },
+  "prepare-real-estate-disclosures": {
+    "name": "Preparar declaraciones inmobiliarias",
+    "summary": "Iniciales y firma en paquetes de divulgación.",
+    "description": "Coloca iniciales en cada página de divulgación y exporta para el cierre."
+  },
+  "hr-onboarding-pdf-pack": {
+    "name": "Paquete PDF de incorporación de RR. HH.",
+    "summary": "Combina PDF de políticas para nuevos empleados.",
+    "description": "Une manual, fiscal y políticas en PDF con numeración de páginas para firmar el primer día."
+  },
+  "classroom-handout-pdf": {
+    "name": "Folleto PDF para el aula",
+    "summary": "Convierte notas y diapositivas a PDF.",
+    "description": "Pasa planes de clase en Word o diapositivas en imagen a folletos PDF imprimibles."
+  },
+  "invoice-pdf-from-spreadsheet": {
+    "name": "Factura PDF desde hoja de cálculo",
+    "summary": "Exportaciones CSV como PDF listos para el cliente.",
+    "description": "Convierte exportaciones CSV con líneas de detalle en facturas PDF de diseño fijo."
+  },
+  "archive-email-attachments-as-pdf": {
+    "name": "Archivar adjuntos como PDF",
+    "summary": "Normaliza archivos mixtos en PDF.",
+    "description": "Convierte adjuntos de texto o imagen a PDF antes del archivo a largo plazo."
+  },
+  "redact-phi-before-sharing": {
+    "name": "Redactar PHI antes de compartir",
+    "summary": "Elimina identificadores de PDF de salud.",
+    "description": "Tapa en negro nombres, números de historia clínica y fechas antes de enviar extractos a especialistas."
+  },
+  "legal-exhibit-labeling": {
+    "name": "Etiquetado de anexos legales",
+    "summary": "Numera anexos en escritos judiciales.",
+    "description": "Aplica numeración y sellos al estilo bates para organizar anexos."
+  },
+  "compare-draft-versions-with-comments": {
+    "name": "Comparar borradores con comentarios",
+    "summary": "Anota diferencias entre rondas de revisión.",
+    "description": "Superpone comentarios en cada borrador PDF para que las partes vean el historial de negociación."
+  },
+  "mobile-friendly-form-filling": {
+    "name": "Rellenado de formularios compatible con móvil",
+    "summary": "Completa formularios PDF en el navegador del móvil.",
+    "description": "Rellena campos en navegadores móviles de myonlinepdfeditor.com; los archivos siguen en el dispositivo."
+  },
+  "batch-rotate-scanned-pages": {
+    "name": "Rotar en lote páginas escaneadas",
+    "summary": "Corrige de una vez un escaneo mal alimentado.",
+    "description": "Rota todas las páginas de un lote torcido antes de combinarlo con otros documentos."
+  },
+  "remove-blank-pages-from-scan": {
+    "name": "Quitar páginas en blanco del escaneo",
+    "summary": "Elimina separadores en blanco de escaneos.",
+    "description": "Recorta páginas vacías que los escáneres dúplex insertan entre documentos a doble cara."
+  },
+  "duplicate-nda-for-each-vendor": {
+    "name": "Duplicar plantilla NDA por proveedor",
+    "summary": "Clona una plantilla antes de cada envío.",
+    "description": "Parte de tu plantilla PDF de NDA y personaliza campos por cada contraparte."
+  },
+  "type-signature-instead-of-draw": {
+    "name": "Escribir firma en lugar de dibujar",
+    "summary": "Línea de firma con estilo cursiva tipográfica.",
+    "description": "Usa el modo de firma escrita cuando una firma con ratón cuesta leer."
+  }
+}

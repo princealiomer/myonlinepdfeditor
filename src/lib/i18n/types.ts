@@ -76,6 +76,10 @@ export type Dictionary = {
     resultsCount: string;
     noResults: string;
   };
+  featuresPage: {
+    /** Used in feature detail titles: "{name} — {howItWorks}" */
+    howItWorks: string;
+  };
   toolPage: {
     freeBadge: string;
     relatedTitle: string;
@@ -152,6 +156,11 @@ export type Dictionary = {
     noOptions: string;
     readyTitle: string;
     downloadAgain: string;
+    /** Shown instead of readyTitle for availability:guide tools */
+    guideReadyTitle: string;
+    guideDownloadAgain: string;
+    guideRun: string;
+    guideDone: string;
   };
   synthesize: {
     whyUse: string[];
@@ -174,3 +183,11 @@ export type ToolLocaleFields = {
 };
 
 export type ToolsLocaleMap = Record<string, ToolLocaleFields>;
+
+export type FeatureLocaleFields = {
+  name: string;
+  summary: string;
+  description: string;
+};
+
+export type FeaturesLocaleMap = Record<string, FeatureLocaleFields>;

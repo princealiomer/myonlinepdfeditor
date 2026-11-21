@@ -238,6 +238,9 @@ export const ptBR: Dictionary = {
     resultsCount: "{count} ferramentas",
     noResults: "Nenhuma ferramenta corresponde. Tente uma palavra mais curta ou outra categoria.",
   },
+  featuresPage: {
+    howItWorks: "como funciona",
+  },
   workspace: {
     options: "Opções",
     uploadFor: "Enviar para {name}",
@@ -303,6 +306,11 @@ export const ptBR: Dictionary = {
     noOptions: "Sem opções extras. Envie um arquivo e execute.",
     readyTitle: "Download pronto",
     downloadAgain: "Baixar novamente",
+    guideReadyTitle: "Guia pronto",
+    guideDownloadAgain: "Baixar o guia novamente",
+    guideRun: "Obter guia",
+    guideDone:
+      "Guia pronto — isto não é um arquivo convertido. Siga os passos no desktop e depois abra o PDF aqui.",
   },
   toolPage: {
     freeBadge: "grátis para sempre",

@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/AdSlot";
-import { FEATURES } from "@/lib/catalog";
 import {
   getDictionary,
+  getLocalizedFeatures,
   isLocale,
   localePath,
   type Locale,
@@ -32,6 +32,7 @@ export default async function LocalizedFeaturesPage({
   if (!isLocale(raw)) notFound();
   const locale = raw as Locale;
   const dict = await getDictionary(locale);
+  const features = getLocalizedFeatures(locale);
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
@@ -39,7 +40,7 @@ export default async function LocalizedFeaturesPage({
       <p className="mt-3 max-w-2xl text-muted">{dict.toolsIndex.intro}</p>
       <AdSlot className="my-8 rounded-xl" />
       <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {FEATURES.map((feature) => (
+        {features.map((feature) => (
           <li key={feature.slug}>
             <Link
               href={localePath(locale, `/features/${feature.slug}`)}

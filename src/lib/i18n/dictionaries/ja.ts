@@ -238,6 +238,9 @@ export const ja: Dictionary = {
     resultsCount: "{count} 件のツール",
     noResults: "一致するツールがありません。短いキーワードや別のカテゴリを試してください。",
   },
+  featuresPage: {
+    howItWorks: "使い方",
+  },
   workspace: {
     options: "オプション",
     uploadFor: "{name} 用にアップロード",
@@ -303,6 +306,11 @@ export const ja: Dictionary = {
     noOptions: "追加オプションはありません。ファイルをアップロードして実行してください。",
     readyTitle: "ダウンロード準備完了",
     downloadAgain: "もう一度ダウンロード",
+    guideReadyTitle: "ガイドの準備完了",
+    guideDownloadAgain: "ガイドを再ダウンロード",
+    guideRun: "ガイドを入手",
+    guideDone:
+      "ガイドの準備完了です。変換ファイルではありません。手順に沿ってデスクトップで変換し、PDFをここで開いてください。",
   },
   toolPage: {
     freeBadge: "ずっと無料",

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { allFeatureSlugs, allToolSlugs, getTool } from "@/lib/catalog";
-import { DEFAULT_LOCALE, LOCALES, localePath } from "@/lib/i18n";
+import { LOCALES, localePath } from "@/lib/i18n";
 import { site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -34,7 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const toolSlugs = allToolSlugs().filter((slug) => {
     const tool = getTool(slug);
     // Keep guide tools out of the sitemap so stubs are not promoted.
-    return tool && tool.availability !== "guide" && slug !== "publisher-to-pdf";
+    return tool && tool.availability !== "guide";
   });
 
   const toolRoutes: MetadataRoute.Sitemap = LOCALES.flatMap((locale) =>
@@ -46,13 +46,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
-  // Feature pages are English-only today — index English only.
-  const featureRoutes: MetadataRoute.Sitemap = allFeatureSlugs().map((slug) => ({
-    url: `${base}${localePath(DEFAULT_LOCALE, `/features/${slug}`)}`,
-    lastModified,
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
+  const featureRoutes: MetadataRoute.Sitemap = LOCALES.flatMap((locale) =>
+    allFeatureSlugs().map((slug) => ({
+      url: `${base}${localePath(locale, `/features/${slug}`)}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+  );
 
   return [...staticRoutes, ...toolRoutes, ...featureRoutes];
 }

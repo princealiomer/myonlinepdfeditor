@@ -1,0 +1,487 @@
+{
+  "create-a-new-pdf-document": {
+    "name": "新しいPDFドキュメントを作成",
+    "summary": "ゼロから始めて、まったく新しいPDFを保存できます。",
+    "description": "空白のキャンバスを開き、ページを追加して、配布資料・チェックリスト・社内文書用のPDFを、デスクトップソフトをインストールせずに作成できます。"
+  },
+  "upload-a-pdf-document": {
+    "name": "PDFドキュメントをアップロード",
+    "summary": "お使いのコンピューター上の任意のPDFを myonlinepdfeditor.com で開けます。",
+    "description": "ファイルをエディターにドラッグして表示・注釈・書き出しができます。アップロードはブラウザのメモリ内に留まり、myonlinepdfeditor.com のサーバーには保存されません。"
+  },
+  "add-images-to-a-pdf": {
+    "name": "PDFに画像を追加",
+    "summary": "任意のページに写真やグラフィックを埋め込めます。",
+    "description": "ロゴ・図・スキャンした署名用に PNG や JPG を挿入し、フラット化や書き出し前にサイズ変更や配置ができます。"
+  },
+  "convert-pdf-document-into-template": {
+    "name": "PDFをテンプレートに変換",
+    "summary": "静的なPDFを再利用できるフォームレイアウトにできます。",
+    "description": "既存のPDFの上にフィールドとラベルを追加し、同じ構成を何度でも送れます。"
+  },
+  "add-text-to-a-pdf": {
+    "name": "PDFにテキストを追加",
+    "summary": "ページ上に直接文字を入力できます。",
+    "description": "氏名・住所・説明文など、編集可能なオーバーレイが必要な箇所にテキストボックスを配置できます。"
+  },
+  "add-checkmark-to-a-pdf": {
+    "name": "PDFにチェックマークを追加",
+    "summary": "完了した項目にチェックを付けられます。",
+    "description": "チェックボックスフィールドや描画ツールで、印刷またはデジタルフォーム上の完了タスクを示せます。"
+  },
+  "add-date-to-a-pdf": {
+    "name": "PDFに日付を追加",
+    "summary": "本日の日付または任意の日付文字列をスタンプできます。",
+    "description": "テキストボックスに日付を入力し、契約書・記録・領収書に完了日を表示できます。"
+  },
+  "add-rectangle-to-a-pdf": {
+    "name": "PDFに矩形を追加",
+    "summary": "枠で内容を囲んだり、領域を強調したりできます。",
+    "description": "図形描画で表の輪郭を描いたり、セクションを強調したり、共有前に領域をマスクしたりできます。"
+  },
+  "add-circle-to-a-pdf": {
+    "name": "PDFに円を追加",
+    "summary": "重要な数値や図の部分を囲めます。",
+    "description": "フリーハンドや図形ツールで、数値・グラフの区画・地図上の位置を指し示せます。"
+  },
+  "add-line-to-a-pdf": {
+    "name": "PDFに線を追加",
+    "summary": "直線で関連を結べます。",
+    "description": "ラベルとオブジェクトを結んだり、ページ上できれいなベクター線で区切ったりできます。"
+  },
+  "add-arrow-to-a-pdf": {
+    "name": "PDFに矢印を追加",
+    "summary": "読者の目を次のステップへ導けます。",
+    "description": "フロー図・間取り図・注釈付きスクリーンショット上の手順がわかりやすくなります。"
+  },
+  "draw-on-a-pdf": {
+    "name": "PDF上に描画",
+    "summary": "ペン風のマークアップで自由にスケッチできます。",
+    "description": "紙のようにPDFにマークアップし、誤りを丸で囲んだり、フィードバックを書き込んだり、簡易承認の署名ができます。"
+  },
+  "whiteout-text-in-a-pdf": {
+    "name": "PDFのテキストをホワイトアウト",
+    "summary": "古いテキストを白で覆って隠せます。",
+    "description": "古い口座番号や誤字を覆い、クライアントへ更新版を送る前に整えられます。"
+  },
+  "redact-pdf": {
+    "name": "PDFを墨消し",
+    "summary": "機密コンテンツを完全に黒塗りできます。",
+    "description": "不透明な墨消しブロックを適用し、共有ファイルから個人データが復元できないようにします。"
+  },
+  "highlight-text-in-a-pdf": {
+    "name": "PDFのテキストをハイライト",
+    "summary": "引用や期限を色で強調できます。",
+    "description": "半透明のハイライトで、学習メモや契約条項を後から見つけやすくします。"
+  },
+  "underline-text-in-a-pdf": {
+    "name": "PDFのテキストに下線",
+    "summary": "フレーズに下線を引いて強調できます。",
+    "description": "見出しや用語に下線を引き、最新ドラフトで何が変わったかレビュアーに伝えられます。"
+  },
+  "strikeout-text-in-a-pdf": {
+    "name": "PDFのテキストに取り消し線",
+    "summary": "取り消された文言に線を引けます。",
+    "description": "元のテキストを削除せず、削除された条項や廃止された指示を示せます。"
+  },
+  "add-a-stamp-to-a-pdf": {
+    "name": "PDFにスタンプを追加",
+    "summary": "承認済み・支払済みなど、カスタムスタンプを押せます。",
+    "description": "目に見えるスタンプで、実印がない場合でも経理・人事・法務のワークフローを加速できます。"
+  },
+  "add-text-field-in-a-pdf": {
+    "name": "PDFにテキストフィールドを追加",
+    "summary": "読者がボックス内に回答を入力できます。",
+    "description": "1行フィールドで、デジタルフォーム上の氏名・ID・短い回答を収集できます。"
+  },
+  "add-paragraph-field-in-a-pdf": {
+    "name": "PDFに段落フィールドを追加",
+    "summary": "長めの回答用の複数行エリアを設けられます。",
+    "description": "大きなテキストエリアで、説明・フィードバック・アンケートの自由記述を収集できます。"
+  },
+  "add-dropdown-field-in-a-pdf": {
+    "name": "PDFにドロップダウンフィールドを追加",
+    "summary": "選択リストから固定の選択肢を提示できます。",
+    "description": "ドロップダウン形式のフィールドで、定義済みの選択肢から選べるため入力ミスを減らせます。"
+  },
+  "add-signature-field-in-a-pdf": {
+    "name": "PDFに署名フィールドを追加",
+    "summary": "署名者がどこに署名するか明確に示せます。",
+    "description": "署名専用ボックスで、eSign の完了を早く、あいまいさなく進められます。"
+  },
+  "add-initials-field-in-a-pdf": {
+    "name": "PDFにイニシャルフィールドを追加",
+    "summary": "各セクションでイニシャルを収集できます。",
+    "description": "イニシャルフィールドで、各ページや別添を確認したことを署名者に思い出させられます。"
+  },
+  "add-date-field-in-a-pdf": {
+    "name": "PDFに日付フィールドを追加",
+    "summary": "署名日の入力を署名者に促せます。",
+    "description": "契約書上の完全な確認ブロックのために、署名と日付フィールドを組み合わせられます。"
+  },
+  "add-checkbox-field-in-a-pdf": {
+    "name": "PDFにチェックボックスフィールドを追加",
+    "summary": "フォーム上でクリック可能なはい／いいえのボックスを設けられます。",
+    "description": "構造化されたチェックボックスで、許可書・免責同意書・アンケートの手書きを置き換えられます。"
+  },
+  "append-blank-page-in-a-pdf": {
+    "name": "PDFに空白ページを追加",
+    "summary": "末尾や途中に空のページを追加できます。",
+    "description": "後で追加するメモ・別添・署名用のシートを挿入できます。"
+  },
+  "insert-and-merge-pdf": {
+    "name": "PDFを挿入して結合",
+    "summary": "別のファイルをパケットに組み込めます。",
+    "description": "別紙・請求書・送付状を順に PDF を結合して添付できます。"
+  },
+  "reorder-pages-in-a-pdf": {
+    "name": "PDFのページを並べ替え",
+    "summary": "ドラッグ＆ドロップでページ順を直せます。",
+    "description": "署名の前に条項を置いたり、スキャンした裏面を表と隣接させたりできます。"
+  },
+  "rotate-pages-in-a-pdf": {
+    "name": "PDFのページを回転",
+    "summary": "横向きのスキャンを正立させられます。",
+    "description": "印刷や結合の前に、1ページだけまたは文書全体を回転できます。"
+  },
+  "duplicate-pages-in-a-pdf": {
+    "name": "PDFのページを複製",
+    "summary": "同じファイル内でページをコピーできます。",
+    "description": "別のソースファイルを維持せず、条項シートや W-9 の写しを繰り返せます。"
+  },
+  "delete-pages-from-a-pdf": {
+    "name": "PDFからページを削除",
+    "summary": "空白ページや不要なスキャンを除去できます。",
+    "description": "バンドルから配送ラベル・失敗スキャン・古い別紙をトリミングできます。"
+  },
+  "number-and-label-pages-on-a-pdf": {
+    "name": "PDFにページ番号とラベルを付与",
+    "summary": "ページ番号付きの自動フッターが使えます。",
+    "description": "長い提出書類やマニュアルを、会議や法廷で参照しやすく保てます。"
+  },
+  "add-comments-on-a-pdf": {
+    "name": "PDFにコメントを追加",
+    "summary": "共同作業者向けのメモを残せます。",
+    "description": "付箋コメントで、本文を変えずに条項が変わった理由を説明できます。"
+  },
+  "send-pdf-via-shareable-link": {
+    "name": "共有可能リンクでPDFを送る",
+    "summary": "クラウドリンク用に完成ファイルを書き出せます。",
+    "description": "きれいな PDF をダウンロードし、Drive・Dropbox・メールにアップロードできます。myonlinepdfeditor.com が文書をホストすることはありません。"
+  },
+  "bulk-sending": {
+    "name": "PDFの一括送信",
+    "summary": "配布用に複数のパケットを準備できます。",
+    "description": "類似契約書のバッチを結合しフィールドを付け、受取人ごとに一貫したレイアウトを届けられます。"
+  },
+  "track-pdf-document-status": {
+    "name": "PDFドキュメントのステータスを追跡",
+    "summary": "版をスタンプしてレビュー状態を示せます。",
+    "description": "監査スタンプとコメントで、チーム内のドラフトと承認済みコピーを区別できます。"
+  },
+  "add-signature-on-desktop-to-a-pdf": {
+    "name": "デスクトップでPDFに署名を追加",
+    "summary": "コンピューター上でマウスやトラックパッドから署名できます。",
+    "description": "PDFページ上に自然な署名を描き、1セッションで書き出せます。"
+  },
+  "add-an-image-of-your-signature-to-a-pdf": {
+    "name": "署名の画像をPDFに追加",
+    "summary": "スキャンした署名の PNG を貼り付けられます。",
+    "description": "透過署名画像をアップロードし、提出するすべてのフォームに配置できます。"
+  },
+  "add-initials-to-a-pdf": {
+    "name": "PDFにイニシャルを追加",
+    "summary": "別添や付属ページにイニシャルを入れられます。",
+    "description": "小さなイニシャル印で、最終署名前に各セクションが確認されたことを示せます。"
+  },
+  "add-multiple-signers-to-a-pdf": {
+    "name": "PDFに複数の署名者を追加",
+    "summary": "当事者ごとにフィールドを割り当てられます。",
+    "description": "クライアント・証人・副署者用の署名ブロックを一度にレイアウトできます。"
+  },
+  "set-signing-order-for-a-pdf": {
+    "name": "PDFの署名順序を設定",
+    "summary": "誰が最初に、次に署名するかをラベル付けできます。",
+    "description": "署名者フィールドに番号を付け、パケットを書き出す前に社内ルートに合わせられます。"
+  },
+  "document-audit": {
+    "name": "ドキュメント監査証跡",
+    "summary": "PDFがいつレビューされたかを示せます。",
+    "description": "目に見える監査スタンプで、軽量なガバナンスのためにレビュアーと日付を記録します。"
+  },
+  "password-protect-document": {
+    "name": "ドキュメントにパスワード保護",
+    "summary": "PDFを開く際にパスフレーズを要求できます。",
+    "description": "財務・医療・個人データを含むファイルをメール送信前に暗号化できます。"
+  },
+  "certify-document": {
+    "name": "ドキュメントを認証",
+    "summary": "公式の最終版PDFとして印付けできます。",
+    "description": "認証バナーで、受取人にこのコピーが承認済みリリースであることを伝えられます。"
+  },
+  "convert-word-to-pdf": {
+    "name": "WordをPDFに変換",
+    "summary": "DOCXファイルをPDFとして書き出せます。",
+    "description": "履歴書・ポリシー・提案書を、誰でも開ける形式で共有できます。"
+  },
+  "convert-txt-to-pdf": {
+    "name": "TXTをPDFに変換",
+    "summary": "プレーンテキストをPDFページにできます。",
+    "description": "ログや設定をページ分割されたPDFとしてアーカイブし、長期保存に適した形にできます。"
+  },
+  "convert-html-to-pdf": {
+    "name": "HTMLをPDFに変換",
+    "summary": "ウェブの断片をPDFとして保存できます。",
+    "description": "HTMLの記事や領収書を、持ち運び可能なドキュメントとして保存できます。"
+  },
+  "convert-csv-to-pdf": {
+    "name": "CSVをPDFに変換",
+    "summary": "スプレッドシート書き出しから印刷可能な表を作れます。",
+    "description": "編集可能なスプレッドシートの代わりに、固定レイアウトのPDFを経理・運用関係者に渡せます。"
+  },
+  "convert-rtf-to-pdf": {
+    "name": "RTFをPDFに変換",
+    "summary": "古いリッチテキストファイルを現代化できます。",
+    "description": "レガシーな RTF 文書を開き、汎用の PDF コピーとして保存できます。"
+  },
+  "convert-jpgjpeg-to-pdf": {
+    "name": "JPG/JPEGをPDFに変換",
+    "summary": "写真アルバムを複数ページのPDFにできます。",
+    "description": "カメラの JPEG を1ファイルにまとめ、保険請求やポートフォリオに使えます。"
+  },
+  "convert-png-to-pdf": {
+    "name": "PNGをPDFに変換",
+    "summary": "ロスレスのスクリーンショットをPDF形式にできます。",
+    "description": "鮮明なUIキャプチャや図を、1つのPDF添付ファイルにまとめられます。"
+  },
+  "print-out-pdf": {
+    "name": "PDFを印刷",
+    "summary": "プリンター用にPDFを整えられます。",
+    "description": "myonlinepdfeditor.com で回転やページ順を直し、ブラウザやOSビューアから印刷できます。"
+  },
+  "download-pdf": {
+    "name": "PDFをダウンロード",
+    "summary": "編集したファイルを端末に保存できます。",
+    "description": "すべてのツールはローカルダウンロードで終わり、アカウントの保管庫は不要です。"
+  },
+  "export-pdf": {
+    "name": "PDFをエクスポート",
+    "summary": "完成版をフラット化して書き出せます。",
+    "description": "エクスポートで注釈とフィールドを標準PDFに統合し、どこでも開けるファイルにできます。"
+  },
+  "flatten-fields-on-a-pdf": {
+    "name": "PDFのフィールドをフラット化",
+    "summary": "フォームの値をページに固定できます。",
+    "description": "フォームが署名・提出された後の誤編集を防ぎます。"
+  },
+  "send-out-pdf-documents-for-signature": {
+    "name": "署名用にPDFを送付",
+    "summary": "署名可能な契約書を準備できます。",
+    "description": "署名・日付フィールドを付け、お好みのチャネルでPDFを共有できます。"
+  },
+  "send-envelopes-for-esignature": {
+    "name": "eSignature用エンベロープを送信",
+    "summary": "署名用に複数ドキュメントをまとめられます。",
+    "description": "関連PDFを結合し、一度フィールドを追加すれば、署名者には1つのまとまったエンベロープとして見えます。"
+  },
+  "ai-document-assistant": {
+    "name": "AIドキュメントアシスタント",
+    "summary": "PDFコンテンツ用のローカルテキストヘルパーです。",
+    "description": "ブラウザ内でテキストを抽出し、クラウドに文書を保存せずにアウトラインや書き直し案を作成できます。"
+  },
+  "simplify-pdf-documents-with-ai": {
+    "name": "AIでPDFをわかりやすく",
+    "summary": "難しい文章を平易な言葉にできます。",
+    "description": "抽出した文言を簡略化し、明確な説明が必要なクライアント・患者・学生向けにします。"
+  },
+  "summarize-documents-with-ai": {
+    "name": "AIでドキュメントを要約",
+    "summary": "長いPDFからすばやく箇条書き要約を得られます。",
+    "description": "ローカル抽出から生成した要約で、会議前に内容を把握できます。"
+  },
+  "get-answers-from-documents-with-ai": {
+    "name": "AIでドキュメントから回答を取得",
+    "summary": "抽出テキストに対して質問できます。",
+    "description": "PDF全体をアップロードせず、ポリシーやマニュアル内の関連文を見つけられます。"
+  },
+  "in-person-signing": {
+    "name": "対面署名",
+    "summary": "会議中に同じ端末で署名できます。",
+    "description": "ノートPCやタブレットを回し、PDF上ですぐに署名を収集できます。"
+  },
+  "edit-pdf-text-online": {
+    "name": "オンラインでPDFテキストを編集",
+    "summary": "ブラウザで表示テキストとオーバーレイを変更できます。",
+    "description": "フォーム・ラベル・手早い修正用にテキストレイヤーを追加・調整できます。"
+  },
+  "visual-edit": {
+    "name": "ビジュアルPDF編集",
+    "summary": "配置しながら変更を確認できます。",
+    "description": "各ページでテキスト・画像・マークアップをWYSIWYGで配置できます。"
+  },
+  "signature-assistant": {
+    "name": "署名アシスタント",
+    "summary": "署名の配置をガイド付きで進められます。",
+    "description": "より少ないクリックで署名を作成・プレビュー・配置できます。"
+  },
+  "create-a-pdf-form": {
+    "name": "PDFフォームを作成",
+    "summary": "ゼロから対話型フォームを構築できます。",
+    "description": "フィールドと静的ラベルを組み合わせ、受取人がデジタルで記入できるフォームにできます。"
+  },
+  "create-a-new-template": {
+    "name": "新しいテンプレートを作成",
+    "summary": "繰り返し使うマスターレイアウトを保存できます。",
+    "description": "一度設計すれば、同じ構成が必要なたびにテンプレートを開けます。"
+  },
+  "manage-fields-in-a-pdf": {
+    "name": "PDF内のフィールドを管理",
+    "summary": "フォームフィールドの追加・移動・サイズ変更ができます。",
+    "description": "デスクトップでもモバイルでも記入しやすいまでフィールド配置を調整できます。"
+  },
+  "make-fields-required-in-a-pdf": {
+    "name": "PDFでフィールドを必須にする",
+    "summary": "必ず記入する項目を強調できます。",
+    "description": "ラベルとレイアウトで、署名者がスキップできないフィールドを示せます。"
+  },
+  "public-viewing-of-documents": {
+    "name": "ドキュメントの公開閲覧",
+    "summary": "読み取り専用のPDFエクスポートを共有できます。",
+    "description": "公開配布資料やウェブサイトのダウンロードに適したPDFにフラット化して書き出せます。"
+  },
+  "share-forms-via-email": {
+    "name": "メールでフォームを共有",
+    "summary": "記入可能な完成PDFを添付できます。",
+    "description": "フォームをダウンロードし、ご自身のメールボックスからメールに添付できます。"
+  },
+  "template-distribution-via-url": {
+    "name": "URLでテンプレートを配布",
+    "summary": "書き出し後にサイト上でテンプレートを公開できます。",
+    "description": "テンプレートPDFを書き出し、ポータルやナレッジベースからリンクできます。"
+  },
+  "set-expiration-date-for-a-pdf": {
+    "name": "PDFの有効期限を設定",
+    "summary": "オファーやポリシーの終了日をファイルに記載できます。",
+    "description": "期限の見えるテキストを追加し、必要に応じて期限付きオファーをパスワードで保護できます。"
+  },
+  "set-automated-reminders-for-a-pdf": {
+    "name": "PDFの自動リマインダーを設定",
+    "summary": "署名者が早く返送すべきパケットを準備できます。",
+    "description": "PDFに期日フィールドを付け、myonlinepdfeditor.com 外のカレンダーリマインダーと組み合わせられます。"
+  },
+  "esign-compliance": {
+    "name": "eSignコンプライアンス支援",
+    "summary": "確定した署名を認証・監査できます。",
+    "description": "認証スタンプ・フラット化・監査マークを組み合わせ、より強い記録を残せます。"
+  },
+  "readable-document": {
+    "name": "読みやすいドキュメント",
+    "summary": "密度の高いPDFテキストの明瞭さを高められます。",
+    "description": "抽出コンテンツを簡略化し、アクセシビティを意識した読者向けに要約を再エクスポートできます。"
+  },
+  "group-documents-into-folders": {
+    "name": "ドキュメントをフォルダーにグループ化",
+    "summary": "関連PDFを1つのパケットに結合できます。",
+    "description": "カテゴリ別にPDFを結合して端末上で整理し、クラウドストレージに保存する前にまとめられます。"
+  },
+  "split-large-pdf-into-chapters": {
+    "name": "大きなPDFを章に分割",
+    "summary": "書籍やマニュアルをパートに分けられます。",
+    "description": "ページ範囲を抽出し、LMSやメールへ各章をより速くアップロードできます。"
+  },
+  "extract-single-page-from-pdf": {
+    "name": "PDFから単一ページを抽出",
+    "summary": "1ページだけ別ファイルにできます。",
+    "description": "証明書・請求書・署名ページだけを、スキャンの残りから切り出して保存できます。"
+  },
+  "compress-pdf-for-email": {
+    "name": "メール用にPDFを圧縮",
+    "summary": "添付をメールボックスの上限以下に縮小できます。",
+    "description": "テキストの読みやすさを保ちながらスキャンサイズを減らし、受信トレイへの送信に適したサイズにできます。"
+  },
+  "combine-images-into-one-pdf": {
+    "name": "画像を1つのPDFに結合",
+    "summary": "混在する画像形式を1つの書き出しにまとめられます。",
+    "description": "スマートフォンの PNG や JPG スキャンを、1つのプロフェッショナルな PDF にまとめられます。"
+  },
+  "scan-to-pdf-workflow": {
+    "name": "スキャンからPDFへのワークフロー",
+    "summary": "スマホスキャンの回転・結合・圧縮ができます。",
+    "description": "向きを直し、複数ページスキャンを結合し、送信前に圧縮できます。"
+  },
+  "fill-existing-government-pdf-forms": {
+    "name": "政府PDFフォームに記入",
+    "summary": "公式PDFをデジタルで完了できます。",
+    "description": "IRS・入国管理・許可申請のPDFに入力し、記入済みコピーをダウンロードできます。"
+  },
+  "add-watermark-style-stamp": {
+    "name": "透かし風スタンプを追加",
+    "summary": "ドラフトを機密またはサンプルと印付けできます。",
+    "description": "斜めのスタンプで、広く配布する前に文書が最終版でないことを示せます。"
+  },
+  "prepare-real-estate-disclosures": {
+    "name": "不動産開示書類を準備",
+    "summary": "開示パケットにイニシャルと署名を入れられます。",
+    "description": "各開示ページにイニシャルを配置し、クロージング用に書き出せます。"
+  },
+  "hr-onboarding-pdf-pack": {
+    "name": "人事オンボーディング用PDFパック",
+    "summary": "新入社員向けにポリシーPDFを結合できます。",
+    "description": "ハンドブック・税務・ポリシーのPDFをページ番号付きで結合し、入社初日の署名に備えられます。"
+  },
+  "classroom-handout-pdf": {
+    "name": "教室配布用PDF",
+    "summary": "ノートやスライドをPDFに変換できます。",
+    "description": "Wordの授業計画や画像スライドを、印刷可能なPDF配布資料にできます。"
+  },
+  "invoice-pdf-from-spreadsheet": {
+    "name": "スプレッドシートから請求書PDF",
+    "summary": "CSV書き出しをクライアント向けPDFにできます。",
+    "description": "明細行のCSV書き出しを、固定レイアウトの請求書PDFに変換できます。"
+  },
+  "archive-email-attachments-as-pdf": {
+    "name": "添付ファイルをPDFとしてアーカイブ",
+    "summary": "混在ファイルをPDFに正規化できます。",
+    "description": "長期アーカイブの前に、テキストや画像の添付をPDFに変換できます。"
+  },
+  "redact-phi-before-sharing": {
+    "name": "共有前にPHIを墨消し",
+    "summary": "医療PDFから識別情報を除去できます。",
+    "description": "専門医へ抜粋を送る前に、氏名・MRN・日付を黒塗りできます。"
+  },
+  "legal-exhibit-labeling": {
+    "name": "法廷別添のラベル付け",
+    "summary": "法廷提出書類で別添に番号を付けられます。",
+    "description": "ベイツ形式のページ番号とスタンプで、別添の整理ができます。"
+  },
+  "compare-draft-versions-with-comments": {
+    "name": "コメント付きでドラフト版を比較",
+    "summary": "レビューラウンド間の差分に注釈を付けられます。",
+    "description": "各ドラフトPDFにコメントを重ね、関係者が交渉の経緯を追えます。"
+  },
+  "mobile-friendly-form-filling": {
+    "name": "モバイル向けフォーム入力",
+    "summary": "スマートフォンのブラウザでPDFフォームを完了できます。",
+    "description": "myonlinepdfeditor.com のモバイルブラウザでフィールドに記入でき、ファイルは端末内に留まります。"
+  },
+  "batch-rotate-scanned-pages": {
+    "name": "スキャンページを一括回転",
+    "summary": "誤送りしたスキャン全体を一度に直せます。",
+    "description": "傾いたバッチスキャンの全ページを回転し、他ドキュメントと結合する前に整えられます。"
+  },
+  "remove-blank-pages-from-scan": {
+    "name": "スキャンから空白ページを削除",
+    "summary": "スキャン区切りの空白を除去できます。",
+    "description": "両面スキャンで両面文書の間に挿入される空ページを削除できます。"
+  },
+  "duplicate-nda-for-each-vendor": {
+    "name": "ベンダーごとにNDAテンプレートを複製",
+    "summary": "送付のたびにテンプレートをクローンできます。",
+    "description": "NDAテンプレートPDFから始め、相手方ごとにフィールドをカスタマイズできます。"
+  },
+  "type-signature-instead-of-draw": {
+    "name": "描画の代わりに署名をタイプ",
+    "summary": "筆記体風のタイプ署名行が使えます。",
+    "description": "マウス署名が読みにくい場合は、タイプ署名モードをご利用ください。"
+  }
+}
