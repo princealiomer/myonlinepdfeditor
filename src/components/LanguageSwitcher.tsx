@@ -22,7 +22,7 @@ export function LanguageSwitcher({
     <details className="relative">
       <summary
         className="btn btn-ghost flex min-h-11 cursor-pointer list-none items-center gap-1.5 border border-mist/80 px-2.5 py-2 text-sm sm:px-3 [&::-webkit-details-marker]:hidden"
-        aria-label={label}
+        aria-label={`${label}: ${locale === "pt-BR" ? "PT" : locale.toUpperCase()}`}
       >
         <span className="hidden text-xs font-medium text-muted sm:inline">
           {label}

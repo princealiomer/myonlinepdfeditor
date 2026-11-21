@@ -30,6 +30,5 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: `${site.url.replace(/\/$/, "")}/sitemap.xml`,
-    host: site.url.replace(/\/$/, ""),
   };
 }

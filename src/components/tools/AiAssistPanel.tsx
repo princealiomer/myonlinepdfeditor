@@ -60,7 +60,7 @@ export function AiAssistPanel({
         setOutput(result);
         const download = downloadBlob(
           new Blob([result], { type: "text/plain;charset=utf-8" }),
-          `myonlinepdfeditor.com-${tool.slug}.txt`,
+          `myonlinepdfeditor-${tool.slug}.txt`,
         );
         setLastDownload(download);
         setMessage(w?.done || "Done — your download should start automatically.");

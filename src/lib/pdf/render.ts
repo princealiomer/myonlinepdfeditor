@@ -1,3 +1,5 @@
+import { copyPdfBytes } from "./bytes";
+
 type PdfJsModule = typeof import("pdfjs-dist");
 
 let pdfjsModule: PdfJsModule | null = null;
@@ -11,14 +13,9 @@ export async function getPdfjs(): Promise<PdfJsModule> {
   return pdfjs;
 }
 
-function toUint8Array(data: ArrayBuffer | Uint8Array): Uint8Array {
-  if (data instanceof Uint8Array) return data;
-  return new Uint8Array(data);
-}
-
 export async function getPageCount(data: ArrayBuffer | Uint8Array): Promise<number> {
   const pdfjs = await getPdfjs();
-  const loadingTask = pdfjs.getDocument({ data: toUint8Array(data) });
+  const loadingTask = pdfjs.getDocument({ data: copyPdfBytes(data) });
   const pdf = await loadingTask.promise;
   const count = pdf.numPages;
   await loadingTask.destroy();
@@ -43,7 +40,8 @@ export async function renderPdfPage(
   }
 
   const pdfjs = await getPdfjs();
-  const loadingTask = pdfjs.getDocument({ data: toUint8Array(data) });
+  // Always copy: pdf.js may transfer/detach the ArrayBuffer to the worker.
+  const loadingTask = pdfjs.getDocument({ data: copyPdfBytes(data) });
   const pdf = await loadingTask.promise;
 
   try {

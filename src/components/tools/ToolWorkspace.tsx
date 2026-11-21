@@ -42,6 +42,7 @@ import {
   grayscalePdf,
   htmlishToText,
   imagesToPdf,
+  inspectPdfSignatures,
   invertPdf,
   markdownToPdf,
   markdownToPlain,
@@ -50,7 +51,9 @@ import {
   odfToPdf,
   overlayPdf,
   pdfEmbedSnippet,
+  pdfToDocx,
   pdfToEpub,
+  pdfToOdt,
   pdfToHtml,
   pdfToImages,
   pdfToMarkdown,
@@ -72,6 +75,7 @@ import {
   splitPdf,
   textToPdf,
   unlockPdf,
+  validatePdfaChecklist,
   watermarkPdf,
   xmlInvoiceToPdf,
   zipToPdf,
@@ -207,7 +211,7 @@ export function ToolWorkspace({ tool, dict }: ToolWorkspaceProps) {
           disabled={pending}
           onClick={() =>
             run(async () => ({
-              download: downloadBytes(await createBlankPdf(1), "myonlinepdfeditor.com-blank.pdf"),
+              download: downloadBytes(await createBlankPdf(1), "myonlinepdfeditor-blank.pdf"),
             }))
           }
         >
@@ -268,7 +272,7 @@ export function ToolWorkspace({ tool, dict }: ToolWorkspaceProps) {
           onClick={() =>
             run(async () => {
               if (!statusName.trim()) throw new Error("Enter a document name.");
-              const key = "myonlinepdfeditor.com-pdf-status";
+              const key = "myonlinepdfeditor-pdf-status";
               const existing = JSON.parse(localStorage.getItem(key) || "[]") as unknown[];
               existing.unshift({
                 name: statusName.trim(),
@@ -339,7 +343,12 @@ export function ToolWorkspace({ tool, dict }: ToolWorkspaceProps) {
             {w.honestExportNote}
           </p>
         )}
-        {(tool.slug === "pdf-to-word" || tool.slug === "pdf-to-text") && (
+        {tool.slug === "pdf-to-word" && (
+          <p className="mt-3 rounded-lg bg-paper px-3 py-2 text-sm text-ink-soft">
+            Downloads a real .docx from extractable text. Layout and fonts will not match the original PDF.
+          </p>
+        )}
+        {tool.slug === "pdf-to-text" && (
           <p className="mt-3 rounded-lg bg-paper px-3 py-2 text-sm text-ink-soft">
             {w.outputTxtNote}
           </p>
@@ -379,7 +388,9 @@ export function ToolWorkspace({ tool, dict }: ToolWorkspaceProps) {
               onChange={(event) => setRanges(event.target.value)}
               placeholder="e.g. 1-3,5"
             />
-            <span className="hint">{w.pageRangesHint}</span>
+            <span className="hint">
+              {w.pageRangesHint} Examples: 1,3 or 1-3,5
+            </span>
           </div>
         )}
 
@@ -546,8 +557,9 @@ export function ToolWorkspace({ tool, dict }: ToolWorkspaceProps) {
               name="extract-pages"
               value={pagesInput}
               onChange={(e) => setPagesInput(e.target.value)}
-              placeholder="1,2,5"
+              placeholder="1-3,5"
             />
+            <span className="hint">Use commas and ranges, e.g. 1-3,5</span>
           </div>
         )}
 
@@ -688,7 +700,7 @@ async function executeTool(
   switch (tool.engine) {
     case "merge": {
       if (files.length < 2) throw new Error("Upload at least two PDF files to merge.");
-      return { download: downloadBytes(await mergePdfs(files), "myonlinepdfeditor.com-merged.pdf") };
+      return { download: downloadBytes(await mergePdfs(files), "myonlinepdfeditor-merged.pdf") };
     }
     case "split": {
       if (!files[0]) throw new Error("Upload a PDF to split.");
@@ -698,14 +710,14 @@ async function executeTool(
     }
     case "rotate": {
       if (!files[0]) throw new Error("Upload a PDF to rotate.");
-      return { download: downloadBytes(await rotatePdf(files[0], degrees), "myonlinepdfeditor.com-rotated.pdf") };
+      return { download: downloadBytes(await rotatePdf(files[0], degrees), "myonlinepdfeditor-rotated.pdf") };
     }
     case "delete-pages": {
       if (!files[0]) throw new Error("Upload a PDF.");
       return {
         download: downloadBytes(
           await deletePages(files[0], parseNumberList(pagesInput)),
-          "myonlinepdfeditor.com-pages-removed.pdf",
+          "myonlinepdfeditor-pages-removed.pdf",
         ),
       };
     }
@@ -715,20 +727,20 @@ async function executeTool(
         return {
           download: downloadBytes(
             await duplicatePages(files[0], parseNumberList(pagesInput)),
-            "myonlinepdfeditor.com-duplicated.pdf",
+            "myonlinepdfeditor-duplicated.pdf",
           ),
         };
       }
       return {
         download: downloadBytes(
           await reorderPages(files[0], parseNumberList(orderInput)),
-          "myonlinepdfeditor.com-reordered.pdf",
+          "myonlinepdfeditor-reordered.pdf",
         ),
       };
     }
     case "images-to-pdf": {
       if (!files.length) throw new Error("Upload one or more images.");
-      return { download: downloadBytes(await imagesToPdf(files), "myonlinepdfeditor.com-images.pdf") };
+      return { download: downloadBytes(await imagesToPdf(files), "myonlinepdfeditor-images.pdf") };
     }
     case "text-to-pdf": {
       let text = pasteText;
@@ -737,36 +749,44 @@ async function executeTool(
       if (tool.slug === "html-to-pdf") text = htmlishToText(text);
       if (tool.slug === "csv-to-pdf") text = csvToFormattedText(text);
       return {
-        download: downloadBytes(await textToPdf(text, tool.shortName), "myonlinepdfeditor.com-text.pdf"),
+        download: downloadBytes(await textToPdf(text, tool.shortName), "myonlinepdfeditor-text.pdf"),
       };
     }
     case "docx-to-pdf": {
       if (!files[0]) throw new Error("Upload a .docx file.");
-      return { download: downloadBytes(await docxToPdf(files[0]), "myonlinepdfeditor.com-from-word.pdf") };
+      return { download: downloadBytes(await docxToPdf(files[0]), "myonlinepdfeditor-from-word.pdf") };
     }
     case "ppt-to-pdf": {
       if (!files[0]) throw new Error("Upload a .pptx file.");
-      return { download: downloadBytes(await pptxToPdf(files[0]), "myonlinepdfeditor.com-from-pptx.pdf") };
+      return { download: downloadBytes(await pptxToPdf(files[0]), "myonlinepdfeditor-from-pptx.pdf") };
     }
     case "protect": {
       if (!files[0]) throw new Error("Upload a PDF.");
       return {
-        download: downloadBytes(await protectPdf(files[0], password), "myonlinepdfeditor.com-protected.pdf"),
+        download: downloadBytes(await protectPdf(files[0], password), "myonlinepdfeditor-protected.pdf"),
       };
     }
     case "page-numbers": {
       if (!files[0]) throw new Error("Upload a PDF.");
       return {
-        download: downloadBytes(await addPageNumbers(files[0]), "myonlinepdfeditor.com-numbered.pdf"),
+        download: downloadBytes(await addPageNumbers(files[0]), "myonlinepdfeditor-numbered.pdf"),
       };
     }
     case "compress": {
       if (!files[0]) throw new Error("Upload a PDF.");
-      return { download: downloadBytes(await compressPdf(files[0]), "myonlinepdfeditor.com-compressed.pdf") };
+      const before = files[0].size;
+      const out = await compressPdf(files[0], "strong");
+      const after = out.byteLength;
+      const saved = Math.max(0, before - after);
+      const pct = before > 0 ? Math.round((saved / before) * 100) : 0;
+      return {
+        download: downloadBytes(out, "myonlinepdfeditor-compressed.pdf"),
+        text: `Compressed ${formatBytes(before)} → ${formatBytes(after)} (${pct}% smaller). Strong mode rebuilds pages as JPEG.`,
+      };
     }
     case "flatten": {
       if (!files[0]) throw new Error("Upload a PDF.");
-      return { download: downloadBytes(await flattenPdf(files[0]), "myonlinepdfeditor.com-flattened.pdf") };
+      return { download: downloadBytes(await flattenPdf(files[0]), "myonlinepdfeditor-flattened.pdf") };
     }
     case "download":
     case "export":
@@ -775,26 +795,23 @@ async function executeTool(
       if (tool.slug === "pdf-to-pdfa") {
         const cleaned = await removePdfMetadata(files[0]);
         return {
-          download: downloadBytes(cleaned, "myonlinepdfeditor.com-pdfa-prep.pdf"),
+          download: downloadBytes(cleaned, "myonlinepdfeditor-pdfa-prep.pdf"),
           text: "Downloaded a metadata-scrubbed PDF. Validate PDF/A conformance in a dedicated PDF/A checker if your archive requires it.",
         };
       }
       const bytes = await fileToUint8Array(files[0]);
       const suffix =
         tool.engine === "fax" ? "fax-ready" : tool.engine === "export" ? "export" : "download";
-      return { download: downloadBytes(bytes, `myonlinepdfeditor.com-${suffix}.pdf`) };
+      return { download: downloadBytes(bytes, `myonlinepdfeditor-${suffix}.pdf`) };
     }
     case "print": {
       if (!files[0]) throw new Error("Upload a PDF.");
       const bytes = await fileToUint8Array(files[0]);
-      const url = URL.createObjectURL(new Blob([bytes.slice()], { type: "application/pdf" }));
-      const win = window.open(url, "_blank");
-      if (!win) throw new Error("Pop-up blocked — allow pop-ups to print.");
-      win.addEventListener("load", () => {
-        win.focus();
-        win.print();
-      });
-      return { text: "Print dialog opened in a new tab." };
+      const url = URL.createObjectURL(
+        new Blob([bytes.slice()], { type: "application/pdf" }),
+      );
+      await printViaHiddenIframe(url);
+      return { text: "Print dialog opened." };
     }
     case "search": {
       if (!files[0]) throw new Error("Upload a PDF.");
@@ -842,20 +859,20 @@ async function executeTool(
         downloads.push(downloadBytes(await fileToUint8Array(file), file.name));
       }
       downloads.push(
-        downloadBlob(new Blob([checklist], { type: "text/plain;charset=utf-8" }), "myonlinepdfeditor.com-checklist.txt"),
+        downloadBlob(new Blob([checklist], { type: "text/plain;charset=utf-8" }), "myonlinepdfeditor-checklist.txt"),
       );
       return { downloads, download: downloads[downloads.length - 1], text: checklist };
     }
     case "excel-to-pdf": {
       if (!files[0]) throw new Error("Upload an Excel (.xlsx) or CSV file.");
-      return { download: downloadBytes(await excelToPdf(files[0]), "myonlinepdfeditor.com-from-excel.pdf") };
+      return { download: downloadBytes(await excelToPdf(files[0]), "myonlinepdfeditor-from-excel.pdf") };
     }
     case "watermark": {
       if (!files[0]) throw new Error("Upload a PDF.");
       return {
         download: downloadBytes(
           await watermarkPdf(files[0], watermarkText),
-          "myonlinepdfeditor.com-watermarked.pdf",
+          "myonlinepdfeditor-watermarked.pdf",
         ),
       };
     }
@@ -863,48 +880,42 @@ async function executeTool(
       if (!files[0]) throw new Error("Upload a PDF.");
       const margin = Number(cropMargin);
       if (!Number.isFinite(margin) || margin < 0) throw new Error("Enter a valid crop margin.");
-      return { download: downloadBytes(await cropPdf(files[0], margin), "myonlinepdfeditor.com-cropped.pdf") };
+      return { download: downloadBytes(await cropPdf(files[0], margin), "myonlinepdfeditor-cropped.pdf") };
     }
     case "extract-pages": {
       if (!files[0]) throw new Error("Upload a PDF.");
       return {
         download: downloadBytes(
           await extractPages(files[0], parseNumberList(pagesInput)),
-          "myonlinepdfeditor.com-extracted.pdf",
+          "myonlinepdfeditor-extracted.pdf",
         ),
       };
     }
     case "repair": {
       if (!files[0]) throw new Error("Upload a PDF.");
-      return { download: downloadBytes(await repairPdf(files[0]), "myonlinepdfeditor.com-repaired.pdf") };
+      return { download: downloadBytes(await repairPdf(files[0]), "myonlinepdfeditor-repaired.pdf") };
     }
     case "grayscale": {
       if (!files[0]) throw new Error("Upload a PDF.");
-      return { download: downloadBytes(await grayscalePdf(files[0]), "myonlinepdfeditor.com-grayscale.pdf") };
+      return { download: downloadBytes(await grayscalePdf(files[0]), "myonlinepdfeditor-grayscale.pdf") };
     }
     case "remove-metadata": {
       if (!files[0]) throw new Error("Upload a PDF.");
       return {
-        download: downloadBytes(await removePdfMetadata(files[0]), "myonlinepdfeditor.com-no-metadata.pdf"),
+        download: downloadBytes(await removePdfMetadata(files[0]), "myonlinepdfeditor-no-metadata.pdf"),
       };
     }
     case "pdf-to-images": {
       if (!files[0]) throw new Error("Upload a PDF.");
       const format = tool.slug === "pdf-to-png" || tool.slug === "pdf-to-tiff" ? "png" : "jpeg";
       const pages = await pdfToImages(await fileToUint8Array(files[0]), format);
-      const downloads = pages.map((page) => {
-        const name =
-          tool.slug === "pdf-to-tiff"
-            ? page.filename.replace(/\.png$/i, ".tiff.png")
-            : page.filename;
-        return downloadBlob(page.blob, name);
-      });
+      const downloads = pages.map((page) => downloadBlob(page.blob, page.filename));
       return {
         downloads,
         download: downloads[downloads.length - 1],
         text:
           tool.slug === "pdf-to-tiff"
-            ? `Exported ${pages.length} PNG page image(s) for TIFF workflows.`
+            ? `Exported ${pages.length} PNG page image(s) (browsers cannot write real TIFF here).`
             : `Exported ${pages.length} image${pages.length === 1 ? "" : "s"}.`,
       };
     }
@@ -913,22 +924,22 @@ async function executeTool(
       return {
         download: downloadBytes(
           await redactPdfPages(files[0], parseNumberList(pagesInput)),
-          "myonlinepdfeditor.com-redacted.pdf",
+          "myonlinepdfeditor-redacted.pdf",
         ),
       };
     }
     case "invert": {
       if (!files[0]) throw new Error("Upload a PDF.");
-      return { download: downloadBytes(await invertPdf(files[0]), "myonlinepdfeditor.com-inverted.pdf") };
+      return { download: downloadBytes(await invertPdf(files[0]), "myonlinepdfeditor-inverted.pdf") };
     }
     case "n-up": {
       if (!files[0]) throw new Error("Upload a PDF.");
-      return { download: downloadBytes(await nUpPdf(files[0], nUp), `myonlinepdfeditor.com-${nUp}up.pdf`) };
+      return { download: downloadBytes(await nUpPdf(files[0], nUp), `myonlinepdfeditor-${nUp}up.pdf`) };
     }
     case "overlay": {
       if (files.length < 2) throw new Error("Upload a base PDF and an overlay PDF.");
       return {
-        download: downloadBytes(await overlayPdf(files[0], files[1]), "myonlinepdfeditor.com-overlay.pdf"),
+        download: downloadBytes(await overlayPdf(files[0], files[1]), "myonlinepdfeditor-overlay.pdf"),
       };
     }
     case "page-size": {
@@ -936,34 +947,58 @@ async function executeTool(
       return {
         download: downloadBytes(
           await changePdfPageSize(files[0], pageSize),
-          `myonlinepdfeditor.com-${pageSize}.pdf`,
+          `myonlinepdfeditor-${pageSize}.pdf`,
         ),
       };
     }
     case "rasterize": {
       if (!files[0]) throw new Error("Upload a PDF.");
-      return { download: downloadBytes(await rasterizePdf(files[0]), "myonlinepdfeditor.com-rasterized.pdf") };
+      return { download: downloadBytes(await rasterizePdf(files[0]), "myonlinepdfeditor-rasterized.pdf") };
     }
     case "reverse": {
       if (!files[0]) throw new Error("Upload a PDF.");
       return {
-        download: downloadBytes(await reversePdfPages(files[0]), "myonlinepdfeditor.com-reversed.pdf"),
+        download: downloadBytes(await reversePdfPages(files[0]), "myonlinepdfeditor-reversed.pdf"),
       };
     }
     case "zip-to-pdf": {
       if (!files[0]) throw new Error("Upload a .zip file.");
-      return { download: downloadBytes(await zipToPdf(files[0]), "myonlinepdfeditor.com-from-zip.pdf") };
+      return { download: downloadBytes(await zipToPdf(files[0]), "myonlinepdfeditor-from-zip.pdf") };
     }
     case "markdown-to-pdf": {
       if (!files[0] && !pasteText.trim()) throw new Error("Upload a .md file or paste Markdown.");
       if (files[0]) {
-        return { download: downloadBytes(await markdownToPdf(files[0]), "myonlinepdfeditor.com-from-markdown.pdf") };
+        return { download: downloadBytes(await markdownToPdf(files[0]), "myonlinepdfeditor-from-markdown.pdf") };
       }
       return {
         download: downloadBytes(
           await textToPdf(markdownToPlain(pasteText), "markdown"),
-          "myonlinepdfeditor.com-from-markdown.pdf",
+          "myonlinepdfeditor-from-markdown.pdf",
         ),
+      };
+    }
+    case "pdf-to-docx": {
+      if (!files[0]) throw new Error("Upload a PDF.");
+      const docx = await pdfToDocx(files[0]);
+      return {
+        download: downloadBytes(
+          docx,
+          "myonlinepdfeditor-from-pdf.docx",
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        ),
+        text: "Downloaded a .docx built from extractable PDF text. Scanned pages without text layers will be sparse.",
+      };
+    }
+    case "pdf-to-odt": {
+      if (!files[0]) throw new Error("Upload a PDF.");
+      const odt = await pdfToOdt(files[0]);
+      return {
+        download: downloadBytes(
+          odt,
+          "myonlinepdfeditor-from-pdf.odt",
+          "application/vnd.oasis.opendocument.text",
+        ),
+        text: "Downloaded a .odt built from extractable PDF text.",
       };
     }
     case "pdf-to-text":
@@ -971,15 +1006,37 @@ async function executeTool(
       if (!files[0]) throw new Error("Upload a PDF.");
       const extracted = await extractPdfText(await fileToUint8Array(files[0]));
       const filename =
-        tool.engine === "pdf-to-text" || tool.slug === "pdf-to-word"
-          ? "myonlinepdfeditor.com-from-pdf.txt"
-          : "myonlinepdfeditor.com-readable.txt";
+        tool.engine === "pdf-to-text"
+          ? "myonlinepdfeditor-from-pdf.txt"
+          : "myonlinepdfeditor-readable.txt";
       return {
         download: downloadBlob(
           new Blob([extracted.fullText], { type: "text/plain;charset=utf-8" }),
           filename,
         ),
         text: extracted.fullText.slice(0, 4000),
+      };
+    }
+    case "verify-signatures": {
+      if (!files[0]) throw new Error("Upload a PDF.");
+      const report = await inspectPdfSignatures(files[0]);
+      return {
+        download: downloadBlob(
+          new Blob([report], { type: "text/plain;charset=utf-8" }),
+          "myonlinepdfeditor-signature-report.txt",
+        ),
+        text: report,
+      };
+    }
+    case "validate-pdfa": {
+      if (!files[0]) throw new Error("Upload a PDF.");
+      const report = await validatePdfaChecklist(files[0]);
+      return {
+        download: downloadBlob(
+          new Blob([report], { type: "text/plain;charset=utf-8" }),
+          "myonlinepdfeditor-pdfa-checklist.txt",
+        ),
+        text: report,
       };
     }
     case "pdf-to-excel": {
@@ -991,14 +1048,14 @@ async function executeTool(
         .map((line) => `"${line.replace(/"/g, '""')}"`)
         .join("\n");
       return {
-        download: downloadBlob(new Blob([csv], { type: "text/csv;charset=utf-8" }), "myonlinepdfeditor.com-from-pdf.csv"),
+        download: downloadBlob(new Blob([csv], { type: "text/csv;charset=utf-8" }), "myonlinepdfeditor-from-pdf.csv"),
         text: csv.slice(0, 2000),
       };
     }
     case "unlock": {
       if (!files[0]) throw new Error("Upload a PDF.");
       return {
-        download: downloadBytes(await unlockPdf(files[0], password), "myonlinepdfeditor.com-unlocked.pdf"),
+        download: downloadBytes(await unlockPdf(files[0], password), "myonlinepdfeditor-unlocked.pdf"),
       };
     }
     case "compare": {
@@ -1007,7 +1064,7 @@ async function executeTool(
       return {
         download: downloadBlob(
           new Blob([report], { type: "text/plain;charset=utf-8" }),
-          "myonlinepdfeditor.com-compare.txt",
+          "myonlinepdfeditor-compare.txt",
         ),
         text: report.slice(0, 5000),
       };
@@ -1039,19 +1096,19 @@ async function executeTool(
     }
     case "odf-to-pdf": {
       if (!files[0]) throw new Error("Upload an OpenDocument file.");
-      return { download: downloadBytes(await odfToPdf(files[0]), "myonlinepdfeditor.com-from-odf.pdf") };
+      return { download: downloadBytes(await odfToPdf(files[0]), "myonlinepdfeditor-from-odf.pdf") };
     }
     case "epub-to-pdf": {
       if (!files[0]) throw new Error("Upload an EPUB.");
-      return { download: downloadBytes(await epubToPdf(files[0]), "myonlinepdfeditor.com-from-epub.pdf") };
+      return { download: downloadBytes(await epubToPdf(files[0]), "myonlinepdfeditor-from-epub.pdf") };
     }
     case "pdf-to-epub": {
       if (!files[0]) throw new Error("Upload a PDF.");
-      return { download: downloadBytes(await pdfToEpub(files[0]), "myonlinepdfeditor.com-from-pdf.epub") };
+      return { download: downloadBytes(await pdfToEpub(files[0]), "myonlinepdfeditor-from-pdf.epub") };
     }
     case "eml-to-pdf": {
       if (!files[0]) throw new Error("Upload an .eml file.");
-      return { download: downloadBytes(await emlToPdf(files[0]), "myonlinepdfeditor.com-from-email.pdf") };
+      return { download: downloadBytes(await emlToPdf(files[0]), "myonlinepdfeditor-from-email.pdf") };
     }
     case "analyze": {
       if (!files[0]) throw new Error("Upload a PDF.");
@@ -1059,7 +1116,7 @@ async function executeTool(
       return {
         download: downloadBlob(
           new Blob([report], { type: "text/plain;charset=utf-8" }),
-          "myonlinepdfeditor.com-pdf-analysis.txt",
+          "myonlinepdfeditor-pdf-analysis.txt",
         ),
         text: report,
       };
@@ -1074,7 +1131,7 @@ async function executeTool(
             subject: docSubject,
             keywords: docKeywords,
           }),
-          "myonlinepdfeditor.com-doc-info.pdf",
+          "myonlinepdfeditor-doc-info.pdf",
         ),
       };
     }
@@ -1083,13 +1140,13 @@ async function executeTool(
       return {
         download: downloadBytes(
           await setPdfViewerPreferences(files[0]),
-          "myonlinepdfeditor.com-viewer-prefs.pdf",
+          "myonlinepdfeditor-viewer-prefs.pdf",
         ),
       };
     }
     case "bookmark": {
       if (!files[0]) throw new Error("Upload a PDF.");
-      return { download: downloadBytes(await bookmarkPdf(files[0]), "myonlinepdfeditor.com-bookmarked.pdf") };
+      return { download: downloadBytes(await bookmarkPdf(files[0]), "myonlinepdfeditor-bookmarked.pdf") };
     }
     case "pdf-to-html": {
       if (!files[0]) throw new Error("Upload a PDF.");
@@ -1097,7 +1154,7 @@ async function executeTool(
       return {
         download: downloadBlob(
           new Blob([html], { type: "text/html;charset=utf-8" }),
-          "myonlinepdfeditor.com-from-pdf.html",
+          "myonlinepdfeditor-from-pdf.html",
         ),
         text: html.slice(0, 3000),
       };
@@ -1108,7 +1165,7 @@ async function executeTool(
       return {
         download: downloadBlob(
           new Blob([md], { type: "text/markdown;charset=utf-8" }),
-          "myonlinepdfeditor.com-from-pdf.md",
+          "myonlinepdfeditor-from-pdf.md",
         ),
         text: md.slice(0, 3000),
       };
@@ -1127,14 +1184,14 @@ async function executeTool(
     }
     case "xml-invoice": {
       if (!files[0]) throw new Error("Upload an XML invoice.");
-      return { download: downloadBytes(await xmlInvoiceToPdf(files[0]), "myonlinepdfeditor.com-invoice.pdf") };
+      return { download: downloadBytes(await xmlInvoiceToPdf(files[0]), "myonlinepdfeditor-invoice.pdf") };
     }
     case "password-gen": {
       const pwd = generatePassword(20);
       return {
         download: downloadBlob(
           new Blob([pwd], { type: "text/plain;charset=utf-8" }),
-          "myonlinepdfeditor.com-password.txt",
+          "myonlinepdfeditor-password.txt",
         ),
         text: `Generated password:\n${pwd}\n\nCopy it into Set PDF Password.`,
       };
@@ -1142,7 +1199,7 @@ async function executeTool(
     case "poster": {
       if (!files[0]) throw new Error("Upload a PDF.");
       return {
-        download: downloadBytes(await printPdfAsPoster(files[0], 2, 2), "myonlinepdfeditor.com-poster.pdf"),
+        download: downloadBytes(await printPdfAsPoster(files[0], 2, 2), "myonlinepdfeditor-poster.pdf"),
       };
     }
     case "embed-snippet": {
@@ -1151,7 +1208,7 @@ async function executeTool(
       return {
         download: downloadBlob(
           new Blob([snippet], { type: "text/html;charset=utf-8" }),
-          "myonlinepdfeditor.com-pdf-embed.html",
+          "myonlinepdfeditor-pdf-embed.html",
         ),
         text: snippet,
       };
@@ -1162,7 +1219,7 @@ async function executeTool(
       return {
         download: downloadBlob(
           new Blob([checklist], { type: "text/plain;charset=utf-8" }),
-          "myonlinepdfeditor.com-accessible-checklist.txt",
+          "myonlinepdfeditor-accessible-checklist.txt",
         ),
         text: checklist,
       };
@@ -1172,9 +1229,9 @@ async function executeTool(
       return {
         download: downloadBytes(
           await advicePdf(tool.slug, files[0]?.name),
-          "myonlinepdfeditor.com-format-note.pdf",
+          "myonlinepdfeditor-conversion-guidance.pdf",
         ),
-        text,
+        text: `Guide only — not a converted file.\n\n${text}`,
       };
     }
     case "in-person":
@@ -1191,12 +1248,72 @@ async function executeTool(
   }
 }
 
+/** Accepts "1,2,5" and ranges like "1-3,5". */
 function parseNumberList(value: string): number[] {
-  const nums = value
-    .split(/[,\s]+/)
-    .map((part) => Number(part.trim()))
-    .filter((n) => Number.isFinite(n) && n > 0)
-    .map((n) => Math.floor(n));
-  if (!nums.length) throw new Error("Enter at least one valid page number.");
+  const nums: number[] = [];
+  for (const raw of value.split(/[,\s]+/)) {
+    const part = raw.trim();
+    if (!part) continue;
+    const range = part.match(/^(\d+)\s*-\s*(\d+)$/);
+    if (range) {
+      const start = Math.floor(Number(range[1]));
+      const end = Math.floor(Number(range[2]));
+      if (!Number.isFinite(start) || !Number.isFinite(end) || start < 1 || end < 1) {
+        continue;
+      }
+      const from = Math.min(start, end);
+      const to = Math.max(start, end);
+      for (let n = from; n <= to; n++) nums.push(n);
+      continue;
+    }
+    const n = Math.floor(Number(part));
+    if (Number.isFinite(n) && n > 0) nums.push(n);
+  }
+  if (!nums.length) {
+    throw new Error('Enter page numbers like "1,2" or ranges like "1-3,5".');
+  }
   return nums;
+}
+
+function formatBytes(n: number): string {
+  if (n < 1024) return `${n} B`;
+  if (n < 1024 * 1024) return `${(n / 1024).toFixed(1)} KB`;
+  return `${(n / (1024 * 1024)).toFixed(2)} MB`;
+}
+
+function printViaHiddenIframe(url: string): Promise<void> {
+  return new Promise((resolve, reject) => {
+    const iframe = document.createElement("iframe");
+    iframe.setAttribute("title", "Print PDF");
+    iframe.style.position = "fixed";
+    iframe.style.right = "0";
+    iframe.style.bottom = "0";
+    iframe.style.width = "0";
+    iframe.style.height = "0";
+    iframe.style.border = "0";
+    iframe.style.opacity = "0";
+    iframe.src = url;
+    const cleanup = () => {
+      window.setTimeout(() => {
+        iframe.remove();
+        URL.revokeObjectURL(url);
+      }, 60_000);
+    };
+    iframe.onload = () => {
+      try {
+        iframe.contentWindow?.focus();
+        iframe.contentWindow?.print();
+        cleanup();
+        resolve();
+      } catch (err) {
+        cleanup();
+        reject(err instanceof Error ? err : new Error("Could not print PDF."));
+      }
+    };
+    iframe.onerror = () => {
+      cleanup();
+      reject(new Error("Could not load PDF for printing."));
+    };
+    document.body.appendChild(iframe);
+  });
 }

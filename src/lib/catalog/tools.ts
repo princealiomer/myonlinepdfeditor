@@ -74,7 +74,14 @@ export type ToolEngine =
   | "poster"
   | "embed-snippet"
   | "accessible-checklist"
-  | "format-advice";
+  | "format-advice"
+  | "pdf-to-docx"
+  | "pdf-to-odt"
+  | "verify-signatures"
+  | "validate-pdfa";
+
+/** live = real conversion; guide = desktop/external guidance only */
+export type ToolAvailability = "live" | "guide";
 
 export type Tool = {
   slug: string;
@@ -88,6 +95,8 @@ export type Tool = {
   keywords: string[];
   accept?: string;
   multiFile?: boolean;
+  /** Defaults to live. Guide tools must not claim a finished conversion. */
+  availability?: ToolAvailability;
 };
 
 export const TOOL_CATEGORIES: { id: ToolCategory; label: string }[] = [
@@ -369,14 +378,14 @@ export const TOOLS: Tool[] = [
     name: "PDF to Word",
     shortName: "PDF → Word",
     category: "convert",
-    engine: "pdf-to-text",
-    summary: "Extract PDF text into an editable Word-friendly download.",
+    engine: "pdf-to-docx",
+    summary: "Extract PDF text into an editable Word .docx download.",
     description:
-      "Pull readable text from a PDF and export a .docx-style or .txt file you can open in Word. Best for text-heavy documents; scanned pages may need OCR elsewhere first.",
+      "Pull readable text from a PDF and export a real .docx you can open in Word or Google Docs. Best for text-heavy documents; scanned pages may need OCR elsewhere first.",
     howTo: [
       "Upload the PDF.",
       "Run text extraction locally.",
-      "Download the Word or plain-text export.",
+      "Download the .docx export.",
     ],
     keywords: ["pdf to word", "pdf to docx", "convert pdf word", "pdf to editable"],
     accept: "application/pdf,.pdf",
@@ -1383,8 +1392,8 @@ export const TOOLS: Tool[] = [
   },
   {
     slug: "pdf-to-tiff",
-    name: "PDF to TIFF",
-    shortName: "PDF to TIFF",
+    name: "PDF to PNG (TIFF workflow)",
+    shortName: "PDF → PNG",
     category: "convert",
     engine: "pdf-to-images",
     summary: "Export PDF pages as high-quality images (PNG stand-in).",
@@ -1400,12 +1409,13 @@ export const TOOLS: Tool[] = [
     shortName: "PDF/A",
     category: "other",
     engine: "export",
+    availability: "guide",
     summary: "Prepare an archival export package for PDF/A workflows.",
     description:
-      "Full PDF/A validation needs specialized converters. myonlinepdfeditor.com packages your file with metadata scrubbing guidance so you can finish archival compliance in a PDF/A validator.",
+      "Full PDF/A conversion needs specialized tools. This download strips metadata as a prep step — validate with a PDF/A checker if your archive requires it.",
     howTo: [
       "Upload a PDF.",
-      "Download the cleaned export package.",
+      "Download the metadata-scrubbed prep file.",
       "Validate with a PDF/A checker if required.",
     ],
     keywords: ["pdf to pdfa", "pdf/a", "archival pdf", "pdfa converter"],
@@ -1645,10 +1655,11 @@ export const TOOLS: Tool[] = [
     name: "PDF to ODT",
     shortName: "PDF to ODT",
     category: "convert",
-    engine: "pdf-to-text",
-    summary: "Export PDF text for LibreOffice Writer.",
-    description: "Download extractable text as .txt you can open in Writer and save as ODT.",
-    howTo: ["Upload PDF.", "Extract text.", "Open in LibreOffice → Save as ODT."],
+    engine: "pdf-to-odt",
+    summary: "Export PDF text as an OpenDocument (.odt) file.",
+    description:
+      "Builds a real .odt from extractable PDF text for LibreOffice Writer. Layout will not match the original PDF.",
+    howTo: ["Upload PDF.", "Extract text locally.", "Download the .odt file."],
     keywords: ["pdf to odt", "pdf to opendocument"],
     accept: "application/pdf,.pdf",
   },
@@ -1824,11 +1835,16 @@ export const TOOLS: Tool[] = [
     name: "Straighten PDF",
     shortName: "Straighten",
     category: "edit",
-    engine: "format-advice",
-    summary: "Guidance for deskewing crooked scans.",
-    description: "Automatic deskew needs CV models. myonlinepdfeditor.com points you to Rotate PDF and scanner deskew workflows.",
-    howTo: ["Upload scan.", "Read guidance.", "Rotate or re-scan as needed."],
-    keywords: ["straighten pdf", "deskew pdf", "fix skewed scan"],
+    engine: "rotate",
+    summary: "Rotate pages to fix sideways or upside-down scans.",
+    description:
+      "Turn pages 90°, 180°, or 270° so crooked phone scans and sideways pages sit upright. Fine deskew of a few degrees still needs a scanner app; use this for common quarter-turn fixes.",
+    howTo: [
+      "Upload a PDF.",
+      "Choose the rotation that uprights the page.",
+      "Download the straightened PDF.",
+    ],
+    keywords: ["straighten pdf", "deskew pdf", "fix skewed scan", "rotate scan"],
     accept: "application/pdf,.pdf",
   },
   {
@@ -1836,10 +1852,15 @@ export const TOOLS: Tool[] = [
     name: "Validate PDF/A",
     shortName: "Validate PDF/A",
     category: "other",
-    engine: "format-advice",
-    summary: "How to validate PDF/A after prep.",
-    description: "Explains PDF/A validation with external checkers after using PDF to PDF/A prep.",
-    howTo: ["Upload PDF.", "Read validation steps.", "Run an external PDF/A validator."],
+    engine: "validate-pdfa",
+    summary: "Run an archival readiness checklist on your PDF.",
+    description:
+      "Produces a readiness report for PDF/A workflows (forms, metadata, openability). Full ISO PDF/A conformance still needs a dedicated validator such as veraPDF.",
+    howTo: [
+      "Upload a PDF.",
+      "Download the readiness checklist.",
+      "Finish with an external PDF/A validator if required.",
+    ],
     keywords: ["validate pdfa", "pdf/a validation"],
     accept: "application/pdf,.pdf",
   },
@@ -1848,10 +1869,15 @@ export const TOOLS: Tool[] = [
     name: "Verify PDF Signatures",
     shortName: "Verify Signatures",
     category: "sign",
-    engine: "format-advice",
-    summary: "Guidance for verifying digital signatures.",
-    description: "Cryptographic verification needs trusted readers; myonlinepdfeditor.com explains the workflow.",
-    howTo: ["Upload signed PDF.", "Read verification guidance.", "Open in a signing suite to validate."],
+    engine: "verify-signatures",
+    summary: "Inspect signature fields in a PDF.",
+    description:
+      "Lists signature-related form fields found in the file. Cryptographic certificate trust still requires Adobe Reader or another signing suite.",
+    howTo: [
+      "Upload a signed PDF.",
+      "Review the signature field report.",
+      "Open in a signing suite for full certificate validation.",
+    ],
     keywords: ["verify pdf signature", "validate digital signature"],
     accept: "application/pdf,.pdf",
   },
@@ -1861,6 +1887,7 @@ export const TOOLS: Tool[] = [
     shortName: "E-Invoice",
     category: "other",
     engine: "format-advice",
+    availability: "guide",
     summary: "Notes on structured e-invoice export.",
     description: "Explains ZUGFeRD/Factur-X/UBL paths; use XML Invoice to PDF for XML payloads.",
     howTo: ["Upload PDF or skip.", "Read guidance.", "Use ERP or XML tools as needed."],
@@ -1873,6 +1900,7 @@ export const TOOLS: Tool[] = [
     shortName: "Validate Invoice",
     category: "other",
     engine: "format-advice",
+    availability: "guide",
     summary: "Point to national e-invoice validators.",
     description: "Schema validation is jurisdiction-specific; myonlinepdfeditor.com documents next steps.",
     howTo: ["Upload optional XML/PDF.", "Read guidance.", "Use your national validator."],
@@ -1885,6 +1913,7 @@ export const TOOLS: Tool[] = [
     shortName: "HWP to PDF",
     category: "convert",
     engine: "format-advice",
+    availability: "guide",
     summary: "How to get Hangul HWP files into PDF.",
     description: "HWP is not decoded in-browser. Guidance covers Hancom/LibreOffice export paths.",
     howTo: ["Select your .hwp.", "Read conversion steps.", "Export PDF externally then use myonlinepdfeditor.com."],
@@ -1897,6 +1926,7 @@ export const TOOLS: Tool[] = [
     shortName: "Pages to PDF",
     category: "convert",
     engine: "format-advice",
+    availability: "guide",
     summary: "Export Apple Pages documents to PDF.",
     description: "Pages files need Apple Pages or iCloud export; myonlinepdfeditor.com documents the path.",
     howTo: ["Select .pages.", "Follow export guidance.", "Upload the PDF to other tools."],
@@ -1909,6 +1939,7 @@ export const TOOLS: Tool[] = [
     shortName: "OFD to PDF",
     category: "convert",
     engine: "format-advice",
+    availability: "guide",
     summary: "Convert Chinese OFD documents via external readers.",
     description: "OFD needs specialized converters; myonlinepdfeditor.com explains how to obtain a PDF first.",
     howTo: ["Select .ofd.", "Read guidance.", "Convert externally."],
@@ -1921,6 +1952,7 @@ export const TOOLS: Tool[] = [
     shortName: "PUB to PDF",
     category: "convert",
     engine: "format-advice",
+    availability: "guide",
     summary: "Export Microsoft Publisher (.pub) to PDF.",
     description: "Publisher files need desktop export; guidance included.",
     howTo: ["Select .pub.", "Follow export steps.", "Continue in myonlinepdfeditor.com with the PDF."],
@@ -1933,6 +1965,7 @@ export const TOOLS: Tool[] = [
     shortName: "Publisher PDF",
     category: "convert",
     engine: "format-advice",
+    availability: "guide",
     summary: "Microsoft Publisher export guidance.",
     description: "Alias-style tool matching PDF24 naming for Publisher → PDF desktop export.",
     howTo: ["Select .pub.", "Export PDF from Publisher.", "Use myonlinepdfeditor.com for further edits."],
@@ -1945,6 +1978,7 @@ export const TOOLS: Tool[] = [
     shortName: "PS to PDF",
     category: "convert",
     engine: "format-advice",
+    availability: "guide",
     summary: "Convert PostScript with desktop Ghostscript-class tools.",
     description: "Browsers cannot run Ghostscript; myonlinepdfeditor.com documents the desktop conversion path.",
     howTo: ["Select .ps.", "Read guidance.", "Convert on desktop."],
@@ -1957,6 +1991,7 @@ export const TOOLS: Tool[] = [
     shortName: "UDF to PDF",
     category: "convert",
     engine: "format-advice",
+    availability: "guide",
     summary: "Convert UDF documents via the authoring app.",
     description: "UDF is not decoded here—export PDF or DOCX first.",
     howTo: ["Select .udf.", "Read guidance.", "Export externally."],

@@ -1,29 +1,34 @@
+import { copyPdfBytes } from "./bytes";
 import { getPdfjs } from "./render";
 
 export async function extractPdfText(
   data: ArrayBuffer | Uint8Array,
 ): Promise<{ pageCount: number; pages: { page: number; text: string }[]; fullText: string }> {
   const pdfjs = await getPdfjs();
-  const loadingTask = pdfjs.getDocument({ data });
+  const loadingTask = pdfjs.getDocument({ data: copyPdfBytes(data) });
   const pdf = await loadingTask.promise;
   const pages: { page: number; text: string }[] = [];
 
-  for (let i = 1; i <= pdf.numPages; i++) {
-    const page = await pdf.getPage(i);
-    const content = await page.getTextContent();
-    const text = content.items
-      .map((item) => ("str" in item ? String(item.str) : ""))
-      .join(" ")
-      .replace(/\s+/g, " ")
-      .trim();
-    pages.push({ page: i, text });
-  }
+  try {
+    for (let i = 1; i <= pdf.numPages; i++) {
+      const page = await pdf.getPage(i);
+      const content = await page.getTextContent();
+      const text = content.items
+        .map((item) => ("str" in item ? String(item.str) : ""))
+        .join(" ")
+        .replace(/\s+/g, " ")
+        .trim();
+      pages.push({ page: i, text });
+    }
 
-  return {
-    pageCount: pdf.numPages,
-    pages,
-    fullText: pages.map((p) => `--- Page ${p.page} ---\n${p.text}`).join("\n\n"),
-  };
+    return {
+      pageCount: pdf.numPages,
+      pages,
+      fullText: pages.map((p) => `--- Page ${p.page} ---\n${p.text}`).join("\n\n"),
+    };
+  } finally {
+    await loadingTask.destroy();
+  }
 }
 
 export function searchPdfText(

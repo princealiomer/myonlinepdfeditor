@@ -30,7 +30,7 @@ export function middleware(request: NextRequest) {
       url.pathname = "/" + url.pathname;
     }
     if (url.pathname === "") url.pathname = "/";
-    return NextResponse.redirect(url);
+    return NextResponse.redirect(url, 308);
   }
 
   // Already prefixed with a supported non-default locale.

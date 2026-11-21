@@ -1,9 +1,9 @@
-import { Suspense } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/AdSlot";
 import { allFeatureSlugs, getFeature, getTool } from "@/lib/catalog";
 import {
+  DEFAULT_LOCALE,
   LOCALES,
   getDictionary,
   isLocale,
@@ -26,35 +26,26 @@ export async function generateMetadata({
   const locale = raw as Locale;
   const feature = getFeature(slug);
   if (!feature) return {};
-  return buildMetadata({
-    title: feature.name,
-    description: feature.description,
-    path: `/features/${feature.slug}`,
-    locale,
-  });
+  const translated = locale === DEFAULT_LOCALE;
+  return {
+    ...buildMetadata({
+      title: `${feature.name} — how it works`,
+      description: translated
+        ? feature.description
+        : `${feature.name}: browser PDF workflow. Open the matching tool to edit files on your device.`,
+      path: `/features/${feature.slug}`,
+      locale,
+    }),
+    // Feature copy is English-only today — avoid indexing thin locale duplicates.
+    robots: translated
+      ? { index: true, follow: true }
+      : { index: false, follow: true },
+  };
 }
 
-export default function FeaturePage({
+export default async function FeaturePage({
   params,
 }: PageProps<"/[locale]/features/[slug]">) {
-  return (
-    <Suspense
-      fallback={
-        <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
-          <p className="text-muted">…</p>
-        </div>
-      }
-    >
-      <FeaturePageContent params={params} />
-    </Suspense>
-  );
-}
-
-async function FeaturePageContent({
-  params,
-}: {
-  params: PageProps<"/[locale]/features/[slug]">["params"];
-}) {
   const { locale: raw, slug } = await params;
   if (!isLocale(raw)) notFound();
   const locale = raw as Locale;

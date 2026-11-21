@@ -59,6 +59,7 @@ export function ToolPageView({
       <header className="max-w-3xl">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-teal">
           {categoryLabel}
+          {tool.availability === "guide" ? " · Guide" : null}
         </p>
         <h1 className="display mt-2 text-[1.85rem] font-semibold leading-tight sm:text-4xl md:text-5xl">
           {tool.name}
@@ -66,6 +67,13 @@ export function ToolPageView({
         <p className="mt-3 text-base leading-relaxed text-muted sm:mt-4 sm:text-lg">
           {copy?.headline || tool.description}
         </p>
+        {tool.availability === "guide" ? (
+          <p className="mt-3 rounded-xl border border-mist bg-paper px-4 py-3 text-sm text-ink-soft">
+            This page is a conversion guide, not an in-browser converter. Download
+            the guidance note for desktop steps, then continue with a supported
+            PDF tool.
+          </p>
+        ) : null}
       </header>
 
       <AdSlot className="my-8 rounded-xl" />

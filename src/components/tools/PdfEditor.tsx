@@ -233,7 +233,7 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
         setError(null);
         setLastDownload(null);
         const bytes = await applyAnnotations(pdfBytes, annotations);
-        const download = downloadBytes(bytes, "myonlinepdfeditor.com-edited.pdf");
+        const download = downloadBytes(bytes, "myonlinepdfeditor-edited.pdf");
         setLastDownload(download);
         setMessage(
           dict?.workspace.done ||

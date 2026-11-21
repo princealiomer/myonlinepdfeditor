@@ -106,7 +106,7 @@ export function OrganizePdfPanel({ tool, dict }: OrganizePdfPanelProps) {
         setLastDownload(null);
         const order = pages.map((p) => p.pageNumber);
         const bytes = await reorderPages(files[0], order);
-        const download = downloadBytes(bytes, "myonlinepdfeditor.com-organized.pdf");
+        const download = downloadBytes(bytes, "myonlinepdfeditor-organized.pdf");
         setLastDownload(download);
         setMessage(w.done);
       } catch (err) {

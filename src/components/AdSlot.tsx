@@ -36,11 +36,7 @@ export function AdSlot({
   }, [client]);
 
   if (!client) {
-    return (
-      <aside className={`ad-slot ${className}`} aria-label={label}>
-        AdSense placeholder — set NEXT_PUBLIC_ADSENSE_CLIENT
-      </aside>
-    );
+    return null;
   }
 
   return (
