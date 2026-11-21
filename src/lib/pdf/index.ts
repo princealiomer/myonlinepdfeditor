@@ -8,6 +8,8 @@ export {
 export { mergePdfs } from "./merge";
 export { splitPdf, type SplitPart } from "./split";
 export { rotatePdf } from "./rotate";
+export { straightenPdf } from "./straighten";
+export { printPdfFile } from "./print-pdf";
 export { deletePages } from "./delete-pages";
 export { duplicatePages, reorderPages } from "./reorder";
 export { imagesToPdf } from "./images-to-pdf";
@@ -22,6 +24,9 @@ export { addPageNumbers, type PageNumberOptions } from "./page-numbers";
 export { compressPdf, type CompressMode } from "./compress";
 export { pdfToDocx } from "./pdf-to-docx";
 export { pdfToOdt } from "./pdf-to-odt";
+export { pdfToOds } from "./pdf-to-ods";
+export { pdfToOdp } from "./pdf-to-odp";
+export { encodeTiffFromImageBlobs, encodeTiffFromCanvases } from "./encode-tiff";
 export { inspectPdfSignatures } from "./verify-signatures";
 export { validatePdfaChecklist } from "./validate-pdfa";
 export { copyPdfBytes } from "./bytes";
@@ -68,3 +73,12 @@ export {
   type Annotation,
 } from "./annotate";
 export { getPageCount, getPdfjs, renderPdfPage } from "./render";
+export {
+  getPdfPageBox,
+  pageBoxFrom,
+  pdfRectToPreviewFractions,
+  previewToPdfPoint,
+  scaleAnnotationToPage,
+  viewFractionToPdf,
+  type PageBox,
+} from "./page-box";

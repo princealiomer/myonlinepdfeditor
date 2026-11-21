@@ -5,16 +5,38 @@ export type Dictionary = {
     titleHome: string;
     descriptionHome: string;
     keywordsHome: string[];
+    descriptionPrivacy: string;
+    descriptionTerms: string;
+    descriptionEsign: string;
+    descriptionPricing: string;
+    descriptionAbout: string;
+    descriptionFeatures: string;
   };
   nav: {
     allTools: string;
     features: string;
     pricing: string;
     about: string;
+    samples: string;
     openEditor: string;
     menu: string;
     close: string;
     free: string;
+  };
+  samplesPage: {
+    title: string;
+    intro: string;
+    formatsTitle: string;
+    downloadCta: string;
+    openFormat: string;
+    fileTitle: string;
+    fileIntro: string;
+    sizeLabel: string;
+    typeLabel: string;
+    relatedTools: string;
+    backToSamples: string;
+    backToFormat: string;
+    note: string;
   };
   common: {
     tools: string;

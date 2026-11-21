@@ -1,58 +1,39 @@
-/** Minimal ZIP reader for OOXML (.pptx/.docx) using browser DecompressionStream. */
+import JSZip from "jszip";
 
-type ZipEntry = { name: string; data: Uint8Array };
+export type ZipEntry = { name: string; data: Uint8Array };
 
-function readU16(view: DataView, offset: number) {
-  return view.getUint16(offset, true);
-}
-
-function readU32(view: DataView, offset: number) {
-  return view.getUint32(offset, true);
-}
-
-async function inflateRaw(data: Uint8Array): Promise<Uint8Array> {
-  if (typeof DecompressionStream === "undefined") {
-    throw new Error("This browser cannot decompress PPTX/ZIP files.");
-  }
-  const stream = new Blob([data.slice()]).stream().pipeThrough(
-    new DecompressionStream("deflate-raw"),
-  );
-  const buffer = await new Response(stream).arrayBuffer();
-  return new Uint8Array(buffer);
-}
-
+/** Read ZIP entries (OOXML, ODF, EPUB, image packs). Uses JSZip for data descriptors / Deflate. */
 export async function unzipEntries(bytes: Uint8Array): Promise<ZipEntry[]> {
-  const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+  let zip: JSZip;
+  try {
+    // Static import — avoids a separate dynamic chunk that can surface as "Failed to fetch".
+    zip = await JSZip.loadAsync(bytes);
+  } catch (err) {
+    const detail = err instanceof Error ? err.message : "";
+    if (/failed to fetch|loading chunk|dynamically imported/i.test(detail)) {
+      throw new Error(
+        `Could not load the ZIP library (${detail}). Reload the page and try again.`,
+      );
+    }
+    throw new Error(
+      "Could not read ZIP archive. The file may be damaged or not a ZIP-based format.",
+    );
+  }
+
   const entries: ZipEntry[] = [];
-  let offset = 0;
+  const names = Object.keys(zip.files).sort((a, b) =>
+    a.localeCompare(b, undefined, { numeric: true }),
+  );
 
-  while (offset + 30 <= bytes.length) {
-    const signature = readU32(view, offset);
-    if (signature !== 0x04034b50) break;
-
-    const method = readU16(view, offset + 8);
-    const compSize = readU32(view, offset + 18);
-    const nameLen = readU16(view, offset + 26);
-    const extraLen = readU16(view, offset + 28);
-    const nameStart = offset + 30;
-    const nameEnd = nameStart + nameLen;
-    const dataStart = nameEnd + extraLen;
-    const dataEnd = dataStart + compSize;
-    if (dataEnd > bytes.length) break;
-
-    const name = new TextDecoder().decode(bytes.subarray(nameStart, nameEnd));
-    const compressed = bytes.subarray(dataStart, dataEnd);
-    let data: Uint8Array;
-    if (method === 0) data = compressed.slice();
-    else if (method === 8) data = await inflateRaw(compressed);
-    else throw new Error(`Unsupported ZIP compression method: ${method}`);
-
+  for (const name of names) {
+    const file = zip.files[name];
+    if (!file || file.dir) continue;
+    const data = await file.async("uint8array");
     entries.push({ name, data });
-    offset = dataEnd;
   }
 
   if (!entries.length) {
-    throw new Error("Could not read ZIP archive.");
+    throw new Error("Could not read ZIP archive (no files found).");
   }
   return entries;
 }

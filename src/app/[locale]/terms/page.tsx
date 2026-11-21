@@ -12,7 +12,7 @@ export async function generateMetadata({
   const dict = await getDictionary(locale);
   return buildMetadata({
     title: dict.footer.terms,
-    description: "Terms for using myonlinepdfeditor.com free PDF tools.",
+    description: dict.meta.descriptionTerms,
     path: "/terms",
     locale,
   });

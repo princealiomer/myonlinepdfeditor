@@ -12,6 +12,10 @@ export function middleware(request: NextRequest) {
     pathname.startsWith("/api") ||
     pathname === "/robots.txt" ||
     pathname === "/sitemap.xml" ||
+    // OG image routes live at /opengraph-image and /[locale]/opengraph-image.
+    pathname === "/opengraph-image" ||
+    pathname.startsWith("/opengraph-image/") ||
+    /\/opengraph-image\/?$/.test(pathname) ||
     PUBLIC_FILE.test(pathname)
   ) {
     return NextResponse.next();

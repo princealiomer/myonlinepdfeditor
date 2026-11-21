@@ -48,7 +48,7 @@ export function AiAssistPanel({
           result = answerLocally(text, question.trim());
         } else if (tool.slug === "translate-pdf") {
           result = [
-            "Translation-ready extract (local, no cloud MT API)",
+            "Prepared for translation (text extract only — no machine translation)",
             "Paste into your preferred translator, or keep as source text.",
             "",
             text.slice(0, 20000),
@@ -63,7 +63,11 @@ export function AiAssistPanel({
           `myonlinepdfeditor-${tool.slug}.txt`,
         );
         setLastDownload(download);
-        setMessage(w?.done || "Done — your download should start automatically.");
+        setMessage(
+          tool.slug === "translate-pdf"
+            ? "Text extract ready — paste into any translator. This tool does not translate automatically."
+            : w?.done || "Done — your download should start automatically.",
+        );
       } catch (err) {
         setError(err instanceof Error ? err.message : "AI assist failed.");
       }

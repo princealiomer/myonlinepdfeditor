@@ -794,7 +794,7 @@
     ]
   },
   "fax": {
-    "name": "Fax PDF",
+    "name": "PDF para fax",
     "shortName": "Fax",
     "summary": "Prepara un PDF listo para imprimir para servicios de fax en línea.",
     "description": "myonlinepdfeditor.com no opera una pasarela de fax. Descarga un PDF limpio optimizado para herramientas de fax en línea de terceros que ya uses.",
@@ -1248,7 +1248,7 @@
     ]
   },
   "n-up-pdf": {
-    "name": "PDF N-up",
+    "name": "Páginas por hoja",
     "shortName": "Páginas por hoja",
     "summary": "Coloca 2 o 4 páginas en cada hoja.",
     "description": "Imprime varias páginas de origen en una hoja de salida para folletos, pruebas y borradores de libretos (2-up o 4-up).",

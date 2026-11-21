@@ -1054,7 +1054,7 @@ const TOOL_COPY: ToolCopy[] = [
     slug: "merge-pdf",
     headline: "Combine multiple PDFs into one file in the order you choose.",
     whatItIs:
-      "Merge PDFs stacks separate files—reports, scans, and appendices—into a single download. Drag to reorder before merging so the cover letter precedes exhibits.",
+      "Merge PDFs stacks separate files—reports, scans, and appendices—into a single download. Files are joined in upload order; remove any you do not want before merging.",
     whyUse: [
       "Closing binders arrive as separate scans that should be one packet.",
       "You converted images to PDF and need one continuous document.",
@@ -1067,8 +1067,8 @@ const TOOL_COPY: ToolCopy[] = [
         detail: "Select two or more PDFs with multi-file upload.",
       },
       {
-        title: "Reorder",
-        detail: "Drag files and optional page thumbnails into sequence.",
+        title: "Check order",
+        detail: "Files merge in the order listed. Remove extras you do not need.",
       },
       {
         title: "Review total page count",
@@ -1127,9 +1127,9 @@ const TOOL_COPY: ToolCopy[] = [
   },
   {
     slug: "rotate-pdf",
-    headline: "Turn sideways scans upright one page or whole document at a time.",
+    headline: "Turn sideways scans upright with one whole-document rotation.",
     whatItIs:
-      "Rotate Pages fixes orientation without rescanning. Select pages and rotate 90° left or right until text reads correctly, then export an updated PDF.",
+      "Rotate Pages fixes orientation without rescanning. Choose 90°, 180°, or 270° for every page, then export an updated PDF.",
     whyUse: [
       "Duplex scans came in landscape by mistake.",
       "Mobile photo imports need 90° correction before merge.",
@@ -1142,20 +1142,20 @@ const TOOL_COPY: ToolCopy[] = [
         detail: "Upload in Rotate PDF.",
       },
       {
-        title: "Select pages",
-        detail: "Pick all pages or a subset from thumbnails.",
+        title: "Choose angle",
+        detail: "Select 90°, 180°, or 270° for the whole document.",
       },
       {
         title: "Rotate",
-        detail: "Apply left or right 90° rotation until upright.",
+        detail: "Run the tool to apply the same rotation to every page.",
       },
       {
         title: "Verify",
-        detail: "Scroll preview for mixed-orientation docs.",
+        detail: "Open the download and confirm orientation.",
       },
       {
         title: "Save",
-        detail: "Download the rotated PDF.",
+        detail: "Keep the rotated PDF.",
       },
     ],
     howToExport: [
@@ -1171,13 +1171,13 @@ const TOOL_COPY: ToolCopy[] = [
     tidbits: [
       "Rotating does not change image resolution.",
       "Some viewers cache old rotation—reopen the downloaded file.",
-      "180° fixes upside-down single pages with two 90° clicks.",
+      "Use 180° for upside-down pages in one step.",
     ],
     faqs: [
       {
         question: "Rotate per page or whole doc?",
         answer:
-          "Both, depending on selection in the UI.",
+          "This tool rotates every page by the same angle. For page-level sorting, use Organize PDF.",
       },
       {
         question: "Is rotation free?",
@@ -1199,9 +1199,9 @@ const TOOL_COPY: ToolCopy[] = [
   },
   {
     slug: "reorder-pdf",
-    headline: "Drag page thumbnails to fix page order before you share.",
+    headline: "Enter a new page order before you share.",
     whatItIs:
-      "Reorder Pages offers a visual sorter so you can move annexes, signature pages, or shuffled scans into the right sequence. Export writes the new order back into a single PDF.",
+      "Reorder Pages lets you type a 1-based page sequence (for example 3,1,2,4) so annexes, signature pages, or shuffled scans land in the right order. Export writes that sequence into a single PDF. For drag-and-drop thumbnails, use Organize PDF.",
     whyUse: [
       "Your scanner fed pages backwards.",
       "Exhibits should appear after the agreement, not before.",
@@ -1214,20 +1214,20 @@ const TOOL_COPY: ToolCopy[] = [
         detail: "Load the file in Reorder Pages.",
       },
       {
-        title: "Open thumbnail strip",
-        detail: "See every page at a glance.",
+        title: "Enter the new order",
+        detail: "Type comma-separated page numbers covering every page once.",
       },
       {
-        title: "Drag to new positions",
-        detail: "Move pages until the narrative reads correctly.",
+        title: "Double-check the list",
+        detail: "Confirm each page appears exactly once.",
       },
       {
-        title: "Spot-check transitions",
-        detail: "Zoom pages that border moved sections.",
+        title: "Run reorder",
+        detail: "Apply the sequence locally in your browser.",
       },
       {
         title: "Download reordered PDF",
-        detail: "Save when sequence is final.",
+        detail: "Save when the sequence is final.",
       },
     ],
     howToExport: [

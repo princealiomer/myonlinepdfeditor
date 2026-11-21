@@ -6,5 +6,7 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://myonlinepdfeditor.com",
   adsenseClient:
     process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "ca-pub-6101881301674084",
+  /** Real AdSense slot ID from the dashboard — leave empty to hide ads (never use 0000000000). */
+  adsenseSlot: process.env.NEXT_PUBLIC_ADSENSE_SLOT || "",
   supportEmail: "hello@myonlinepdfeditor.com",
 };

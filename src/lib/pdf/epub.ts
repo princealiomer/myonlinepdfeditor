@@ -2,6 +2,7 @@ import { textToPdf } from "./text-to-pdf";
 import { fileToUint8Array } from "./read-file";
 import { unzipEntries } from "./unzip";
 import { extractPdfText } from "./extract-text";
+import { encodeUtf8, zipStore } from "./zip-store";
 
 function stripHtml(html: string): string {
   return html
@@ -34,106 +35,10 @@ export async function epubToPdf(file: File): Promise<Uint8Array> {
   return textToPdf(text || "(empty epub)", file.name.replace(/\.epub$/i, ""));
 }
 
-function crc32(buf: Uint8Array): number {
-  let c = ~0;
-  for (let i = 0; i < buf.length; i++) {
-    c ^= buf[i];
-    for (let k = 0; k < 8; k++) c = c & 1 ? (c >>> 1) ^ 0xedb88320 : c >>> 1;
-  }
-  return ~c >>> 0;
-}
-
-function u16(n: number) {
-  const b = new Uint8Array(2);
-  new DataView(b.buffer).setUint16(0, n, true);
-  return b;
-}
-function u32(n: number) {
-  const b = new Uint8Array(4);
-  new DataView(b.buffer).setUint32(0, n, true);
-  return b;
-}
-
-function concat(parts: Uint8Array[]) {
-  const len = parts.reduce((a, p) => a + p.length, 0);
-  const out = new Uint8Array(len);
-  let o = 0;
-  for (const p of parts) {
-    out.set(p, o);
-    o += p.length;
-  }
-  return out;
-}
-
-/** Minimal store-only ZIP writer for EPUB packaging. */
-function zipStore(files: { name: string; data: Uint8Array }[]): Uint8Array {
-  const localParts: Uint8Array[] = [];
-  const centralParts: Uint8Array[] = [];
-  let offset = 0;
-  const enc = new TextEncoder();
-
-  for (const file of files) {
-    const nameBytes = enc.encode(file.name);
-    const crc = crc32(file.data);
-    const local = concat([
-      u32(0x04034b50),
-      u16(20),
-      u16(0),
-      u16(0),
-      u16(0),
-      u16(0),
-      u32(crc),
-      u32(file.data.length),
-      u32(file.data.length),
-      u16(nameBytes.length),
-      u16(0),
-      nameBytes,
-      file.data,
-    ]);
-    const central = concat([
-      u32(0x02014b50),
-      u16(20),
-      u16(20),
-      u16(0),
-      u16(0),
-      u16(0),
-      u16(0),
-      u32(crc),
-      u32(file.data.length),
-      u32(file.data.length),
-      u16(nameBytes.length),
-      u16(0),
-      u16(0),
-      u16(0),
-      u16(0),
-      u32(0),
-      u32(offset),
-      nameBytes,
-    ]);
-    localParts.push(local);
-    centralParts.push(central);
-    offset += local.length;
-  }
-
-  const centralDir = concat(centralParts);
-  const end = concat([
-    u32(0x06054b50),
-    u16(0),
-    u16(0),
-    u16(files.length),
-    u16(files.length),
-    u32(centralDir.length),
-    u32(offset),
-    u16(0),
-  ]);
-  return concat([...localParts, centralDir, end]);
-}
-
 export async function pdfToEpub(file: File): Promise<Uint8Array> {
   const extracted = await extractPdfText(await fileToUint8Array(file));
   const title = file.name.replace(/\.pdf$/i, "") || "myonlinepdfeditor.com Export";
   const body = extracted.fullText || "(no extractable text)";
-  const enc = new TextEncoder();
   const xhtml = `<?xml version="1.0" encoding="UTF-8"?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head><title>${title.replace(/[<>&]/g, "")}</title></head>
@@ -167,10 +72,10 @@ export async function pdfToEpub(file: File): Promise<Uint8Array> {
 </container>`;
 
   return zipStore([
-    { name: "mimetype", data: enc.encode("application/epub+zip") },
-    { name: "META-INF/container.xml", data: enc.encode(container) },
-    { name: "content.opf", data: enc.encode(opf) },
-    { name: "toc.ncx", data: enc.encode(ncx) },
-    { name: "chapter.xhtml", data: enc.encode(xhtml) },
+    { name: "mimetype", data: encodeUtf8("application/epub+zip") },
+    { name: "META-INF/container.xml", data: encodeUtf8(container) },
+    { name: "content.opf", data: encodeUtf8(opf) },
+    { name: "toc.ncx", data: encodeUtf8(ncx) },
+    { name: "chapter.xhtml", data: encodeUtf8(xhtml) },
   ]);
 }

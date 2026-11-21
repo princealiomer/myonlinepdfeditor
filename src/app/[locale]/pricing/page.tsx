@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/AdSlot";
+import { JsonLd } from "@/components/JsonLd";
 import {
   getDictionary,
   isLocale,
   localePath,
   type Locale,
 } from "@/lib/i18n";
-import { buildMetadata } from "@/lib/seo";
+import { absoluteUrl, breadcrumbJsonLd, buildMetadata } from "@/lib/seo";
+import { site } from "@/lib/site";
 
 export async function generateMetadata({
   params,
@@ -18,7 +20,7 @@ export async function generateMetadata({
   const dict = await getDictionary(locale);
   return buildMetadata({
     title: dict.nav.pricing,
-    description: dict.meta.descriptionHome,
+    description: dict.meta.descriptionPricing,
     path: "/pricing",
     locale,
   });
@@ -32,8 +34,23 @@ export default async function LocalizedPricingPage({
   const locale = raw as Locale;
   const dict = await getDictionary(locale);
 
+  const pricingUrl = absoluteUrl(localePath(locale, "/pricing"));
+
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
+      <JsonLd
+        data={breadcrumbJsonLd([{ name: dict.nav.pricing, url: pricingUrl }])}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: dict.nav.pricing,
+          url: pricingUrl,
+          description: dict.meta.descriptionPricing,
+          isPartOf: { "@type": "WebSite", name: site.name, url: site.url },
+        }}
+      />
       <h1 className="display text-4xl font-semibold">{dict.nav.pricing}</h1>
       <p className="mt-3 text-lg text-muted">{dict.home.categoriesBody}</p>
       <AdSlot className="my-8 rounded-xl" />

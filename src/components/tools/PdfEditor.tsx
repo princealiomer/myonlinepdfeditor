@@ -18,6 +18,12 @@ import {
   renderPdfPage,
   type Annotation,
 } from "@/lib/pdf";
+import {
+  getPdfPageBox,
+  pdfRectToPreviewFractions,
+  previewToPdfPoint,
+  type PageBox,
+} from "@/lib/pdf/page-box";
 
 type EditorTool =
   | "select"
@@ -55,10 +61,12 @@ const ALL_TOOLS: { id: EditorTool; label: string }[] = [
   { id: "draw", label: "Draw" },
   { id: "sign", label: "Sign" },
   { id: "initials", label: "Initials" },
-  { id: "image", label: "Image sig" },
+  { id: "image", label: "Image" },
   { id: "comment", label: "Comment" },
   { id: "field", label: "Field" },
 ];
+
+const RENDER_SCALE = 1.25;
 
 export function PdfEditor({ tool, dict }: PdfEditorProps) {
   const mode = useMemo(() => editorModeFor(tool.slug), [tool.slug]);
@@ -80,7 +88,14 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const overlayRef = useRef<HTMLDivElement | null>(null);
   const drawStart = useRef<{ x: number; y: number } | null>(null);
-  const [canvasSize, setCanvasSize] = useState({ width: 0, height: 0 });
+  /** pdf-lib MediaBox for the visible page — source of truth for annotation coords. */
+  const [pageBox, setPageBox] = useState<PageBox>({
+    width: 612,
+    height: 792,
+    rotation: 0,
+  });
+  /** Per-page authoring sizes so export can scale if MediaBox differs. */
+  const pageBoxesRef = useRef<Record<number, PageBox>>({});
 
   useEffect(() => {
     setActiveTool(mode.defaultTool);
@@ -107,6 +122,7 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
       setPageCount(count);
       setPage(1);
       setAnnotations([]);
+      pageBoxesRef.current = {};
     } catch (err) {
       setError(err instanceof Error ? err.message : "Could not open PDF.");
     }
@@ -121,7 +137,10 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
     let cancelled = false;
     (async () => {
       try {
-        const result = await renderPdfPage(copyPdfBytes(pdfBytes), page, 1.25);
+        const [result, box] = await Promise.all([
+          renderPdfPage(copyPdfBytes(pdfBytes), page, RENDER_SCALE),
+          getPdfPageBox(copyPdfBytes(pdfBytes), page),
+        ]);
         if (cancelled || !canvasRef.current) return;
         const ctx = canvasRef.current.getContext("2d");
         if (!ctx) return;
@@ -129,7 +148,8 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
         canvasRef.current.height = result.height;
         ctx.clearRect(0, 0, result.width, result.height);
         ctx.drawImage(result.canvas, 0, 0);
-        setCanvasSize({ width: result.width, height: result.height });
+        setPageBox(box);
+        pageBoxesRef.current[page - 1] = box;
       } catch (err) {
         if (!cancelled) {
           setError(err instanceof Error ? err.message : "Could not render page.");
@@ -150,19 +170,19 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
     return () => window.removeEventListener("keydown", onKey);
   }, [mode.kiosk, kioskOn]);
 
-  function relativePoint(clientX: number, clientY: number) {
+  /** Map pointer → PDF points (pdf-lib MediaBox, origin bottom-left). */
+  function relativePdfPoint(clientX: number, clientY: number) {
     const el = overlayRef.current;
-    if (!el) return { x: 0, y: 0 };
-    const rect = el.getBoundingClientRect();
-    return {
-      x: ((clientX - rect.left) / rect.width) * canvasSize.width,
-      y: ((clientY - rect.top) / rect.height) * canvasSize.height,
-    };
+    if (!el || pageBox.width <= 0 || pageBox.height <= 0) {
+      return { x: 0, y: 0 };
+    }
+    return previewToPdfPoint(clientX, clientY, el.getBoundingClientRect(), pageBox);
   }
 
-  function addAtPoint(x: number, y: number, width = 160, height = 28) {
+  function addAtPoint(x: number, yFromBottom: number) {
     const pageIndex = page - 1;
-    const pdfY = canvasSize.height - y;
+    const highlightW = Math.min(160, pageBox.width * 0.35);
+    const highlightH = 22;
 
     if (activeTool === "text" || activeTool === "comment" || activeTool === "field") {
       setAnnotations((prev) => [
@@ -171,7 +191,7 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
           type: "text",
           pageIndex,
           x,
-          y: pdfY - 14,
+          y: Math.max(2, yFromBottom - 4),
           text:
             activeTool === "comment"
               ? `Comment: ${textValue}`
@@ -198,9 +218,9 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
           type: "rect",
           pageIndex,
           x,
-          y: pdfY - height,
-          width,
-          height,
+          y: Math.max(0, yFromBottom - highlightH),
+          width: highlightW,
+          height: highlightH,
           color,
           opacity: activeTool === "highlight" ? 0.4 : 1,
         },
@@ -217,7 +237,7 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
           type: "image",
           pageIndex,
           x,
-          y: pdfY - h,
+          y: Math.max(0, yFromBottom - h),
           width: w,
           height: h,
           dataUrl: signatureDataUrl,
@@ -227,18 +247,19 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
     }
 
     if (activeTool === "sign" || activeTool === "initials") {
+      const size = activeTool === "initials" ? 16 : 22;
       setAnnotations((prev) => [
         ...prev,
         {
           type: "text",
           pageIndex,
           x,
-          y: pdfY - 18,
+          y: Math.max(2, yFromBottom - 4),
           text:
             activeTool === "initials"
               ? textValue.slice(0, 3).toUpperCase() || "JD"
               : textValue || "Signature",
-          size: activeTool === "initials" ? 16 : 22,
+          size,
           color: "#8A1E44",
         },
       ]);
@@ -247,7 +268,7 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
 
   function onPointerDown(event: React.PointerEvent<HTMLDivElement>) {
     if (!pdfBytes) return;
-    const point = relativePoint(event.clientX, event.clientY);
+    const point = relativePdfPoint(event.clientX, event.clientY);
     if (activeTool === "draw") {
       drawStart.current = point;
       return;
@@ -257,7 +278,7 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
 
   function onPointerUp(event: React.PointerEvent<HTMLDivElement>) {
     if (activeTool !== "draw" || !drawStart.current || !pdfBytes) return;
-    const end = relativePoint(event.clientX, event.clientY);
+    const end = relativePdfPoint(event.clientX, event.clientY);
     const start = drawStart.current;
     drawStart.current = null;
     setAnnotations((prev) => [
@@ -266,16 +287,16 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
         type: "line",
         pageIndex: page - 1,
         x1: start.x,
-        y1: canvasSize.height - start.y,
+        y1: start.y,
         x2: end.x,
-        y2: canvasSize.height - end.y,
+        y2: end.y,
         color: "#1B1B1F",
       },
     ]);
   }
 
   function withModeStamps(list: Annotation[]): Annotation[] {
-    if (!mode.autoStamp || !pdfBytes || canvasSize.height <= 0) return list;
+    if (!mode.autoStamp || !pdfBytes || pageBox.height <= 0) return list;
     const stampText =
       mode.autoStamp === "certify"
         ? `CERTIFIED · ${new Date().toISOString().slice(0, 10)} · myonlinepdfeditor.com`
@@ -305,7 +326,22 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
         setError(null);
         setLastDownload(null);
         const toApply = withModeStamps(annotations);
-        const bytes = await applyAnnotations(copyPdfBytes(pdfBytes), toApply);
+        const sourcePageSizes: Record<number, { width: number; height: number }> =
+          {};
+        for (const [index, box] of Object.entries(pageBoxesRef.current)) {
+          sourcePageSizes[Number(index)] = {
+            width: box.width,
+            height: box.height,
+          };
+        }
+        // Ensure the current page is present even if only one page was viewed.
+        sourcePageSizes[page - 1] = {
+          width: pageBox.width,
+          height: pageBox.height,
+        };
+        const bytes = await applyAnnotations(copyPdfBytes(pdfBytes), toApply, {
+          sourcePageSizes,
+        });
         const download = downloadBytes(
           bytes,
           `myonlinepdfeditor-${tool.slug}.pdf`,
@@ -531,7 +567,7 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
                       <AnnotationPreview
                         key={`${item.type}-${index}`}
                         annotation={item}
-                        canvasHeight={canvasSize.height}
+                        pageBox={pageBox}
                       />
                     ))}
                 </div>
@@ -553,20 +589,33 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
   );
 }
 
+function fracPct(n: number) {
+  return `${Math.max(0, n) * 100}%`;
+}
+
 function AnnotationPreview({
   annotation,
-  canvasHeight,
+  pageBox,
 }: {
   annotation: Annotation;
-  canvasHeight: number;
+  pageBox: PageBox;
 }) {
   if (annotation.type === "text") {
+    const size = annotation.size || 14;
+    const style = pdfRectToPreviewFractions(
+      annotation.x,
+      annotation.y,
+      size * 0.6,
+      size,
+      pageBox,
+    );
     return (
       <span
-        className="absolute text-sm font-medium text-ink"
+        className="absolute font-medium text-ink"
         style={{
-          left: annotation.x,
-          top: canvasHeight - annotation.y - (annotation.size || 14),
+          left: fracPct(style.left),
+          top: fracPct(style.top),
+          fontSize: `${Math.max(10, size)}px`,
         }}
       >
         {annotation.text}
@@ -574,14 +623,21 @@ function AnnotationPreview({
     );
   }
   if (annotation.type === "rect") {
+    const style = pdfRectToPreviewFractions(
+      annotation.x,
+      annotation.y,
+      annotation.width,
+      annotation.height,
+      pageBox,
+    );
     return (
       <span
         className="absolute"
         style={{
-          left: annotation.x,
-          top: canvasHeight - annotation.y - annotation.height,
-          width: annotation.width,
-          height: annotation.height,
+          left: fracPct(style.left),
+          top: fracPct(style.top),
+          width: fracPct(style.width),
+          height: fracPct(style.height),
           background: annotation.color || "#000",
           opacity: annotation.opacity ?? 1,
         }}
@@ -589,17 +645,24 @@ function AnnotationPreview({
     );
   }
   if (annotation.type === "image") {
+    const style = pdfRectToPreviewFractions(
+      annotation.x,
+      annotation.y,
+      annotation.width,
+      annotation.height,
+      pageBox,
+    );
     return (
       // eslint-disable-next-line @next/next/no-img-element
       <img
         alt=""
         src={annotation.dataUrl}
-        className="absolute"
+        className="absolute object-contain"
         style={{
-          left: annotation.x,
-          top: canvasHeight - annotation.y - annotation.height,
-          width: annotation.width,
-          height: annotation.height,
+          left: fracPct(style.left),
+          top: fracPct(style.top),
+          width: fracPct(style.width),
+          height: fracPct(style.height),
         }}
       />
     );

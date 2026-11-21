@@ -12,7 +12,7 @@ export async function generateMetadata({
   const dict = await getDictionary(locale);
   return buildMetadata({
     title: dict.footer.privacy,
-    description: "How myonlinepdfeditor.com handles privacy, local file processing, and advertising.",
+    description: dict.meta.descriptionPrivacy,
     path: "/privacy",
     locale,
   });

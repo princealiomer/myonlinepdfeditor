@@ -1,0 +1,335 @@
+{
+  "generatedAt": "2026-11-21T01:56:02.283Z",
+  "files": [
+    {
+      "format": "pdf",
+      "ext": "pdf",
+      "mime": "application/pdf",
+      "slug": "150kb",
+      "label": "150 kB",
+      "filename": "sample-pdf-150kb.pdf",
+      "path": "/sample-documents/pdf/sample-pdf-150kb.pdf",
+      "bytes": 153619
+    },
+    {
+      "format": "pdf",
+      "ext": "pdf",
+      "mime": "application/pdf",
+      "slug": "500kb",
+      "label": "500 kB",
+      "filename": "sample-pdf-500kb.pdf",
+      "path": "/sample-documents/pdf/sample-pdf-500kb.pdf",
+      "bytes": 512019
+    },
+    {
+      "format": "pdf",
+      "ext": "pdf",
+      "mime": "application/pdf",
+      "slug": "1mb",
+      "label": "1 MB",
+      "filename": "sample-pdf-1mb.pdf",
+      "path": "/sample-documents/pdf/sample-pdf-1mb.pdf",
+      "bytes": 1048595
+    },
+    {
+      "format": "doc",
+      "ext": "doc",
+      "mime": "application/msword",
+      "slug": "100kb",
+      "label": "100 kB",
+      "filename": "sample-doc-100kb.doc",
+      "path": "/sample-documents/doc/sample-doc-100kb.doc",
+      "bytes": 102425
+    },
+    {
+      "format": "doc",
+      "ext": "doc",
+      "mime": "application/msword",
+      "slug": "500kb",
+      "label": "500 kB",
+      "filename": "sample-doc-500kb.doc",
+      "path": "/sample-documents/doc/sample-doc-500kb.doc",
+      "bytes": 512006
+    },
+    {
+      "format": "doc",
+      "ext": "doc",
+      "mime": "application/msword",
+      "slug": "1mb",
+      "label": "1 MB",
+      "filename": "sample-doc-1mb.doc",
+      "path": "/sample-documents/doc/sample-doc-1mb.doc",
+      "bytes": 1048576
+    },
+    {
+      "format": "docx",
+      "ext": "docx",
+      "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "slug": "100kb",
+      "label": "100 kB",
+      "filename": "sample-docx-100kb.docx",
+      "path": "/sample-documents/docx/sample-docx-100kb.docx",
+      "bytes": 102572
+    },
+    {
+      "format": "docx",
+      "ext": "docx",
+      "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "slug": "500kb",
+      "label": "500 kB",
+      "filename": "sample-docx-500kb.docx",
+      "path": "/sample-documents/docx/sample-docx-500kb.docx",
+      "bytes": 512172
+    },
+    {
+      "format": "docx",
+      "ext": "docx",
+      "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "slug": "1mb",
+      "label": "1 MB",
+      "filename": "sample-docx-1mb.docx",
+      "path": "/sample-documents/docx/sample-docx-1mb.docx",
+      "bytes": 1048748
+    },
+    {
+      "format": "xls",
+      "ext": "xls",
+      "mime": "application/vnd.ms-excel",
+      "slug": "100kb",
+      "label": "100 kB",
+      "filename": "sample-xls-100kb.xls",
+      "path": "/sample-documents/xls/sample-xls-100kb.xls",
+      "bytes": 102400
+    },
+    {
+      "format": "xls",
+      "ext": "xls",
+      "mime": "application/vnd.ms-excel",
+      "slug": "500kb",
+      "label": "500 kB",
+      "filename": "sample-xls-500kb.xls",
+      "path": "/sample-documents/xls/sample-xls-500kb.xls",
+      "bytes": 512000
+    },
+    {
+      "format": "xls",
+      "ext": "xls",
+      "mime": "application/vnd.ms-excel",
+      "slug": "1mb",
+      "label": "1 MB",
+      "filename": "sample-xls-1mb.xls",
+      "path": "/sample-documents/xls/sample-xls-1mb.xls",
+      "bytes": 1048576
+    },
+    {
+      "format": "xlsx",
+      "ext": "xlsx",
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "slug": "100kb",
+      "label": "100 kB",
+      "filename": "sample-xlsx-100kb.xlsx",
+      "path": "/sample-documents/xlsx/sample-xlsx-100kb.xlsx",
+      "bytes": 102568
+    },
+    {
+      "format": "xlsx",
+      "ext": "xlsx",
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "slug": "500kb",
+      "label": "500 kB",
+      "filename": "sample-xlsx-500kb.xlsx",
+      "path": "/sample-documents/xlsx/sample-xlsx-500kb.xlsx",
+      "bytes": 512168
+    },
+    {
+      "format": "xlsx",
+      "ext": "xlsx",
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "slug": "1mb",
+      "label": "1 MB",
+      "filename": "sample-xlsx-1mb.xlsx",
+      "path": "/sample-documents/xlsx/sample-xlsx-1mb.xlsx",
+      "bytes": 1048744
+    },
+    {
+      "format": "ppt",
+      "ext": "ppt",
+      "mime": "application/vnd.ms-powerpoint",
+      "slug": "100kb",
+      "label": "100 kB",
+      "filename": "sample-ppt-100kb.ppt",
+      "path": "/sample-documents/ppt/sample-ppt-100kb.ppt",
+      "bytes": 102405
+    },
+    {
+      "format": "ppt",
+      "ext": "ppt",
+      "mime": "application/vnd.ms-powerpoint",
+      "slug": "500kb",
+      "label": "500 kB",
+      "filename": "sample-ppt-500kb.ppt",
+      "path": "/sample-documents/ppt/sample-ppt-500kb.ppt",
+      "bytes": 512001
+    },
+    {
+      "format": "ppt",
+      "ext": "ppt",
+      "mime": "application/vnd.ms-powerpoint",
+      "slug": "1mb",
+      "label": "1 MB",
+      "filename": "sample-ppt-1mb.ppt",
+      "path": "/sample-documents/ppt/sample-ppt-1mb.ppt",
+      "bytes": 1048577
+    },
+    {
+      "format": "pptx",
+      "ext": "pptx",
+      "mime": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "slug": "100kb",
+      "label": "100 kB",
+      "filename": "sample-pptx-100kb.pptx",
+      "path": "/sample-documents/pptx/sample-pptx-100kb.pptx",
+      "bytes": 94534
+    },
+    {
+      "format": "pptx",
+      "ext": "pptx",
+      "mime": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "slug": "500kb",
+      "label": "500 kB",
+      "filename": "sample-pptx-500kb.pptx",
+      "path": "/sample-documents/pptx/sample-pptx-500kb.pptx",
+      "bytes": 542112
+    },
+    {
+      "format": "pptx",
+      "ext": "pptx",
+      "mime": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "slug": "1mb",
+      "label": "1 MB",
+      "filename": "sample-pptx-1mb.pptx",
+      "path": "/sample-documents/pptx/sample-pptx-1mb.pptx",
+      "bytes": 1128777
+    },
+    {
+      "format": "odt",
+      "ext": "odt",
+      "mime": "application/vnd.oasis.opendocument.text",
+      "slug": "100kb",
+      "label": "100 kB",
+      "filename": "sample-odt-100kb.odt",
+      "path": "/sample-documents/odt/sample-odt-100kb.odt",
+      "bytes": 103682
+    },
+    {
+      "format": "odt",
+      "ext": "odt",
+      "mime": "application/vnd.oasis.opendocument.text",
+      "slug": "500kb",
+      "label": "500 kB",
+      "filename": "sample-odt-500kb.odt",
+      "path": "/sample-documents/odt/sample-odt-500kb.odt",
+      "bytes": 513502
+    },
+    {
+      "format": "odt",
+      "ext": "odt",
+      "mime": "application/vnd.oasis.opendocument.text",
+      "slug": "1mb",
+      "label": "1 MB",
+      "filename": "sample-odt-1mb.odt",
+      "path": "/sample-documents/odt/sample-odt-1mb.odt",
+      "bytes": 1049788
+    },
+    {
+      "format": "ods",
+      "ext": "ods",
+      "mime": "application/vnd.oasis.opendocument.spreadsheet",
+      "slug": "100kb",
+      "label": "100 kB",
+      "filename": "sample-ods-100kb.ods",
+      "path": "/sample-documents/ods/sample-ods-100kb.ods",
+      "bytes": 103832
+    },
+    {
+      "format": "ods",
+      "ext": "ods",
+      "mime": "application/vnd.oasis.opendocument.spreadsheet",
+      "slug": "500kb",
+      "label": "500 kB",
+      "filename": "sample-ods-500kb.ods",
+      "path": "/sample-documents/ods/sample-ods-500kb.ods",
+      "bytes": 513506
+    },
+    {
+      "format": "ods",
+      "ext": "ods",
+      "mime": "application/vnd.oasis.opendocument.spreadsheet",
+      "slug": "1mb",
+      "label": "1 MB",
+      "filename": "sample-ods-1mb.ods",
+      "path": "/sample-documents/ods/sample-ods-1mb.ods",
+      "bytes": 1050124
+    },
+    {
+      "format": "odp",
+      "ext": "odp",
+      "mime": "application/vnd.oasis.opendocument.presentation",
+      "slug": "100kb",
+      "label": "100 kB",
+      "filename": "sample-odp-100kb.odp",
+      "path": "/sample-documents/odp/sample-odp-100kb.odp",
+      "bytes": 54492
+    },
+    {
+      "format": "odp",
+      "ext": "odp",
+      "mime": "application/vnd.oasis.opendocument.presentation",
+      "slug": "500kb",
+      "label": "500 kB",
+      "filename": "sample-odp-500kb.odp",
+      "path": "/sample-documents/odp/sample-odp-500kb.odp",
+      "bytes": 267197
+    },
+    {
+      "format": "odp",
+      "ext": "odp",
+      "mime": "application/vnd.oasis.opendocument.presentation",
+      "slug": "1mb",
+      "label": "1 MB",
+      "filename": "sample-odp-1mb.odp",
+      "path": "/sample-documents/odp/sample-odp-1mb.odp",
+      "bytes": 545827
+    },
+    {
+      "format": "rtf",
+      "ext": "rtf",
+      "mime": "application/rtf",
+      "slug": "100kb",
+      "label": "100 kB",
+      "filename": "sample-rtf-100kb.rtf",
+      "path": "/sample-documents/rtf/sample-rtf-100kb.rtf",
+      "bytes": 102412
+    },
+    {
+      "format": "rtf",
+      "ext": "rtf",
+      "mime": "application/rtf",
+      "slug": "500kb",
+      "label": "500 kB",
+      "filename": "sample-rtf-500kb.rtf",
+      "path": "/sample-documents/rtf/sample-rtf-500kb.rtf",
+      "bytes": 512000
+    },
+    {
+      "format": "rtf",
+      "ext": "rtf",
+      "mime": "application/rtf",
+      "slug": "1mb",
+      "label": "1 MB",
+      "filename": "sample-rtf-1mb.rtf",
+      "path": "/sample-documents/rtf/sample-rtf-1mb.rtf",
+      "bytes": 1048576
+    }
+  ]
+}

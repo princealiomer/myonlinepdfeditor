@@ -1,5 +1,6 @@
 import { PDFDocument, StandardFonts, rgb, type RGB } from "@cantoo/pdf-lib";
 import { copyPdfBytes } from "./bytes";
+import { pageBoxFrom, scaleAnnotationToPage } from "./page-box";
 import { fileToUint8Array } from "./read-file";
 
 export type Annotation =
@@ -41,13 +42,15 @@ export type Annotation =
       color?: string;
     };
 
-/** Convert top-left canvas coordinates to PDF bottom-left coordinates. */
+/** Convert top-left canvas coordinates to PDF bottom-left points (divide by render scale). */
 export function canvasToPdfPoint(
-  pageHeight: number,
+  canvasHeight: number,
   x: number,
   y: number,
+  scale = 1,
 ): { x: number; y: number } {
-  return { x, y: pageHeight - y };
+  const s = scale > 0 ? scale : 1;
+  return { x: x / s, y: (canvasHeight - y) / s };
 }
 
 function parseColor(color: string | undefined, fallback: RGB): RGB {
@@ -86,6 +89,10 @@ async function loadPdfBytes(file: File | Uint8Array): Promise<Uint8Array> {
 export async function applyAnnotations(
   file: File | Uint8Array,
   annotations: Annotation[],
+  options?: {
+    /** Page sizes used when authoring (pdf points). Scaled to each page's MediaBox on draw. */
+    sourcePageSizes?: Record<number, { width: number; height: number }>;
+  },
 ): Promise<Uint8Array> {
   const bytes = await loadPdfBytes(file);
   let pdfDoc: PDFDocument;
@@ -100,11 +107,14 @@ export async function applyAnnotations(
   const pageCount = pdfDoc.getPageCount();
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
 
-  for (const ann of annotations) {
-    if (!Number.isInteger(ann.pageIndex) || ann.pageIndex < 0 || ann.pageIndex >= pageCount) {
-      throw new Error(`Invalid pageIndex: ${ann.pageIndex}`);
+  for (const raw of annotations) {
+    if (!Number.isInteger(raw.pageIndex) || raw.pageIndex < 0 || raw.pageIndex >= pageCount) {
+      throw new Error(`Invalid pageIndex: ${raw.pageIndex}`);
     }
-    const page = pdfDoc.getPage(ann.pageIndex);
+    const page = pdfDoc.getPage(raw.pageIndex);
+    const box = pageBoxFrom(page);
+    const source = options?.sourcePageSizes?.[raw.pageIndex] ?? box;
+    const ann = scaleAnnotationToPage(raw, source, box);
 
     switch (ann.type) {
       case "text": {

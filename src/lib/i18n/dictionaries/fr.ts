@@ -12,16 +12,46 @@ export const fr: Dictionary = {
       "convertir word en pdf",
       "signature électronique",
     ],
+    descriptionPrivacy:
+      "Comment myonlinepdfeditor.com gère la confidentialité, le traitement local des fichiers et la publicité.",
+    descriptionTerms:
+      "Conditions d’utilisation des outils PDF gratuits de myonlinepdfeditor.com.",
+    descriptionEsign:
+      "Comment myonlinepdfeditor.com aborde les signatures électroniques, le consentement et les téléchargements adaptés à l’audit.",
+    descriptionPricing:
+      "Tous les outils myonlinepdfeditor.com sont gratuits pour toujours. Pas d’abonnements ni de mur payant — la pub finance le kit.",
+    descriptionAbout:
+      "myonlinepdfeditor.com est une boîte à outils PDF gratuite dans le navigateur. Éditez, signez et convertissez sur votre appareil sans compte.",
+    descriptionFeatures:
+      "Explorez les fonctions PDF : édition, signature, fusion, conversion, compression et plus. Chaque guide mène à un outil gratuit.",
   },
   nav: {
     allTools: "Tous les outils",
     features: "Fonctionnalités",
     pricing: "Gratuit pour toujours",
     about: "À propos",
+    samples: "Fichiers exemples",
     openEditor: "Ouvrir l'éditeur",
     menu: "Menu",
     close: "Fermer",
     free: "Gratuit",
+  },
+  samplesPage: {
+    title: "Téléchargement de documents exemples",
+    intro:
+      "Fichiers DOC, DOCX, XLS, XLSX, PPT, PPTX, PDF, ODT, ODS, ODP et RTF gratuits dans des tailles courantes. Téléchargez un fichier puis ouvrez-le dans un outil myonlinepdfeditor.com.",
+    formatsTitle: "Choisir un format",
+    downloadCta: "Télécharger le fichier exemple",
+    openFormat: "Voir les tailles et télécharger",
+    fileTitle: "Télécharger {name}",
+    fileIntro:
+      "Cet exemple {ext} est hébergé sur myonlinepdfeditor.com pour tester les imports et conversions.",
+    sizeLabel: "Taille",
+    typeLabel: "Type",
+    relatedTools: "Essayer avec ces outils",
+    backToSamples: "Tous les documents exemples",
+    backToFormat: "Tous les exemples {format}",
+    note: "Exemples générés pour les tests. Préférez OOXML/ODF/PDF modernes.",
   },
   common: {
     tools: "Outils",
@@ -244,7 +274,7 @@ export const fr: Dictionary = {
   workspace: {
     options: "Options",
     uploadFor: "Téléverser pour {name}",
-    run: "Lancer {name}",
+    run: "{name}",
     working: "Traitement…",
     done: "Terminé — le téléchargement devrait démarrer automatiquement.",
     errorGeneric: "Une erreur s’est produite.",

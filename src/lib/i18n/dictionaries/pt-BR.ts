@@ -12,16 +12,46 @@ export const ptBR: Dictionary = {
       "converter word para pdf",
       "assinatura eletrônica",
     ],
+    descriptionPrivacy:
+      "Como o myonlinepdfeditor.com trata privacidade, processamento local de arquivos e publicidade.",
+    descriptionTerms:
+      "Termos de uso das ferramentas PDF gratuitas do myonlinepdfeditor.com.",
+    descriptionEsign:
+      "Como o myonlinepdfeditor.com aborda assinaturas eletrônicas, consentimento e downloads adequados para auditoria.",
+    descriptionPricing:
+      "Todas as ferramentas do myonlinepdfeditor.com são grátis para sempre. Sem planos nem paywall — anúncios mantêm o kit aberto.",
+    descriptionAbout:
+      "myonlinepdfeditor.com é um kit PDF gratuito no navegador. Edite, assine e converta no seu dispositivo sem criar conta.",
+    descriptionFeatures:
+      "Explore recursos de PDF: editar, assinar, unir, converter, compactar e mais. Cada guia leva a uma ferramenta gratuita.",
   },
   nav: {
     allTools: "Todas as ferramentas",
     features: "Recursos",
     pricing: "Grátis para sempre",
     about: "Sobre",
+    samples: "Arquivos de exemplo",
     openEditor: "Abrir editor",
     menu: "Menu",
     close: "Fechar",
     free: "Grátis",
+  },
+  samplesPage: {
+    title: "Download de documentos de exemplo",
+    intro:
+      "Arquivos DOC, DOCX, XLS, XLSX, PPT, PPTX, PDF, ODT, ODS, ODP e RTF gratuitos em tamanhos comuns. Baixe um arquivo e abra em uma ferramenta do myonlinepdfeditor.com.",
+    formatsTitle: "Escolha um formato",
+    downloadCta: "Baixar arquivo de exemplo",
+    openFormat: "Ver tamanhos e baixar",
+    fileTitle: "Baixar {name}",
+    fileIntro:
+      "Este exemplo {ext} está hospedado no myonlinepdfeditor.com para testes de upload e conversão.",
+    sizeLabel: "Tamanho",
+    typeLabel: "Tipo",
+    relatedTools: "Experimente com estas ferramentas",
+    backToSamples: "Todos os documentos de exemplo",
+    backToFormat: "Todos os exemplos {format}",
+    note: "Exemplos gerados para testes. Prefira formatos OOXML/ODF/PDF modernos.",
   },
   common: {
     tools: "Ferramentas",
@@ -244,7 +274,7 @@ export const ptBR: Dictionary = {
   workspace: {
     options: "Opções",
     uploadFor: "Enviar para {name}",
-    run: "Executar {name}",
+    run: "{name}",
     working: "Processando…",
     done: "Pronto — o download deve começar automaticamente.",
     errorGeneric: "Algo deu errado.",

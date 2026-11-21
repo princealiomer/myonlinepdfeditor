@@ -179,15 +179,7 @@ body {
   overflow-wrap: break-word;
   padding-left: env(safe-area-inset-left, 0px);
   padding-right: env(safe-area-inset-right, 0px);
-  background:
-    radial-gradient(1200px 520px at 8% -12%, color-mix(in oklab, var(--rose-600) 18%, transparent), transparent 55%),
-    radial-gradient(900px 420px at 100% 0%, color-mix(in oklab, var(--rose-400) 22%, transparent), transparent 52%),
-    linear-gradient(
-      180deg in oklab,
-      color-mix(in oklab, var(--rose-100) 88%, white) 0%,
-      var(--color-bg-page) 42%,
-      color-mix(in oklab, var(--rose-100) 92%, var(--rose-400)) 100%
-    );
+  background: var(--color-bg-page);
   color: var(--color-text-primary);
   font-family: var(--font-body), system-ui, sans-serif;
 }
@@ -386,6 +378,88 @@ summary {
 
 .site-header {
   padding-top: env(safe-area-inset-top, 0px);
+}
+
+/* Brand link: defeat body/a overflow-wrap:anywhere so the domain never
+   fractures mid-word. Wordmark is two intentional lines (name + .com). */
+.site-brand {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-wrap: normal;
+  word-break: normal;
+  text-wrap: nowrap;
+  text-decoration: none;
+}
+
+.site-brand__wordmark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  overflow-wrap: normal;
+  word-break: keep-all;
+  text-wrap: nowrap;
+}
+
+.site-brand__wordmark > span {
+  display: block;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: keep-all;
+}
+
+.site-brand__wordmark > span:last-child:not(:only-child) {
+  font-size: 0.92em;
+  opacity: 0.9;
+}
+
+@media (max-width: 419px) {
+  .site-brand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+  }
+
+  .site-brand__wordmark {
+    font-size: 0.62rem;
+  }
+}
+
+@media (min-width: 420px) and (max-width: 639px) {
+  .site-brand__wordmark {
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .site-brand {
+    gap: 0.65rem;
+  }
+
+  .site-brand__wordmark {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-brand__wordmark {
+    font-size: 1.125rem;
+  }
+}
+
+/* .btn sets display:inline-flex and beats Tailwind .hidden — keep CTA desktop-only */
+.site-header .header-editor-cta {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .site-header .header-editor-cta {
+    display: inline-flex;
+  }
 }
 
 .site-footer {

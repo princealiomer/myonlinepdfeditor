@@ -1,10 +1,22 @@
 import { PDFDocument } from "@cantoo/pdf-lib";
 import { fileToUint8Array } from "./read-file";
 
-function assertValidOrder(order: number[], pageCount: number): void {
-  if (order.length !== pageCount) {
+function assertValidOrder(
+  order: number[],
+  pageCount: number,
+  allowSubset: boolean,
+): void {
+  if (order.length === 0) {
+    throw new Error("Order must include at least one page.");
+  }
+  if (!allowSubset && order.length !== pageCount) {
     throw new Error(
       `Order must include exactly ${pageCount} pages (got ${order.length}).`,
+    );
+  }
+  if (allowSubset && order.length > pageCount) {
+    throw new Error(
+      `Order has ${order.length} pages but the PDF only has ${pageCount}.`,
     );
   }
   const seen = new Set<number>();
@@ -22,6 +34,7 @@ function assertValidOrder(order: number[], pageCount: number): void {
 export async function reorderPages(
   file: File,
   order: number[],
+  options?: { allowSubset?: boolean },
 ): Promise<Uint8Array> {
   const bytes = await fileToUint8Array(file);
   let source: PDFDocument;
@@ -36,7 +49,11 @@ export async function reorderPages(
     throw new Error("PDF has no pages.");
   }
 
-  assertValidOrder(order, pageCount);
+  // Treat a proper subset as intentional (organize / delete-via-reorder flows).
+  const allowSubset =
+    options?.allowSubset === true ||
+    (options?.allowSubset !== false && order.length < pageCount);
+  assertValidOrder(order, pageCount, allowSubset);
 
   const result = await PDFDocument.create();
   const indices = order.map((p) => p - 1);

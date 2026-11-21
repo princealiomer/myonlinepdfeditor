@@ -11,6 +11,7 @@ export type ToolEngine =
   | "merge"
   | "split"
   | "rotate"
+  | "straighten"
   | "delete-pages"
   | "reorder"
   | "images-to-pdf"
@@ -45,6 +46,7 @@ export type ToolEngine =
   | "pdf-to-images"
   | "pdf-to-text"
   | "pdf-to-excel"
+  | "pdf-to-ods"
   | "unlock"
   | "compare"
   | "redact"
@@ -77,6 +79,7 @@ export type ToolEngine =
   | "format-advice"
   | "pdf-to-docx"
   | "pdf-to-odt"
+  | "pdf-to-odp"
   | "verify-signatures"
   | "validate-pdfa";
 
@@ -520,8 +523,8 @@ export const TOOLS: Tool[] = [
     description:
       "Stack reports, scans, and attachments into a single PDF. Reorder files before merging; everything is stitched together locally in your browser.",
     howTo: [
-      "Add two or more PDF files.",
-      "Drag files into the desired order.",
+      "Add two or more PDF files (merge order follows upload order).",
+      "Remove any file you do not want included.",
       "Merge and download the combined PDF.",
     ],
     keywords: ["merge pdf", "combine pdf", "join pdf files", "pdf combiner"],
@@ -534,12 +537,12 @@ export const TOOLS: Tool[] = [
     shortName: "Rotate Pages",
     category: "edit",
     engine: "rotate",
-    summary: "Fix sideways scans by rotating pages 90° at a time.",
+    summary: "Rotate every page 90°, 180°, or 270°.",
     description:
-      "Select one page or the whole document and rotate until orientation looks right. No re-scanning—just quick fixes before you merge or email.",
+      "Apply the same rotation to all pages until orientation looks right. No re-scanning—just a quick fix before you merge or email.",
     howTo: [
       "Open your PDF.",
-      "Select pages and rotate left or right.",
+      "Choose 90°, 180°, or 270° for the whole document.",
       "Save the rotated PDF.",
     ],
     keywords: ["rotate pdf", "turn pdf pages", "fix sideways pdf", "pdf orientation"],
@@ -551,12 +554,12 @@ export const TOOLS: Tool[] = [
     shortName: "Reorder Pages",
     category: "edit",
     engine: "reorder",
-    summary: "Drag and drop thumbnails to rearrange page order.",
+    summary: "Rearrange pages by entering a new page order.",
     description:
-      "Put annexes first, move signatures to the end, or fix a mixed scan order with a visual page sorter. Changes apply when you export the PDF.",
+      "Put annexes first, move signatures to the end, or fix a mixed scan order. Enter the new 1-based page sequence (for example 3,1,2,4), then export.",
     howTo: [
       "Upload your PDF.",
-      "Drag page thumbnails into the new order.",
+      "Enter the new page order as comma-separated numbers (e.g. 3,1,2,4).",
       "Download the reordered file.",
     ],
     keywords: ["reorder pdf pages", "sort pdf", "arrange pdf", "move pdf pages"],
@@ -1154,8 +1157,8 @@ export const TOOLS: Tool[] = [
   },
   {
     slug: "print-out",
-    name: "Print Out",
-    shortName: "Print",
+    name: "Print PDF",
+    shortName: "Print PDF",
     category: "other",
     engine: "print",
     summary: "Open the system print dialog for your PDF.",
@@ -1163,7 +1166,7 @@ export const TOOLS: Tool[] = [
       "Load a PDF and trigger your browser’s print dialog for paper copies or “Save as PDF” printers.",
     howTo: [
       "Upload a PDF.",
-      "Click Print.",
+      "Click Print PDF.",
       "Choose a printer or Save as PDF.",
     ],
     keywords: ["print pdf", "print out pdf", "pdf printer"],
@@ -1212,14 +1215,14 @@ export const TOOLS: Tool[] = [
     engine: "images-to-pdf",
     summary: "Convert iPhone HEIC photos to PDF in the browser.",
     description:
-      "Drop HEIC/HEIF images to build a PDF. Conversion uses your browser’s decoder—if HEIC is unsupported, export JPEG from Photos first.",
+      "Drop HEIC/HEIF images to build a PDF. Files are decoded locally with a built-in HEIC converter—no Photos export required.",
     howTo: [
       "Upload one or more .heic files.",
       "Wait for local conversion.",
       "Download the PDF.",
     ],
     keywords: ["heic to pdf", "heif to pdf", "iphone photo pdf"],
-    accept: "image/heic,image/heif,.heic,.heif,image/*",
+    accept: "image/heic,image/heif,.heic,.heif",
     multiFile: true,
   },
   {
@@ -1230,10 +1233,10 @@ export const TOOLS: Tool[] = [
     engine: "images-to-pdf",
     summary: "Turn TIFF scans into multi-page PDFs.",
     description:
-      "Convert TIFF/TIF scans to PDF pages locally. Multi-page TIFFs depend on browser decode support; single-page TIFFs work best.",
+      "Convert TIFF/TIF scans to PDF pages locally, including multipage TIFFs decoded in the browser.",
     howTo: ["Upload .tiff or .tif files.", "Convert locally.", "Download the PDF."],
     keywords: ["tiff to pdf", "tif to pdf", "scan tiff pdf"],
-    accept: "image/tiff,.tif,.tiff,image/*",
+    accept: "image/tiff,.tif,.tiff",
     multiFile: true,
   },
   {
@@ -1323,7 +1326,7 @@ export const TOOLS: Tool[] = [
   {
     slug: "n-up-pdf",
     name: "N-up PDF",
-    shortName: "Pages per sheet",
+    shortName: "N-up",
     category: "edit",
     engine: "n-up",
     summary: "Fit 2 or 4 pages on each sheet.",
@@ -1392,14 +1395,14 @@ export const TOOLS: Tool[] = [
   },
   {
     slug: "pdf-to-tiff",
-    name: "PDF to PNG (TIFF workflow)",
-    shortName: "PDF → PNG",
+    name: "PDF to TIFF",
+    shortName: "PDF → TIFF",
     category: "convert",
     engine: "pdf-to-images",
-    summary: "Export PDF pages as high-quality images (PNG stand-in).",
+    summary: "Export PDF pages as a multipage TIFF file.",
     description:
-      "Browsers rarely write multipage TIFF. myonlinepdfeditor.com exports crisp PNG page images you can open in scan software that saves TIFF.",
-    howTo: ["Upload a PDF.", "Export page images.", "Save each file."],
+      "Renders each PDF page and packs them into one uncompressed multipage .tiff you can open in scan and imaging software.",
+    howTo: ["Upload a PDF.", "Convert locally.", "Download the .tiff file."],
     keywords: ["pdf to tiff", "pdf to tif", "pdf page images"],
     accept: "application/pdf,.pdf",
   },
@@ -1423,19 +1426,19 @@ export const TOOLS: Tool[] = [
   },
   {
     slug: "translate-pdf",
-    name: "Translate PDF",
-    shortName: "Translate PDF",
+    name: "Prepare PDF for Translation",
+    shortName: "Prep for translation",
     category: "ai",
     engine: "ai-assist",
-    summary: "Extract text and draft a translation-ready copy.",
+    summary: "Extract PDF text into a translation-ready plain-text file.",
     description:
-      "Pull extractable PDF text into the Document Assistant so you can request translations. Image-only scans need OCR first (Readable PDF).",
+      "Pulls extractable PDF text into a .txt you can paste into any translator. This tool does not machine-translate. Image-only scans need OCR first (Readable PDF).",
     howTo: [
       "Upload a PDF with selectable text.",
-      "Open the assistant prompt for translation.",
-      "Copy or download the translated text.",
+      "Run the extractor.",
+      "Download the .txt and paste it into your translator.",
     ],
-    keywords: ["translate pdf", "pdf translation", "pdf translate"],
+    keywords: ["translate pdf", "pdf translation", "pdf translate", "extract text for translation"],
     accept: "application/pdf,.pdf",
   },
   // ——— Remaining competitor-gap tools ———
@@ -1446,10 +1449,11 @@ export const TOOLS: Tool[] = [
     category: "convert",
     engine: "image-convert",
     summary: "Convert HEIC photos to JPEG.",
-    description: "Decode HEIC/HEIF in the browser when supported and download JPG files.",
+    description:
+      "Decode HEIC/HEIF photos in the browser with a built-in converter and download JPG files.",
     howTo: ["Upload HEIC files.", "Convert.", "Download JPGs."],
     keywords: ["heic to jpg", "heic to jpeg", "heif to jpg"],
-    accept: "image/heic,image/heif,.heic,.heif,image/*",
+    accept: "image/heic,image/heif,.heic,.heif",
     multiFile: true,
   },
   {
@@ -1459,10 +1463,11 @@ export const TOOLS: Tool[] = [
     category: "convert",
     engine: "image-convert",
     summary: "Convert HEIC photos to PNG.",
-    description: "Decode HEIC/HEIF and export lossless PNG when the browser can decode the file.",
+    description:
+      "Decode HEIC/HEIF photos in the browser with a built-in converter and export PNG files.",
     howTo: ["Upload HEIC.", "Convert.", "Download PNG."],
     keywords: ["heic to png", "heif to png"],
-    accept: "image/heic,image/heif,.heic,.heif,image/*",
+    accept: "image/heic,image/heif,.heic,.heif",
     multiFile: true,
   },
   {
@@ -1666,24 +1671,26 @@ export const TOOLS: Tool[] = [
   {
     slug: "pdf-to-ods",
     name: "PDF to ODS",
-    shortName: "PDF to ODS",
+    shortName: "PDF → ODS",
     category: "convert",
-    engine: "pdf-to-excel",
-    summary: "Export PDF tables toward Calc/ODS.",
-    description: "Export CSV-like text from the PDF for LibreOffice Calc; save as ODS in Calc.",
-    howTo: ["Upload PDF.", "Export CSV.", "Open in Calc → Save as ODS."],
+    engine: "pdf-to-ods",
+    summary: "Export PDF text as a LibreOffice Calc (.ods) file.",
+    description:
+      "Builds a real .ods spreadsheet from extractable PDF text for LibreOffice Calc. Layout will not match the original PDF.",
+    howTo: ["Upload PDF.", "Extract text locally.", "Download the .ods file."],
     keywords: ["pdf to ods", "pdf to libreoffice calc"],
     accept: "application/pdf,.pdf",
   },
   {
     slug: "pdf-to-odp",
     name: "PDF to ODP",
-    shortName: "PDF to ODP",
+    shortName: "PDF → ODP",
     category: "convert",
-    engine: "pdf-to-text",
-    summary: "Export PDF text for Impress/ODP workflows.",
-    description: "Extract text for pasting into LibreOffice Impress slides, then save as ODP.",
-    howTo: ["Upload PDF.", "Extract text.", "Paste into Impress."],
+    engine: "pdf-to-odp",
+    summary: "Export PDF pages as a LibreOffice Impress (.odp) file.",
+    description:
+      "Builds a real .odp with one text slide per PDF page for LibreOffice Impress. Layout will not match the original PDF.",
+    howTo: ["Upload PDF.", "Extract text locally.", "Download the .odp file."],
     keywords: ["pdf to odp", "pdf to impress"],
     accept: "application/pdf,.pdf",
   },
@@ -1726,7 +1733,7 @@ export const TOOLS: Tool[] = [
   {
     slug: "change-pdf-doc-info",
     name: "Change PDF Doc Info",
-    shortName: "Doc Info",
+    shortName: "Document info",
     category: "edit",
     engine: "doc-info",
     summary: "Edit PDF title, author, subject, and keywords.",
@@ -1738,7 +1745,7 @@ export const TOOLS: Tool[] = [
   {
     slug: "set-pdf-viewer-preferences",
     name: "Set PDF Viewer Preferences",
-    shortName: "Viewer Prefs",
+    shortName: "Viewer preferences",
     category: "edit",
     engine: "viewer-prefs",
     summary: "Normalize producer/creator viewer metadata.",
@@ -1774,7 +1781,7 @@ export const TOOLS: Tool[] = [
   {
     slug: "generate-password",
     name: "Generate Password",
-    shortName: "Password Gen",
+    shortName: "Password",
     category: "other",
     engine: "password-gen",
     summary: "Create a strong random password for PDF protect.",
@@ -1835,13 +1842,13 @@ export const TOOLS: Tool[] = [
     name: "Straighten PDF",
     shortName: "Straighten",
     category: "edit",
-    engine: "rotate",
-    summary: "Rotate pages to fix sideways or upside-down scans.",
+    engine: "straighten",
+    summary: "Deskew slightly tilted scan pages in the browser.",
     description:
-      "Turn pages 90°, 180°, or 270° so crooked phone scans and sideways pages sit upright. Fine deskew of a few degrees still needs a scanner app; use this for common quarter-turn fixes.",
+      "Detects small skew angles on each page and rebuilds an upright PDF. For pages rotated a full 90°/180°/270°, use Rotate PDF first.",
     howTo: [
-      "Upload a PDF.",
-      "Choose the rotation that uprights the page.",
+      "Upload a scanned PDF.",
+      "Run Straighten to deskew pages locally.",
       "Download the straightened PDF.",
     ],
     keywords: ["straighten pdf", "deskew pdf", "fix skewed scan", "rotate scan"],

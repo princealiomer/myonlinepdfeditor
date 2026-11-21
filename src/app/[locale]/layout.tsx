@@ -1,4 +1,3 @@
-import Script from "next/script";
 import { notFound } from "next/navigation";
 import { Fraunces, Figtree, Noto_Sans_JP } from "next/font/google";
 import { LocaleShell } from "@/components/LocaleShell";
@@ -8,7 +7,6 @@ import {
   isLocale,
   type Locale,
 } from "@/lib/i18n";
-import { site } from "@/lib/site";
 
 const display = Fraunces({
   variable: "--font-display",
@@ -56,15 +54,6 @@ export default async function LocaleLayout({
         <LocaleShell locale={locale} dict={dict}>
           {children}
         </LocaleShell>
-        {site.adsenseClient ? (
-          <Script
-            id="adsense"
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${site.adsenseClient}`}
-            crossOrigin="anonymous"
-            strategy="lazyOnload"
-          />
-        ) : null}
       </body>
     </html>
   );

@@ -12,16 +12,46 @@ export const ja: Dictionary = {
       "word pdf 変換",
       "電子署名",
     ],
+    descriptionPrivacy:
+      "myonlinepdfeditor.comのプライバシー、ローカルファイル処理、広告の取り扱いについて。",
+    descriptionTerms:
+      "myonlinepdfeditor.comの無料PDFツールをご利用いただく際の利用規約。",
+    descriptionEsign:
+      "myonlinepdfeditor.comにおける電子署名、同意、監査に適したダウンロードの考え方。",
+    descriptionPricing:
+      "myonlinepdfeditor.comのツールはすべてずっと無料。プランやペイウォールはなく、広告で運営しています。",
+    descriptionAbout:
+      "myonlinepdfeditor.comはブラウザで動く無料PDFツールキットです。アカウントなしで端末上で編集・署名・変換できます。",
+    descriptionFeatures:
+      "PDFの編集・電子署名・結合・変換・圧縮などの機能を紹介。各ガイドから無料ツールへ進めます。",
   },
   nav: {
     allTools: "すべてのツール",
     features: "機能",
     pricing: "ずっと無料",
     about: "概要",
+    samples: "サンプルファイル",
     openEditor: "エディターを開く",
     menu: "メニュー",
     close: "閉じる",
     free: "無料",
+  },
+  samplesPage: {
+    title: "サンプル文書のダウンロード",
+    intro:
+      "DOC、DOCX、XLS、XLSX、PPT、PPTX、PDF、ODT、ODS、ODP、RTF の無料サンプルを一般的なサイズで用意しています。ダウンロードして myonlinepdfeditor.com のツールで試せます。",
+    formatsTitle: "形式を選ぶ",
+    downloadCta: "サンプルをダウンロード",
+    openFormat: "サイズを見てダウンロード",
+    fileTitle: "{name} をダウンロード",
+    fileIntro:
+      "この {ext} サンプルはアップロードと変換テスト用に myonlinepdfeditor.com で提供しています。",
+    sizeLabel: "サイズ",
+    typeLabel: "種類",
+    relatedTools: "これらのツールで試す",
+    backToSamples: "すべてのサンプル文書",
+    backToFormat: "{format} のすべてのサンプル",
+    note: "テスト用に生成したサンプルです。OOXML / ODF / PDF が最も安定します。",
   },
   common: {
     tools: "ツール",
@@ -244,7 +274,7 @@ export const ja: Dictionary = {
   workspace: {
     options: "オプション",
     uploadFor: "{name} 用にアップロード",
-    run: "{name} を実行",
+    run: "{name}",
     working: "処理中…",
     done: "完了 — ダウンロードが自動で始まるはずです。",
     errorGeneric: "問題が発生しました。",

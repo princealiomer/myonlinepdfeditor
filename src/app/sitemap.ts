@@ -1,5 +1,9 @@
 import type { MetadataRoute } from "next";
 import { allFeatureSlugs, allToolSlugs, getTool } from "@/lib/catalog";
+import {
+  SAMPLE_FORMATS,
+  allSampleFormatIds,
+} from "@/lib/catalog/sample-documents";
 import { LOCALES, localePath } from "@/lib/i18n";
 import { site } from "@/lib/site";
 
@@ -11,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/tools",
     "/features",
+    "/sample-documents",
     "/pricing",
     "/about",
     "/privacy",
@@ -55,5 +60,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
-  return [...staticRoutes, ...toolRoutes, ...featureRoutes];
+  const sampleFormatRoutes: MetadataRoute.Sitemap = LOCALES.flatMap((locale) =>
+    allSampleFormatIds().map((format) => ({
+      url: `${base}${localePath(locale, `/sample-documents/${format}`)}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.55,
+    })),
+  );
+
+  const sampleFileRoutes: MetadataRoute.Sitemap = LOCALES.flatMap((locale) =>
+    SAMPLE_FORMATS.flatMap((format) =>
+      format.files.map((file) => ({
+        url: `${base}${localePath(locale, `/sample-documents/${format.id}/${file.slug}`)}`,
+        lastModified,
+        changeFrequency: "monthly" as const,
+        priority: 0.5,
+      })),
+    ),
+  );
+
+  return [
+    ...staticRoutes,
+    ...toolRoutes,
+    ...featureRoutes,
+    ...sampleFormatRoutes,
+    ...sampleFileRoutes,
+  ];
 }

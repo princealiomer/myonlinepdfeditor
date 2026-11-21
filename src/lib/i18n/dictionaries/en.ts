@@ -12,16 +12,45 @@ export const en: Dictionary = {
       "convert word to pdf",
       "esign",
     ],
+    descriptionPrivacy:
+      "How myonlinepdfeditor.com handles privacy, local file processing, and advertising.",
+    descriptionTerms: "Terms for using myonlinepdfeditor.com free PDF tools.",
+    descriptionEsign:
+      "How myonlinepdfeditor.com approaches electronic signatures, consent, and audit-friendly downloads.",
+    descriptionPricing:
+      "Every myonlinepdfeditor.com tool is free forever. No plans, trials, or paywalls — ads keep the toolkit open.",
+    descriptionAbout:
+      "myonlinepdfeditor.com is a free, browser-based PDF toolkit. Edit, sign, and convert on your device without an account.",
+    descriptionFeatures:
+      "Explore PDF features: edit, eSign, merge, convert, compress, and more. Each guide links to a free in-browser tool.",
   },
   nav: {
     allTools: "All tools",
     features: "Features",
     pricing: "Free forever",
     about: "About",
+    samples: "Sample files",
     openEditor: "Open editor",
     menu: "Menu",
     close: "Close",
     free: "Free",
+  },
+  samplesPage: {
+    title: "Sample documents download",
+    intro:
+      "Free sample DOC, DOCX, XLS, XLSX, PPT, PPTX, PDF, ODT, ODS, ODP, and RTF files in common sizes. Download a file, then open it in a myonlinepdfeditor.com tool to test convert, edit, merge, and more.",
+    formatsTitle: "Choose a format",
+    downloadCta: "Download sample file",
+    openFormat: "View sizes & download",
+    fileTitle: "Download {name}",
+    fileIntro:
+      "This {ext} sample is hosted on myonlinepdfeditor.com for free upload and converter testing.",
+    sizeLabel: "Size",
+    typeLabel: "Type",
+    relatedTools: "Try with these tools",
+    backToSamples: "All sample documents",
+    backToFormat: "All {format} samples",
+    note: "Samples are generated for testing. Prefer modern OOXML/ODF/PDF formats for best converter results.",
   },
   common: {
     tools: "Tools",
@@ -244,7 +273,7 @@ export const en: Dictionary = {
   workspace: {
     options: "Options",
     uploadFor: "Upload for {name}",
-    run: "Run {name}",
+    run: "{name}",
     working: "Working…",
     done: "Done — your download should start automatically.",
     errorGeneric: "Something went wrong.",

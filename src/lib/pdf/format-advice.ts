@@ -9,7 +9,7 @@ const ADVICE: Record<string, string> = {
   ps: "PostScript (.ps) conversion needs Ghostscript-class tooling. Convert to PDF on desktop, then use myonlinepdfeditor.com tools.",
   udf: "UDF document format is not supported here. Export to PDF or DOCX from the authoring app first.",
   straighten:
-    "Automatic deskew needs computer-vision models. Rotate pages with Rotate PDF if the scan is 90° off, or deskew in a scanner app then Scan to PDF.",
+    "Use Straighten PDF for small skew (a few degrees). If the page is sideways or upside-down, use Rotate PDF (90°/180°/270°) first.",
   "validate-pdfa":
     "Full PDF/A validation requires veraPDF-class checkers. Use PDF to PDF/A prep, then validate with an external PDF/A tool.",
   "verify-pdf-signatures":

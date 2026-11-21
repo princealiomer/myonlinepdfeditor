@@ -86,19 +86,35 @@ export function buildMetadata({
 }): Metadata {
   const localizedPath = localePath(locale, path);
   const url = absoluteUrl(localizedPath);
+  // Keep titles near ~60 chars: trim the page title before appending the brand.
+  const brandSuffix = ` | ${site.name}`;
+  let pageTitle = title.includes(site.name) ? title : title;
+  if (!title.includes(site.name)) {
+    const maxPage = Math.max(24, 60 - brandSuffix.length);
+    if (pageTitle.length > maxPage) {
+      pageTitle = `${pageTitle.slice(0, maxPage - 1).replace(/\s+\S*$/, "")}…`;
+    }
+  }
   const fullTitle = title.includes(site.name)
-    ? title
-    : `${title} | ${site.name}`;
+    ? pageTitle
+    : `${pageTitle}${brandSuffix}`;
   const imageUrl = absoluteUrl(
     imagePath ||
       (path.startsWith("/tools/")
         ? `${localePath(locale, path)}/opengraph-image`
-        : "/opengraph-image"),
+        : locale === DEFAULT_LOCALE
+          ? "/opengraph-image"
+          : `${localePath(locale, "/")}/opengraph-image`),
   );
+
+  const trimmedDescription =
+    description.length > 160
+      ? `${description.slice(0, 157).replace(/\s+\S*$/, "")}…`
+      : description;
 
   return {
     title: fullTitle,
-    description,
+    description: trimmedDescription,
     keywords: keywords.length ? keywords : undefined,
     alternates: {
       canonical: url,
@@ -106,7 +122,7 @@ export function buildMetadata({
     },
     openGraph: {
       title: fullTitle,
-      description,
+      description: trimmedDescription,
       url,
       siteName: site.name,
       type: "website",
@@ -123,7 +139,7 @@ export function buildMetadata({
     twitter: {
       card: "summary_large_image",
       title: fullTitle,
-      description,
+      description: trimmedDescription,
       images: [imageUrl],
     },
     robots: {

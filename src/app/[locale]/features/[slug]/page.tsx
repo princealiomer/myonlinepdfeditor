@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/AdSlot";
+import { JsonLd } from "@/components/JsonLd";
 import { allFeatureSlugs } from "@/lib/catalog";
 import {
   LOCALES,
@@ -12,7 +13,12 @@ import {
   localePath,
   type Locale,
 } from "@/lib/i18n";
-import { buildMetadata } from "@/lib/seo";
+import {
+  absoluteUrl,
+  breadcrumbJsonLd,
+  buildMetadata,
+  howToJsonLd,
+} from "@/lib/seo";
 
 export function generateStaticParams() {
   return LOCALES.flatMap((locale) =>
@@ -30,10 +36,14 @@ export async function generateMetadata({
   const feature = getLocalizedFeature(slug, locale);
   if (!feature) return {};
   const translated = hasFeatureTranslations(locale);
+  const description =
+    feature.description.length > 160
+      ? `${feature.description.slice(0, 157).replace(/\s+\S*$/, "")}…`
+      : feature.description;
   return {
     ...buildMetadata({
-      title: `${feature.name} — ${dict.featuresPage.howItWorks}`,
-      description: feature.description,
+      title: feature.name,
+      description,
       path: `/features/${feature.slug}`,
       locale,
     }),
@@ -53,9 +63,32 @@ export default async function FeaturePage({
   const feature = getLocalizedFeature(slug, locale);
   if (!feature) notFound();
   const tool = getLocalizedTool(feature.toolSlug, locale);
+  const featureUrl = absoluteUrl(localePath(locale, `/features/${feature.slug}`));
+  const crumbs = [
+    { name: dict.nav.features, url: absoluteUrl(localePath(locale, "/features")) },
+    { name: feature.name, url: featureUrl },
+  ];
+  const howToSteps = tool
+    ? [
+        { name: dict.home.easyCta, text: tool.summary },
+        {
+          name: tool.shortName,
+          text: `Open ${tool.name} on myonlinepdfeditor.com and follow the on-page steps.`,
+        },
+      ]
+    : [{ name: feature.name, text: feature.description }];
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <JsonLd
+        data={howToJsonLd({
+          name: `${feature.name} — ${dict.featuresPage.howItWorks}`,
+          description: feature.description,
+          steps: howToSteps,
+          url: featureUrl,
+        })}
+      />
       <nav aria-label="Breadcrumb" className="mb-4 text-sm text-muted">
         <Link
           href={localePath(locale, "/features")}

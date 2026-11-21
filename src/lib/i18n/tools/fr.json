@@ -1213,7 +1213,7 @@
     ]
   },
   "n-up-pdf": {
-    "name": "N-up PDF",
+    "name": "Pages par feuille",
     "shortName": "Pages par feuille",
     "summary": "Placez 2 ou 4 pages sur chaque feuille.",
     "description": "Imposez plusieurs pages source sur une feuille de sortie pour documents, épreuves et brouillons de livret (2-up ou 4-up).",

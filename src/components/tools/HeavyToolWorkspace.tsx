@@ -51,14 +51,19 @@ import {
   pdfToDocx,
   pdfToEpub,
   pdfToOdt,
+  pdfToOds,
+  pdfToOdp,
   pdfToHtml,
   pdfToImages,
   pdfToMarkdown,
   pdfToSvgFiles,
+  encodeTiffFromCanvases,
   pptxToPdf,
   printPdfAsPoster,
+  printPdfFile,
   protectPdf,
   rasterizePdf,
+  renderPdfPage,
   readTextFile,
   redactPdfPages,
   removePdfMetadata,
@@ -66,6 +71,7 @@ import {
   repairPdf,
   reversePdfPages,
   rotatePdf,
+  straightenPdf,
   searchPdfText,
   setPdfDocInfo,
   setPdfViewerPreferences,
@@ -91,6 +97,7 @@ type ToolOutput = {
   text?: string;
   download?: DownloadResult;
   downloads?: DownloadResult[];
+  successMessage?: string;
 };
 
 export function HeavyToolWorkspace({ tool, dict }: ToolWorkspaceProps) {
@@ -102,13 +109,13 @@ export function HeavyToolWorkspace({ tool, dict }: ToolWorkspaceProps) {
   const [password, setPassword] = useState("");
   const [ranges, setRanges] = useState("");
   const [degrees, setDegrees] = useState<90 | 180 | 270>(90);
-  const [pagesInput, setPagesInput] = useState("1");
-  const [orderInput, setOrderInput] = useState("1");
+  const [pagesInput, setPagesInput] = useState("");
+  const [orderInput, setOrderInput] = useState("");
   const [pasteText, setPasteText] = useState("");
   const [emailTo, setEmailTo] = useState("");
   const [recipients, setRecipients] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
-  const [watermarkText, setWatermarkText] = useState("CONFIDENTIAL");
+  const [watermarkText, setWatermarkText] = useState("");
   const [cropMargin, setCropMargin] = useState("36");
   const [nUp, setNUp] = useState<2 | 4>(2);
   const [pageSize, setPageSize] = useState<PageSizePreset>("letter");
@@ -179,10 +186,12 @@ export function HeavyToolWorkspace({ tool, dict }: ToolWorkspaceProps) {
             : null);
         if (download) setLastDownload(download);
         setMessage(
-          successMessage || (isGuide ? w.guideDone : w.done),
+          output?.successMessage ||
+            successMessage ||
+            (isGuide ? w.guideDone : w.done),
         );
       } catch (err) {
-        setError(err instanceof Error ? err.message : w.errorGeneric);
+        setError(friendlyToolError(err, w.errorGeneric));
       }
     });
   }
@@ -471,6 +480,7 @@ export function HeavyToolWorkspace({ tool, dict }: ToolWorkspaceProps) {
               name="watermark"
               value={watermarkText}
               onChange={(e) => setWatermarkText(e.target.value)}
+              placeholder="CONFIDENTIAL"
             />
           </div>
         )}
@@ -637,7 +647,7 @@ export function HeavyToolWorkspace({ tool, dict }: ToolWorkspaceProps) {
             ? w.working
             : isGuide
               ? w.guideRun
-              : w.run.replace("{name}", tool.shortName)}
+              : runLabelFor(tool)}
         </button>
 
         <ToolResultBanner
@@ -716,6 +726,17 @@ async function executeTool(
     case "rotate": {
       if (!files[0]) throw new Error("Upload a PDF to rotate.");
       return { download: downloadBytes(await rotatePdf(files[0], degrees), "myonlinepdfeditor-rotated.pdf") };
+    }
+    case "straighten": {
+      if (!files[0]) throw new Error("Upload a PDF to straighten.");
+      const { bytes, angles } = await straightenPdf(files[0]);
+      const summary = angles
+        .map((a, i) => `Page ${i + 1}: ${a === 0 ? "already upright" : `${a > 0 ? "+" : ""}${a.toFixed(1)}°`}`)
+        .join("; ");
+      return {
+        download: downloadBytes(bytes, "myonlinepdfeditor-straightened.pdf"),
+        text: `Deskewed ${angles.length} page${angles.length === 1 ? "" : "s"} (${summary}).`,
+      };
     }
     case "delete-pages": {
       if (!files[0]) throw new Error("Upload a PDF.");
@@ -811,12 +832,10 @@ async function executeTool(
     }
     case "print": {
       if (!files[0]) throw new Error("Upload a PDF.");
-      const bytes = await fileToUint8Array(files[0]);
-      const url = URL.createObjectURL(
-        new Blob([bytes.slice()], { type: "application/pdf" }),
-      );
-      await printViaHiddenIframe(url);
-      return { text: "Print dialog opened." };
+      await printPdfFile(files[0]);
+      return {
+        text: "Print dialog opened. If nothing appeared, allow pop-ups for this site and try again.",
+      };
     }
     case "search": {
       if (!files[0]) throw new Error("Upload a PDF.");
@@ -876,7 +895,7 @@ async function executeTool(
       if (!files[0]) throw new Error("Upload a PDF.");
       return {
         download: downloadBytes(
-          await watermarkPdf(files[0], watermarkText),
+          await watermarkPdf(files[0], watermarkText.trim() || "CONFIDENTIAL"),
           "myonlinepdfeditor-watermarked.pdf",
         ),
       };
@@ -912,16 +931,26 @@ async function executeTool(
     }
     case "pdf-to-images": {
       if (!files[0]) throw new Error("Upload a PDF.");
-      const format = tool.slug === "pdf-to-png" || tool.slug === "pdf-to-tiff" ? "png" : "jpeg";
+      if (tool.slug === "pdf-to-tiff") {
+        const bytes = await fileToUint8Array(files[0]);
+        const first = await renderPdfPage(bytes, 1, 1.5);
+        const canvases = [first.canvas];
+        for (let p = 2; p <= first.pageCount; p++) {
+          canvases.push((await renderPdfPage(bytes, p, 1.5)).canvas);
+        }
+        const tiff = encodeTiffFromCanvases(canvases);
+        return {
+          download: downloadBytes(tiff, "myonlinepdfeditor-from-pdf.tiff", "image/tiff"),
+          text: `Exported a multipage TIFF with ${canvases.length} page${canvases.length === 1 ? "" : "s"}.`,
+        };
+      }
+      const format = tool.slug === "pdf-to-png" ? "png" : "jpeg";
       const pages = await pdfToImages(await fileToUint8Array(files[0]), format);
       const downloads = pages.map((page) => downloadBlob(page.blob, page.filename));
       return {
         downloads,
         download: downloads[downloads.length - 1],
-        text:
-          tool.slug === "pdf-to-tiff"
-            ? `Exported ${pages.length} PNG page image(s) (browsers cannot write real TIFF here).`
-            : `Exported ${pages.length} image${pages.length === 1 ? "" : "s"}.`,
+        text: `Exported ${pages.length} image${pages.length === 1 ? "" : "s"}.`,
       };
     }
     case "redact": {
@@ -1055,6 +1084,30 @@ async function executeTool(
       return {
         download: downloadBlob(new Blob([csv], { type: "text/csv;charset=utf-8" }), "myonlinepdfeditor-from-pdf.csv"),
         text: csv.slice(0, 2000),
+      };
+    }
+    case "pdf-to-ods": {
+      if (!files[0]) throw new Error("Upload a PDF.");
+      const ods = await pdfToOds(files[0]);
+      return {
+        download: downloadBytes(
+          ods,
+          "myonlinepdfeditor-from-pdf.ods",
+          "application/vnd.oasis.opendocument.spreadsheet",
+        ),
+        text: "Downloaded a .ods built from extractable PDF text.",
+      };
+    }
+    case "pdf-to-odp": {
+      if (!files[0]) throw new Error("Upload a PDF.");
+      const odp = await pdfToOdp(files[0]);
+      return {
+        download: downloadBytes(
+          odp,
+          "myonlinepdfeditor-from-pdf.odp",
+          "application/vnd.oasis.opendocument.presentation",
+        ),
+        text: "Downloaded a .odp with one slide per PDF page (text only).",
       };
     }
     case "unlock": {
@@ -1193,12 +1246,16 @@ async function executeTool(
     }
     case "password-gen": {
       const pwd = generatePassword(20);
+      try {
+        if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(pwd);
+        }
+      } catch {
+        // Clipboard may be blocked; still show the password in the result panel.
+      }
       return {
-        download: downloadBlob(
-          new Blob([pwd], { type: "text/plain;charset=utf-8" }),
-          "myonlinepdfeditor-password.txt",
-        ),
-        text: `Generated password:\n${pwd}\n\nCopy it into Set PDF Password.`,
+        text: `Password copied to clipboard (when allowed):\n${pwd}\n\nPaste it into Set PDF Password.`,
+        successMessage: "Password generated and copied when clipboard access is allowed.",
       };
     }
     case "poster": {
@@ -1253,6 +1310,52 @@ async function executeTool(
   }
 }
 
+function runLabelFor(tool: Tool): string {
+  const verbs: Record<string, string> = {
+    merge: "Merge",
+    split: "Split",
+    rotate: "Rotate",
+    "delete-pages": "Delete pages",
+    reorder: tool.slug === "duplicate-pages" ? "Duplicate pages" : "Reorder",
+    "images-to-pdf": "Create PDF",
+    "text-to-pdf": "Create PDF",
+    protect: "Set password",
+    unlock: "Unlock",
+    compress: "Compress",
+    watermark: "Add watermark",
+    crop: "Crop",
+    "n-up": "Impose pages",
+    "password-gen": "Generate password",
+    print: "Print",
+    search: "Search",
+    "doc-info": "Update info",
+    "viewer-prefs": "Save preferences",
+  };
+  return verbs[tool.engine] || verbs[tool.slug] || "Run tool";
+}
+
+function friendlyToolError(err: unknown, fallback: string): string {
+  const raw = err instanceof Error ? err.message : String(err || "");
+  const lower = raw.toLowerCase();
+  if (!raw.trim()) return fallback;
+  if (lower.includes("no pdf header") || lower.includes("invalid pdf")) {
+    return "That file does not look like a valid PDF. Try another file or re-export it as PDF.";
+  }
+  if (lower.includes("failed to parse pdf") || lower.includes("pdf structure")) {
+    return "Could not read this PDF. It may be damaged or password-protected — try Unlock PDF first.";
+  }
+  if (lower.includes("failed to fetch") || lower.includes("networkerror")) {
+    return "A required browser resource failed to load. Refresh the page and try again.";
+  }
+  if (lower.includes("could not decode")) {
+    return "Could not decode that image. Try another file or convert it to PNG/JPEG first.";
+  }
+  if (raw.length > 160) {
+    return `${raw.slice(0, 157).replace(/\s+\S*$/, "")}…`;
+  }
+  return raw;
+}
+
 /** Accepts "1,2,5" and ranges like "1-3,5". */
 function parseNumberList(value: string): number[] {
   const nums: number[] = [];
@@ -1286,39 +1389,3 @@ function formatBytes(n: number): string {
   return `${(n / (1024 * 1024)).toFixed(2)} MB`;
 }
 
-function printViaHiddenIframe(url: string): Promise<void> {
-  return new Promise((resolve, reject) => {
-    const iframe = document.createElement("iframe");
-    iframe.setAttribute("title", "Print PDF");
-    iframe.style.position = "fixed";
-    iframe.style.right = "0";
-    iframe.style.bottom = "0";
-    iframe.style.width = "0";
-    iframe.style.height = "0";
-    iframe.style.border = "0";
-    iframe.style.opacity = "0";
-    iframe.src = url;
-    const cleanup = () => {
-      window.setTimeout(() => {
-        iframe.remove();
-        URL.revokeObjectURL(url);
-      }, 60_000);
-    };
-    iframe.onload = () => {
-      try {
-        iframe.contentWindow?.focus();
-        iframe.contentWindow?.print();
-        cleanup();
-        resolve();
-      } catch (err) {
-        cleanup();
-        reject(err instanceof Error ? err : new Error("Could not print PDF."));
-      }
-    };
-    iframe.onerror = () => {
-      cleanup();
-      reject(new Error("Could not load PDF for printing."));
-    };
-    document.body.appendChild(iframe);
-  });
-}

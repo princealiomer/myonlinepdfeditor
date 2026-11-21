@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AdSlot } from "@/components/AdSlot";
 import { CategoryIcons8Icon } from "@/components/Icons8Icon";
+import { HomeToolSearch } from "@/components/HomeToolSearch";
 import { JsonLd } from "@/components/JsonLd";
 import { ToolCard } from "@/components/ToolCard";
 import { TOOLS } from "@/lib/catalog";
@@ -43,47 +44,50 @@ export function HomePageView({
       <JsonLd data={faqJsonLd(h.faqs)} />
 
       <section className="relative overflow-hidden">
-        <div className="mx-auto grid max-w-6xl gap-8 px-4 pb-12 pt-8 sm:gap-10 sm:px-6 sm:pb-16 sm:pt-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-teal">
-              {h.eyebrow || site.name}
-            </p>
-            <h1 className="display mt-3 max-w-2xl text-[2.15rem] font-semibold leading-[1.08] text-ink sm:text-5xl md:text-6xl">
-              {h.headline}
-            </h1>
-            <p className="mt-4 max-w-xl text-base leading-relaxed text-muted sm:mt-5 sm:text-lg">
-              {h.subhead}
-            </p>
-            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
-              <Link
-                href={localePath(locale, "/tools/edit-pdf")}
-                className="btn btn-accent w-full no-underline sm:w-auto"
-              >
-                {h.ctaEdit}
-              </Link>
+        <div className="mx-auto max-w-6xl px-4 pb-10 pt-8 sm:px-6 sm:pb-12 sm:pt-12">
+          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-teal">
+            {h.eyebrow || site.name}
+          </p>
+          <h1 className="display mt-3 max-w-3xl text-[2.15rem] font-semibold leading-[1.08] text-ink sm:text-5xl md:text-6xl">
+            {h.headline}
+          </h1>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
+            {h.popularBody}
+          </p>
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Link
+              href={localePath(locale, "/tools/edit-pdf")}
+              className="btn btn-accent w-full no-underline sm:w-auto"
+            >
+              {h.ctaEdit}
+            </Link>
+            <Link
+              href={localePath(locale, "/tools")}
+              className="btn btn-ghost w-full no-underline sm:w-auto"
+            >
+              {h.ctaBrowse}
+            </Link>
+          </div>
+          <div className="mt-2 max-w-xl">
+            <HomeToolSearch locale={locale} dict={dict} />
+          </div>
+          <div className="mt-8">
+            <div className="mb-4 flex items-end justify-between gap-4">
+              <h2 className="display text-xl font-semibold sm:text-2xl">
+                {h.popularTitle}
+              </h2>
               <Link
                 href={localePath(locale, "/tools")}
-                className="btn btn-ghost w-full no-underline sm:w-auto"
+                className="text-sm font-semibold text-teal no-underline"
               >
-                {h.ctaBrowse}
+                {h.viewCatalog}
               </Link>
             </div>
-          </div>
-
-          <div className="surface relative rounded-[1.5rem] p-5 sm:p-6">
-            <div
-              className="absolute inset-x-6 top-0 h-1 rounded-b-full bg-gradient-to-r from-brand-wine via-brand-rose to-brand-dust"
-              aria-hidden="true"
-            />
-            <p className="text-sm font-semibold text-teal">{h.howTitle}</p>
-            <ol className="mt-4 space-y-3 text-sm leading-relaxed text-ink-soft">
-              {h.howSteps.map((step) => (
-                <li key={step}>{step}</li>
+            <div className="tool-grid">
+              {featured.map((tool) => (
+                <ToolCard key={tool.slug} tool={tool} locale={locale} dict={dict} />
               ))}
-            </ol>
-            <p className="mt-6 text-xs uppercase tracking-[0.14em] text-muted">
-              {h.howFoot}
-            </p>
+            </div>
           </div>
         </div>
       </section>
@@ -91,6 +95,20 @@ export function HomePageView({
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <AdSlot className="mb-12 rounded-xl" />
       </div>
+
+      <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+        <div className="surface relative rounded-[1.5rem] p-5 sm:p-6">
+          <p className="text-sm font-semibold text-teal">{h.howTitle}</p>
+          <ol className="mt-4 space-y-3 text-sm leading-relaxed text-ink-soft">
+            {h.howSteps.map((step) => (
+              <li key={step}>{step}</li>
+            ))}
+          </ol>
+          <p className="mt-6 text-xs uppercase tracking-[0.14em] text-muted">
+            {h.howFoot}
+          </p>
+        </div>
+      </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
         <h2 className="display text-3xl font-semibold">{h.whatTitle}</h2>
@@ -123,26 +141,6 @@ export function HomePageView({
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <div className="mb-6 flex items-end justify-between gap-4">
-          <div>
-            <h2 className="display text-3xl font-semibold">{h.popularTitle}</h2>
-            <p className="mt-2 text-muted">{h.popularBody}</p>
-          </div>
-          <Link
-            href={localePath(locale, "/tools")}
-            className="text-sm font-semibold text-teal no-underline"
-          >
-            {h.viewCatalog}
-          </Link>
-        </div>
-        <div className="tool-grid">
-          {featured.map((tool) => (
-            <ToolCard key={tool.slug} tool={tool} locale={locale} dict={dict} />
-          ))}
         </div>
       </section>
 

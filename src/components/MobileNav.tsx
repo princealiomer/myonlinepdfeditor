@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { BrandLogo } from "@/components/BrandLogo";
+import { BrandWordmark } from "@/components/BrandWordmark";
 import type { Dictionary, Locale } from "@/lib/i18n";
 import { localePath } from "@/lib/i18n";
 import { site } from "@/lib/site";
@@ -103,13 +104,10 @@ export function MobileNav({
       >
         <div className="mobile-nav-sheet surface">
           <div className="flex items-center justify-between gap-3 border-b border-mist/80 px-4 py-3">
-            <div className="flex min-w-0 items-center gap-2.5">
+            <div className="site-brand text-ink">
               <BrandLogo className="h-8 w-8 shrink-0" title="" />
-              <p
-                id={titleId}
-                className="display truncate text-base font-semibold text-ink"
-              >
-                {site.name}
+              <p id={titleId} className="m-0">
+                <BrandWordmark />
               </p>
             </div>
             <button

@@ -1193,7 +1193,7 @@
     ]
   },
   "n-up-pdf": {
-    "name": "N-up PDF",
+    "name": "Seiten pro Blatt",
     "shortName": "Seiten pro Blatt",
     "summary": "2 oder 4 Seiten auf jedes Blatt legen.",
     "description": "Mehrere Quellseiten auf ein Ausgabeblatt für Handouts, Proofs und Booklet-Entwürfe (2-up oder 4-up).",

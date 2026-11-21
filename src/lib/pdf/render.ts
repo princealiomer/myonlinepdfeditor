@@ -8,7 +8,8 @@ export async function getPdfjs(): Promise<PdfJsModule> {
   if (pdfjsModule) return pdfjsModule;
 
   const pdfjs = await import("pdfjs-dist");
-  pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+  // Same-origin worker (copied to /public on postinstall) — avoids CDN "Failed to fetch".
+  pdfjs.GlobalWorkerOptions.workerSrc = `/pdf.worker.min.mjs?v=${pdfjs.version}`;
   pdfjsModule = pdfjs;
   return pdfjs;
 }

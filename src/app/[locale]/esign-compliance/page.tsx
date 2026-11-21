@@ -12,8 +12,7 @@ export async function generateMetadata({
   const dict = await getDictionary(locale);
   return buildMetadata({
     title: dict.footer.esign,
-    description:
-      "How myonlinepdfeditor.com approaches electronic signatures, consent, and audit-friendly downloads.",
+    description: dict.meta.descriptionEsign,
     path: "/esign-compliance",
     locale,
   });
@@ -24,10 +23,12 @@ export default async function EsignCompliancePage({
 }: PageProps<"/[locale]/esign-compliance">) {
   const { locale: raw } = await params;
   if (!isLocale(raw)) notFound();
+  const locale = raw as Locale;
+  const dict = await getDictionary(locale);
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
-      <h1 className="display text-4xl font-semibold">eSign compliance</h1>
+      <h1 className="display text-4xl font-semibold">{dict.footer.esign}</h1>
       <div className="mt-6 space-y-4 text-base leading-relaxed text-ink-soft">
         <p>
           {site.name} lets you type, draw, or upload a signature image onto a PDF in your

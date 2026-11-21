@@ -1200,8 +1200,8 @@
     ]
   },
   "n-up-pdf": {
-    "name": "N-up PDF",
-    "shortName": "Pages per sheet",
+    "name": "ページ集約PDF",
+    "shortName": "1枚に複数ページ",
     "summary": "1枚に2ページまたは4ページを配置します。",
     "description": "元ページを2-upまたは4-upで1シートにまとめ、配布資料・校正・冊子下書きに使えます。",
     "howTo": [

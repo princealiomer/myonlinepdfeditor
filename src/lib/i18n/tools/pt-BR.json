@@ -1179,7 +1179,7 @@
     ]
   },
   "n-up-pdf": {
-    "name": "N-up PDF",
+    "name": "Páginas por folha",
     "shortName": "Páginas/folha",
     "summary": "Coloque 2 ou 4 páginas em cada folha.",
     "description": "Imponha várias páginas de origem em uma folha de saída para apostilas, provas e rascunhos de livreto (2-up ou 4-up).",

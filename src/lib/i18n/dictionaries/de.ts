@@ -12,16 +12,46 @@ export const de: Dictionary = {
       "word zu pdf konvertieren",
       "esign",
     ],
+    descriptionPrivacy:
+      "Wie myonlinepdfeditor.com mit Datenschutz, lokaler Dateiverarbeitung und Werbung umgeht.",
+    descriptionTerms:
+      "Nutzungsbedingungen für die kostenlosen PDF-Tools von myonlinepdfeditor.com.",
+    descriptionEsign:
+      "Wie myonlinepdfeditor.com elektronische Signaturen, Einwilligung und auditfreundliche Downloads handhabt.",
+    descriptionPricing:
+      "Jedes Tool auf myonlinepdfeditor.com ist für immer kostenlos. Keine Pläne oder Paywalls — Werbung hält den Baukasten offen.",
+    descriptionAbout:
+      "myonlinepdfeditor.com ist ein kostenloses PDF-Toolkit im Browser. Bearbeiten, signieren und konvertieren auf Ihrem Gerät ohne Konto.",
+    descriptionFeatures:
+      "PDF-Funktionen entdecken: bearbeiten, eSign, zusammenführen, konvertieren, komprimieren und mehr. Jede Anleitung führt zu einem kostenlosen Tool.",
   },
   nav: {
     allTools: "Alle Tools",
     features: "Funktionen",
     pricing: "Für immer kostenlos",
     about: "Über uns",
+    samples: "Beispieldateien",
     openEditor: "Editor öffnen",
     menu: "Menü",
     close: "Schließen",
     free: "Kostenlos",
+  },
+  samplesPage: {
+    title: "Beispieldokumente zum Download",
+    intro:
+      "Kostenlose DOC-, DOCX-, XLS-, XLSX-, PPT-, PPTX-, PDF-, ODT-, ODS-, ODP- und RTF-Dateien in gängigen Größen. Laden Sie eine Datei herunter und öffnen Sie sie in einem Tool auf myonlinepdfeditor.com.",
+    formatsTitle: "Format wählen",
+    downloadCta: "Beispieldatei herunterladen",
+    openFormat: "Größen anzeigen & herunterladen",
+    fileTitle: "{name} herunterladen",
+    fileIntro:
+      "Diese {ext}-Beispieldatei liegt auf myonlinepdfeditor.com für Upload- und Konvertertests.",
+    sizeLabel: "Größe",
+    typeLabel: "Typ",
+    relatedTools: "Mit diesen Tools testen",
+    backToSamples: "Alle Beispieldokumente",
+    backToFormat: "Alle {format}-Beispiele",
+    note: "Beispiele sind zum Testen erzeugt. Moderne OOXML/ODF/PDF-Formate funktionieren am besten.",
   },
   common: {
     tools: "Tools",
@@ -244,7 +274,7 @@ export const de: Dictionary = {
   workspace: {
     options: "Optionen",
     uploadFor: "Hochladen für {name}",
-    run: "{name} starten",
+    run: "{name}",
     working: "Arbeitet…",
     done: "Fertig — der Download sollte automatisch starten.",
     errorGeneric: "Etwas ist schiefgelaufen.",

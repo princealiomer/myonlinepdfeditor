@@ -12,16 +12,46 @@ export const es: Dictionary = {
       "convertir word a pdf",
       "firma electrónica",
     ],
+    descriptionPrivacy:
+      "Cómo myonlinepdfeditor.com trata la privacidad, el procesamiento local de archivos y la publicidad.",
+    descriptionTerms:
+      "Términos de uso de las herramientas PDF gratuitas de myonlinepdfeditor.com.",
+    descriptionEsign:
+      "Cómo myonlinepdfeditor.com aborda las firmas electrónicas, el consentimiento y las descargas aptas para auditoría.",
+    descriptionPricing:
+      "Todas las herramientas de myonlinepdfeditor.com son gratis para siempre. Sin planes ni muros de pago: los anuncios mantienen el kit abierto.",
+    descriptionAbout:
+      "myonlinepdfeditor.com es un kit PDF gratuito en el navegador. Edita, firma y convierte en tu dispositivo sin cuenta.",
+    descriptionFeatures:
+      "Explora funciones PDF: editar, firmar, unir, convertir, comprimir y más. Cada guía enlaza a una herramienta gratuita.",
   },
   nav: {
     allTools: "Todas las herramientas",
     features: "Funciones",
     pricing: "Gratis para siempre",
     about: "Acerca de",
+    samples: "Archivos de muestra",
     openEditor: "Abrir editor",
     menu: "Menú",
     close: "Cerrar",
     free: "Gratis",
+  },
+  samplesPage: {
+    title: "Descarga de documentos de muestra",
+    intro:
+      "Archivos DOC, DOCX, XLS, XLSX, PPT, PPTX, PDF, ODT, ODS, ODP y RTF gratis en tamaños habituales. Descarga uno y ábrelo en una herramienta de myonlinepdfeditor.com.",
+    formatsTitle: "Elige un formato",
+    downloadCta: "Descargar archivo de muestra",
+    openFormat: "Ver tamaños y descargar",
+    fileTitle: "Descargar {name}",
+    fileIntro:
+      "Esta muestra {ext} está alojada en myonlinepdfeditor.com para pruebas de carga y conversión.",
+    sizeLabel: "Tamaño",
+    typeLabel: "Tipo",
+    relatedTools: "Pruébalo con estas herramientas",
+    backToSamples: "Todos los documentos de muestra",
+    backToFormat: "Todas las muestras {format}",
+    note: "Las muestras se generan para pruebas. Prefiere formatos OOXML/ODF/PDF modernos.",
   },
   common: {
     tools: "Herramientas",
@@ -244,7 +274,7 @@ export const es: Dictionary = {
   workspace: {
     options: "Opciones",
     uploadFor: "Subir para {name}",
-    run: "Ejecutar {name}",
+    run: "{name}",
     working: "Procesando…",
     done: "Listo: la descarga debería empezar automáticamente.",
     errorGeneric: "Algo salió mal.",

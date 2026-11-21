@@ -36,13 +36,20 @@ export async function generateMetadata({
     headline: copy?.headline,
   });
 
-  return buildMetadata({
+  const meta = buildMetadata({
     title: tool.name,
     description,
     path: `/tools/${tool.slug}`,
     keywords: tool.keywords,
     locale,
   });
+  if (tool.availability === "guide") {
+    return {
+      ...meta,
+      robots: { index: false, follow: true, googleBot: { index: false, follow: true } },
+    };
+  }
+  return meta;
 }
 
 export default async function LocalizedToolPage({
