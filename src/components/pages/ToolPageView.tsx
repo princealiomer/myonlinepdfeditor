@@ -4,10 +4,8 @@ import { ToolIcons8Icon } from "@/components/Icons8Icon";
 import { JsonLd } from "@/components/JsonLd";
 import { ToolCopySections } from "@/components/tools/ToolCopySections";
 import { UploadShell } from "@/components/tools/UploadShell";
-import {
-  ToolWorkspace,
-  usesUploadShell,
-} from "@/components/tools/ToolWorkspace";
+import { ToolWorkspace } from "@/components/tools/ToolWorkspace";
+import { usesUploadShell } from "@/lib/catalog/uses-upload-shell";
 import type { Dictionary, Locale } from "@/lib/i18n";
 import {
   getLocalizedTool,

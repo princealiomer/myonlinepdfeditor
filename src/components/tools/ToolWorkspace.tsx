@@ -78,19 +78,3 @@ export function ToolWorkspace({ tool, dict, locale }: ToolWorkspaceProps) {
 
   return <HeavyToolWorkspace tool={tool} dict={dict} locale={locale} />;
 }
-
-export function usesUploadShell(tool: Tool): boolean {
-  if (tool.slug === "organize-pdf") return false;
-  if (
-    tool.engine === "editor" ||
-    tool.engine === "kiosk" ||
-    tool.engine === "in-person" ||
-    tool.engine === "ai-assist" ||
-    tool.engine === "create" ||
-    tool.engine === "status" ||
-    tool.engine === "password-gen"
-  ) {
-    return false;
-  }
-  return true;
-}
