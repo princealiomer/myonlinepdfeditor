@@ -35,6 +35,9 @@ export const metadata: Metadata = {
   formatDetection: {
     telephone: false,
   },
+  verification: {
+    google: "aNug0RhPTDeIb2HhnNzxjuT3vS62FIgNdDVrYe1cn5k",
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },

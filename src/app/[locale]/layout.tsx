@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { Fraunces, Figtree, Noto_Sans_JP } from "next/font/google";
 import { LocaleShell } from "@/components/LocaleShell";
 import {
@@ -51,6 +52,19 @@ export default async function LocaleLayout({
       className={`${display.variable} ${body.variable} ${japanese.variable} h-full`}
     >
       <body className="flex min-h-dvh flex-col antialiased">
+        <Script id="gtm-datalayer" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          `}
+        </Script>
+        <Script
+          id="gtm"
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-K28KSHSP"
+          strategy="afterInteractive"
+          fetchPriority="low"
+        />
         <LocaleShell locale={locale} dict={dict}>
           {children}
         </LocaleShell>
