@@ -44,7 +44,8 @@ const HeavyToolWorkspace = dynamic(
     import("@/components/tools/HeavyToolWorkspace").then((m) => ({
       default: m.HeavyToolWorkspace,
     })),
-  { ssr: false, loading: () => <Loading label="Loading tool…" /> },
+  // Keep SSR upload shell visible — do not flash "Loading tool…".
+  { ssr: false, loading: () => null },
 );
 
 type ToolWorkspaceProps = {
@@ -56,7 +57,7 @@ type ToolWorkspaceProps = {
 /**
  * Thin router: editor / organize / AI load only their own chunks.
  * Conversion tools load the heavy PDF engine after hydration.
- * Server-rendered H1/copy above this island keep LCP on text, not JS.
+ * Server-rendered UploadShell above this island keeps LCP on the upload UI.
  */
 export function ToolWorkspace({ tool, dict, locale }: ToolWorkspaceProps) {
   if (tool.slug === "organize-pdf") {
@@ -76,4 +77,20 @@ export function ToolWorkspace({ tool, dict, locale }: ToolWorkspaceProps) {
   }
 
   return <HeavyToolWorkspace tool={tool} dict={dict} locale={locale} />;
+}
+
+export function usesUploadShell(tool: Tool): boolean {
+  if (tool.slug === "organize-pdf") return false;
+  if (
+    tool.engine === "editor" ||
+    tool.engine === "kiosk" ||
+    tool.engine === "in-person" ||
+    tool.engine === "ai-assist" ||
+    tool.engine === "create" ||
+    tool.engine === "status" ||
+    tool.engine === "password-gen"
+  ) {
+    return false;
+  }
+  return true;
 }
