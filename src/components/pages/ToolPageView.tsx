@@ -3,7 +3,11 @@ import { AdSlot } from "@/components/AdSlot";
 import { ToolIcons8Icon } from "@/components/Icons8Icon";
 import { JsonLd } from "@/components/JsonLd";
 import { ToolCopySections } from "@/components/tools/ToolCopySections";
-import { ToolWorkspace } from "@/components/tools/ToolWorkspace";
+import { UploadShell } from "@/components/tools/UploadShell";
+import {
+  ToolWorkspace,
+  usesUploadShell,
+} from "@/components/tools/ToolWorkspace";
 import type { Dictionary, Locale } from "@/lib/i18n";
 import {
   getLocalizedTool,
@@ -72,9 +76,8 @@ export function ToolPageView({
           featureList: [
             tool.summary,
             ...(copy?.whyUse?.slice(0, 4) || []),
-            "Free",
-            "No signup",
-            "Files stay in your browser",
+            dict.common.freeForever,
+            dict.common.trustBrowser,
           ],
           howToName: fillHowTo(dict, tool.name),
           howToDescription: copy?.whatItIs || tool.description,
@@ -101,14 +104,18 @@ export function ToolPageView({
           {dict.common.breadcrumbTools}
         </Link>
         <span aria-hidden="true"> / </span>
-        <span>{tool.shortName}</span>
+        <span>{tool.name}</span>
       </nav>
 
       <header className="max-w-3xl">
-        <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-teal">
+        <p className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-teal">
           <ToolIcons8Icon tool={tool} size={22} />
           {categoryLabel}
-          {tool.availability === "guide" ? " · Guide" : null}
+          {tool.availability === "guide" || tool.engine === "format-advice" ? (
+            <span className="rounded-md bg-mist/80 px-2 py-0.5 text-[0.65rem] tracking-wide text-muted">
+              {dict.common.comingSoon}
+            </span>
+          ) : null}
         </p>
         <h1 className="display mt-2 text-[1.85rem] font-semibold leading-tight sm:text-4xl md:text-5xl">
           {tool.name}
@@ -116,18 +123,28 @@ export function ToolPageView({
         <p className="mt-3 text-base leading-relaxed text-muted sm:mt-4 sm:text-lg">
           {copy?.headline || tool.description}
         </p>
-        {tool.availability === "guide" ? (
-          <p className="mt-3 rounded-xl border border-mist bg-paper px-4 py-3 text-sm text-ink-soft">
-            This page is a conversion guide, not an in-browser converter. Download
-            the guidance note for desktop steps, then continue with a supported
-            PDF tool.
+        {tool.availability !== "guide" && tool.engine !== "format-advice" ? (
+          <p className="mt-3 text-sm font-medium text-teal">
+            {dict.common.trustBrowser}
           </p>
-        ) : null}
+        ) : (
+          <p className="mt-3 rounded-xl border border-mist bg-paper px-4 py-3 text-sm text-ink-soft">
+            {dict.toolPage.guideOnlyBanner}
+          </p>
+        )}
       </header>
 
-      {/* Client island: deferred PDF engine — H1 above is the LCP candidate.
-          Ads sit below the fold so AdSense does not compete with LCP. */}
-      <div className="min-h-[28rem]">
+      {/* SSR upload shell for LCP; client island replaces it after hydration. */}
+      <div className="relative min-h-[28rem]">
+        {usesUploadShell(tool) ? (
+          <div data-tool-ssr-shell>
+            <UploadShell
+              tool={tool}
+              dict={dict}
+              trustLine={dict.common.trustBrowser}
+            />
+          </div>
+        ) : null}
         <ToolWorkspace tool={tool} dict={dict} locale={locale} />
       </div>
 

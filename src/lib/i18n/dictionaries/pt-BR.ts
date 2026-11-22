@@ -4,7 +4,7 @@ export const ptBR: Dictionary = {
   meta: {
     titleHome: "myonlinepdfeditor.com — Editor de PDF, assinatura eletrônica e conversão grátis",
     descriptionHome:
-      "Editor de PDF online gratuito, assinatura eletrônica, unir, dividir, converter e formulários. Sem cadastro. Os arquivos não saem do navegador. Apoiado por anúncios.",
+      "Editor de PDF online gratuito, assinatura eletrônica, unir, dividir, converter e formulários. Sem cadastro. Nos fluxos habituais, os arquivos ficam no navegador.",
     keywordsHome: [
       "editor pdf grátis",
       "assinar pdf online",
@@ -13,13 +13,13 @@ export const ptBR: Dictionary = {
       "assinatura eletrônica",
     ],
     descriptionPrivacy:
-      "Como o myonlinepdfeditor.com trata privacidade, processamento local de arquivos e publicidade.",
+      "Como o myonlinepdfeditor.com trata privacidade e processamento local de arquivos.",
     descriptionTerms:
       "Termos de uso das ferramentas PDF gratuitas do myonlinepdfeditor.com.",
     descriptionEsign:
       "Como o myonlinepdfeditor.com aborda assinaturas eletrônicas, consentimento e downloads adequados para auditoria.",
     descriptionPricing:
-      "Todas as ferramentas do myonlinepdfeditor.com são grátis para sempre. Sem planos nem paywall — anúncios mantêm o kit aberto.",
+      "Todas as ferramentas do myonlinepdfeditor.com são grátis para sempre. Sem planos nem paywall.",
     descriptionAbout:
       "myonlinepdfeditor.com é um kit PDF gratuito no navegador. Edite, assine e converta no seu dispositivo sem criar conta.",
     descriptionFeatures:
@@ -43,6 +43,9 @@ export const ptBR: Dictionary = {
     formatsTitle: "Escolha um formato",
     downloadCta: "Baixar arquivo de exemplo",
     openFormat: "Ver tamanhos e baixar",
+    formatTitle: "Documentos de exemplo {format}",
+    formatIntro:
+      "Arquivos de exemplo {ext} gratuitos para testar as ferramentas do myonlinepdfeditor.com. Baixe um tamanho e abra em um conversor ou editor.",
     fileTitle: "Baixar {name}",
     fileIntro:
       "Este exemplo {ext} está hospedado no myonlinepdfeditor.com para testes de upload e conversão.",
@@ -60,6 +63,8 @@ export const ptBR: Dictionary = {
     relatedTools: "Ferramentas relacionadas",
     language: "Idioma",
     breadcrumbTools: "Ferramentas",
+    comingSoon: "Em breve",
+    trustBrowser: "Processado no navegador — os arquivos ficam no seu dispositivo",
   },
   categories: {
     convert: "Converter",
@@ -71,19 +76,25 @@ export const ptBR: Dictionary = {
   },
   footer: {
     blurb:
-      "Edição, assinatura, conversão e organização de PDF grátis — processadas no navegador. Apoiado por anúncios, sem paywall.",
+      "Edição, assinatura, conversão e organização de PDF grátis — processadas no navegador. Sem cadastro e sem paywall.",
     copyright: "Todas as ferramentas grátis para sempre.",
-    privacy: "Privacidade",
-    terms: "Termos",
+    company: "Empresa",
+    about: "Sobre nós",
+    contact: "Contato",
+    privacy: "Política de privacidade",
+    disclaimer: "Isenção de responsabilidade",
+    terms: "Termos de serviço",
     esign: "Conformidade de assinatura eletrônica",
     sitemap: "Mapa do site",
+    lastUpdated: "Última atualização",
   },
   home: {
     eyebrow: "myonlinepdfeditor.com",
     headline: "Todas as ferramentas de documentos, grátis para todos.",
     subhead:
-      "O myonlinepdfeditor.com é um kit de ferramentas PDF no navegador: edite, assine, una, divida, comprima e converta arquivos no seu dispositivo. Os anúncios mantêm cada ferramenta aberta para qualquer pessoa concluir o trabalho sem assinatura.",
+      "O myonlinepdfeditor.com é um kit de ferramentas PDF no navegador: edite, assine, una, divida, comprima e converta arquivos no seu dispositivo. Cada ferramenta permanece aberta para qualquer pessoa concluir o trabalho sem assinatura.",
     ctaEdit: "Editar um PDF grátis",
+    ctaSign: "Assinar um PDF grátis",
     ctaBrowse: "Ver todas as ferramentas",
     howTitle: "Como usar o myonlinepdfeditor.com",
     howSteps: [
@@ -91,7 +102,7 @@ export const ptBR: Dictionary = {
       "2. Abra seu arquivo do computador ou celular. O processamento fica local.",
       "3. Siga os passos curtos da página e baixe o arquivo pronto.",
     ],
-    howFoot: "Grátis para sempre · Com anúncios · Funciona no navegador",
+    howFoot: "Grátis para sempre · Sem cadastro · Funciona no navegador",
     whatTitle: "O que é o myonlinepdfeditor.com",
     whatBody:
       "O myonlinepdfeditor.com é um lugar online gratuito para trabalhar com PDFs e arquivos relacionados. Você escolhe uma ferramenta focada, abre um arquivo que já tem, faz a alteração e leva o resultado no download. O catálogo cobre converter, editar e anotar, assinar e enviar, colaborar e compartilhar, assistência de IA e outros utilitários — tudo desbloqueado.",
@@ -111,7 +122,7 @@ export const ptBR: Dictionary = {
     ],
     worldTitle: "Ferramentas grátis para um mundo mais conectado",
     worldBody:
-      "Burocracia não deveria depender de quem pode pagar uma licença. Financiamos o myonlinepdfeditor.com com anúncios para estudantes, clínicas, freelancers e famílias editarem e assinarem no mesmo dia. Processar no navegador também permite trabalhar em dispositivos compartilhados sem deixar documentos na nuvem de outra pessoa.",
+      "Burocracia não deveria depender de quem pode pagar uma licença. O myonlinepdfeditor.com permanece grátis para estudantes, clínicas, freelancers e famílias editarem e assinarem no mesmo dia. Processar no navegador também permite trabalhar em dispositivos compartilhados sem deixar documentos na nuvem de outra pessoa.",
     worldUses: [
       {
         where: "Estudantes e professores",
@@ -335,12 +346,22 @@ export const ptBR: Dictionary = {
     guidanceOnly: "Só orientação — explica conversão no desktop quando o navegador não consegue.",
     noOptions: "Sem opções extras. Envie um arquivo e execute.",
     readyTitle: "Download pronto",
+    doneTitle: "Concluído",
     downloadAgain: "Baixar novamente",
     guideReadyTitle: "Guia pronto",
     guideDownloadAgain: "Baixar o guia novamente",
     guideRun: "Obter guia",
     guideDone:
       "Guia pronto — isto não é um arquivo convertido. Siga os passos no desktop e depois abra o PDF aqui.",
+    processAnother: "Processar outro arquivo",
+    downloadCta: "Baixar",
+    sizeLabel: "Tamanho",
+    pagesLabel: "Páginas",
+    openSuggestedTool: "Tentar {name}",
+    useCamera: "Usar câmera",
+    toolbarMore: "Mostrar ferramentas",
+    toolbarLess: "Ocultar ferramentas",
+    comingSoonBadge: "Em breve",
   },
   toolPage: {
     freeBadge: "grátis para sempre",
@@ -352,13 +373,15 @@ export const ptBR: Dictionary = {
     howToExport: "Como exportar o resultado",
     tidbits: "Dicas e truques",
     faqs: "Perguntas frequentes sobre {name}",
+    guideOnlyBanner:
+      "Esta página é um guia de conversão, não um conversor no navegador. Baixe a nota com os passos no desktop e continue com uma ferramenta PDF compatível.",
   },
   synthesize: {
     whyUse: [
       "Você precisa deste fluxo sem instalar software PDF de desktop.",
       "Quer processamento no navegador quando possível.",
       "Está comparando a cobertura de ferramentas da concorrência no myonlinepdfeditor.com.",
-      "Prefere um conversor gratuito com anúncios sem muro de cadastro.",
+      "Prefere um conversor gratuito sem muro de cadastro.",
     ],
     howToUseTitles: [
       "Abrir a ferramenta",
@@ -394,7 +417,7 @@ export const ptBR: Dictionary = {
     faqs: [
       {
         question: "É grátis?",
-        answer: "Sim. As ferramentas do myonlinepdfeditor.com são grátis para sempre e apoiadas por anúncios.",
+        answer: "Sim. As ferramentas do myonlinepdfeditor.com são grátis para sempre, sem cadastro obrigatório.",
       },
       {
         question: "Vocês enviam meu arquivo?",

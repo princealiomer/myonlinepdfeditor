@@ -33,7 +33,7 @@ export function ToolCopySections({
     <div className="mt-14 space-y-10">
       <section className="surface rounded-2xl p-6 sm:p-8" aria-labelledby="what-heading">
         <h2 id="what-heading" className="display text-2xl font-semibold">
-          {fill(l.whatIs, tool.shortName)}
+          {fill(l.whatIs, tool.name)}
         </h2>
         <p className="mt-4 max-w-3xl text-base leading-relaxed text-ink-soft">
           {copy.whatItIs}
@@ -77,7 +77,7 @@ export function ToolCopySections({
 
       <section className="surface rounded-2xl p-6 sm:p-8" aria-labelledby="howto-heading">
         <h2 id="howto-heading" className="display text-2xl font-semibold">
-          {fill(l.howToUse, tool.shortName)}
+          {fill(l.howToUse, tool.name)}
         </h2>
         <ol className="mt-6 space-y-5">
           {copy.howToUse.map((step, index) => (
@@ -126,7 +126,7 @@ export function ToolCopySections({
 
       <section className="surface rounded-2xl p-6 sm:p-8" aria-labelledby="faq-heading">
         <h2 id="faq-heading" className="display text-2xl font-semibold">
-          {fill(l.faqs, tool.shortName)}
+          {fill(l.faqs, tool.name)}
         </h2>
         <div className="mt-5 space-y-3">
           {copy.faqs.map((faq) => (

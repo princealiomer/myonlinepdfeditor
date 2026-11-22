@@ -29,6 +29,10 @@ export type Dictionary = {
     formatsTitle: string;
     downloadCta: string;
     openFormat: string;
+    /** Localized H1/title for a format index, e.g. "{format} sample documents" */
+    formatTitle: string;
+    /** Localized meta/intro for a format index; {format} and {ext} placeholders */
+    formatIntro: string;
     fileTitle: string;
     fileIntro: string;
     sizeLabel: string;
@@ -45,21 +49,29 @@ export type Dictionary = {
     relatedTools: string;
     language: string;
     breadcrumbTools: string;
+    comingSoon: string;
+    trustBrowser: string;
   };
   categories: Record<ToolCategory, string>;
   footer: {
     blurb: string;
     copyright: string;
+    company: string;
+    about: string;
+    contact: string;
     privacy: string;
+    disclaimer: string;
     terms: string;
     esign: string;
     sitemap: string;
+    lastUpdated: string;
   };
   home: {
     eyebrow: string;
     headline: string;
     subhead: string;
     ctaEdit: string;
+    ctaSign: string;
     ctaBrowse: string;
     howTitle: string;
     howSteps: string[];
@@ -112,6 +124,8 @@ export type Dictionary = {
     howToExport: string;
     tidbits: string;
     faqs: string;
+    /** Shown on availability:guide tool pages instead of English hardcoding */
+    guideOnlyBanner: string;
   };
   workspace: {
     options: string;
@@ -177,12 +191,23 @@ export type Dictionary = {
     guidanceOnly: string;
     noOptions: string;
     readyTitle: string;
+    /** Shown when a tool finishes without a file download (e.g. print, search) */
+    doneTitle: string;
     downloadAgain: string;
     /** Shown instead of readyTitle for availability:guide tools */
     guideReadyTitle: string;
     guideDownloadAgain: string;
     guideRun: string;
     guideDone: string;
+    processAnother: string;
+    downloadCta: string;
+    sizeLabel: string;
+    pagesLabel: string;
+    openSuggestedTool: string;
+    useCamera: string;
+    toolbarMore: string;
+    toolbarLess: string;
+    comingSoonBadge: string;
   };
   synthesize: {
     whyUse: string[];

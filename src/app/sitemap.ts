@@ -18,23 +18,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/sample-documents",
     "/pricing",
     "/about",
+    "/contact",
     "/privacy",
+    "/disclaimer",
     "/terms",
     "/esign-compliance",
   ];
 
-  const staticRoutes: MetadataRoute.Sitemap = LOCALES.flatMap((locale) =>
-    staticPaths.map((path) => {
-      const localized = localePath(locale, path || "/");
-      return {
-        url: `${base}${localized === "/" ? "/" : localized}`,
-        lastModified,
-        changeFrequency:
-          path === "" || path === "/tools" ? "weekly" : "monthly",
-        priority: path === "" ? 1 : path === "/tools" ? 0.9 : 0.6,
-      } as const;
-    }),
-  );
+  // Comparison pages: English only in the sitemap (other locales are noindex).
+  const comparePaths = ["/vs", "/vs/ilovepdf", "/vs/smallpdf"];
+
+  const staticRoutes: MetadataRoute.Sitemap = [
+    ...LOCALES.flatMap((locale) =>
+      staticPaths.map((path) => {
+        const localized = localePath(locale, path || "/");
+        return {
+          url: `${base}${localized === "/" ? "/" : localized}`,
+          lastModified,
+          changeFrequency:
+            path === "" || path === "/tools" ? "weekly" : "monthly",
+          priority: path === "" ? 1 : path === "/tools" ? 0.9 : 0.6,
+        } as const;
+      }),
+    ),
+    ...comparePaths.map((path) => ({
+      url: `${base}${path}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    })),
+  ];
 
   const toolSlugs = allToolSlugs().filter((slug) => {
     const tool = getTool(slug);

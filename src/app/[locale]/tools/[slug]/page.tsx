@@ -9,7 +9,11 @@ import {
   isLocale,
   type Locale,
 } from "@/lib/i18n";
-import { buildMetadata, toolMetaDescription } from "@/lib/seo";
+import {
+  buildMetadata,
+  toolMetaDescription,
+  toolSerpTitle,
+} from "@/lib/seo";
 
 export function generateStaticParams() {
   const slugs = allToolSlugs();
@@ -37,7 +41,7 @@ export async function generateMetadata({
   });
 
   const meta = buildMetadata({
-    title: tool.name,
+    title: toolSerpTitle(tool.name, locale, tool.keywords?.[0]),
     description,
     path: `/tools/${tool.slug}`,
     keywords: tool.keywords,

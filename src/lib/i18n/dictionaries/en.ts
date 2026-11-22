@@ -2,9 +2,9 @@ import type { Dictionary } from "../types";
 
 export const en: Dictionary = {
   meta: {
-    titleHome: "myonlinepdfeditor.com — Free PDF Editor, eSign & Convert",
+    titleHome: "Free Online PDF Editor — Edit, Sign & Convert",
     descriptionHome:
-      "Free online PDF editor, eSign, merge, split, convert, and form tools. No signup. Files never leave your browser. Supported by ads.",
+      "Free online PDF editor, eSign, merge, split, convert, and form tools. No signup. Files stay in your browser for ordinary tools.",
     keywordsHome: [
       "free pdf editor",
       "sign pdf online",
@@ -13,12 +13,12 @@ export const en: Dictionary = {
       "esign",
     ],
     descriptionPrivacy:
-      "How myonlinepdfeditor.com handles privacy, local file processing, and advertising.",
+      "How myonlinepdfeditor.com handles privacy and local file processing in the browser.",
     descriptionTerms: "Terms for using myonlinepdfeditor.com free PDF tools.",
     descriptionEsign:
       "How myonlinepdfeditor.com approaches electronic signatures, consent, and audit-friendly downloads.",
     descriptionPricing:
-      "Every myonlinepdfeditor.com tool is free forever. No plans, trials, or paywalls — ads keep the toolkit open.",
+      "Every myonlinepdfeditor.com tool is free forever. No plans, trials, or paywalls.",
     descriptionAbout:
       "myonlinepdfeditor.com is a free, browser-based PDF toolkit. Edit, sign, and convert on your device without an account.",
     descriptionFeatures:
@@ -42,6 +42,9 @@ export const en: Dictionary = {
     formatsTitle: "Choose a format",
     downloadCta: "Download sample file",
     openFormat: "View sizes & download",
+    formatTitle: "{format} sample documents",
+    formatIntro:
+      "Free {ext} sample files for testing myonlinepdfeditor.com tools. Download a size below, then open it in a converter or editor.",
     fileTitle: "Download {name}",
     fileIntro:
       "This {ext} sample is hosted on myonlinepdfeditor.com for free upload and converter testing.",
@@ -59,6 +62,8 @@ export const en: Dictionary = {
     relatedTools: "Related tools",
     language: "Language",
     breadcrumbTools: "Tools",
+    comingSoon: "Coming soon",
+    trustBrowser: "Processed in your browser — files stay on your device",
   },
   categories: {
     convert: "Convert",
@@ -70,19 +75,25 @@ export const en: Dictionary = {
   },
   footer: {
     blurb:
-      "Free PDF editing, signing, converting, and organizing — processed in your browser. Supported by ads, not paywalls.",
+      "Free PDF editing, signing, converting, and organizing — processed in your browser. No signup and no paywalls.",
     copyright: "All tools free forever.",
-    privacy: "Privacy",
-    terms: "Terms",
+    company: "Company",
+    about: "About us",
+    contact: "Contact",
+    privacy: "Privacy Policy",
+    disclaimer: "Disclaimer",
+    terms: "Terms of Service",
     esign: "eSign compliance",
     sitemap: "Sitemap",
+    lastUpdated: "Last updated",
   },
   home: {
     eyebrow: "myonlinepdfeditor.com",
-    headline: "Every document tool, free for everyone.",
+    headline: "Free online PDF editor — edit, sign, and convert in your browser",
     subhead:
       "myonlinepdfeditor.com is a browser PDF toolkit: edit, sign, merge, split, compress, and convert files on your device. Ads keep every tool open so people anywhere can finish the work without a subscription.",
     ctaEdit: "Edit a PDF free",
+    ctaSign: "Sign a PDF free",
     ctaBrowse: "Browse every tool",
     howTitle: "How to use myonlinepdfeditor.com",
     howSteps: [
@@ -110,7 +121,7 @@ export const en: Dictionary = {
     ],
     worldTitle: "Free tools for a better-connected world",
     worldBody:
-      "Paperwork should not wait on who can afford a license. We fund myonlinepdfeditor.com with ads so students, clinics, freelancers, and families can edit and sign the same day they need the file. Keeping processing in the browser also means you can work on shared or borrowed devices without leaving documents on someone else's cloud.",
+      "Paperwork should not wait on who can afford a license. myonlinepdfeditor.com stays free so students, clinics, freelancers, and families can edit and sign the same day they need the file. Keeping processing in the browser also means you can work on shared or borrowed devices without leaving documents on someone else's cloud.",
     worldUses: [
       {
         where: "Students and teachers",
@@ -215,7 +226,7 @@ export const en: Dictionary = {
       {
         question: "Is every tool really free?",
         answer:
-          "Yes. Ads fund the site, so edit, sign, convert, and the rest stay open for everyone. You do not need an account to use the core tools.",
+          "Yes. Edit, sign, convert, and the rest stay open for everyone. You do not need an account to use the core tools.",
       },
       {
         question: "Do my files leave my computer?",
@@ -273,10 +284,10 @@ export const en: Dictionary = {
   workspace: {
     options: "Options",
     uploadFor: "Upload for {name}",
-    run: "{name}",
+    run: "Run {name}",
     working: "Working…",
     done: "Done — your download should start automatically.",
-    errorGeneric: "Something went wrong.",
+    errorGeneric: "Something went wrong. Try another file or reload the page.",
     pasteContent: "Or paste content",
     pageRanges: "Page ranges (optional)",
     pageRangesHint: "Leave empty to export every page separately.",
@@ -338,12 +349,22 @@ export const en: Dictionary = {
     guidanceOnly: "Guidance only — this tool explains how to convert on desktop when the browser cannot.",
     noOptions: "No extra options for this tool. Upload a file and run.",
     readyTitle: "Download ready",
+    doneTitle: "Done",
     downloadAgain: "Download again",
     guideReadyTitle: "Guidance ready",
     guideDownloadAgain: "Download guidance again",
     guideRun: "Get guidance",
     guideDone:
       "Guidance note ready — this is not a converted file. Follow the desktop steps, then open the PDF here.",
+    processAnother: "Process another file",
+    downloadCta: "Download",
+    sizeLabel: "Size",
+    pagesLabel: "Pages",
+    openSuggestedTool: "Try {name} instead",
+    useCamera: "Use camera",
+    toolbarMore: "Show tools",
+    toolbarLess: "Hide tools",
+    comingSoonBadge: "Coming soon",
   },
   toolPage: {
     freeBadge: "free forever",
@@ -355,13 +376,15 @@ export const en: Dictionary = {
     howToExport: "How to export your result",
     tidbits: "Tidbits & tips",
     faqs: "FAQs about {name}",
+    guideOnlyBanner:
+      "This page is a conversion guide, not an in-browser converter. Download the guidance note for desktop steps, then continue with a supported PDF tool.",
   },
   synthesize: {
     whyUse: [
       "You need this workflow without installing desktop PDF software.",
       "You want processing that stays in the browser when possible.",
       "You are matching competitor tool coverage on myonlinepdfeditor.com.",
-      "You prefer a free, AdSense-funded converter without a signup wall.",
+      "You prefer a free converter without a signup wall.",
     ],
     howToUseTitles: [
       "Open the tool",
@@ -397,7 +420,7 @@ export const en: Dictionary = {
     faqs: [
       {
         question: "Is this free?",
-        answer: "Yes. myonlinepdfeditor.com tools are free forever and supported by ads.",
+        answer: "Yes. myonlinepdfeditor.com tools are free forever with no signup required.",
       },
       {
         question: "Do you upload my file?",

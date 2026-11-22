@@ -29,10 +29,18 @@ export function getLocalizedTool(
   const overlay = TOOL_LOCALES[locale]?.[slug];
   if (!overlay) return base;
 
+  // Many locale overlays leave shortName in English ("Merge PDFs") while
+  // translating name. Prefer the localized name so H2s, upload chrome, and
+  // breadcrumbs do not leak English into non-EN pages.
+  const shortName =
+    overlay.shortName === base.shortName && overlay.name !== base.name
+      ? overlay.name
+      : overlay.shortName;
+
   return {
     ...base,
     name: overlay.name,
-    shortName: overlay.shortName,
+    shortName,
     summary: overlay.summary,
     description: overlay.description,
     howTo: overlay.howTo,

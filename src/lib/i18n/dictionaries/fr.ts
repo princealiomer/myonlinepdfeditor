@@ -4,7 +4,7 @@ export const fr: Dictionary = {
   meta: {
     titleHome: "myonlinepdfeditor.com — Éditeur PDF, signature électronique et conversion gratuits",
     descriptionHome:
-      "Éditeur PDF en ligne gratuit, signature électronique, fusion, division, conversion et formulaires. Sans inscription. Les fichiers ne quittent pas votre navigateur. Soutenu par la publicité.",
+      "Éditeur PDF en ligne gratuit, signature électronique, fusion, division, conversion et formulaires. Sans inscription. Les fichiers restent dans votre navigateur pour les outils habituels.",
     keywordsHome: [
       "éditeur pdf gratuit",
       "signer pdf en ligne",
@@ -13,7 +13,7 @@ export const fr: Dictionary = {
       "signature électronique",
     ],
     descriptionPrivacy:
-      "Comment myonlinepdfeditor.com gère la confidentialité, le traitement local des fichiers et la publicité.",
+      "Comment myonlinepdfeditor.com gère la confidentialité et le traitement local des fichiers.",
     descriptionTerms:
       "Conditions d’utilisation des outils PDF gratuits de myonlinepdfeditor.com.",
     descriptionEsign:
@@ -43,6 +43,9 @@ export const fr: Dictionary = {
     formatsTitle: "Choisir un format",
     downloadCta: "Télécharger le fichier exemple",
     openFormat: "Voir les tailles et télécharger",
+    formatTitle: "Documents d’exemple {format}",
+    formatIntro:
+      "Fichiers d’exemple {ext} gratuits pour tester les outils myonlinepdfeditor.com. Téléchargez une taille, puis ouvrez-la dans un convertisseur ou un éditeur.",
     fileTitle: "Télécharger {name}",
     fileIntro:
       "Cet exemple {ext} est hébergé sur myonlinepdfeditor.com pour tester les imports et conversions.",
@@ -60,6 +63,8 @@ export const fr: Dictionary = {
     relatedTools: "Outils associés",
     language: "Langue",
     breadcrumbTools: "Outils",
+    comingSoon: "Bientôt",
+    trustBrowser: "Traité dans votre navigateur — les fichiers restent sur votre appareil",
   },
   categories: {
     convert: "Convertir",
@@ -71,19 +76,25 @@ export const fr: Dictionary = {
   },
   footer: {
     blurb:
-      "Édition, signature, conversion et organisation de PDF gratuites — traitées dans votre navigateur. Soutenu par la publicité, sans mur payant.",
+      "Édition, signature, conversion et organisation de PDF gratuites — traitées dans votre navigateur. Sans inscription et sans mur payant.",
     copyright: "Tous les outils gratuits pour toujours.",
-    privacy: "Confidentialité",
-    terms: "Conditions",
+    company: "Entreprise",
+    about: "À propos",
+    contact: "Contact",
+    privacy: "Politique de confidentialité",
+    disclaimer: "Avertissement",
+    terms: "Conditions d’utilisation",
     esign: "Conformité signature électronique",
     sitemap: "Plan du site",
+    lastUpdated: "Dernière mise à jour",
   },
   home: {
     eyebrow: "myonlinepdfeditor.com",
     headline: "Tous les outils documentaires, gratuits pour tous.",
     subhead:
-      "myonlinepdfeditor.com est une boîte à outils PDF dans le navigateur : modifier, signer, fusionner, diviser, compresser et convertir vos fichiers sur votre appareil. La publicité garde chaque outil ouvert pour que chacun puisse terminer sans abonnement.",
+      "myonlinepdfeditor.com est une boîte à outils PDF dans le navigateur : modifier, signer, fusionner, diviser, compresser et convertir vos fichiers sur votre appareil. Chaque outil reste ouvert pour que chacun puisse terminer sans abonnement.",
     ctaEdit: "Modifier un PDF gratuitement",
+    ctaSign: "Signer un PDF gratuitement",
     ctaBrowse: "Parcourir tous les outils",
     howTitle: "Comment utiliser myonlinepdfeditor.com",
     howSteps: [
@@ -91,7 +102,7 @@ export const fr: Dictionary = {
       "2. Ouvrez votre fichier depuis votre ordinateur ou téléphone. Le traitement reste local.",
       "3. Suivez les étapes courtes de la page, puis téléchargez le fichier terminé.",
     ],
-    howFoot: "Gratuit pour toujours · Soutenu par la publicité · Dans votre navigateur",
+    howFoot: "Gratuit pour toujours · Sans inscription · Dans votre navigateur",
     whatTitle: "Ce qu'est myonlinepdfeditor.com",
     whatBody:
       "myonlinepdfeditor.com est un lieu en ligne gratuit pour travailler avec des PDF et fichiers associés. Vous choisissez un outil ciblé, ouvrez un fichier que vous avez déjà, faites la modification et récupérez le résultat en téléchargement. Le catalogue couvre convertir, modifier et annoter, signer et envoyer, collaborer et partager, assistance IA et autres utilitaires — tout débloqué.",
@@ -111,7 +122,7 @@ export const fr: Dictionary = {
     ],
     worldTitle: "Des outils gratuits pour un monde mieux connecté",
     worldBody:
-      "La paperasse ne devrait pas dépendre de qui peut payer une licence. Nous finançons myonlinepdfeditor.com par la publicité pour que étudiants, cabinets, indépendants et familles puissent modifier et signer le jour même. Traiter dans le navigateur permet aussi de travailler sur des appareils partagés sans laisser de documents sur le cloud d'autrui.",
+      "La paperasse ne devrait pas dépendre de qui peut payer une licence. myonlinepdfeditor.com reste gratuit pour que étudiants, cabinets, indépendants et familles puissent modifier et signer le jour même. Traiter dans le navigateur permet aussi de travailler sur des appareils partagés sans laisser de documents sur le cloud d'autrui.",
     worldUses: [
       {
         where: "Étudiants et enseignants",
@@ -216,7 +227,7 @@ export const fr: Dictionary = {
       {
         question: "Tous les outils sont-ils vraiment gratuits ?",
         answer:
-          "Oui. La publicité finance le site, donc modifier, signer, convertir et le reste restent ouverts à tous. Aucun compte n'est requis pour les outils principaux.",
+          "Oui. Modifier, signer, convertir et le reste restent ouverts à tous. Aucun compte n'est requis pour les outils principaux.",
       },
       {
         question: "Mes fichiers quittent-ils mon ordinateur ?",
@@ -241,7 +252,7 @@ export const fr: Dictionary = {
       {
         question: "Pourquoi tout offrir gratuitement ?",
         answer:
-          "Partout, les gens doivent finaliser paperasse, travail scolaire et contrats sans acheter de logiciel bureau ni abonnement. La publicité garde la boîte à outils ouverte pour que le coût ne soit pas un obstacle.",
+          "Partout, les gens doivent finaliser paperasse, travail scolaire et contrats sans acheter de logiciel bureau ni abonnement. La boîte à outils reste ouverte pour que le coût ne soit pas un obstacle.",
       },
       {
         question: "Les signatures électroniques sont-elles juridiquement utiles ?",
@@ -335,12 +346,22 @@ export const fr: Dictionary = {
     guidanceOnly: "Conseils uniquement — explique la conversion bureau si le navigateur ne peut pas.",
     noOptions: "Pas d’options supplémentaires. Téléversez un fichier et lancez.",
     readyTitle: "Téléchargement prêt",
+    doneTitle: "Terminé",
     downloadAgain: "Télécharger à nouveau",
     guideReadyTitle: "Guide prêt",
     guideDownloadAgain: "Télécharger le guide à nouveau",
     guideRun: "Obtenir le guide",
     guideDone:
       "Guide prêt — ce n’est pas un fichier converti. Suivez les étapes sur ordinateur, puis ouvrez le PDF ici.",
+    processAnother: "Traiter un autre fichier",
+    downloadCta: "Télécharger",
+    sizeLabel: "Taille",
+    pagesLabel: "Pages",
+    openSuggestedTool: "Essayer {name}",
+    useCamera: "Utiliser la caméra",
+    toolbarMore: "Afficher les outils",
+    toolbarLess: "Masquer les outils",
+    comingSoonBadge: "Bientôt",
   },
   toolPage: {
     freeBadge: "gratuit pour toujours",
@@ -352,13 +373,15 @@ export const fr: Dictionary = {
     howToExport: "Comment exporter votre résultat",
     tidbits: "Astuces et conseils",
     faqs: "FAQ sur {name}",
+    guideOnlyBanner:
+      "Cette page est un guide de conversion, pas un convertisseur dans le navigateur. Téléchargez la note avec les étapes bureau, puis continuez avec un outil PDF pris en charge.",
   },
   synthesize: {
     whyUse: [
       "Vous avez besoin de ce flux sans installer de logiciel PDF bureau.",
       "Vous voulez un traitement dans le navigateur quand c'est possible.",
       "Vous comparez la couverture d'outils concurrents sur myonlinepdfeditor.com.",
-      "Vous préférez un convertisseur gratuit financé par la publicité sans mur d'inscription.",
+      "Vous préférez un convertisseur gratuit sans mur d'inscription.",
     ],
     howToUseTitles: [
       "Ouvrir l'outil",
@@ -394,7 +417,7 @@ export const fr: Dictionary = {
     faqs: [
       {
         question: "Est-ce gratuit ?",
-        answer: "Oui. Les outils myonlinepdfeditor.com sont gratuits pour toujours et soutenus par la publicité.",
+        answer: "Oui. Les outils myonlinepdfeditor.com sont gratuits pour toujours, sans inscription requise.",
       },
       {
         question: "Importez-vous mon fichier ?",

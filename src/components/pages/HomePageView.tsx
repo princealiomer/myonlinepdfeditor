@@ -51,15 +51,24 @@ export function HomePageView({
           <h1 className="display mt-3 max-w-3xl text-[2.15rem] font-semibold leading-[1.08] text-ink sm:text-5xl md:text-6xl">
             {h.headline}
           </h1>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-            {h.popularBody}
+          <p className="mt-3 max-w-xl text-sm font-medium text-teal sm:text-base">
+            {dict.common.trustBrowser}
           </p>
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <div className="mt-5 max-w-xl">
+            <HomeToolSearch locale={locale} dict={dict} />
+          </div>
+          <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
               href={localePath(locale, "/tools/edit-pdf")}
               className="btn btn-accent w-full no-underline sm:w-auto"
             >
               {h.ctaEdit}
+            </Link>
+            <Link
+              href={localePath(locale, "/tools/sign-pdf")}
+              className="btn btn-ghost w-full no-underline sm:w-auto"
+            >
+              {h.ctaSign}
             </Link>
             <Link
               href={localePath(locale, "/tools")}
@@ -68,17 +77,17 @@ export function HomePageView({
               {h.ctaBrowse}
             </Link>
           </div>
-          <div className="mt-2 max-w-xl">
-            <HomeToolSearch locale={locale} dict={dict} />
-          </div>
           <div className="mt-8">
             <div className="mb-4 flex items-end justify-between gap-4">
-              <h2 className="display text-xl font-semibold sm:text-2xl">
-                {h.popularTitle}
-              </h2>
+              <div>
+                <h2 className="display text-xl font-semibold sm:text-2xl">
+                  {h.popularTitle}
+                </h2>
+                <p className="mt-1 text-sm text-muted">{h.popularBody}</p>
+              </div>
               <Link
                 href={localePath(locale, "/tools")}
-                className="text-sm font-semibold text-teal no-underline"
+                className="shrink-0 text-sm font-semibold text-teal no-underline"
               >
                 {h.viewCatalog}
               </Link>
@@ -95,35 +104,6 @@ export function HomePageView({
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <AdSlot className="mb-12 rounded-xl" />
       </div>
-
-      <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
-        <div className="surface relative rounded-[1.5rem] p-5 sm:p-6">
-          <p className="text-sm font-semibold text-teal">{h.howTitle}</p>
-          <ol className="mt-4 space-y-3 text-sm leading-relaxed text-ink-soft">
-            {h.howSteps.map((step) => (
-              <li key={step}>{step}</li>
-            ))}
-          </ol>
-          <p className="mt-6 text-xs uppercase tracking-[0.14em] text-muted">
-            {h.howFoot}
-          </p>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
-        <h2 className="display text-3xl font-semibold">{h.whatTitle}</h2>
-        <p className="mt-3 max-w-3xl text-base leading-relaxed text-muted">
-          {h.whatBody.replace("{count}", String(TOOLS.length))}
-        </p>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {h.pillars.map((item) => (
-            <div key={item.title} className="surface rounded-2xl p-5">
-              <h3 className="text-lg font-semibold">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{item.body}</p>
-            </div>
-          ))}
-        </div>
-      </section>
 
       <section className="border-y border-mist bg-white/50 py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -236,6 +216,35 @@ export function HomePageView({
               );
             })}
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+        <div className="surface relative rounded-[1.5rem] p-5 sm:p-6">
+          <p className="text-sm font-semibold text-teal">{h.howTitle}</p>
+          <ol className="mt-4 space-y-3 text-sm leading-relaxed text-ink-soft">
+            {h.howSteps.map((step) => (
+              <li key={step}>{step}</li>
+            ))}
+          </ol>
+          <p className="mt-6 text-xs uppercase tracking-[0.14em] text-muted">
+            {h.howFoot}
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+        <h2 className="display text-3xl font-semibold">{h.whatTitle}</h2>
+        <p className="mt-3 max-w-3xl text-base leading-relaxed text-muted">
+          {h.whatBody.replace("{count}", String(TOOLS.length))}
+        </p>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {h.pillars.map((item) => (
+            <div key={item.title} className="surface rounded-2xl p-5">
+              <h3 className="text-lg font-semibold">{item.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{item.body}</p>
+            </div>
+          ))}
         </div>
       </section>
 

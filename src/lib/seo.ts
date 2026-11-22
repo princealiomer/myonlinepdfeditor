@@ -25,6 +25,37 @@ function languageAlternates(path: string) {
   return languages;
 }
 
+/**
+ * SERP title for a tool page (before brand suffix).
+ * Puts a clear free/online modifier on English money pages without stuffing
+ * locales that already bake intent into the localized name.
+ */
+export function toolSerpTitle(
+  name: string,
+  locale: Locale = DEFAULT_LOCALE,
+  primaryKeyword?: string,
+): string {
+  if (
+    /\b(free|gratis|gratuit|kostenlos|無料|grátis|online)\b/i.test(name)
+  ) {
+    return name;
+  }
+  if (locale !== DEFAULT_LOCALE) return name;
+  // Prefer a sharper query when the display name is brand-y ("PDF Editor").
+  const keyword = primaryKeyword?.trim();
+  if (
+    keyword &&
+    keyword.length >= 6 &&
+    keyword.length <= 40 &&
+    !/^pdf editor$/i.test(keyword)
+  ) {
+    const base = /pdf/i.test(keyword) ? keyword : `${keyword} PDF`;
+    if (!/\b(free|online)\b/i.test(base)) return `${base} Free Online`;
+    return base;
+  }
+  return `${name} Free Online`;
+}
+
 /** Build a ~140–160 character meta description for a tool page. */
 export function toolMetaDescription(input: {
   name: string;

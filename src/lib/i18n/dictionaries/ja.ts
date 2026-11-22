@@ -4,7 +4,7 @@ export const ja: Dictionary = {
   meta: {
     titleHome: "myonlinepdfeditor.com — 無料PDF編集・電子署名・変換",
     descriptionHome:
-      "無料のオンラインPDFエディター、電子署名、結合・分割・変換・フォームツール。登録不要。ファイルはブラウザから送信されません。広告で運営。",
+      "無料のオンラインPDFエディター、電子署名、結合・分割・変換・フォームツール。登録不要。通常ツールではファイルはブラウザ内に留まります。",
     keywordsHome: [
       "無料 pdf 編集",
       "pdf 署名 オンライン",
@@ -13,13 +13,13 @@ export const ja: Dictionary = {
       "電子署名",
     ],
     descriptionPrivacy:
-      "myonlinepdfeditor.comのプライバシー、ローカルファイル処理、広告の取り扱いについて。",
+      "myonlinepdfeditor.comのプライバシーとローカルファイル処理について。",
     descriptionTerms:
       "myonlinepdfeditor.comの無料PDFツールをご利用いただく際の利用規約。",
     descriptionEsign:
       "myonlinepdfeditor.comにおける電子署名、同意、監査に適したダウンロードの考え方。",
     descriptionPricing:
-      "myonlinepdfeditor.comのツールはすべてずっと無料。プランやペイウォールはなく、広告で運営しています。",
+      "myonlinepdfeditor.comのツールはすべてずっと無料。プランやペイウォールはありません。",
     descriptionAbout:
       "myonlinepdfeditor.comはブラウザで動く無料PDFツールキットです。アカウントなしで端末上で編集・署名・変換できます。",
     descriptionFeatures:
@@ -43,6 +43,9 @@ export const ja: Dictionary = {
     formatsTitle: "形式を選ぶ",
     downloadCta: "サンプルをダウンロード",
     openFormat: "サイズを見てダウンロード",
+    formatTitle: "{format} のサンプル文書",
+    formatIntro:
+      "myonlinepdfeditor.com のツール検証用の無料 {ext} サンプルです。サイズを選んでダウンロードし、変換や編集ツールで開いてください。",
     fileTitle: "{name} をダウンロード",
     fileIntro:
       "この {ext} サンプルはアップロードと変換テスト用に myonlinepdfeditor.com で提供しています。",
@@ -60,6 +63,8 @@ export const ja: Dictionary = {
     relatedTools: "関連ツール",
     language: "言語",
     breadcrumbTools: "ツール",
+    comingSoon: "近日公開",
+    trustBrowser: "ブラウザで処理 — ファイルは端末内に留まります",
   },
   categories: {
     convert: "変換",
@@ -71,19 +76,25 @@ export const ja: Dictionary = {
   },
   footer: {
     blurb:
-      "PDFの編集・署名・変換・整理を無料で。処理はブラウザ内で完結。広告支援、ペイウォールなし。",
+      "PDFの編集・署名・変換・整理を無料で。処理はブラウザ内で完結。登録不要、ペイウォールなし。",
     copyright: "すべてのツールがずっと無料。",
-    privacy: "プライバシー",
+    company: "会社情報",
+    about: "私たちについて",
+    contact: "お問い合わせ",
+    privacy: "プライバシーポリシー",
+    disclaimer: "免責事項",
     terms: "利用規約",
     esign: "電子署名のコンプライアンス",
     sitemap: "サイトマップ",
+    lastUpdated: "最終更新",
   },
   home: {
     eyebrow: "myonlinepdfeditor.com",
     headline: "ドキュメント作業に必要なツールを、すべて無料で。",
     subhead:
-      "myonlinepdfeditor.comはブラウザ上のPDFツールキットです。端末上で編集・署名・結合・分割・圧縮・変換ができます。広告によりすべてのツールを開放し、サブスクなしで作業を完了できます。",
+      "myonlinepdfeditor.comはブラウザ上のPDFツールキットです。端末上で編集・署名・結合・分割・圧縮・変換ができます。すべてのツールが開放されており、サブスクなしで作業を完了できます。",
     ctaEdit: "PDFを無料で編集",
+    ctaSign: "PDFに無料で署名",
     ctaBrowse: "すべてのツールを見る",
     howTitle: "myonlinepdfeditor.comの使い方",
     howSteps: [
@@ -91,7 +102,7 @@ export const ja: Dictionary = {
       "2. PCやスマホからファイルを開きます。処理はローカルで行われます。",
       "3. 画面上の短い手順に従い、完成ファイルをダウンロードします。",
     ],
-    howFoot: "ずっと無料 · 広告支援 · ブラウザで利用可能",
+    howFoot: "ずっと無料 · 登録不要 · ブラウザで利用可能",
     whatTitle: "myonlinepdfeditor.comとは",
     whatBody:
       "myonlinepdfeditor.comはPDFと関連ファイルを扱う無料のオンラインサービスです。目的のツールを選び、手持ちのファイルを開いて変更し、結果をダウンロードします。変換、編集・注釈、署名・送信、共同作業・共有、AI支援、その他のユーティリティがすべて利用可能です。",
@@ -111,7 +122,7 @@ export const ja: Dictionary = {
     ],
     worldTitle: "つながる世界のための無料ツール",
     worldBody:
-      "書類仕事はライセンス代の有無で止まるべきではありません。myonlinepdfeditor.comは広告で運営し、学生・クリニック・フリーランス・家族が必要な当日に編集・署名できるようにしています。ブラウザ内処理により、共有端末でも他人のクラウドに文書を残さず作業できます。",
+      "書類仕事はライセンス代の有無で止まるべきではありません。myonlinepdfeditor.comは無料のまま、学生・クリニック・フリーランス・家族が必要な当日に編集・署名できるようにしています。ブラウザ内処理により、共有端末でも他人のクラウドに文書を残さず作業できます。",
     worldUses: [
       {
         where: "学生・教職員",
@@ -216,7 +227,7 @@ export const ja: Dictionary = {
       {
         question: "本当にすべて無料ですか？",
         answer:
-          "はい。広告で運営しているため、編集・署名・変換などは誰でも利用できます。主要ツールにアカウントは不要です。",
+          "はい。編集・署名・変換などは誰でも利用できます。主要ツールにアカウントは不要です。",
       },
       {
         question: "ファイルはPCから送信されますか？",
@@ -241,7 +252,7 @@ export const ja: Dictionary = {
       {
         question: "なぜすべて無料なのですか？",
         answer:
-          "世界中の人が、デスクトップソフトやサブスクなしで書類・学業・契約を終えたいからです。広告によりツールキットを開放し、費用を壁にしません。",
+          "世界中の人が、デスクトップソフトやサブスクなしで書類・学業・契約を終えたいからです。ツールキットを開放し、費用を壁にしません。",
       },
       {
         question: "電子署名は法的に有効ですか？",
@@ -335,12 +346,22 @@ export const ja: Dictionary = {
     guidanceOnly: "案内のみ — ブラウザで変換できない場合のデスクトップ手順です。",
     noOptions: "追加オプションはありません。ファイルをアップロードして実行してください。",
     readyTitle: "ダウンロード準備完了",
+    doneTitle: "完了",
     downloadAgain: "もう一度ダウンロード",
     guideReadyTitle: "ガイドの準備完了",
     guideDownloadAgain: "ガイドを再ダウンロード",
     guideRun: "ガイドを入手",
     guideDone:
       "ガイドの準備完了です。変換ファイルではありません。手順に沿ってデスクトップで変換し、PDFをここで開いてください。",
+    processAnother: "別のファイルを処理",
+    downloadCta: "ダウンロード",
+    sizeLabel: "サイズ",
+    pagesLabel: "ページ",
+    openSuggestedTool: "{name}を試す",
+    useCamera: "カメラを使う",
+    toolbarMore: "ツールを表示",
+    toolbarLess: "ツールを隠す",
+    comingSoonBadge: "近日公開",
   },
   toolPage: {
     freeBadge: "ずっと無料",
@@ -352,13 +373,15 @@ export const ja: Dictionary = {
     howToExport: "結果のエクスポート方法",
     tidbits: "ヒントと豆知識",
     faqs: "{name}に関するFAQ",
+    guideOnlyBanner:
+      "このページは変換ガイドであり、ブラウザ内コンバーターではありません。デスクトップ手順のメモをダウンロードし、対応するPDFツールで続けてください。",
   },
   synthesize: {
     whyUse: [
       "デスクトップPDFソフトを入れずにこのワークフローが必要な場合。",
       "可能な限りブラウザ内で処理したい場合。",
       "myonlinepdfeditor.comで競合と同等のツール網を揃えたい場合。",
-      "登録ウォールのない、広告支援の無料コンバーターを好む場合。",
+      "登録ウォールのない無料コンバーターを好む場合。",
     ],
     howToUseTitles: [
       "ツールを開く",
@@ -394,7 +417,7 @@ export const ja: Dictionary = {
     faqs: [
       {
         question: "無料ですか？",
-        answer: "はい。myonlinepdfeditor.comのツールはずっと無料で、広告により運営されています。",
+        answer: "はい。myonlinepdfeditor.comのツールはずっと無料で、登録は不要です。",
       },
       {
         question: "ファイルはアップロードされますか？",

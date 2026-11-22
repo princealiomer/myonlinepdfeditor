@@ -4,7 +4,7 @@ export const de: Dictionary = {
   meta: {
     titleHome: "myonlinepdfeditor.com — Kostenloser PDF-Editor, eSign & Konvertieren",
     descriptionHome:
-      "Kostenloser Online-PDF-Editor, eSign, Zusammenführen, Teilen, Konvertieren und Formulare. Keine Anmeldung. Dateien verlassen Ihren Browser nicht. Finanziert durch Werbung.",
+      "Kostenloser Online-PDF-Editor, eSign, Zusammenführen, Teilen, Konvertieren und Formulare. Keine Anmeldung. Bei gewöhnlichen Tools bleiben Dateien in Ihrem Browser.",
     keywordsHome: [
       "kostenloser pdf editor",
       "pdf online unterschreiben",
@@ -13,13 +13,13 @@ export const de: Dictionary = {
       "esign",
     ],
     descriptionPrivacy:
-      "Wie myonlinepdfeditor.com mit Datenschutz, lokaler Dateiverarbeitung und Werbung umgeht.",
+      "Wie myonlinepdfeditor.com mit Datenschutz und lokaler Dateiverarbeitung umgeht.",
     descriptionTerms:
       "Nutzungsbedingungen für die kostenlosen PDF-Tools von myonlinepdfeditor.com.",
     descriptionEsign:
       "Wie myonlinepdfeditor.com elektronische Signaturen, Einwilligung und auditfreundliche Downloads handhabt.",
     descriptionPricing:
-      "Jedes Tool auf myonlinepdfeditor.com ist für immer kostenlos. Keine Pläne oder Paywalls — Werbung hält den Baukasten offen.",
+      "Jedes Tool auf myonlinepdfeditor.com ist für immer kostenlos. Keine Pläne oder Paywalls.",
     descriptionAbout:
       "myonlinepdfeditor.com ist ein kostenloses PDF-Toolkit im Browser. Bearbeiten, signieren und konvertieren auf Ihrem Gerät ohne Konto.",
     descriptionFeatures:
@@ -43,6 +43,9 @@ export const de: Dictionary = {
     formatsTitle: "Format wählen",
     downloadCta: "Beispieldatei herunterladen",
     openFormat: "Größen anzeigen & herunterladen",
+    formatTitle: "{format}-Beispieldokumente",
+    formatIntro:
+      "Kostenlose {ext}-Beispieldateien zum Testen der Tools auf myonlinepdfeditor.com. Laden Sie eine Größe herunter und öffnen Sie sie in einem Konverter oder Editor.",
     fileTitle: "{name} herunterladen",
     fileIntro:
       "Diese {ext}-Beispieldatei liegt auf myonlinepdfeditor.com für Upload- und Konvertertests.",
@@ -60,6 +63,8 @@ export const de: Dictionary = {
     relatedTools: "Verwandte Tools",
     language: "Sprache",
     breadcrumbTools: "Tools",
+    comingSoon: "Demnächst",
+    trustBrowser: "Im Browser verarbeitet — Dateien bleiben auf Ihrem Gerät",
   },
   categories: {
     convert: "Konvertieren",
@@ -71,19 +76,25 @@ export const de: Dictionary = {
   },
   footer: {
     blurb:
-      "Kostenloses Bearbeiten, Signieren, Konvertieren und Organisieren von PDFs — verarbeitet in Ihrem Browser. Finanziert durch Werbung, ohne Paywall.",
+      "Kostenloses Bearbeiten, Signieren, Konvertieren und Organisieren von PDFs — verarbeitet in Ihrem Browser. Keine Anmeldung, ohne Paywall.",
     copyright: "Alle Tools für immer kostenlos.",
-    privacy: "Datenschutz",
+    company: "Unternehmen",
+    about: "Über uns",
+    contact: "Kontakt",
+    privacy: "Datenschutzerklärung",
+    disclaimer: "Haftungsausschluss",
     terms: "Nutzungsbedingungen",
     esign: "eSign-Konformität",
     sitemap: "Sitemap",
+    lastUpdated: "Zuletzt aktualisiert",
   },
   home: {
     eyebrow: "myonlinepdfeditor.com",
     headline: "Alle Dokumenten-Tools, für alle kostenlos.",
     subhead:
-      "myonlinepdfeditor.com ist ein PDF-Toolkit im Browser: Bearbeiten, Signieren, Zusammenführen, Teilen, Komprimieren und Konvertieren auf Ihrem Gerät. Werbung hält jedes Tool offen, damit Menschen überall die Arbeit ohne Abo erledigen können.",
+      "myonlinepdfeditor.com ist ein PDF-Toolkit im Browser: Bearbeiten, Signieren, Zusammenführen, Teilen, Komprimieren und Konvertieren auf Ihrem Gerät. Jedes Tool bleibt offen, damit Menschen überall die Arbeit ohne Abo erledigen können.",
     ctaEdit: "PDF kostenlos bearbeiten",
+    ctaSign: "PDF kostenlos unterschreiben",
     ctaBrowse: "Alle Tools durchsuchen",
     howTitle: "So nutzen Sie myonlinepdfeditor.com",
     howSteps: [
@@ -111,7 +122,7 @@ export const de: Dictionary = {
     ],
     worldTitle: "Kostenlose Tools für eine besser vernetzte Welt",
     worldBody:
-      "Papierkram sollte nicht davon abhängen, wer sich eine Lizenz leisten kann. Wir finanzieren myonlinepdfeditor.com mit Werbung, damit Studierende, Praxen, Freelancer und Familien noch am selben Tag bearbeiten und unterschreiben können. Verarbeitung im Browser bedeutet auch: Arbeit auf geteilten Geräten, ohne Dokumente in fremden Clouds zu hinterlassen.",
+      "Papierkram sollte nicht davon abhängen, wer sich eine Lizenz leisten kann. myonlinepdfeditor.com bleibt kostenlos, damit Studierende, Praxen, Freelancer und Familien noch am selben Tag bearbeiten und unterschreiben können. Verarbeitung im Browser bedeutet auch: Arbeit auf geteilten Geräten, ohne Dokumente in fremden Clouds zu hinterlassen.",
     worldUses: [
       {
         where: "Studierende und Lehrkräfte",
@@ -216,7 +227,7 @@ export const de: Dictionary = {
       {
         question: "Sind wirklich alle Tools kostenlos?",
         answer:
-          "Ja. Werbung finanziert die Seite, damit Bearbeiten, Signieren, Konvertieren und der Rest für alle offen bleiben. Für die Kern-Tools brauchen Sie kein Konto.",
+          "Ja. Bearbeiten, Signieren, Konvertieren und der Rest bleiben für alle offen. Für die Kern-Tools brauchen Sie kein Konto.",
       },
       {
         question: "Verlassen meine Dateien meinen Computer?",
@@ -241,7 +252,7 @@ export const de: Dictionary = {
       {
         question: "Warum sind alle Tools kostenlos?",
         answer:
-          "Menschen überall müssen Papierkram, Schularbeit und Verträge ohne Desktop-Software oder Abo erledigen. Werbung hält das Toolkit offen, damit Kosten keine Hürde sind.",
+          "Menschen überall müssen Papierkram, Schularbeit und Verträge ohne Desktop-Software oder Abo erledigen. Das Toolkit bleibt offen, damit Kosten keine Hürde sind.",
       },
       {
         question: "Sind elektronische Signaturen rechtlich nutzbar?",
@@ -335,12 +346,22 @@ export const de: Dictionary = {
     guidanceOnly: "Nur Hinweise — erklärt Desktop-Konvertierung, wenn der Browser es nicht kann.",
     noOptions: "Keine Extra-Optionen. Datei hochladen und starten.",
     readyTitle: "Download bereit",
+    doneTitle: "Fertig",
     downloadAgain: "Erneut herunterladen",
     guideReadyTitle: "Anleitung bereit",
     guideDownloadAgain: "Anleitung erneut herunterladen",
     guideRun: "Anleitung holen",
     guideDone:
       "Anleitung bereit — keine Konvertierung. Folgen Sie den Desktop-Schritten und öffnen Sie danach das PDF hier.",
+    processAnother: "Weitere Datei verarbeiten",
+    downloadCta: "Herunterladen",
+    sizeLabel: "Größe",
+    pagesLabel: "Seiten",
+    openSuggestedTool: "{name} ausprobieren",
+    useCamera: "Kamera nutzen",
+    toolbarMore: "Tools zeigen",
+    toolbarLess: "Tools ausblenden",
+    comingSoonBadge: "Demnächst",
   },
   toolPage: {
     freeBadge: "für immer kostenlos",
@@ -352,6 +373,8 @@ export const de: Dictionary = {
     howToExport: "So exportieren Sie Ihr Ergebnis",
     tidbits: "Tipps & Hinweise",
     faqs: "FAQ zu {name}",
+    guideOnlyBanner:
+      "Diese Seite ist eine Konvertierungsanleitung, kein Browser-Konverter. Laden Sie die Desktop-Schritte herunter und fahren Sie mit einem unterstützten PDF-Tool fort.",
   },
   synthesize: {
     whyUse: [
