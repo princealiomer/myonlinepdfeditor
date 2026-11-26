@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { AdSlot } from "@/components/AdSlot";
 import {
   formatBytes,
   type SampleFormat,
@@ -17,6 +16,10 @@ export function SampleFormatView({
   dict: Dictionary;
 }) {
   const s = dict.samplesPage;
+  const title = s.formatTitle.replace("{format}", format.shortName);
+  const intro = s.formatIntro
+    .replace("{format}", format.shortName)
+    .replace("{ext}", format.extension.toUpperCase());
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
@@ -32,13 +35,17 @@ export function SampleFormatView({
       </nav>
 
       <h1 className="display text-[1.85rem] font-semibold sm:text-4xl">
-        {format.name}
+        {title}
       </h1>
       <p className="mt-3 text-base leading-relaxed text-muted">
-        {format.description}
+        {intro}
       </p>
-
-      <AdSlot className="my-8 rounded-xl" />
+      <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+        Download a sample, then open the matching converter or editor on
+        myonlinepdfeditor.com to practice the workflow before you use a real
+        file. Samples are for testing uploads and layout — they are not legal
+        templates.
+      </p>
 
       <ul className="space-y-3">
         {format.files.map((file) => (

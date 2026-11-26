@@ -101,10 +101,6 @@ export function HomePageView({
         </div>
       </section>
 
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <AdSlot className="mb-12 rounded-xl" />
-      </div>
-
       <section className="border-y border-mist bg-white/50 py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h2 className="display text-3xl font-semibold">{h.worldTitle}</h2>
@@ -262,7 +258,21 @@ export function HomePageView({
             </details>
           ))}
         </div>
+        <p className="mt-8 text-sm text-muted">
+          Want longer walkthroughs? Read our{" "}
+          <Link
+            href={localePath(locale, "/guides")}
+            className="font-semibold text-teal no-underline"
+          >
+            PDF guides
+          </Link>{" "}
+          for privacy, merge workflows, and signing tips.
+        </p>
       </section>
+
+      <div className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+        <AdSlot className="rounded-xl" />
+      </div>
     </>
   );
 }

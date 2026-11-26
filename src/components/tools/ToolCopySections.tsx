@@ -1,5 +1,4 @@
 import type { Tool, ToolCopy } from "@/lib/catalog";
-import { AdSlot } from "@/components/AdSlot";
 import type { Dictionary } from "@/lib/i18n";
 
 type ToolCopySectionsProps = {
@@ -72,8 +71,6 @@ export function ToolCopySections({
           </ul>
         </div>
       </section>
-
-      <AdSlot className="rounded-xl" />
 
       <section className="surface rounded-2xl p-6 sm:p-8" aria-labelledby="howto-heading">
         <h2 id="howto-heading" className="display text-2xl font-semibold">

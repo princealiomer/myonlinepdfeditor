@@ -1,7 +1,8 @@
 "use client";
 
-import { useDeferredValue, useMemo, useState } from "react";
+import { useDeferredValue, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { CategoryIcons8Icon } from "@/components/Icons8Icon";
 import { ToolCard } from "@/components/ToolCard";
 import { NAV_TOOL_GROUPS } from "@/lib/catalog/nav-tools";
@@ -18,6 +19,13 @@ const CATEGORY_ORDER: ToolCategory[] = [
   "other",
 ];
 
+function parseCategory(value: string | null): "all" | ToolCategory {
+  if (value && (CATEGORY_ORDER as string[]).includes(value)) {
+    return value as ToolCategory;
+  }
+  return "all";
+}
+
 export function ToolsCatalog({
   locale,
   dict,
@@ -25,9 +33,33 @@ export function ToolsCatalog({
   locale: Locale;
   dict: Dictionary;
 }) {
-  const [query, setQuery] = useState("");
-  const [category, setCategory] = useState<"all" | ToolCategory>("all");
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const categoryFromUrl = parseCategory(searchParams.get("category"));
+
+  const [query, setQuery] = useState(searchParams.get("q") || "");
+  const [category, setCategory] = useState<"all" | ToolCategory>(categoryFromUrl);
   const deferredQuery = useDeferredValue(query.trim().toLowerCase());
+
+  useEffect(() => {
+    setCategory(categoryFromUrl);
+  }, [categoryFromUrl]);
+
+  useEffect(() => {
+    const params = new URLSearchParams(searchParams.toString());
+    if (category === "all") params.delete("category");
+    else params.set("category", category);
+
+    const q = query.trim();
+    if (q) params.set("q", q);
+    else params.delete("q");
+
+    const next = params.toString();
+    const current = searchParams.toString();
+    if (next === current) return;
+    router.replace(next ? `${pathname}?${next}` : pathname, { scroll: false });
+  }, [category, query, pathname, router, searchParams]);
 
   const groups = useMemo(() => {
     return NAV_TOOL_GROUPS.map((group) => {
@@ -41,6 +73,14 @@ export function ToolsCatalog({
         .filter(Boolean) as NonNullable<ReturnType<typeof getLocalizedTool>>[];
 
       const filtered = items.filter((tool) => {
+        // Hide unfinished / guide-only stubs from the catalog so reviewers
+        // do not see “Coming soon” inventory during AdSense checks.
+        if (
+          tool.availability === "guide" ||
+          tool.engine === "format-advice"
+        ) {
+          return false;
+        }
         if (category !== "all" && tool.category !== category) return false;
         if (!deferredQuery) return true;
         const hay = [
@@ -113,7 +153,7 @@ export function ToolsCatalog({
           {groups.map((group) => (
             <section
               key={group.key}
-              id={group.label.toLowerCase().replace(/\s+/g, "-")}
+              id={group.category || group.key.toLowerCase().replace(/\s+/g, "-")}
             >
               <h2 className="display flex items-center gap-3 text-2xl font-semibold">
                 {group.category ? (

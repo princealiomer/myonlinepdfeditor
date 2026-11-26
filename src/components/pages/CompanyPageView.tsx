@@ -105,7 +105,10 @@ export function CompanyPageView({
         ))}
       </nav>
 
-      <AdSlot className="mt-10 rounded-xl" />
+      {/* Ads only on longer policy/about pages — skip thin contact/disclaimer. */}
+      {id === "about" || id === "privacy" || id === "terms" ? (
+        <AdSlot className="mt-10 rounded-xl" />
+      ) : null}
     </article>
   );
 }

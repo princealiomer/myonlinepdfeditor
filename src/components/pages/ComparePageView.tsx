@@ -113,8 +113,6 @@ export function ComparePageView({
         </div>
       </section>
 
-      <AdSlot className="mt-10 rounded-xl" />
-
       <section className="mt-10">
         <h2 className="display text-2xl font-semibold">
           Switch from {page.competitorName} in minutes
@@ -182,6 +180,8 @@ export function ComparePageView({
           {page.competitorName} pricing ↗
         </a>
       </div>
+
+      <AdSlot className="mt-10 rounded-xl" />
     </article>
   );
 }

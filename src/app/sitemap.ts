@@ -25,8 +25,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/esign-compliance",
   ];
 
-  // Comparison pages: English only in the sitemap (other locales are noindex).
-  const comparePaths = ["/vs", "/vs/ilovepdf", "/vs/smallpdf"];
+  // Comparison + guide pages: English only in the sitemap (other locales are noindex).
+  const comparePaths = [
+    "/vs",
+    "/vs/ilovepdf",
+    "/vs/smallpdf",
+    "/guides",
+    "/guides/browser-pdf-privacy",
+    "/guides/merge-pdf-without-messing-up-order",
+    "/guides/esign-pdf-checklist",
+    "/guides/free-pdf-editor-vs-paid",
+  ];
 
   const staticRoutes: MetadataRoute.Sitemap = [
     ...LOCALES.flatMap((locale) =>

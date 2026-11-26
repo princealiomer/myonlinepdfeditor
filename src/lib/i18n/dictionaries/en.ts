@@ -263,6 +263,31 @@ export const en: Dictionary = {
         answer:
           "No. myonlinepdfeditor.com runs in a modern browser on desktop or mobile. Open the site, pick a tool, and work with files already on your device.",
       },
+      {
+        question: "Where can I learn longer workflows?",
+        answer:
+          "Open the Guides section for original articles on browser PDF privacy, merging without breaking page order, e-sign checklists, and free versus paid editors. Each guide links back to the matching tools.",
+      },
+      {
+        question: "Why do I see advertisements?",
+        answer:
+          "Ads fund hosting and development so the PDF catalog can stay free. Ads are placed after the main explanations on content-rich pages, not on empty shells. Tools keep working if you use an ad blocker.",
+      },
+      {
+        question: "Is the site still under construction?",
+        answer:
+          "No. The public catalog lists finished browser tools with instructions and FAQs. Niche formats that only have desktop guidance are labeled as guides and are not presented as unfinished converters.",
+      },
+      {
+        question: "Who operates myonlinepdfeditor.com?",
+        answer:
+          "See the About and Contact pages for operator details and the support email. Privacy and Terms explain how ads, logs, and browser processing fit together.",
+      },
+      {
+        question: "Can I use this for school or small-business paperwork?",
+        answer:
+          "Yes—that is the primary audience. Students, freelancers, clinics, and families use the toolkit to finish documents without buying desktop software. For regulated certificate-based signing, use the platform your institution requires.",
+      },
     ],
   },
   toolsIndex: {

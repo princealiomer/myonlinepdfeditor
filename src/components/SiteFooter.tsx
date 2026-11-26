@@ -22,6 +22,7 @@ export function SiteFooter({
 
   const quickLinks = [
     { href: localePath(locale, "/tools"), label: dict.nav.allTools },
+    { href: localePath(locale, "/guides"), label: "Guides" },
     { href: localePath(locale, "/tools/edit-pdf"), label: dict.nav.openEditor },
     { href: localePath(locale, "/sample-documents"), label: dict.nav.samples },
     { href: localePath(locale, "/pricing"), label: dict.nav.pricing },

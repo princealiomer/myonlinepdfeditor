@@ -111,7 +111,7 @@ export function ToolPageView({
           {categoryLabel}
           {tool.availability === "guide" || tool.engine === "format-advice" ? (
             <span className="rounded-md bg-mist/80 px-2 py-0.5 text-[0.65rem] tracking-wide text-muted">
-              {dict.common.comingSoon}
+              Guide
             </span>
           ) : null}
         </p>
@@ -146,8 +146,6 @@ export function ToolPageView({
         <ToolWorkspace tool={tool} dict={dict} locale={locale} />
       </div>
 
-      <AdSlot className="my-8 rounded-xl" />
-
       {copy ? (
         <ToolCopySections tool={tool} copy={copy} labels={dict.toolPage} />
       ) : null}
@@ -168,6 +166,11 @@ export function ToolPageView({
           ))}
         </ul>
       </section>
+
+      {/* Ads only after substantial publisher copy — never on guide/stub tools. */}
+      {tool.availability !== "guide" && tool.engine !== "format-advice" ? (
+        <AdSlot className="my-10 rounded-xl" />
+      ) : null}
     </div>
   );
 }

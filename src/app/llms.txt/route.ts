@@ -33,6 +33,7 @@ Sitemap: ${base}/sitemap.xml
 - [Privacy](${base}/privacy): Privacy and ads disclosure
 - [Terms](${base}/terms): Terms of use
 - [eSign compliance](${base}/esign-compliance): Electronic signature notes
+- [Guides](${base}/guides): Original articles on privacy, merge, e-sign, and free vs paid editors
 
 ## Tool categories
 - Convert: Word/TXT/HTML/CSV/RTF/PNG/JPG to PDF

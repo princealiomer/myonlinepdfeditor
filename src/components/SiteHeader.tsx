@@ -15,10 +15,12 @@ export function SiteHeader({
 }) {
   const nav = [
     { href: localePath(locale, "/tools"), label: dict.nav.allTools },
+    { href: localePath(locale, "/guides"), label: "Guides" },
     { href: localePath(locale, "/features"), label: dict.nav.features },
     { href: localePath(locale, "/sample-documents"), label: dict.nav.samples },
     { href: localePath(locale, "/pricing"), label: dict.nav.pricing },
     { href: localePath(locale, "/about"), label: dict.nav.about },
+    { href: localePath(locale, "/contact"), label: dict.footer.contact },
   ];
 
   return (
