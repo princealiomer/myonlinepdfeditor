@@ -134,7 +134,7 @@ export const GUIDES: Guide[] = [
         ],
       },
     ],
-    relatedTools: ["sign-pdf", "edit-pdf", "flatten-pdf"],
+    relatedTools: ["sign-pdf", "edit-pdf", "flatten-fields"],
   },
   {
     slug: "free-pdf-editor-vs-paid",

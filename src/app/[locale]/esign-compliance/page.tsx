@@ -1,5 +1,6 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getDictionary, isLocale, type Locale } from "@/lib/i18n";
+import { getDictionary, isLocale, localePath, type Locale } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
@@ -45,6 +46,23 @@ export default async function EsignCompliancePage({
           For stronger evidence trails, keep the final PDF, note signer identity, and retain
           communication that shows consent. Enterprise certificate-based signing and
           managed multi-party cloud workflows are outside the current free browser toolkit.
+        </p>
+        <p>
+          Before you place a signature, use the{" "}
+          <Link
+            href={localePath(locale, "/guides/esign-pdf-checklist")}
+            className="font-semibold text-teal no-underline"
+          >
+            e-sign PDF checklist
+          </Link>{" "}
+          for consent, appearance, and download hygiene—then open{" "}
+          <Link
+            href={localePath(locale, "/tools/sign-pdf")}
+            className="font-semibold text-teal no-underline"
+          >
+            Sign PDF
+          </Link>
+          .
         </p>
       </div>
     </article>
