@@ -4117,7 +4117,7 @@ function synthesizeCopy(slug: string): ToolCopy | undefined {
       "You need this workflow without installing desktop PDF software.",
       "You want processing that stays in the browser when possible.",
       "You are matching competitor tool coverage on myonlinepdfeditor.com.",
-      "You prefer a free, AdSense-funded converter without a signup wall.",
+      "You prefer a free converter without a signup wall.",
     ],
     howToUse: [
       { title: "Open the tool", detail: "Pick it from the myonlinepdfeditor.com catalog." },
@@ -4144,7 +4144,7 @@ function synthesizeCopy(slug: string): ToolCopy | undefined {
       "Spot-check output when fonts, scans, or exotic formats are involved.",
     ],
     faqs: [
-      { question: "Is this free?", answer: "Yes. myonlinepdfeditor.com tools are free forever and supported by ads." },
+      { question: "Is this free?", answer: "Yes. myonlinepdfeditor.com tools are free forever with no signup required." },
       { question: "Do you upload my file?", answer: "Core conversion runs in your browser session whenever the tool engine allows." },
       { question: "Account required?", answer: "No account is required to start." },
       { question: "Mobile friendly?", answer: "Modern mobile browsers are supported; large files work best on desktop." },

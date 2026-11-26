@@ -1370,14 +1370,14 @@
     ]
   },
   "translate-pdf": {
-    "name": "Traducir PDF",
-    "shortName": "Traducir PDF",
-    "summary": "Extrae texto y prepara una copia lista para traducir.",
-    "description": "Saca texto extraíble del PDF al Asistente de documentos para pedir traducciones. Escaneos solo imagen necesitan OCR primero (PDF legible).",
+    "name": "Preparar PDF para traducir",
+    "shortName": "Prep. traducción",
+    "summary": "Extrae el texto del PDF a un archivo listo para pegar en un traductor.",
+    "description": "Saca texto extraíble del PDF a un .txt para pegarlo en cualquier traductor. Esta herramienta no traduce automáticamente. Los escaneos solo imagen necesitan OCR primero (PDF legible).",
     "howTo": [
       "Sube un PDF con texto seleccionable.",
-      "Abre el asistente con la opción de traducción.",
-      "Copia o descarga el texto traducido."
+      "Ejecuta la extracción.",
+      "Descarga el .txt y pégalo en tu traductor."
     ],
     "keywords": [
       "traducir pdf",

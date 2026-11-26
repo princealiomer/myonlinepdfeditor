@@ -1,4 +1,11 @@
 export { downloadBytes, downloadBlob, type DownloadResult } from "./download";
+export { namedFromOriginal } from "./output-name";
+export { suggestToolSlugForFile } from "./suggest-tool";
+export {
+  setHandoffFiles,
+  takeHandoffFiles,
+  fileFromBlob,
+} from "./tool-handoff";
 export {
   fileToArrayBuffer,
   fileToDataUrl,

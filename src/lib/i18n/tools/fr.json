@@ -1331,14 +1331,14 @@
     ]
   },
   "translate-pdf": {
-    "name": "Traduire PDF",
-    "shortName": "Traduire PDF",
-    "summary": "Extrayez le texte et préparez une copie prête à traduire.",
-    "description": "Récupérez le texte extractible du PDF dans l'Assistant document pour demander des traductions. Les numérisations image seule nécessitent d'abord une OCR (PDF lisible).",
+    "name": "Préparer le PDF à la traduction",
+    "shortName": "Préparer traduction",
+    "summary": "Extrait le texte du PDF dans un fichier prêt à coller dans un traducteur.",
+    "description": "Extrait le texte sélectionnable du PDF dans un .txt à coller dans n’importe quel traducteur. Cet outil ne traduit pas automatiquement. Les scans image-only nécessitent d’abord l’OCR (PDF lisible).",
     "howTo": [
-      "Importez un PDF avec texte sélectionnable.",
-      "Ouvrez l'assistant et demandez une traduction.",
-      "Copiez ou téléchargez le texte traduit."
+      "Téléversez un PDF avec du texte sélectionnable.",
+      "Lancez l’extraction.",
+      "Téléchargez le .txt et collez-le dans votre traducteur."
     ],
     "keywords": [
       "traduire pdf",

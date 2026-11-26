@@ -6,7 +6,7 @@ const securityHeaders = [
   { key: "X-Frame-Options", value: "SAMEORIGIN" },
   {
     key: "Permissions-Policy",
-    value: "camera=(), microphone=(), geolocation=(), payment=()",
+    value: "camera=(self), microphone=(), geolocation=(), payment=()",
   },
   {
     key: "Content-Security-Policy",
@@ -18,7 +18,8 @@ const securityHeaders = [
       "img-src 'self' data: blob: https:",
       "font-src 'self' data:",
       "connect-src 'self' https: blob:",
-      "frame-src 'self' https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com https://www.googleadservices.com https://fundingchoicesmessages.google.com https://*.google.com",
+      // blob: allows same-origin print preview iframes/windows (HTML page images, not PDF plugins).
+      "frame-src 'self' blob: https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com https://www.googleadservices.com https://fundingchoicesmessages.google.com https://*.google.com",
       "worker-src 'self' blob:",
       "object-src 'none'",
       "base-uri 'self'",
@@ -31,6 +32,8 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   // Prefer fully static HTML for tool/feature pages (avoids empty <main> holes).
   cacheComponents: false,
+  // Helps Lighthouse "missing source maps" / easier production debugging.
+  productionBrowserSourceMaps: true,
   turbopack: {
     rules: {
       "*.css": {

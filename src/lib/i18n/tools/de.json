@@ -1311,14 +1311,14 @@
     ]
   },
   "translate-pdf": {
-    "name": "PDF übersetzen",
-    "shortName": "PDF übersetzen",
-    "summary": "Text extrahieren und übersetzungsfertige Kopie entwerfen.",
-    "description": "Extrahierbaren PDF-Text in den Dokumenten-Assistenten für Übersetzungsanfragen überführen. Reine Bildscans brauchen zuerst OCR (Lesbares PDF).",
+    "name": "PDF für Übersetzung vorbereiten",
+    "shortName": "Übersetzung vorbereiten",
+    "summary": "Extrahiert PDF-Text in eine übersetzungsbereite Textdatei.",
+    "description": "Zieht extrahierbaren PDF-Text in eine .txt-Datei zum Einfügen in jeden Übersetzer. Dieses Tool übersetzt nicht automatisch. Bild-only-Scans brauchen zuerst OCR (Lesbares PDF).",
     "howTo": [
-      "PDF mit wählbarem Text hochladen.",
-      "Assistenten für Übersetzung öffnen.",
-      "Übersetzten Text kopieren oder herunterladen."
+      "Laden Sie ein PDF mit auswählbarem Text hoch.",
+      "Extraktion starten.",
+      "Laden Sie die .txt herunter und fügen Sie sie in Ihren Übersetzer ein."
     ],
     "keywords": [
       "pdf übersetzen",

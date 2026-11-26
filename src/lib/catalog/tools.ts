@@ -262,8 +262,8 @@ export const TOOLS: Tool[] = [
     description:
       "Turn Excel workbooks into PDF for printing, emailing, or archiving. myonlinepdfeditor.com reads .xlsx locally and lays out sheet data in a fixed PDF view recipients cannot accidentally edit.",
     howTo: [
-      "Upload your .xlsx spreadsheet.",
-      "Choose sheets or range if prompted.",
+      "Upload your .xlsx spreadsheet (or a CSV).",
+      "Convert locally — every sheet becomes a text section in the PDF.",
       "Download the generated PDF.",
     ],
     keywords: ["excel to pdf", "xlsx to pdf", "spreadsheet to pdf", "convert excel pdf"],
@@ -317,7 +317,7 @@ export const TOOLS: Tool[] = [
       "Legacy BMP scans and exports become easy-to-share PDFs. Stack several bitmaps into one file for printing or submission portals.",
     howTo: [
       "Choose BMP files from your computer.",
-      "Reorder thumbnails if needed.",
+      "Upload order becomes page order (first file = first page).",
       "Download the PDF.",
     ],
     keywords: ["bmp to pdf", "bitmap to pdf", "convert bmp pdf"],
@@ -332,10 +332,10 @@ export const TOOLS: Tool[] = [
     engine: "images-to-pdf",
     summary: "Merge mixed image formats into one ordered PDF.",
     description:
-      "Drop PNG, JPG, WebP, GIF, BMP, and other supported images and get a single PDF in the order you arrange. Ideal for scan batches and photo packets.",
+      "Drop PNG, JPG, WebP, GIF, BMP, and other supported images and get a single PDF in upload order. Ideal for scan batches and photo packets.",
     howTo: [
       "Add multiple image files of any supported type.",
-      "Drag to set page order.",
+      "Upload order becomes page order (reorder by removing and re-adding if needed).",
       "Download the merged PDF.",
     ],
     keywords: ["images to pdf", "photos to pdf", "combine images pdf", "picture to pdf"],
@@ -644,7 +644,7 @@ export const TOOLS: Tool[] = [
       "Remove scanner bed borders or excess white margins so every page is tight to the content. Apply per page or to the whole document.",
     howTo: [
       "Load the PDF in Crop PDF.",
-      "Draw crop boxes on thumbnails or use uniform margins.",
+      "Enter a uniform crop margin in points (default 36 ≈ half an inch).",
       "Export the cropped PDF.",
     ],
     keywords: ["crop pdf", "trim pdf margins", "cut pdf border"],

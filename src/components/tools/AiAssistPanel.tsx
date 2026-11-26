@@ -118,6 +118,7 @@ export function AiAssistPanel({
             working: w?.working || "Working…",
             downloadAgain: w?.downloadAgain || "Download again",
             readyTitle: w?.readyTitle || "Download ready",
+            doneTitle: w?.doneTitle || "Done",
           }}
         />
         {output && (

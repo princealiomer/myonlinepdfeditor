@@ -129,14 +129,12 @@ export function buildMetadata({
   const fullTitle = title.includes(site.name)
     ? pageTitle
     : `${pageTitle}${brandSuffix}`;
-  const imageUrl = absoluteUrl(
-    imagePath ||
-      (path.startsWith("/tools/")
-        ? `${localePath(locale, path)}/opengraph-image`
-        : locale === DEFAULT_LOCALE
-          ? "/opengraph-image"
-          : `${localePath(locale, "/")}/opengraph-image`),
-  );
+  // Every localized page serves its own opengraph-image route.
+  // English home stays at /opengraph-image; all other paths append /opengraph-image.
+  const localizedBase = localePath(locale, path);
+  const defaultImagePath =
+    localizedBase === "/" ? "/opengraph-image" : `${localizedBase}/opengraph-image`;
+  const imageUrl = absoluteUrl(imagePath || defaultImagePath);
 
   const trimmedDescription =
     description.length > 160

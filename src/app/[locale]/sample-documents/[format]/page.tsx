@@ -28,9 +28,12 @@ export async function generateMetadata({
   const locale = raw as Locale;
   const format = getSampleFormat(formatId);
   if (!format) return {};
+  const dict = await getDictionary(locale);
   return buildMetadata({
-    title: format.name,
-    description: format.description,
+    title: dict.samplesPage.formatTitle.replace("{format}", format.shortName),
+    description: dict.samplesPage.formatIntro
+      .replace("{format}", format.shortName)
+      .replace("{ext}", format.extension.toUpperCase()),
     path: `/sample-documents/${format.id}`,
     locale,
   });

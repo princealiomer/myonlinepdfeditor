@@ -8,6 +8,7 @@ import {
   ToolResultBanner,
   type ToolDownload,
 } from "@/components/tools/ToolResultBanner";
+import { nextToolsFor } from "@/lib/catalog/next-tools";
 import {
   applyAnnotations,
   copyPdfBytes,
@@ -15,7 +16,9 @@ import {
   downloadBytes,
   fileToUint8Array,
   getPageCount,
+  namedFromOriginal,
   renderPdfPage,
+  takeHandoffFiles,
   type Annotation,
 } from "@/lib/pdf";
 import {
@@ -85,6 +88,7 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
   const [pending, startTransition] = useTransition();
   const [lastDownload, setLastDownload] = useState<ToolDownload | null>(null);
   const [kioskOn, setKioskOn] = useState(mode.kiosk);
+  const [toolbarOpen, setToolbarOpen] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const overlayRef = useRef<HTMLDivElement | null>(null);
   const drawStart = useRef<{ x: number; y: number } | null>(null);
@@ -102,6 +106,11 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
     setKioskOn(mode.kiosk);
     setTextValue(mode.defaultTool === "sign" ? "Signature" : "Sample text");
   }, [mode]);
+
+  useEffect(() => {
+    const handoff = takeHandoffFiles();
+    if (handoff?.length) setFiles(handoff);
+  }, [tool.slug]);
 
   const loadFile = useCallback(async (file: File | null, blank = false) => {
     setError(null);
@@ -344,7 +353,10 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
         });
         const download = downloadBytes(
           bytes,
-          `myonlinepdfeditor-${tool.slug}.pdf`,
+          namedFromOriginal(
+            files[0]?.name,
+            tool.slug === "sign-pdf" ? "signed" : "edited",
+          ),
         );
         setLastDownload(download);
         setMessage(
@@ -408,6 +420,10 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
             onFiles={setFiles}
             label={`Open PDF — ${tool.shortName}`}
             hint={mode.hint}
+            trustLine={dict?.common.trustBrowser}
+            dropLabel={dict?.workspace.dropHere}
+            browseLabel={dict?.workspace.orBrowse}
+            removeLabel={dict?.workspace.remove}
           />
           <section className="surface rounded-2xl p-5">
             <h2 className="text-lg font-semibold">Or start blank</h2>
@@ -426,8 +442,29 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
       ) : (
         <>
           <div className="surface rounded-2xl p-3">
+            <div className="mb-2 flex items-center justify-between gap-2 sm:hidden">
+              <button
+                type="button"
+                className="btn btn-ghost min-h-11 text-sm"
+                onClick={() => setToolbarOpen((open) => !open)}
+              >
+                {toolbarOpen
+                  ? dict?.workspace.toolbarLess || "Hide tools"
+                  : dict?.workspace.toolbarMore || "Show tools"}
+              </button>
+              <button
+                type="button"
+                className="btn btn-accent min-h-11 px-4 text-sm font-semibold"
+                disabled={pending}
+                onClick={exportPdf}
+              >
+                {pending
+                  ? dict?.workspace.working || "Working…"
+                  : dict?.workspace.downloadCta || "Download"}
+              </button>
+            </div>
             <div
-              className="toolbar-scroll"
+              className={`toolbar-scroll ${toolbarOpen ? "" : "max-sm:hidden"}`}
               role="toolbar"
               aria-label={`${tool.shortName} tools`}
             >
@@ -452,11 +489,13 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
               </button>
               <button
                 type="button"
-                className="btn btn-accent min-h-11 shrink-0 px-4 py-2 text-sm font-semibold"
+                className="btn btn-accent min-h-11 shrink-0 px-4 py-2 text-sm font-semibold max-sm:hidden"
                 disabled={pending}
                 onClick={exportPdf}
               >
-                {pending ? dict?.workspace.working || "Working…" : "Download PDF"}
+                {pending
+                  ? dict?.workspace.working || "Working…"
+                  : "Download PDF"}
               </button>
             </div>
           </div>
@@ -465,10 +504,34 @@ export function PdfEditor({ tool, dict }: PdfEditorProps) {
             error={error}
             message={message}
             download={lastDownload}
+            stats={
+              lastDownload
+                ? {
+                    filename: lastDownload.filename,
+                    afterBytes: lastDownload.blob.size,
+                    pageCount: pageCount || undefined,
+                  }
+                : null
+            }
+            chain={nextToolsFor("editor", tool.slug)}
+            onProcessAnother={() => {
+              setFiles([]);
+              setPdfBytes(null);
+              setAnnotations([]);
+              setLastDownload(null);
+              setMessage(null);
+              setError(null);
+            }}
             labels={{
               working: dict?.workspace.working || "Working…",
               downloadAgain: dict?.workspace.downloadAgain || "Download again",
               readyTitle: dict?.workspace.readyTitle || "Download ready",
+              processAnother:
+                dict?.workspace.processAnother || "Process another file",
+              downloadCta: dict?.workspace.downloadCta || "Download",
+              nextSteps: dict?.workspace.nextSteps || "Next",
+              pagesLabel: dict?.workspace.pagesLabel || "Pages",
+              sizeLabel: dict?.workspace.sizeLabel || "Size",
             }}
           />
 

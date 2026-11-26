@@ -14,6 +14,11 @@ export function ToolCard({
   dict?: Dictionary;
 }) {
   const categoryLabel = dict?.categories[tool.category] || tool.category;
+  const isGuide =
+    tool.availability === "guide" || tool.engine === "format-advice";
+  const badge = isGuide
+    ? dict?.common.comingSoon || "Coming soon"
+    : null;
 
   return (
     <Link
@@ -31,6 +36,11 @@ export function ToolCard({
           <h3 className="tool-card-title mt-1 text-base font-semibold text-ink sm:text-lg">
             {tool.shortName}
           </h3>
+          {badge ? (
+            <span className="mt-1 inline-block rounded-md bg-mist/80 px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-muted">
+              {badge}
+            </span>
+          ) : null}
         </div>
       </div>
       <p className="mt-3 text-sm leading-relaxed text-muted">{tool.summary}</p>

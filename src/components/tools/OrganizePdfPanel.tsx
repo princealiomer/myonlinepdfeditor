@@ -13,9 +13,12 @@ import {
   downloadBytes,
   fileToUint8Array,
   getPageCount,
+  namedFromOriginal,
   reorderPages,
   renderPdfPage,
+  takeHandoffFiles,
 } from "@/lib/pdf";
+import { nextToolsFor } from "@/lib/catalog/next-tools";
 
 type PageThumb = {
   id: string;
@@ -71,6 +74,11 @@ export function OrganizePdfPanel({ tool, dict }: OrganizePdfPanelProps) {
   }, [w]);
 
   useEffect(() => {
+    const handoff = takeHandoffFiles();
+    if (handoff?.length) setFiles(handoff);
+  }, []);
+
+  useEffect(() => {
     if (files[0]) void loadThumbs(files[0]);
     else setPages([]);
   }, [files, loadThumbs]);
@@ -108,7 +116,10 @@ export function OrganizePdfPanel({ tool, dict }: OrganizePdfPanelProps) {
         setLastDownload(null);
         const order = pages.map((p) => p.pageNumber);
         const bytes = await reorderPages(files[0], order, { allowSubset: true });
-        const download = downloadBytes(bytes, "myonlinepdfeditor-organized.pdf");
+        const download = downloadBytes(
+          bytes,
+          namedFromOriginal(files[0].name, "organized"),
+        );
         setLastDownload(download);
         setMessage(w.done);
       } catch (err) {
@@ -129,6 +140,7 @@ export function OrganizePdfPanel({ tool, dict }: OrganizePdfPanelProps) {
           dropLabel={w.dropHere}
           browseLabel={w.orBrowse}
           removeLabel={w.remove}
+          trustLine={dict.common.trustBrowser}
         />
       ) : null}
 
@@ -218,10 +230,32 @@ export function OrganizePdfPanel({ tool, dict }: OrganizePdfPanelProps) {
         error={error}
         message={message}
         download={lastDownload}
+        stats={
+          lastDownload
+            ? {
+                filename: lastDownload.filename,
+                afterBytes: lastDownload.blob.size,
+                pageCount: pages.length || undefined,
+              }
+            : null
+        }
+        chain={nextToolsFor("reorder", tool.slug)}
+        onProcessAnother={() => {
+          setFiles([]);
+          setPages([]);
+          setMessage(null);
+          setError(null);
+          setLastDownload(null);
+        }}
         labels={{
           working: loadingThumbs ? w.organizeLoading : w.working,
           downloadAgain: w.downloadAgain,
           readyTitle: w.readyTitle,
+          processAnother: w.processAnother,
+          downloadCta: w.downloadCta,
+          nextSteps: w.nextSteps,
+          pagesLabel: w.pagesLabel,
+          sizeLabel: w.sizeLabel,
         }}
       />
     </div>
