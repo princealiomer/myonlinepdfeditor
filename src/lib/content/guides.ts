@@ -50,7 +50,7 @@ export const GUIDES: Guide[] = [
         heading: "How myonlinepdfeditor.com fits",
         paragraphs: [
           "Our catalog focuses on everyday PDF jobs: edit, sign, merge, split, compress, convert images and office formats, and organize pages. The product promise is simple—free forever for the unlocked catalog, no signup wall for core tools, and browser-side processing for ordinary workflows.",
-          "If you need enterprise SSO, desktop apps, or multi-gigabyte batch queues, a paid cloud suite may still be the right product. For students, freelancers, and small teams who just need to finish a file today without a subscription, a browser toolkit is usually enough.",
+          "If you need enterprise SSO, desktop apps, or multi-gigabyte batch queues, a paid cloud suite may still be the right product—see [free PDF editor vs paid suites](/guides/free-pdf-editor-vs-paid). For students, freelancers, and small teams who just need to finish a file today without a subscription, a browser toolkit is usually enough.",
         ],
       },
     ],
@@ -69,14 +69,14 @@ export const GUIDES: Guide[] = [
         heading: "Start with a clear stack, not a pile",
         paragraphs: [
           "Name your source files before you open the merge tool: 01-cover.pdf, 02-body.pdf, 03-appendix.pdf. Alphabetical upload order is still the most common reason merges go wrong. If your phone camera produced IMG_2401.pdf style names, rename them on the desktop first.",
-          "Open Merge PDF, add the files, then drag the list into the final reading order. Do not download yet. Scroll the preview if the tool offers one, or open each source briefly to confirm the first and last page look right.",
+          "Open [Merge PDF](/tools/merge-pdf), add the files, then drag the list into the final reading order. Do not download yet. Scroll the preview if the tool offers one, or open each source briefly to confirm the first and last page look right.",
         ],
       },
       {
         heading: "Fix rotation and blank pages before you combine",
         paragraphs: [
-          "A sideways scan will stay sideways after a merge. Rotate those pages in a dedicated rotate or organize tool first, then merge. The same rule applies to accidental blank sheets from a feeder—delete them before you create the combined file, or you will ship empty pages to a client.",
-          "If one attachment is a huge image-heavy scan, compress it first. Merging five 40 MB scans into a 200 MB email attachment creates a second problem after you solve the first.",
+          "A sideways scan will stay sideways after a merge. Rotate those pages with [Rotate PDF](/tools/rotate-pdf) or [Organize PDF](/tools/organize-pdf) first, then merge. The same rule applies to accidental blank sheets from a feeder—delete them before you create the combined file, or you will ship empty pages to a client.",
+          "If one attachment is a huge image-heavy scan, [compress the PDF](/tools/compress-pdf) first. Merging five 40 MB scans into a 200 MB email attachment creates a second problem after you solve the first.",
         ],
       },
       {
@@ -90,7 +90,7 @@ export const GUIDES: Guide[] = [
       {
         heading: "When not to merge",
         paragraphs: [
-          "Keep files separate when a recipient needs to sign only one packet, when portals enforce per-document uploads, or when file-size caps are tight. In those cases, compress or split instead of creating one giant PDF.",
+          "Keep files separate when a recipient needs to sign only one packet, when portals enforce per-document uploads, or when file-size caps are tight. In those cases, [compress](/tools/compress-pdf) or split instead of creating one giant PDF. If privacy matters more than convenience, read how [browser PDF tools keep files on your device](/guides/browser-pdf-privacy).",
         ],
       },
     ],
@@ -109,20 +109,20 @@ export const GUIDES: Guide[] = [
         heading: "Confirm the parties agree to sign electronically",
         paragraphs: [
           "US ESIGN and UETA frameworks generally allow electronic signatures when parties consent to do business electronically. If the other party expects wet ink, overnight mail, or a specific vendor (DocuSign, Adobe Sign), do not surprise them with a drawn PNG on page three.",
-          "Our eSign compliance page summarizes how typed, drawn, and uploaded signatures are commonly used. It is not legal advice for your jurisdiction—regulated industries may need certificate-based or identity-verified signing.",
+          "Our [eSign compliance page](/esign-compliance) summarizes how typed, drawn, and uploaded signatures are commonly used. It is not legal advice for your jurisdiction—regulated industries may need certificate-based or identity-verified signing.",
         ],
       },
       {
         heading: "Prepare the document before you sign",
         paragraphs: [
-          "Finish edits first. Signing a draft that still needs redlines creates version chaos. Flatten or lock form fields only after the content is final if your workflow requires it.",
+          "Finish edits first with [Edit PDF](/tools/edit-pdf). Signing a draft that still needs redlines creates version chaos. Flatten or lock form fields only after the content is final if your workflow requires it.",
           "Leave clear space for the signature and date. If the PDF is a scan, make sure contrast is high enough that a black ink stroke remains readable when printed.",
         ],
       },
       {
         heading: "Choose an appearance that looks deliberate",
         paragraphs: [
-          "A tiny faint scribble in the corner reads as accidental. Use the Sign PDF tool to place a sized signature, initials if needed, and a readable date. Preview at 100% zoom before download.",
+          "A tiny faint scribble in the corner reads as accidental. Use the [Sign PDF](/tools/sign-pdf) tool to place a sized signature, initials if needed, and a readable date. Preview at 100% zoom before download.",
           "If multiple people must sign, agree on order. Send the file to the next signer only after you verify your own signature landed on the correct line.",
         ],
       },
@@ -130,7 +130,7 @@ export const GUIDES: Guide[] = [
         heading: "What self-serve e-sign does not automatically include",
         paragraphs: [
           "Browser self-sign tools typically do not issue cryptographic certificates, government ID checks, or tamper-evident audit trails comparable to enterprise signing platforms. If a bank, court, or HR system requires those controls, use the platform they specify.",
-          "Keep your own records: the final PDF, the date you sent it, and any email confirmation from the other party. Good file hygiene prevents most “which version did we sign?” disputes.",
+          "Keep your own records: the final PDF, the date you sent it, and any email confirmation from the other party. Good file hygiene prevents most “which version did we sign?” disputes. Prefer tools that [keep signing in the browser](/guides/browser-pdf-privacy) when the document is sensitive.",
         ],
       },
     ],
@@ -148,7 +148,7 @@ export const GUIDES: Guide[] = [
       {
         heading: "Choose free browser tools when…",
         paragraphs: [
-          "You merge, compress, rotate, or sign a few documents a week. You care that ordinary files stay in the browser. You do not want another subscription. You are fine with ads that fund the toolkit.",
+          "You [merge](/tools/merge-pdf), [compress](/tools/compress-pdf), rotate, or [sign](/tools/sign-pdf) a few documents a week. You care that ordinary files [stay in the browser](/guides/browser-pdf-privacy). You do not want another subscription. You are fine with ads that fund the toolkit.",
           "myonlinepdfeditor.com is built for that profile: unlocked catalog tools, no account wall for core jobs, and copy on each page that explains the workflow in plain language.",
         ],
       },
@@ -156,13 +156,13 @@ export const GUIDES: Guide[] = [
         heading: "Choose a paid suite when…",
         paragraphs: [
           "You hit published free-tier caps every day (for example small per-task file limits on cloud converters). You need native desktop or mobile apps. You need team SSO, centralized billing, or vendor-backed e-sign custody.",
-          "Compare live pricing pages before you buy—limits and regional prices change. Our /vs/ilovepdf and /vs/smallpdf pages summarize sourced differences and where those products still win.",
+          "Compare live pricing pages before you buy—limits and regional prices change. Our [iLovePDF comparison](/vs/ilovepdf) and [Smallpdf comparison](/vs/smallpdf) summarize sourced differences and where those products still win.",
         ],
       },
       {
         heading: "Avoid false economies",
         paragraphs: [
-          "A “free” tool that uploads sensitive files to an unknown host can cost more than a subscription if data leaks. Likewise, paying annually for Premium when you only merge two PDFs a month is usually wasted spend.",
+          "A “free” tool that uploads sensitive files to an unknown host can cost more than a subscription if data leaks—start with the [browser PDF privacy guide](/guides/browser-pdf-privacy). Likewise, paying annually for Premium when you only merge two PDFs a month is usually wasted spend.",
           "Write down your top three weekly PDF tasks. If a free browser tool covers all three cleanly, stay free. If two of the three require apps or huge batches, budget for a paid plan and keep the free site as a backup for small jobs.",
         ],
       },
@@ -177,4 +177,13 @@ export function getGuide(slug: string): Guide | undefined {
 
 export function allGuideSlugs(): string[] {
   return GUIDES.map((guide) => guide.slug);
+}
+
+/** Guides that list this tool in relatedTools — for reverse inlinks from tool pages. */
+export function getGuidesForTool(toolSlug: string): Guide[] {
+  return GUIDES.filter((guide) => guide.relatedTools.includes(toolSlug));
+}
+
+export function getOtherGuides(slug: string): Guide[] {
+  return GUIDES.filter((guide) => guide.slug !== slug);
 }

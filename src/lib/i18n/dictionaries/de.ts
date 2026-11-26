@@ -2,7 +2,7 @@ import type { Dictionary } from "../types";
 
 export const de: Dictionary = {
   meta: {
-    titleHome: "myonlinepdfeditor.com — Kostenloser PDF-Editor, eSign & Konvertieren",
+    titleHome: "Kostenloser PDF-Editor online",
     descriptionHome:
       "Kostenloser Online-PDF-Editor, eSign, Zusammenführen, Teilen, Konvertieren und Formulare. Keine Anmeldung. Bei gewöhnlichen Tools bleiben Dateien in Ihrem Browser.",
     keywordsHome: [
@@ -366,6 +366,7 @@ export const de: Dictionary = {
   toolPage: {
     freeBadge: "für immer kostenlos",
     relatedTitle: "Verwandte Tools",
+    relatedGuidesTitle: "Verwandte Leitfäden",
     whatIs: "Was ist {name}?",
     whyUse: "Warum dieses Tool nutzen",
     whyBest: "Warum myonlinepdfeditor.com eine starke Wahl ist",

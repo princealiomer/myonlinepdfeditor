@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { ToolCard } from "@/components/ToolCard";
 import { TOOLS } from "@/lib/catalog";
 import { NAV_TOOL_GROUPS } from "@/lib/catalog/nav-tools";
+import { GUIDES } from "@/lib/content/guides";
 import type { Dictionary, Locale } from "@/lib/i18n";
 import { getLocalizedTool, localePath } from "@/lib/i18n";
 import {
@@ -258,16 +259,25 @@ export function HomePageView({
             </details>
           ))}
         </div>
-        <p className="mt-8 text-sm text-muted">
-          Want longer walkthroughs? Read our{" "}
-          <Link
-            href={localePath(locale, "/guides")}
-            className="font-semibold text-teal no-underline"
-          >
-            PDF guides
-          </Link>{" "}
-          for privacy, merge workflows, and signing tips.
-        </p>
+        <div className="mt-10">
+          <h3 className="text-lg font-semibold">PDF guides</h3>
+          <p className="mt-2 text-sm text-muted">
+            Longer walkthroughs for privacy, merge workflows, signing, and free
+            vs paid editors.
+          </p>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+            {GUIDES.map((guide) => (
+              <li key={guide.slug}>
+                <Link
+                  href={localePath(locale, `/guides/${guide.slug}`)}
+                  className="font-semibold text-teal no-underline"
+                >
+                  {guide.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
 
       <div className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">

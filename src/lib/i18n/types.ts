@@ -117,6 +117,7 @@ export type Dictionary = {
   toolPage: {
     freeBadge: string;
     relatedTitle: string;
+    relatedGuidesTitle: string;
     whatIs: string;
     whyUse: string;
     whyBest: string;

@@ -7,6 +7,13 @@ import { localePath } from "@/lib/i18n";
 import { absoluteUrl, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
 import { site } from "@/lib/site";
 
+/** Use the first http(s) URL in a source string so notes cannot poison href. */
+function sourceHref(source: string): string {
+  const match = source.match(/https?:\/\/[^\s)]+/);
+  if (match) return match[0];
+  return source.startsWith("/") ? absoluteUrl(source) : source;
+}
+
 export function ComparePageView({
   page,
   locale,
@@ -71,7 +78,7 @@ export function ComparePageView({
                   <td className="px-3 py-3 text-ink-soft">{row.us}</td>
                   <td className="px-3 py-3">
                     <a
-                      href={row.source.startsWith("http") ? row.source : absoluteUrl(row.source)}
+                      href={sourceHref(row.source)}
                       className="text-teal underline-offset-2 hover:underline"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -158,7 +165,25 @@ export function ComparePageView({
         </div>
       </section>
 
-      <div className="mt-12 flex flex-col gap-3 sm:flex-row">
+      <p className="mt-10 text-sm leading-relaxed text-muted">
+        Still deciding whether a subscription is worth it? Read{" "}
+        <Link
+          href={localePath(locale, "/guides/free-pdf-editor-vs-paid")}
+          className="font-semibold text-teal no-underline"
+        >
+          free PDF editor vs paid suites
+        </Link>{" "}
+        and how{" "}
+        <Link
+          href={localePath(locale, "/guides/browser-pdf-privacy")}
+          className="font-semibold text-teal no-underline"
+        >
+          browser-based PDF tools keep files on your device
+        </Link>
+        .
+      </p>
+
+      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
         <Link
           href={localePath(locale, page.ctaHref)}
           className="btn btn-accent no-underline"

@@ -2,7 +2,7 @@ import type { Dictionary } from "../types";
 
 export const en: Dictionary = {
   meta: {
-    titleHome: "Free Online PDF Editor — Edit, Sign & Convert",
+    titleHome: "Free Online PDF Editor",
     descriptionHome:
       "Free online PDF editor, eSign, merge, split, convert, and form tools. No signup. Files stay in your browser for ordinary tools.",
     keywordsHome: [
@@ -394,6 +394,7 @@ export const en: Dictionary = {
   toolPage: {
     freeBadge: "free forever",
     relatedTitle: "Related tools",
+    relatedGuidesTitle: "Related guides",
     whatIs: "What is {name}?",
     whyUse: "Why use this tool",
     whyBest: "Why myonlinepdfeditor.com is a strong pick",

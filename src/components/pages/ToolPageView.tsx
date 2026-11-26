@@ -13,6 +13,7 @@ import {
   getLocalizedTools,
   localePath,
 } from "@/lib/i18n";
+import { getGuidesForTool } from "@/lib/content/guides";
 import {
   absoluteUrl,
   breadcrumbJsonLd,
@@ -36,6 +37,7 @@ export function ToolPageView({
   const related = getLocalizedTools(locale)
     .filter((item) => item.category === tool.category && item.slug !== tool.slug)
     .slice(0, 4);
+  const relatedGuides = getGuidesForTool(tool.slug);
 
   const howToSteps =
     copy?.howToUse.map((step) => ({
@@ -166,6 +168,27 @@ export function ToolPageView({
           ))}
         </ul>
       </section>
+
+      {relatedGuides.length > 0 ? (
+        <section className="mt-8 surface rounded-2xl p-6">
+          <h2 className="text-xl font-semibold">
+            {dict.toolPage.relatedGuidesTitle}
+          </h2>
+          <ul className="mt-4 space-y-3">
+            {relatedGuides.map((guide) => (
+              <li key={guide.slug}>
+                <Link
+                  href={localePath(locale, `/guides/${guide.slug}`)}
+                  className="font-medium text-teal no-underline"
+                >
+                  {guide.title}
+                </Link>
+                <p className="text-sm text-muted">{guide.description}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
 
       {/* Ads only after substantial publisher copy — never on guide/stub tools. */}
       {tool.availability !== "guide" && tool.engine !== "format-advice" ? (

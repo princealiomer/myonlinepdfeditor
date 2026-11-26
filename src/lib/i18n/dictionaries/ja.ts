@@ -2,7 +2,7 @@ import type { Dictionary } from "../types";
 
 export const ja: Dictionary = {
   meta: {
-    titleHome: "myonlinepdfeditor.com — 無料PDF編集・電子署名・変換",
+    titleHome: "無料オンラインPDF編集",
     descriptionHome:
       "無料のオンラインPDFエディター、電子署名、結合・分割・変換・フォームツール。登録不要。通常ツールではファイルはブラウザ内に留まります。",
     keywordsHome: [
@@ -366,6 +366,7 @@ export const ja: Dictionary = {
   toolPage: {
     freeBadge: "ずっと無料",
     relatedTitle: "関連ツール",
+    relatedGuidesTitle: "関連ガイド",
     whatIs: "{name}とは",
     whyUse: "このツールを使う理由",
     whyBest: "myonlinepdfeditor.comが選ばれる理由",

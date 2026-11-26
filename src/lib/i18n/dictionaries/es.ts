@@ -2,7 +2,7 @@ import type { Dictionary } from "../types";
 
 export const es: Dictionary = {
   meta: {
-    titleHome: "myonlinepdfeditor.com — Editor de PDF, firma electrónica y conversión gratis",
+    titleHome: "Editor de PDF gratis online",
     descriptionHome:
       "Editor de PDF online gratuito, firma electrónica, unir, dividir, convertir y formularios. Sin registro. Los archivos se quedan en tu navegador en las herramientas habituales.",
     keywordsHome: [
@@ -366,6 +366,7 @@ export const es: Dictionary = {
   toolPage: {
     freeBadge: "gratis para siempre",
     relatedTitle: "Herramientas relacionadas",
+    relatedGuidesTitle: "Guías relacionadas",
     whatIs: "¿Qué es {name}?",
     whyUse: "Por qué usar esta herramienta",
     whyBest: "Por qué myonlinepdfeditor.com es una buena opción",

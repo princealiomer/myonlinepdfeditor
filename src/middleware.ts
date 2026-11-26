@@ -1,10 +1,28 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { DEFAULT_LOCALE, isLocale } from "@/lib/i18n/config";
+import { site } from "@/lib/site";
 
 const PUBLIC_FILE = /\.[^/]+$/;
 
+function canonicalOrigin(): string {
+  return site.url.replace(/\/$/, "");
+}
+
+/** Collapse www → apex with a permanent redirect (Vercel domain redirects use 307). */
+function redirectOffWww(request: NextRequest): NextResponse | null {
+  const host = request.headers.get("host")?.split(":")[0]?.toLowerCase();
+  if (!host || !host.startsWith("www.")) return null;
+
+  const apex = canonicalOrigin();
+  const url = new URL(request.nextUrl.pathname + request.nextUrl.search, apex);
+  return NextResponse.redirect(url, 308);
+}
+
 export function middleware(request: NextRequest) {
+  const offWww = redirectOffWww(request);
+  if (offWww) return offWww;
+
   const { pathname } = request.nextUrl;
 
   if (
