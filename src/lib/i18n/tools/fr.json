@@ -126,17 +126,16 @@
   "rtf-to-pdf": {
     "name": "RTF vers PDF",
     "shortName": "RTF → PDF",
-    "summary": "Convertissez des fichiers Rich Text Format en PDF standard.",
-    "description": "Ouvrez d'anciens documents .rtf et enregistrez-les en PDF pour une consultation universelle. myonlinepdfeditor.com traite le fichier sur votre appareil afin que les brouillons sensibles restent privés.",
+    "summary": "Convertir RTF en PDF en ligne gratuitement.",
+    "description": "Ouvrez un .rtf et enregistrez-le en PDF standard.",
     "howTo": [
       "Choisissez un fichier .rtf sur votre ordinateur.",
       "Attendez la conversion locale.",
       "Téléchargez le PDF."
     ],
     "keywords": [
-      "rtf en pdf",
-      "rich text en pdf",
-      "convertir rtf",
+      "rtf vers pdf",
+      "convertir rtf en pdf",
       "rtf to pdf"
     ]
   },
@@ -192,16 +191,16 @@
   "bmp-to-pdf": {
     "name": "BMP vers PDF",
     "shortName": "BMP → PDF",
-    "summary": "Convertissez des images bitmap (BMP) en pages PDF.",
-    "description": "Les anciennes numérisations et exportations BMP deviennent des PDF faciles à partager. Empilez plusieurs bitmaps dans un fichier pour l'impression ou les portails de dépôt.",
+    "summary": "Convertir BMP en PDF en ligne.",
+    "description": "Transformez des bitmaps BMP en PDF partageable.",
     "howTo": [
       "Choisissez des fichiers BMP sur votre ordinateur.",
       "Réorganisez les vignettes si nécessaire.",
       "Téléchargez le PDF."
     ],
     "keywords": [
+      "bmp vers pdf",
       "bmp en pdf",
-      "bitmap en pdf",
       "bmp to pdf"
     ]
   },
@@ -309,56 +308,56 @@
     ]
   },
   "edit-pdf": {
-    "name": "Éditeur PDF",
+    "name": "Éditer un PDF en ligne",
     "shortName": "Modifier PDF",
-    "summary": "Ouvrez tout PDF et ajustez pages, texte et annotations dans le navigateur.",
-    "description": "L'éditeur PDF myonlinepdfeditor.com vous permet d'importer un document et de le travailler localement : parcourir les pages, placer du contenu et exporter une fois terminé. Votre fichier reste sur votre appareil en permanence.",
+    "summary": "Modifier un PDF en ligne : ajouter du texte, gratuit.",
+    "description": "Éditez des PDF dans le navigateur. Ajoutez du texte, annotez, téléchargez — sans inscription.",
     "howTo": [
       "Importez le PDF à modifier.",
       "Utilisez la barre d'outils pour ajouter ou modifier du contenu.",
       "Téléchargez le PDF mis à jour."
     ],
     "keywords": [
-      "éditeur pdf",
-      "modifier pdf en ligne",
-      "éditeur pdf gratuit",
-      "pdf editor",
-      "edit pdf"
+      "ajouter du texte dans un pdf",
+      "comment ajouter du texte sur un pdf",
+      "ajouter texte sur pdf gratuit",
+      "editar pdf en linea",
+      "pdf editor online"
     ]
   },
   "create-pdf": {
-    "name": "Créer un PDF",
+    "name": "Créer un PDF en ligne",
     "shortName": "Créer PDF",
-    "summary": "Partez d'une page vierge et composez un nouveau PDF.",
-    "description": "Commencez avec une toile ou un modèle vide et assemblez un PDF de zéro. Ajoutez pages, texte et images, puis enregistrez — sans installer de logiciel.",
+    "summary": "Créer un PDF gratuit en ligne — page blanche incluse.",
+    "description": "Démarrez une page blanche et construisez un nouveau PDF sans installer de logiciel.",
     "howTo": [
       "Ouvrez Créer un PDF pour démarrer un document vierge.",
       "Ajoutez pages et contenu selon vos besoins.",
       "Téléchargez votre nouveau PDF."
     ],
     "keywords": [
-      "créer pdf",
-      "nouveau pdf",
-      "pdf vierge",
-      "create pdf",
-      "faire pdf en ligne"
+      "créer un pdf en ligne",
+      "pdf blanc",
+      "feuille blanche pdf",
+      "créer un pdf gratuitement",
+      "online pdf erstellen"
     ]
   },
   "add-fillable-fields": {
-    "name": "Ajouter des champs remplissables",
+    "name": "Créer un formulaire PDF",
     "shortName": "Champs remplissables",
-    "summary": "Placez des champs texte, case à cocher et signature sur tout PDF.",
-    "description": "Transformez un PDF plat en formulaire remplissable en marquant des champs sur la page. Exportez et réutilisez le document préparé pour la collecte de données.",
+    "summary": "Ajouter des champs et créer un formulaire PDF fillable.",
+    "description": "Placez champs texte, cases et signature pour un PDF remplissable.",
     "howTo": [
       "Ouvrez votre PDF dans l'éditeur.",
       "Ajoutez des marqueurs de champs là où les personnes doivent saisir ou signer.",
       "Téléchargez le PDF remplissable."
     ],
     "keywords": [
-      "champs remplissables pdf",
       "formulaire pdf",
-      "rendre pdf remplissable",
-      "fillable pdf"
+      "partager un formulaire en ligne",
+      "fillable pdf",
+      "remplir un formulaire en ligne"
     ]
   },
   "flatten-fields": {
@@ -616,21 +615,20 @@
     ]
   },
   "sign-pdf": {
-    "name": "Signer un PDF",
+    "name": "Signer un PDF en ligne",
     "shortName": "Signer PDF",
-    "summary": "Signez contrats et formulaires sur ordinateur par dessin ou saisie.",
-    "description": "Ajoutez votre signature à tout PDF à la souris, au stylet ou en tapant. Exportez une copie signée immédiatement — idéal pour une signature sur place ou sur le même appareil.",
+    "summary": "Ajouter une signature sur un PDF gratuitement.",
+    "description": "Dessinez ou tapez votre signature et placez-la sur le PDF.",
     "howTo": [
       "Importez le PDF à signer.",
       "Créez ou placez votre signature sur la page.",
       "Téléchargez le document signé."
     ],
     "keywords": [
+      "signet pdf",
       "signer pdf",
-      "signature pdf",
-      "signature électronique pdf",
-      "sign pdf",
-      "esign pdf"
+      "paraphen",
+      "online unterschreiben"
     ]
   },
   "send-for-signature": {
@@ -1145,19 +1143,20 @@
     ]
   },
   "zip-to-pdf": {
-    "name": "ZIP vers PDF",
+    "name": "Convertisseur ZIP en PDF",
     "shortName": "ZIP → PDF",
-    "summary": "Décompressez une archive d'images/PDF en un seul PDF.",
-    "description": "Importez un .zip contenant images et/ou PDF. myonlinepdfeditor.com extrait les fichiers pris en charge et les fusionne en un PDF unique, localement.",
+    "summary": "Transformer un fichier ZIP en PDF en ligne gratuitement.",
+    "description": "Téléversez un .zip d’images/PDF. Extraction et fusion locales en un seul PDF — convertisseur zip en PDF.",
     "howTo": [
       "Importez un .zip.",
       "Extrayez et fusionnez localement.",
       "Téléchargez le PDF combiné."
     ],
     "keywords": [
-      "zip en pdf",
-      "dézipper en pdf",
-      "dossier en pdf",
+      "convertisseur zip en pdf",
+      "transformer un fichier zip en pdf",
+      "comment transformer un fichier zip en pdf",
+      "fichier zip en pdf",
       "zip to pdf"
     ]
   },
@@ -1458,20 +1457,20 @@
     ]
   },
   "odt-to-pdf": {
-    "name": "ODT vers PDF",
+    "name": "Convertisseur ODT vers PDF",
     "shortName": "ODT → PDF",
-    "summary": "Convertissez LibreOffice Writer (.odt) en PDF.",
-    "description": "Extrait le texte OpenDocument et construit un PDF localement. Les mises en page complexes deviennent un flux de texte simplifié.",
+    "summary": "Comment convertir ODT en PDF en ligne.",
+    "description": "Convertissez LibreOffice Writer (.odt) en PDF localement.",
     "howTo": [
       "Importez un .odt.",
       "Convertissez.",
       "Téléchargez le PDF."
     ],
     "keywords": [
-      "odt en pdf",
-      "opendocument en pdf",
-      "libreoffice writer pdf",
-      "odt to pdf"
+      "convertisseur odt vers pdf",
+      "comment convertir odt en pdf",
+      "odt vers pdf",
+      "conversion odt en pdf"
     ]
   },
   "ods-to-pdf": {
@@ -1557,18 +1556,18 @@
   "eml-to-pdf": {
     "name": "EML vers PDF",
     "shortName": "EML → PDF",
-    "summary": "Convertissez des courriels (.eml) en PDF.",
-    "description": "Analyse en-têtes et corps du message pour en faire une archive PDF du courriel.",
+    "summary": "Convertir un fichier EML en PDF en ligne.",
+    "description": "Transformez un e-mail .eml en PDF consultable.",
     "howTo": [
       "Importez un .eml.",
       "Convertissez.",
       "Téléchargez le PDF."
     ],
     "keywords": [
-      "eml en pdf",
-      "courriel en pdf",
-      "message en pdf",
-      "eml to pdf"
+      "eml vers pdf",
+      "convertir un fichier eml en pdf",
+      "eml to pdf",
+      "email to pdf converter"
     ]
   },
   "pdf-to-html": {
@@ -1622,16 +1621,16 @@
   "pdf-to-odt": {
     "name": "PDF vers ODT",
     "shortName": "PDF → ODT",
-    "summary": "Exportez le texte PDF pour LibreOffice Writer.",
-    "description": "Télécharge le texte extractible en .txt ouvrable dans Writer, puis enregistrable en ODT.",
+    "summary": "Convertir PDF en ODT (texte extractible).",
+    "description": "Exportez le texte du PDF pour LibreOffice Writer.",
     "howTo": [
       "Importez le PDF.",
       "Extrayez le texte.",
       "Ouvrez dans LibreOffice → Enregistrer en ODT."
     ],
     "keywords": [
-      "pdf en odt",
-      "pdf opendocument",
+      "pdf vers odt",
+      "convertir pdf en odt",
       "pdf to odt"
     ]
   },

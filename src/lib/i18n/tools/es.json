@@ -196,10 +196,10 @@
     ]
   },
   "bmp-to-pdf": {
-    "name": "BMP a PDF",
+    "name": "BMP a PDF online",
     "shortName": "BMP → PDF",
-    "summary": "Convierte imágenes bitmap (BMP) en páginas PDF.",
-    "description": "Los BMP heredados y exportaciones de escáner pasan a ser PDF fáciles de compartir. Apila varios bitmap en un solo archivo para imprimir o portales de envío.",
+    "summary": "Convertir BMP a PDF gratis en el navegador.",
+    "description": "Convierte imágenes BMP en PDF listos para compartir, sin instalar programas.",
     "howTo": [
       "Elige archivos BMP en tu computadora.",
       "Reordena las miniaturas si hace falta.",
@@ -207,8 +207,7 @@
     ],
     "keywords": [
       "bmp a pdf",
-      "bitmap a pdf",
-      "convertir bmp pdf",
+      "convertir bmp a pdf",
       "bmp to pdf"
     ]
   },
@@ -320,21 +319,22 @@
     ]
   },
   "edit-pdf": {
-    "name": "Editor de PDF",
+    "name": "Editar PDF en línea gratis",
     "shortName": "Editar PDF",
-    "summary": "Abre cualquier PDF y ajusta páginas, texto y marcas en el navegador.",
-    "description": "El editor de PDF de myonlinepdfeditor.com te permite subir un documento y trabajar de forma local: navegar páginas, colocar contenido y exportar al terminar. Tu archivo permanece en tu dispositivo todo el tiempo.",
+    "summary": "Editor de PDF online para editar texto y páginas. Sin registro.",
+    "description": "Editar PDF en línea gratis en el navegador: texto, páginas y marcas. El archivo no sale de tu dispositivo.",
     "howTo": [
       "Sube el PDF que quieres editar.",
       "Usa la barra de herramientas para agregar o cambiar contenido.",
       "Descarga el PDF actualizado."
     ],
     "keywords": [
-      "editor pdf",
+      "editar pdf en linea",
       "editar pdf en línea",
-      "editor pdf gratis",
-      "modificar pdf",
-      "pdf editor"
+      "editar texto pdf",
+      "modificar pdf online",
+      "editor de pdf en linea",
+      "editar pdf gratis online"
     ]
   },
   "create-pdf": {
@@ -356,20 +356,21 @@
     ]
   },
   "add-fillable-fields": {
-    "name": "Agregar campos rellenables",
+    "name": "Crear PDF rellenable",
     "shortName": "Campos rellenables",
-    "summary": "Coloca campos de texto, casilla y firma en cualquier PDF.",
-    "description": "Convierte un PDF plano en un formulario rellenable marcando campos en la página. Exporta y reutiliza el documento preparado para capturar datos.",
+    "summary": "Añade campos y crea un PDF rellenable / editável online.",
+    "description": "Convierte un PDF plano en formulario rellenable con campos de texto, casillas y firma.",
     "howTo": [
       "Abre tu PDF en el editor.",
       "Agrega marcadores de campo donde la gente debe escribir o firmar.",
       "Descarga el PDF rellenable."
     ],
     "keywords": [
-      "agregar campos rellenables",
-      "campos formulario pdf",
-      "hacer pdf rellenable",
-      "fillable pdf fields"
+      "rellenar pdf online",
+      "crear pdf rellenable",
+      "campos rellenables pdf",
+      "formulario pdf",
+      "compartir formulario en línea"
     ]
   },
   "flatten-fields": {
@@ -846,21 +847,21 @@
     ]
   },
   "create-fillable-forms": {
-    "name": "Crear formularios rellenables",
+    "name": "Rellenar formulario PDF online",
     "shortName": "Formularios rellenables",
-    "summary": "Abre formularios existentes y escribe respuestas en el navegador.",
-    "description": "Completa formularios PDF interactivos sin imprimir. Llena cuadros de texto y casillas, luego guarda o aplana al terminar.",
+    "summary": "Rellena formularios PDF online sin imprimir.",
+    "description": "Completa formularios PDF interactivos en el navegador y descarga el resultado.",
     "howTo": [
       "Sube un PDF rellenable.",
       "Haz clic en los campos e ingresa tus respuestas.",
       "Descarga el formulario completado."
     ],
     "keywords": [
-      "pdf rellenable",
-      "llenar formulario pdf",
-      "rellenar pdf",
-      "pdf interactivo",
-      "fillable pdf"
+      "llenar formulario online",
+      "rellenar pdf online",
+      "formulario online",
+      "preencher formulário",
+      "pdf rellenable"
     ]
   },
   "document-assistant": {
@@ -1178,20 +1179,20 @@
     ]
   },
   "zip-to-pdf": {
-    "name": "ZIP a PDF",
+    "name": "Convertir ZIP a PDF",
     "shortName": "ZIP a PDF",
-    "summary": "Desempaqueta un ZIP de imágenes/PDF en un solo PDF.",
-    "description": "Sube un .zip con imágenes y/o PDF. myonlinepdfeditor.com extrae archivos compatibles y los fusiona en un solo PDF de forma local.",
+    "summary": "Transforma un archivo ZIP en PDF online.",
+    "description": "Sube un .zip con imágenes/PDF y únelos en un solo PDF en el navegador.",
     "howTo": [
       "Sube un .zip.",
       "Extrae y fusiona de forma local.",
       "Descarga el PDF combinado."
     ],
     "keywords": [
+      "de zip a pdf",
       "zip a pdf",
-      "descomprimir a pdf",
-      "carpeta a pdf",
-      "zip to pdf"
+      "convertir zip a pdf",
+      "archivo zip a pdf"
     ]
   },
   "scan-pdf": {
@@ -1213,10 +1214,10 @@
     ]
   },
   "redact-pdf": {
-    "name": "Redactar PDF",
+    "name": "Redactar PDF online",
     "shortName": "Redactar PDF",
-    "summary": "Tapa páginas completas antes de compartir.",
-    "description": "Cubre páginas seleccionadas con rectángulos negros opacos para ocultar páginas sensibles completas en copias compartidas. Para redacción por región exacta, usa anotaciones en Editar PDF después.",
+    "summary": "Tacha o censura páginas de un PDF online gratis.",
+    "description": "Cubre páginas sensibles con negro opaco antes de compartir.",
     "howTo": [
       "Sube un PDF.",
       "Ingresa los números de página a redactar por completo.",
@@ -1225,9 +1226,8 @@
     "keywords": [
       "redactar pdf",
       "censurar pdf",
-      "tapar pdf",
-      "redacción pdf",
-      "redact pdf"
+      "pdf redactor online",
+      "redigir pdf"
     ]
   },
   "invert-pdf": {

@@ -38,6 +38,7 @@ export async function generateMetadata({
     summary: tool.summary,
     description: tool.description,
     headline: copy?.headline,
+    locale,
   });
 
   const meta = buildMetadata({

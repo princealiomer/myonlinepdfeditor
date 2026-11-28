@@ -161,7 +161,7 @@ export const TOOLS: Tool[] = [
       "Arrange order if you added multiple images.",
       "Download your PDF.",
     ],
-    keywords: ["png to pdf", "convert png", "image to pdf", "screenshot to pdf"],
+    keywords: ["png to pdf", "convert png to pdf online", "image to pdf", "screenshot to pdf"],
     accept: "image/png,.png",
     multiFile: true,
   },
@@ -249,7 +249,7 @@ export const TOOLS: Tool[] = [
       "Wait for local conversion.",
       "Download the PDF.",
     ],
-    keywords: ["rtf to pdf", "rich text to pdf", "convert rtf", "rtf converter"],
+    keywords: ["rtf to pdf", "rich text to pdf", "convert rtf to pdf", "rtf file to pdf converter online"],
     accept: ".rtf,application/rtf",
   },
   {
@@ -284,7 +284,7 @@ export const TOOLS: Tool[] = [
       "Reorder images if you added several.",
       "Download your PDF.",
     ],
-    keywords: ["webp to pdf", "convert webp", "webp image pdf"],
+    keywords: ["webp to pdf", "convert webp to pdf", "webp image pdf"],
     accept: "image/webp,.webp",
     multiFile: true,
   },
@@ -302,7 +302,7 @@ export const TOOLS: Tool[] = [
       "Arrange page order when using multiple files.",
       "Save the combined PDF.",
     ],
-    keywords: ["gif to pdf", "convert gif", "gif image to pdf"],
+    keywords: ["gif to pdf", "convert gif to pdf", "gif image to pdf"],
     accept: "image/gif,.gif",
     multiFile: true,
   },
@@ -320,7 +320,7 @@ export const TOOLS: Tool[] = [
       "Upload order becomes page order (first file = first page).",
       "Download the PDF.",
     ],
-    keywords: ["bmp to pdf", "bitmap to pdf", "convert bmp pdf"],
+    keywords: ["bmp to pdf", "bmp pdf converter online", "bitmap to pdf", "convert bmp pdf"],
     accept: "image/bmp,.bmp,image/x-ms-bmp",
     multiFile: true,
   },
@@ -338,7 +338,7 @@ export const TOOLS: Tool[] = [
       "Upload order becomes page order (reorder by removing and re-adding if needed).",
       "Download the merged PDF.",
     ],
-    keywords: ["images to pdf", "photos to pdf", "combine images pdf", "picture to pdf"],
+    keywords: ["convert images to one pdf", "images to pdf", "combine 2 image into 1 pdf", "photos to one pdf", "convert multiple images to one pdf"],
     accept: "image/*",
     multiFile: true,
   },
@@ -443,7 +443,7 @@ export const TOOLS: Tool[] = [
       "Use the toolbar to add or change content.",
       "Download the updated PDF.",
     ],
-    keywords: ["pdf editor", "edit pdf online", "free pdf editor", "modify pdf"],
+    keywords: ["visual pdf", "edit pdf online", "free pdf editor", "visual pdf editor", "pdf editor"],
     accept: "application/pdf,.pdf",
   },
   {
@@ -476,7 +476,7 @@ export const TOOLS: Tool[] = [
       "Add field markers where people should type or sign.",
       "Download the fillable PDF.",
     ],
-    keywords: ["add fillable fields", "pdf form fields", "make pdf fillable"],
+    keywords: ["add fillable fields to pdf", "make pdf fillable online", "create fillable pdf form free", "pdf form fields", "free fillable pdf forms"],
     accept: "application/pdf,.pdf",
   },
   {
@@ -715,7 +715,7 @@ export const TOOLS: Tool[] = [
       "Apply grayscale to all pages.",
       "Download the gray-toned PDF.",
     ],
-    keywords: ["grayscale pdf", "black and white pdf", "convert pdf gray"],
+    keywords: ["grayscale pdf", "black and white pdf", "convert pdf gray", "pdf to black and white"],
     accept: "application/pdf,.pdf",
   },
   {
@@ -768,7 +768,7 @@ export const TOOLS: Tool[] = [
       "Add signature and date fields for each signer.",
       "Download and share the prepared PDF.",
     ],
-    keywords: ["send for signature", "signature fields pdf", "prepare esign", "signing workflow"],
+    keywords: ["send pdf for signature free", "send pdf for signature", "signature fields pdf", "prepare esign", "signing workflow"],
     accept: "application/pdf,.pdf",
   },
   {
@@ -957,7 +957,7 @@ export const TOOLS: Tool[] = [
       "Click fields and enter your answers.",
       "Download the completed form.",
     ],
-    keywords: ["fillable pdf", "fill pdf form", "pdf form filler", "interactive pdf"],
+    keywords: ["fillable pdf free", "create fillable forms pdf free", "fill pdf form", "pdf fillable form free", "make pdf forms fillable free"],
     accept: "application/pdf,.pdf",
   },
 
@@ -1221,7 +1221,7 @@ export const TOOLS: Tool[] = [
       "Wait for local conversion.",
       "Download the PDF.",
     ],
-    keywords: ["heic to pdf", "heif to pdf", "iphone photo pdf"],
+    keywords: ["heic to pdf", "convert heic to pdf", "heif to pdf", "iphone photo pdf"],
     accept: "image/heic,image/heif,.heic,.heif",
     multiFile: true,
   },
@@ -1276,7 +1276,7 @@ export const TOOLS: Tool[] = [
     description:
       "Upload a .zip containing images and/or PDFs. myonlinepdfeditor.com extracts supported files and merges them into a single PDF locally.",
     howTo: ["Upload a .zip.", "Extract and merge locally.", "Download the combined PDF."],
-    keywords: ["zip to pdf", "unzip to pdf", "folder to pdf"],
+    keywords: ["zip to pdf", "convert zip to pdf", "unzip to pdf", "folder to pdf"],
     accept: ".zip,application/zip,application/x-zip-compressed",
   },
   {
@@ -1307,7 +1307,7 @@ export const TOOLS: Tool[] = [
       "Enter page numbers to fully redact.",
       "Download the redacted PDF.",
     ],
-    keywords: ["redact pdf", "blackout pdf", "censor pdf", "pdf redaction"],
+    keywords: ["pdf redactor online", "redact pdf", "blackout pdf", "censor pdf", "pdf redaction"],
     accept: "application/pdf,.pdf",
   },
   {
@@ -1320,7 +1320,7 @@ export const TOOLS: Tool[] = [
     description:
       "Rasterize and invert colors on every page. Useful for dark backgrounds or accessibility contrast experiments.",
     howTo: ["Upload a PDF.", "Run invert.", "Download."],
-    keywords: ["invert pdf", "negative pdf", "dark mode pdf"],
+    keywords: ["invert pdf", "invert pdf online", "negative pdf", "dark mode pdf"],
     accept: "application/pdf,.pdf",
   },
   {
@@ -1377,7 +1377,7 @@ export const TOOLS: Tool[] = [
     description:
       "Scale and center each page onto a target paper size without a desktop print dialog.",
     howTo: ["Upload a PDF.", "Pick Letter, A4, or Legal.", "Download."],
-    keywords: ["change pdf page size", "a4 to letter", "letter to a4", "pdf paper size"],
+    keywords: ["change pdf page size", "pdf page size", "a4 to letter", "letter to a4", "resize pdf online"],
     accept: "application/pdf,.pdf",
   },
   {
@@ -1775,7 +1775,7 @@ export const TOOLS: Tool[] = [
     summary: "Tile the first page into a poster grid.",
     description: "Split the first page across multiple sheets for large-format wall prints.",
     howTo: ["Upload PDF.", "Generate poster tiles.", "Print the downloaded pages."],
-    keywords: ["pdf poster", "print poster pdf", "tile pdf"],
+    keywords: ["convert pdf to poster", "pdf poster", "print poster pdf", "pdf to poster online", "tile pdf"],
     accept: "application/pdf,.pdf",
   },
   {
@@ -1868,7 +1868,7 @@ export const TOOLS: Tool[] = [
       "Download the readiness checklist.",
       "Finish with an external PDF/A validator if required.",
     ],
-    keywords: ["validate pdfa", "pdf/a validation"],
+    keywords: ["pdf validator online", "pdfa validator", "validate pdfa", "pdf checker online", "pdf/a validation"],
     accept: "application/pdf,.pdf",
   },
   {

@@ -4,11 +4,42 @@ import {
   SAMPLE_FORMATS,
   allSampleFormatIds,
 } from "@/lib/catalog/sample-documents";
-import { LOCALES, localePath } from "@/lib/i18n";
+import { LOCALES, localePath, stripLocalePrefix } from "@/lib/i18n";
+import { languageAlternates } from "@/lib/seo";
 import { site } from "@/lib/site";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+function entry(
+  localizedPath: string,
+  opts: {
+    lastModified: string;
+    changeFrequency: NonNullable<
+      MetadataRoute.Sitemap[number]["changeFrequency"]
+    >;
+    priority: number;
+    /** When false, skip hreflang (EN-only /vs + guides that stay noindex elsewhere). */
+    hreflang?: boolean;
+  },
+): MetadataRoute.Sitemap[number] {
   const base = site.url.replace(/\/$/, "");
+  const href = localizedPath === "/" ? "/" : localizedPath;
+  const { path: sharedPath } = stripLocalePrefix(href);
+
+  return {
+    url: `${base}${href === "/" ? "/" : href}`,
+    lastModified: opts.lastModified,
+    changeFrequency: opts.changeFrequency,
+    priority: opts.priority,
+    ...(opts.hreflang === false
+      ? {}
+      : {
+          alternates: {
+            languages: languageAlternates(sharedPath),
+          },
+        }),
+  };
+}
+
+export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = "2026-11-21";
 
   const staticPaths = [
@@ -40,22 +71,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     ...LOCALES.flatMap((locale) =>
       staticPaths.map((path) => {
-        const localized = localePath(locale, path || "/");
-        return {
-          url: `${base}${localized === "/" ? "/" : localized}`,
+        const shared = path || "/";
+        const localized = localePath(locale, shared);
+        return entry(localized === "/" ? "/" : localized, {
           lastModified,
           changeFrequency:
             path === "" || path === "/tools" ? "weekly" : "monthly",
           priority: path === "" ? 1 : path === "/tools" ? 0.9 : 0.6,
-        } as const;
+          hreflang: true,
+        });
       }),
     ),
-    ...comparePaths.map((path) => ({
-      url: `${base}${path}`,
-      lastModified,
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
-    })),
+    ...comparePaths.map((path) =>
+      entry(path, {
+        lastModified,
+        changeFrequency: "monthly",
+        priority: 0.75,
+        // Do not point hreflang at noindex locale duplicates.
+        hreflang: false,
+      }),
+    ),
   ];
 
   const toolSlugs = allToolSlugs().filter((slug) => {
@@ -65,40 +100,51 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
 
   const toolRoutes: MetadataRoute.Sitemap = LOCALES.flatMap((locale) =>
-    toolSlugs.map((slug) => ({
-      url: `${base}${localePath(locale, `/tools/${slug}`)}`,
-      lastModified,
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    })),
+    toolSlugs.map((slug) =>
+      entry(localePath(locale, `/tools/${slug}`), {
+        lastModified,
+        changeFrequency: "weekly",
+        priority: 0.8,
+        hreflang: true,
+      }),
+    ),
   );
 
   const featureRoutes: MetadataRoute.Sitemap = LOCALES.flatMap((locale) =>
-    allFeatureSlugs().map((slug) => ({
-      url: `${base}${localePath(locale, `/features/${slug}`)}`,
-      lastModified,
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    })),
+    allFeatureSlugs().map((slug) =>
+      entry(localePath(locale, `/features/${slug}`), {
+        lastModified,
+        changeFrequency: "monthly",
+        priority: 0.7,
+        hreflang: true,
+      }),
+    ),
   );
 
   const sampleFormatRoutes: MetadataRoute.Sitemap = LOCALES.flatMap((locale) =>
-    allSampleFormatIds().map((format) => ({
-      url: `${base}${localePath(locale, `/sample-documents/${format}`)}`,
-      lastModified,
-      changeFrequency: "monthly" as const,
-      priority: 0.55,
-    })),
+    allSampleFormatIds().map((format) =>
+      entry(localePath(locale, `/sample-documents/${format}`), {
+        lastModified,
+        changeFrequency: "monthly",
+        priority: 0.55,
+        hreflang: true,
+      }),
+    ),
   );
 
   const sampleFileRoutes: MetadataRoute.Sitemap = LOCALES.flatMap((locale) =>
     SAMPLE_FORMATS.flatMap((format) =>
-      format.files.map((file) => ({
-        url: `${base}${localePath(locale, `/sample-documents/${format.id}/${file.slug}`)}`,
-        lastModified,
-        changeFrequency: "monthly" as const,
-        priority: 0.5,
-      })),
+      format.files.map((file) =>
+        entry(
+          localePath(locale, `/sample-documents/${format.id}/${file.slug}`),
+          {
+            lastModified,
+            changeFrequency: "monthly",
+            priority: 0.5,
+            hreflang: true,
+          },
+        ),
+      ),
     ),
   );
 

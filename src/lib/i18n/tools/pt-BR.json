@@ -119,10 +119,10 @@
     ]
   },
   "rtf-to-pdf": {
-    "name": "RTF para PDF",
+    "name": "RTF para PDF online",
     "shortName": "RTF → PDF",
-    "summary": "Converta arquivos Rich Text Format em PDFs padrão.",
-    "description": "Abra documentos .rtf legados e salve como PDF para visualização universal. O myonlinepdfeditor.com processa o arquivo na sua máquina para que rascunhos sensíveis permaneçam privados.",
+    "summary": "Converter RTF / rich text para PDF grátis.",
+    "description": "Abra documentos .rtf e salve como PDF. Conversor de RTF para PDF no navegador.",
     "howTo": [
       "Escolha um arquivo .rtf no seu computador.",
       "Aguarde a conversão local.",
@@ -131,8 +131,9 @@
     "keywords": [
       "rtf para pdf",
       "rich text para pdf",
-      "converter rtf",
-      "conversor rtf"
+      "converter rtf em pdf",
+      "formato rich text para pdf",
+      "como converter rtf em pdf"
     ]
   },
   "excel-to-pdf": {
@@ -153,42 +154,42 @@
     ]
   },
   "webp-to-pdf": {
-    "name": "WebP para PDF",
+    "name": "Converter WebP em PDF",
     "shortName": "WebP → PDF",
-    "summary": "Combine imagens WebP em um único PDF.",
-    "description": "Converta gráficos WebP modernos em um PDF para anexar ou imprimir. Una vários arquivos WebP na ordem desejada sem enviá-los a um servidor remoto.",
+    "summary": "Arquivo WebP para PDF online grátis.",
+    "description": "Converta imagens WebP em um PDF pronto para envio ou impressão.",
     "howTo": [
       "Selecione um ou mais arquivos WebP.",
       "Reordene as imagens se você adicionou várias.",
       "Baixe seu PDF."
     ],
     "keywords": [
-      "webp para pdf",
-      "converter webp",
-      "imagem webp pdf"
+      "converter webp em pdf",
+      "arquivo webp para pdf",
+      "webp para pdf"
     ]
   },
   "gif-to-pdf": {
-    "name": "GIF para PDF",
+    "name": "Converter GIF em PDF",
     "shortName": "GIF → PDF",
-    "summary": "Transforme imagens GIF em um PDF imprimível.",
-    "description": "Coloque quadros ou imagens estáticas de GIF em um documento PDF para registro e compartilhamento. O processamento roda no navegador para que GIFs animados ou com marca fiquem no seu dispositivo.",
+    "summary": "GIF em PDF online grátis.",
+    "description": "Envie GIFs e monte um PDF para arquivo ou impressão.",
     "howTo": [
       "Envie arquivos de imagem GIF.",
       "Organize a ordem das páginas ao usar vários arquivos.",
       "Salve o PDF combinado."
     ],
     "keywords": [
-      "gif para pdf",
-      "converter gif",
-      "gif imagem para pdf"
+      "converter gif em pdf",
+      "gif em pdf",
+      "gif para pdf"
     ]
   },
   "bmp-to-pdf": {
-    "name": "BMP para PDF",
+    "name": "BMP para PDF online",
     "shortName": "BMP → PDF",
-    "summary": "Converta imagens bitmap (BMP) em páginas PDF.",
-    "description": "Scans e exportações BMP legados viram PDFs fáceis de compartilhar. Empilhe vários bitmaps em um arquivo para impressão ou portais de envio.",
+    "summary": "Converter BMP em PDF grátis no navegador.",
+    "description": "Scans e exportações BMP legados viram PDFs fáceis de compartilhar. Conversor de BMP para PDF sem instalar programas.",
     "howTo": [
       "Escolha arquivos BMP no seu computador.",
       "Reordene as miniaturas, se necessário.",
@@ -196,25 +197,27 @@
     ],
     "keywords": [
       "bmp para pdf",
-      "bitmap para pdf",
-      "converter bmp pdf"
+      "converter bmp em pdf",
+      "conversor de bmp para pdf",
+      "como converter bmp em pdf usando uma ferramenta online?"
     ]
   },
   "images-to-pdf": {
     "name": "Imagens para PDF",
     "shortName": "Imagens → PDF",
-    "summary": "Una formatos de imagem mistos em um PDF ordenado.",
-    "description": "Solte PNG, JPG, WebP, GIF, BMP e outras imagens suportadas e receba um único PDF na ordem que você definir. Ideal para lotes de scan e pacotes de fotos.",
+    "summary": "Juntar imagens em um PDF. Fotos para um único arquivo.",
+    "description": "Una PNG, JPG, WebP, GIF e BMP em um PDF ordenado. Ideal para digitalizar e juntar fotos.",
     "howTo": [
       "Adicione vários arquivos de imagem de qualquer tipo suportado.",
       "Arraste para definir a ordem das páginas.",
       "Baixe o PDF unificado."
     ],
     "keywords": [
-      "imagens para pdf",
-      "fotos para pdf",
+      "imagens em pdf",
+      "digitalizar para pdf",
       "juntar imagens pdf",
-      "foto para pdf"
+      "fotos para pdf",
+      "colocar imagem em pdf"
     ]
   },
   "pdf-to-jpg": {
@@ -302,53 +305,59 @@
     ]
   },
   "edit-pdf": {
-    "name": "Editor de PDF",
+    "name": "Editar PDF online grátis",
     "shortName": "Editar PDF",
-    "summary": "Abra qualquer PDF e ajuste páginas, texto e marcações no navegador.",
-    "description": "O Editor de PDF do myonlinepdfeditor.com permite enviar um documento e trabalhar nele localmente: navegue pelas páginas, posicione conteúdo e exporte quando terminar. O arquivo permanece no seu dispositivo o tempo todo.",
+    "summary": "Editor de PDF online para editar texto e páginas. Sem cadastro.",
+    "description": "Editar PDF online grátis no navegador: ajuste texto, páginas e marcações. O arquivo permanece no seu dispositivo.",
     "howTo": [
       "Envie o PDF que você quer editar.",
       "Use a barra de ferramentas para adicionar ou alterar conteúdo.",
       "Baixe o PDF atualizado."
     ],
     "keywords": [
-      "editor pdf",
       "editar pdf online",
-      "editor pdf grátis",
-      "modificar pdf"
+      "editar texto pdf",
+      "editar pdf online gratis",
+      "editor de pdf online",
+      "modificar pdf online",
+      "editar pdf en linea"
     ]
   },
   "create-pdf": {
-    "name": "Criar PDF",
+    "name": "Criar PDF online",
     "shortName": "Criar PDF",
-    "summary": "Comece com uma página em branco e monte um PDF novo.",
-    "description": "Inicie com uma tela vazia ou modelo e monte um PDF do zero. Adicione páginas, texto e imagens e salve — tudo sem instalar software.",
+    "summary": "Criar um PDF em branco ou novo documento online grátis.",
+    "description": "Comece com uma página em branco e monte um novo PDF. Criador de PDF online sem instalar.",
     "howTo": [
       "Abra Criar PDF para iniciar um documento em branco.",
       "Adicione páginas e conteúdo conforme necessário.",
       "Baixe seu novo PDF."
     ],
     "keywords": [
-      "criar pdf",
-      "novo pdf",
+      "criar pdf online",
       "pdf em branco",
-      "fazer pdf online"
+      "criar um pdf",
+      "gerar pdf online",
+      "criador de pdf online"
     ]
   },
   "add-fillable-fields": {
-    "name": "Adicionar campos preenchíveis",
+    "name": "Criar PDF editável com campos",
     "shortName": "Campos preenchíveis",
-    "summary": "Coloque campos de texto, caixa de seleção e assinatura em qualquer PDF.",
-    "description": "Transforme um PDF estático em formulário preenchível marcando campos na página. Exporte e reutilize o documento preparado para coleta de dados.",
+    "summary": "Adicione campos e crie um PDF editável/preenchível online grátis.",
+    "description": "Transforme um PDF estático em formulário preenchível. Ideal para criar PDF editável, adicionar campos e caixas de seleção sem instalar software.",
     "howTo": [
       "Abra seu PDF no editor.",
       "Adicione marcadores de campo onde as pessoas devem digitar ou assinar.",
       "Baixe o PDF preenchível."
     ],
     "keywords": [
+      "criar pdf editável",
+      "como criar um pdf editável",
+      "criar pdf preenchível",
+      "pdf preenchível grátis",
       "adicionar campos preenchíveis",
-      "campos formulário pdf",
-      "tornar pdf preenchível"
+      "criar formulário em pdf"
     ]
   },
   "flatten-fields": {
@@ -487,36 +496,37 @@
     ]
   },
   "watermark-pdf": {
-    "name": "Marca d'água em PDF",
+    "name": "Carimbo / marca d’água em PDF",
     "shortName": "Marca d'água",
-    "summary": "Adicione marcas d'água de texto ou imagem em todas as páginas.",
-    "description": "Marque rascunhos como CONFIDENCIAL, adicione um logotipo ou identifique cópias de revisão com uma sobreposição semitransparente. Controle opacidade e posição antes de exportar.",
+    "summary": "Adicione carimbo ou marca d’água em PDF online.",
+    "description": "Aplique texto ou imagem como carimbo/marca d’água nas páginas do PDF.",
     "howTo": [
       "Envie o PDF.",
       "Digite o texto da marca d'água ou escolha uma imagem.",
       "Pré-visualize e baixe o arquivo com marca d'água."
     ],
     "keywords": [
-      "marca dágua pdf",
+      "carimbo em pdf",
       "marca dagua pdf",
-      "carimbo rascunho pdf",
-      "marca pdf"
+      "watermark pdf",
+      "carimbo pdf"
     ]
   },
   "crop-pdf": {
-    "name": "Recortar PDF",
+    "name": "Cortar PDF online",
     "shortName": "Recortar PDF",
-    "summary": "Ajuste margens e recorte as caixas de página ao conteúdo.",
-    "description": "Remova bordas do scanner ou margens brancas extras para que cada página fique justa ao conteúdo. Aplique por página ou em todo o documento.",
+    "summary": "Como cortar um PDF / recortar páginas grátis.",
+    "description": "Recorte margens e áreas indesejadas do PDF no navegador.",
     "howTo": [
       "Carregue o PDF em Recortar PDF.",
       "Desenhe caixas de recorte nas miniaturas ou use margens uniformes.",
       "Exporte o PDF recortado."
     ],
     "keywords": [
-      "recortar pdf",
-      "aparar margens pdf",
-      "cortar borda pdf"
+      "como cortar um pdf",
+      "como recortar um pdf",
+      "recortar pdf online gratis",
+      "cortador de pdf"
     ]
   },
   "extract-pages": {
@@ -602,10 +612,10 @@
     ]
   },
   "sign-pdf": {
-    "name": "Assinar PDF",
+    "name": "Assinar PDF online",
     "shortName": "Assinar PDF",
-    "summary": "Assine contratos e formulários no desktop com desenho ou digitação.",
-    "description": "Adicione sua assinatura a qualquer PDF com mouse, caneta ou texto digitado. Exporte uma cópia assinada na hora — ideal para assinatura presencial ou no mesmo dispositivo.",
+    "summary": "Assine PDF grátis no navegador.",
+    "description": "Adicione sua assinatura a qualquer PDF com mouse ou texto digitado.",
     "howTo": [
       "Envie o PDF a assinar.",
       "Crie ou posicione sua assinatura na página.",
@@ -613,26 +623,26 @@
     ],
     "keywords": [
       "assinar pdf",
-      "assinatura pdf",
+      "assinador de pdf",
       "assinar pdf online",
-      "assinar documento online"
+      "sign pdf free online"
     ]
   },
   "send-for-signature": {
-    "name": "Preparar para assinatura",
+    "name": "Enviar PDF para assinatura",
     "shortName": "Enviar p/ assinar",
-    "summary": "Posicione campos de assinatura e exporte um pacote pronto para assinar.",
-    "description": "Marque onde os signatários devem assinar, datar ou rubricar e exporte um PDF para outras pessoas completarem. O myonlinepdfeditor.com foca na preparação no navegador; o envio fica com você.",
+    "summary": "Prepare e envie PDF para assinatura grátis.",
+    "description": "Marque campos de assinatura e prepare o pacote para o signatário preencher.",
     "howTo": [
       "Envie o acordo.",
       "Adicione campos de assinatura e data para cada signatário.",
       "Baixe e compartilhe o PDF preparado."
     ],
     "keywords": [
-      "enviar para assinatura",
-      "campos assinatura pdf",
-      "preparar assinatura eletrônica",
-      "fluxo assinatura"
+      "send pdf for signature free",
+      "send pdf for signature",
+      "assinar documento online",
+      "assinatura pdf"
     ]
   },
   "send-envelopes": {
@@ -799,10 +809,10 @@
     ]
   },
   "create-fillable-forms": {
-    "name": "Criar formulários preenchíveis",
+    "name": "Formulário PDF preenchível",
     "shortName": "Formulários",
-    "summary": "Abra formulários existentes e digite respostas no navegador.",
-    "description": "Preencha formulários PDF interativos sem imprimir. Preencha caixas de texto e seleções e salve ou achete quando terminar.",
+    "summary": "Crie e preencha formulário em PDF online. PDF preenchível grátis.",
+    "description": "Preencha formulários PDF interativos sem imprimir. Crie ou complete um PDF preenchível e baixe o resultado.",
     "howTo": [
       "Envie um PDF preenchível.",
       "Clique nos campos e informe suas respostas.",
@@ -810,9 +820,11 @@
     ],
     "keywords": [
       "pdf preenchível",
-      "preencher formulário pdf",
-      "preenchedor pdf",
-      "pdf interativo"
+      "formulário de preenchimento",
+      "preencher formulário em pdf",
+      "como criar um formulário preenchível",
+      "criar formulários preenchíveis",
+      "preenchível"
     ]
   },
   "document-assistant": {
@@ -1032,36 +1044,39 @@
     ]
   },
   "compare-pdf": {
-    "name": "Comparar PDF",
+    "name": "Comparar PDF online",
     "shortName": "Comparar PDF",
-    "summary": "Diferença lado a lado entre duas versões de PDF.",
-    "description": "Carregue um PDF original e outro revisado para destacar mudanças de texto e layout página a página. Útil para contratos e revisões de conformidade.",
+    "summary": "Comparação de arquivos PDF lado a lado.",
+    "description": "Compare duas versões de PDF e revise diferenças de texto e layout.",
     "howTo": [
       "Envie dois arquivos PDF para comparar.",
       "Alinhe as versões e execute a comparação.",
       "Revise diferenças e exporte um resumo, se disponível."
     ],
     "keywords": [
-      "comparar pdf",
-      "diff pdf",
-      "comparação pdf",
-      "comparar documentos"
+      "comparação de arquivos pdf",
+      "comparar documentos pdf",
+      "comparar pdfs",
+      "comparador de pdf",
+      "comparar pdf online"
     ]
   },
   "heic-to-pdf": {
-    "name": "HEIC para PDF",
+    "name": "Converter HEIC para PDF",
     "shortName": "HEIC → PDF",
-    "summary": "Converta fotos HEIC do iPhone em PDF no navegador.",
-    "description": "Solte imagens HEIC/HEIF para montar um PDF. A conversão usa o decodificador do navegador — se HEIC não for suportado, exporte JPEG do Fotos primeiro.",
+    "summary": "Converter HEIC para PDF online grátis (fotos iPhone).",
+    "description": "Solte imagens HEIC/HEIF para montar um PDF. Conversor HEIC para PDF no navegador.",
     "howTo": [
       "Envie um ou mais arquivos .heic.",
       "Aguarde a conversão local.",
       "Baixe o PDF."
     ],
     "keywords": [
+      "converter heic para pdf",
+      "conversor de heic para pdf",
       "heic para pdf",
-      "heif para pdf",
-      "foto iphone pdf"
+      "arquivo heic para pdf",
+      "converter de heic para pdf"
     ]
   },
   "tiff-to-pdf": {
@@ -1113,19 +1128,21 @@
     ]
   },
   "zip-to-pdf": {
-    "name": "ZIP para PDF",
+    "name": "Conversor de ZIP para PDF",
     "shortName": "ZIP → PDF",
-    "summary": "Extraia um ZIP de imagens/PDFs em um único PDF.",
-    "description": "Envie um .zip com imagens e/ou PDFs. O myonlinepdfeditor.com extrai arquivos suportados e une em um PDF localmente.",
+    "summary": "Transforme arquivo ZIP em PDF online grátis. Sem cadastro.",
+    "description": "Envie um .zip com imagens e/ou PDFs. Extraímos os arquivos suportados e unimos em um único PDF no navegador — conversor de arquivo zip para PDF.",
     "howTo": [
       "Envie um .zip.",
       "Extraia e una localmente.",
       "Baixe o PDF combinado."
     ],
     "keywords": [
+      "conversor de arquivo zip para pdf",
+      "transformar arquivo zip em pdf",
+      "conversor de zip para pdf",
       "zip para pdf",
-      "descompactar para pdf",
-      "pasta para pdf"
+      "de zip a pdf"
     ]
   },
   "scan-pdf": {
@@ -1146,10 +1163,10 @@
     ]
   },
   "redact-pdf": {
-    "name": "Redigir PDF",
+    "name": "Redigir PDF online",
     "shortName": "Redigir PDF",
-    "summary": "Oculte páginas inteiras em preto antes de compartilhar.",
-    "description": "Cubra páginas selecionadas com retângulos pretos opacos para que cópias compartilhadas escondam páginas sensíveis inteiras. Para redação por região, use anotações em Editar PDF depois.",
+    "summary": "Redigir documentos PDF com páginas pretas. Grátis.",
+    "description": "Cubra páginas sensíveis com retângulos pretos antes de compartilhar. Ferramenta para redigir PDF no navegador.",
     "howTo": [
       "Envie um PDF.",
       "Informe os números das páginas a redigir por completo.",
@@ -1157,9 +1174,9 @@
     ],
     "keywords": [
       "redigir pdf",
-      "censurar pdf",
-      "ocultar pdf",
-      "redação pdf"
+      "redigir documentos",
+      "pdf redactor online",
+      "censurar pdf"
     ]
   },
   "invert-pdf": {
@@ -1419,8 +1436,8 @@
   "odt-to-pdf": {
     "name": "ODT para PDF",
     "shortName": "ODT → PDF",
-    "summary": "Converta LibreOffice Writer (.odt) para PDF.",
-    "description": "Extraia texto OpenDocument e monte um PDF localmente. Layouts complexos viram fluxo de texto.",
+    "summary": "Converter ODT (LibreOffice) em PDF online.",
+    "description": "Converta LibreOffice Writer (.odt) para PDF localmente no navegador.",
     "howTo": [
       "Envie .odt.",
       "Converta.",
@@ -1428,15 +1445,15 @@
     ],
     "keywords": [
       "odt para pdf",
-      "opendocument para pdf",
-      "libreoffice writer pdf"
+      "odt to pdf",
+      "converter libre office para pdf"
     ]
   },
   "ods-to-pdf": {
     "name": "ODS para PDF",
     "shortName": "ODS → PDF",
-    "summary": "Converta LibreOffice Calc (.ods) para PDF.",
-    "description": "Leia planilhas ODS como texto tabular e publique um instantâneo PDF.",
+    "summary": "Converter planilha ODS em PDF online.",
+    "description": "Transforme arquivos ODS do LibreOffice Calc em PDF para compartilhar.",
     "howTo": [
       "Envie .ods.",
       "Converta.",
@@ -1444,7 +1461,8 @@
     ],
     "keywords": [
       "ods para pdf",
-      "planilha opendocument pdf"
+      "ods to pdf",
+      "planilha ods pdf"
     ]
   },
   "odp-to-pdf": {
@@ -1569,18 +1587,20 @@
     ]
   },
   "pdf-to-odt": {
-    "name": "PDF para ODT",
+    "name": "Converter PDF em ODT",
     "shortName": "PDF → ODT",
-    "summary": "Exporte texto do PDF para LibreOffice Writer.",
-    "description": "Baixe texto extraível como .txt para abrir no Writer e salvar como ODT.",
+    "summary": "PDF para ODT: exporte texto para LibreOffice Writer.",
+    "description": "Extraia texto do PDF para abrir no Writer e salvar como ODT. Conversor PDF para ODT orientado a texto.",
     "howTo": [
       "Envie PDF.",
       "Extraia texto.",
       "Abra no LibreOffice → Salvar como ODT."
     ],
     "keywords": [
+      "converter pdf em odt",
       "pdf para odt",
-      "pdf para opendocument"
+      "pdf odt",
+      "convertir pdf en odt"
     ]
   },
   "pdf-to-ods": {
@@ -1820,18 +1840,20 @@
     ]
   },
   "validate-pdfa": {
-    "name": "Validar PDF/A",
+    "name": "Validador de PDF",
     "shortName": "Validar PDF/A",
-    "summary": "Como validar PDF/A após a preparação.",
-    "description": "Explica validação PDF/A com verificadores externos após usar a preparação PDF para PDF/A.",
+    "summary": "Verificar PDF / checklist de validação PDF/A online.",
+    "description": "Gera um checklist de prontidão para fluxos PDF/A e ajuda a verificar o arquivo.",
     "howTo": [
       "Envie PDF.",
       "Leia os passos de validação.",
       "Execute um validador PDF/A externo."
     ],
     "keywords": [
-      "validar pdfa",
-      "validação pdf/a"
+      "validador de pdf",
+      "verificar pdf",
+      "pdf validator online",
+      "pdf checker online"
     ]
   },
   "verify-pdf-signatures": {

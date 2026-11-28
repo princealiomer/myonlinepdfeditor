@@ -1,19 +1,19 @@
 {
   "word-to-pdf": {
-    "name": "Word-zu-PDF-Konverter",
+    "name": "Word in PDF konvertieren",
     "shortName": "Word → PDF",
-    "summary": "DOCX-Dateien im Browser in saubere PDFs umwandeln.",
-    "description": "Microsoft-Word-Dokumente in PDF konvertieren, ohne sie auf einen Server hochzuladen. myonlinepdfeditor.com liest Ihre DOCX-Datei lokal, erhält das Layout nach Möglichkeit und liefert in Sekunden ein downloadfertiges PDF.",
+    "summary": "Word zu PDF konvertieren — online kostenlos.",
+    "description": "DOCX lokal in PDF umwandeln ohne Upload-Server.",
     "howTo": [
       "Word zu PDF öffnen und Ihre DOCX-Datei auswählen.",
       "Warten, bis die lokale Konvertierung abgeschlossen ist.",
       "Ergebnis prüfen und das PDF herunterladen."
     ],
     "keywords": [
-      "word to pdf",
-      "docx to pdf",
-      "word in pdf umwandeln",
-      "docx konverter"
+      "word in pdf konvertieren",
+      "word zu pdf konvertieren",
+      "word to pdf kostenlos",
+      "docx in pdf umwandeln"
     ]
   },
   "txt-to-pdf": {
@@ -121,18 +121,17 @@
   "rtf-to-pdf": {
     "name": "RTF zu PDF",
     "shortName": "RTF → PDF",
-    "summary": "Rich-Text-Format-Dateien in Standard-PDFs konvertieren.",
-    "description": "Ältere RTF-Dokumente öffnen und als PDF für universelle Anzeige speichern. myonlinepdfeditor.com verarbeitet die Datei auf Ihrem Rechner – sensible Entwürfe bleiben privat.",
+    "summary": "RTF zu PDF online umwandeln.",
+    "description": "Rich-Text-Dateien (.rtf) lokal als PDF speichern.",
     "howTo": [
       "RTF-Datei vom Computer auswählen.",
       "Auf die lokale Konvertierung warten.",
       "PDF herunterladen."
     ],
     "keywords": [
-      "rtf to pdf",
-      "rich text zu pdf",
-      "rtf konvertieren",
-      "rtf converter"
+      "rtf zu pdf",
+      "rtf in pdf",
+      "rich text pdf"
     ]
   },
   "excel-to-pdf": {
@@ -187,8 +186,8 @@
   "bmp-to-pdf": {
     "name": "BMP zu PDF",
     "shortName": "BMP → PDF",
-    "summary": "Bitmap-Bilder (BMP) in PDF-Seiten umwandeln.",
-    "description": "Ältere BMP-Scans und Exporte werden zu leicht teilbaren PDFs. Mehrere Bitmaps für Druck oder Upload-Portale in einer Datei stapeln.",
+    "summary": "BMP zu PDF online umwandeln.",
+    "description": "Bitmap-Dateien zu PDF konvertieren — kostenlos im Browser.",
     "howTo": [
       "BMP-Dateien vom Computer wählen.",
       "Miniaturvorschauen bei Bedarf neu anordnen.",
@@ -196,25 +195,28 @@
     ],
     "keywords": [
       "bmp to pdf",
-      "bitmap zu pdf",
+      "bmp zu pdf",
       "bmp pdf konvertieren"
     ]
   },
   "images-to-pdf": {
-    "name": "Bilder zu PDF",
+    "name": "Bilder in PDF umwandeln",
     "shortName": "Bilder → PDF",
-    "summary": "Gemischte Bildformate in ein geordnetes PDF zusammenführen.",
-    "description": "PNG, JPG, WebP, GIF, BMP und weitere unterstützte Bilder ablegen und ein PDF in der gewünschten Reihenfolge erhalten. Ideal für Scan-Stapel und Fotopakete.",
+    "summary": "Fotos und Bilder zu PDF zusammenfügen — online.",
+    "description": "PNG, JPG und mehr zu einem PDF. PDF aus Bildern erstellen ohne Installation.",
     "howTo": [
       "Mehrere Bilddateien beliebiger unterstützter Typen hinzufügen.",
       "Per Drag-and-drop die Seitenreihenfolge festlegen.",
       "Zusammengeführtes PDF herunterladen."
     ],
     "keywords": [
-      "images to pdf",
-      "fotos zu pdf",
-      "bilder kombinieren pdf",
-      "bild zu pdf"
+      "pdf aus bildern",
+      "pdf erstellen aus bildern",
+      "bilder in pdf",
+      "bilder zu pdf",
+      "fotos zu pdf zusammenfügen",
+      "img zu pdf",
+      "bild in pdf"
     ]
   },
   "pdf-to-jpg": {
@@ -302,20 +304,22 @@
     ]
   },
   "edit-pdf": {
-    "name": "PDF-Editor",
+    "name": "PDF online bearbeiten kostenlos",
     "shortName": "PDF bearbeiten",
-    "summary": "PDFs im Browser öffnen und Seiten, Text sowie Markierungen anpassen.",
-    "description": "Mit dem myonlinepdfeditor.com PDF-Editor laden Sie ein Dokument hoch und arbeiten lokal: Seiten navigieren, Inhalte platzieren und exportieren, wenn Sie fertig sind. Die Datei bleibt durchgehend auf Ihrem Gerät.",
+    "summary": "PDFs online bearbeiten: Text einfügen und Seiten anpassen. Kostenlos.",
+    "description": "PDF online bearbeiten kostenlos im Browser. Text ändern, Anmerkungen setzen — Dateien bleiben auf dem Gerät.",
     "howTo": [
       "Das zu bearbeitende PDF hochladen.",
       "Symbolleiste nutzen, um Inhalte hinzuzufügen oder zu ändern.",
       "Aktualisiertes PDF herunterladen."
     ],
     "keywords": [
-      "pdf editor",
+      "pdfs online bearbeiten",
+      "online pdf bearbeiten",
+      "pdf online bearbeiten",
       "pdf bearbeiten online",
-      "kostenloser pdf editor",
-      "pdf ändern"
+      "text in pdf einfügen",
+      "pdf text bearbeiten kostenlos"
     ]
   },
   "create-pdf": {
@@ -336,20 +340,21 @@
     ]
   },
   "add-fillable-fields": {
-    "name": "Ausfüllbare Felder hinzufügen",
+    "name": "Ausfüllbares PDF erstellen",
     "shortName": "Formularfelder",
-    "summary": "Text-, Kontrollkästchen- und Signaturfelder auf PDFs platzieren.",
-    "description": "Ein flaches PDF per Feldmarkierungen in ein ausfüllbares Formular verwandeln. Vorbereitetes Dokument exportieren und für Datenerfassung wiederverwenden.",
+    "summary": "PDF mit ausfüllbaren Feldern erstellen — online kostenlos.",
+    "description": "Flaches PDF in ausfüllbares Formular verwandeln. Ideal für Formulare online erstellen.",
     "howTo": [
       "PDF im Editor öffnen.",
       "Feldmarkierungen setzen, wo getippt oder unterschrieben werden soll.",
       "Ausfüllbares PDF herunterladen."
     ],
     "keywords": [
-      "ausfüllbare pdf felder",
-      "pdf formularfelder",
-      "pdf ausfüllbar machen",
-      "fillable pdf"
+      "formulare online erstellen",
+      "ausfüllbares pdf erstellen",
+      "pdf mit ausfüllbaren feldern erstellen",
+      "pdf ausfüllbar machen kostenlos",
+      "formulare online ausfüllen"
     ]
   },
   "flatten-fields": {
@@ -606,20 +611,19 @@
     ]
   },
   "sign-pdf": {
-    "name": "PDF unterschreiben",
+    "name": "PDF unterschreiben online",
     "shortName": "PDF signieren",
-    "summary": "Verträge und Formulare am Desktop zeichnen oder tippen.",
-    "description": "Mit Maus, Stift oder getippter Schrift auf jedem PDF signieren. Signierte Kopie sofort exportieren – ideal vor Ort oder auf demselben Gerät.",
+    "summary": "PDF online unterschreiben — kostenlos.",
+    "description": "Unterschrift zeichnen oder tippen und ins PDF setzen.",
     "howTo": [
       "Zu signierendes PDF hochladen.",
       "Signatur erstellen oder auf der Seite platzieren.",
       "Signiertes Dokument herunterladen."
     ],
     "keywords": [
-      "pdf unterschreiben",
-      "sign pdf",
-      "pdf signatur",
-      "dokument online signieren"
+      "pdf unterschreiben online",
+      "online unterschreiben",
+      "unterschrift kopieren und einfügen"
     ]
   },
   "send-for-signature": {
@@ -807,20 +811,21 @@
     ]
   },
   "create-fillable-forms": {
-    "name": "Ausfüllbare Formulare",
+    "name": "Formular online ausfüllen",
     "shortName": "Formulare ausfüllen",
-    "summary": "Bestehende Formulare im Browser ausfüllen.",
-    "description": "Interaktive PDF-Formulare ohne Druck ausfüllen. Textfelder und Kontrollkästchen bearbeiten, danach speichern oder ebenen.",
+    "summary": "Dokumente und Formulare online ausfüllen — kostenlos.",
+    "description": "Interaktive PDF-Formulare im Browser ausfüllen und speichern.",
     "howTo": [
       "Ausfüllbares PDF hochladen.",
       "Felder anklicken und Antworten eintragen.",
       "Ausgefülltes Formular herunterladen."
     ],
     "keywords": [
-      "ausfüllbares pdf",
-      "pdf formular ausfüllen",
-      "fillable pdf",
-      "interaktives pdf"
+      "formulare online ausfüllen",
+      "dokumente online ausfüllen",
+      "formular online ausfüllen kostenlos",
+      "formular online",
+      "pdf online ausfüllen"
     ]
   },
   "document-assistant": {
@@ -858,20 +863,22 @@
     ]
   },
   "summarize-key-points": {
-    "name": "Kernpunkte zusammenfassen",
+    "name": "Dokumente zusammenfassen mit KI",
     "shortName": "Zusammenfassung",
-    "summary": "Text-Helfer: kurze Zusammenfassungen aus extrahiertem PDF-Text.",
-    "description": "Text auf dem Gerät zu Stichpunkt-Zusammenfassungen langer Berichte oder Artikel. Ideal für schnelle Orientierung vor dem Detaillesen.",
+    "summary": "Dokumente automatisch mit KI zusammenfassen — online.",
+    "description": "PDF-Inhalte in kurze Kernpunkte verdichten. KI-Zusammenfassung für Dokumente im Browser.",
     "howTo": [
       "PDF öffnen und Text lokal extrahieren.",
       "Zusammenfassung auf den extrahierten Inhalt anwenden.",
       "Zusammenfassung für Notizen oder E-Mail kopieren."
     ],
     "keywords": [
-      "pdf zusammenfassen",
-      "pdf summary",
-      "tldr pdf",
-      "zusammenfassung dokument"
+      "dokumente zusammenfassen mit ki",
+      "dokumente automatisch zusammenfassen",
+      "dokumente zusammenfassen ki",
+      "pdf zusammenfassen ki",
+      "ki pdf-zusammenfassung online",
+      "ki dokument zusammenfassen"
     ]
   },
   "ask-document": {
@@ -1128,8 +1135,8 @@
   "zip-to-pdf": {
     "name": "ZIP zu PDF",
     "shortName": "ZIP → PDF",
-    "summary": "ZIP mit Bildern/PDFs in ein PDF entpacken.",
-    "description": "ZIP mit Bildern und/oder PDFs hochladen. myonlinepdfeditor.com entpackt unterstützte Dateien und führt sie lokal zu einem PDF zusammen.",
+    "summary": "ZIP-Archiv mit Bildern/PDFs zu einem PDF entpacken.",
+    "description": "ZIP hochladen und unterstützte Dateien lokal zu einem PDF zusammenführen.",
     "howTo": [
       "ZIP hochladen.",
       "Lokal entpacken und zusammenführen.",
@@ -1159,10 +1166,10 @@
     ]
   },
   "redact-pdf": {
-    "name": "PDF schwärzen",
+    "name": "PDF schwärzen online kostenlos",
     "shortName": "Schwärzen",
-    "summary": "Ganze Seiten vor dem Teilen schwärzen.",
-    "description": "Ausgewählte Seiten mit undurchsichtigen schwarzen Flächen abdecken, damit sensible Seiten in geteilten Kopien verborgen bleiben. Für pixelgenaue Bereichsschwärzung danach Anmerkungen im PDF-Editor nutzen.",
+    "summary": "PDF Dokument schwärzen — online, kostenlos, ohne Anmeldung.",
+    "description": "Seiten vollständig schwärzen, bevor Sie teilen. PDF schwärzen online kostenlos im Browser; für Bereichsschwärzung danach den PDF-Editor nutzen.",
     "howTo": [
       "PDF hochladen.",
       "Seitennummern zum vollständigen Schwärzen eingeben.",
@@ -1170,9 +1177,12 @@
     ],
     "keywords": [
       "pdf schwärzen",
-      "redact pdf",
-      "pdf zensieren",
-      "blackout pdf"
+      "pdf dokument schwärzen",
+      "pdf online schwärzen",
+      "pdf schwärzen online",
+      "pdf schwärzen online kostenlos",
+      "schwärzen pdf",
+      "dokumente schwärzen"
     ]
   },
   "invert-pdf": {
@@ -1244,10 +1254,10 @@
     ]
   },
   "change-page-size": {
-    "name": "Seitengröße ändern",
+    "name": "PDF Seitengröße ändern",
     "shortName": "Seitengröße",
-    "summary": "Seiten auf Letter, A4 oder Legal anpassen.",
-    "description": "Jede Seite skalieren und auf Zielformat zentrieren – ohne Desktop-Druckdialog.",
+    "summary": "Seitengröße PDF ändern — Letter, A4, Legal online.",
+    "description": "Jede Seite skalieren und auf Zielformat zentrieren. PDF Seitengröße ändern ohne Druckdialog.",
     "howTo": [
       "PDF hochladen.",
       "Letter, A4 oder Legal wählen.",
@@ -1255,9 +1265,9 @@
     ],
     "keywords": [
       "pdf seitengröße ändern",
-      "a4 zu letter",
-      "letter zu a4",
-      "pdf papierformat"
+      "seitengröße pdf ändern",
+      "pdf papierformat",
+      "a4 zu letter"
     ]
   },
   "rasterize-pdf": {
@@ -1435,19 +1445,21 @@
     ]
   },
   "odt-to-pdf": {
-    "name": "ODT zu PDF",
+    "name": "ODT in PDF umwandeln",
     "shortName": "ODT → PDF",
-    "summary": "LibreOffice Writer (ODT) in PDF konvertieren.",
-    "description": "OpenDocument-Text extrahieren und lokal ein PDF aufbauen. Komplexe Layouts werden zu Textfluss vereinfacht.",
+    "summary": "ODT in PDF konvertieren — LibreOffice Writer online.",
+    "description": "OpenDocument-Text lokal in PDF umwandeln.",
     "howTo": [
       "ODT hochladen.",
       "Konvertieren.",
       "PDF herunterladen."
     ],
     "keywords": [
-      "odt to pdf",
-      "opendocument zu pdf",
-      "libreoffice writer pdf"
+      "odt in pdf umwandeln",
+      "odt in pdf",
+      "odt zu pdf",
+      "odt datei umwandeln in pdf",
+      "libreoffice in pdf umwandeln"
     ]
   },
   "ods-to-pdf": {
@@ -1746,18 +1758,17 @@
   "print-pdf-as-poster": {
     "name": "PDF als Poster drucken",
     "shortName": "Poster",
-    "summary": "Erste Seite in ein Poster-Raster kacheln.",
-    "description": "Erste Seite über mehrere Blätter für großformatige Wanddrucke aufteilen.",
+    "summary": "PDF Poster online kacheln und großformatig drucken.",
+    "description": "Erste Seite in Poster-Kacheln teilen für Wanddruck.",
     "howTo": [
       "PDF hochladen.",
       "Poster-Kacheln erzeugen.",
       "Heruntergeladene Seiten drucken."
     ],
     "keywords": [
+      "pdf als poster drucken",
       "pdf poster",
-      "poster drucken pdf",
-      "pdf kacheln",
-      "tile pdf"
+      "poster print pdf online"
     ]
   },
   "generate-password": {

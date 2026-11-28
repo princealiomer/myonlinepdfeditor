@@ -17,54 +17,57 @@
     ]
   },
   "txt-to-pdf": {
-    "name": "テキストをPDFに",
+    "name": "テキストからPDF作成",
     "shortName": "TXT → PDF",
-    "summary": "プレーンテキストを見やすく印刷できるPDFにします。",
-    "description": ".txtをアップロードするかテキストを貼り付けると、読みやすい体裁のシンプルなPDFを作成します。メモ、ログ、スクリプトの保存・共有に便利です。",
+    "summary": "テキスト文書をPDFに変換。オンライン無料。",
+    "description": ".txtをアップロードするかテキストを貼り付けると、読みやすい体裁のシンプルなPDFを作成します。",
     "howTo": [
       ".txtをアップロードするかテキストを貼り付けます。",
       "表示されている場合はページ設定を調整します。",
       "生成されたPDFをダウンロードします。"
     ],
     "keywords": [
-      "テキスト pdf",
-      "txt to pdf",
-      "text to pdf",
-      "メモ pdf"
+      "テキストからpdf作成",
+      "テキスト pdf 変換方法",
+      "テキスト文書 pdf変換",
+      "テキスト pdf変換",
+      "txtファイル pdf変換"
     ]
   },
   "png-to-pdf": {
-    "name": "PNGをPDFに",
+    "name": "PNG PDF変換 オンライン",
     "shortName": "PNG → PDF",
-    "summary": "PNG画像を1つのPDFにまとめます。",
-    "description": "PNGを1枚以上ドロップすると、画質を保ったPDFが得られます。処理はすべてブラウザ内で行われ、スクリーンショットや画像が端末から出ません。",
+    "summary": "PNGをPDFにオンライン変換。複数画像も1つのPDFに結合。",
+    "description": "PNGを1枚以上ドロップして画質を保ったPDFへ。png pdf オンライン変換・登録不要。処理はブラウザ内のみ。",
     "howTo": [
       "PNG画像ファイルを選択します。",
       "複数ある場合は順序を並べ替えます。",
       "PDFをダウンロードします。"
     ],
     "keywords": [
-      "png pdf",
-      "png to pdf",
-      "画像 pdf 結合",
-      "スクリーンショット pdf"
+      "png pdf オンライン変換",
+      "オンライン png pdf 変換",
+      "png pdf 変換",
+      "pngをpdfに変換",
+      "png pdf 変換方法"
     ]
   },
   "jpg-to-pdf": {
-    "name": "JPG/JPEGをPDFに",
+    "name": "JPG PDF結合・変換 オンライン",
     "shortName": "JPG → PDF",
-    "summary": "JPEG写真をPDFに変換します。",
-    "description": "JPG・JPEG写真を共有しやすいPDFにします。複数枚を1ファイルにまとめて印刷やメール送信に使え、変換はすべてローカルで行います。",
+    "summary": "JPG/JPEGを1つのPDFに結合。複数写真のオンライン変換。",
+    "description": "複数のJPG・JPEGを1つのPDFに結合。写真やスキャン束を無料オンラインでまとめます。",
     "howTo": [
       "JPGまたはJPEGファイルをアップロードします。",
       "必要に応じてページ順を並べ替えます。",
       "結合したPDFを保存します。"
     ],
     "keywords": [
-      "jpg pdf",
-      "jpeg pdf",
-      "写真 pdf",
-      "画像 to pdf"
+      "jpg pdf結合",
+      "jpeg 2つを1つのpdfに結合",
+      "画像をpdfに結合",
+      "jpg 1つのpdf 結合",
+      "jpeg pdf 結合"
     ]
   },
   "ppt-to-pdf": {
@@ -85,20 +88,20 @@
     ]
   },
   "csv-to-pdf": {
-    "name": "CSVをPDFに",
+    "name": "CSVをPDFに変換",
     "shortName": "CSV → PDF",
-    "summary": "表データを読みやすいPDF表として出力します。",
-    "description": "CSVをアップロードすると、行を見やすいPDFレイアウトに変換します。印刷向けの固定レイアウトで共有したいレポートに便利です。",
+    "summary": "CSVをPDF表に変換。無料オンライン変換ツール。",
+    "description": "CSVをアップロードすると、行を見やすいPDFレイアウトに変換します。",
     "howTo": [
       ".csvファイルをアップロードします。",
       "表のプレビューを確認します。",
       "PDFレポートをダウンロードします。"
     ],
     "keywords": [
-      "csv pdf",
-      "表 pdf",
-      "スプレッドシート pdf",
-      "csv to pdf"
+      "csvをpdfに変換",
+      "csv pdf 変換 方法",
+      "csvからpdf",
+      "csv pdf変換"
     ]
   },
   "html-to-pdf": {
@@ -119,10 +122,10 @@
     ]
   },
   "rtf-to-pdf": {
-    "name": "RTFをPDFに",
+    "name": "RTFをPDFに変換",
     "shortName": "RTF → PDF",
-    "summary": "リッチテキスト（RTF）を標準PDFに変換します。",
-    "description": "従来の.rtfを開いて、どこでも閲覧できるPDFとして保存できます。myonlinepdfeditor.comは端末上で処理するため、機密ドラフトも外に出ません。",
+    "summary": "リッチテキスト（RTF）をPDFへオンライン変換。",
+    "description": "従来の.rtfを開いて、どこでも閲覧できるPDFとして保存できます。",
     "howTo": [
       "パソコンから.rtfファイルを選びます。",
       "ローカル変換が終わるまで待ちます。",
@@ -130,8 +133,8 @@
     ],
     "keywords": [
       "rtf pdf",
-      "rich text pdf",
       "rtf to pdf",
+      "rich text pdf",
       "rtf 変換"
     ]
   },
@@ -153,10 +156,10 @@
     ]
   },
   "webp-to-pdf": {
-    "name": "WebPをPDFに",
+    "name": "WebPをPDFに変換",
     "shortName": "WebP → PDF",
-    "summary": "WebP画像を1つのPDFにまとめます。",
-    "description": "WebP画像を添付や印刷に使えるPDFに変換します。複数ファイルも順序どおりに結合でき、リモートサーバーへのアップロードは不要です。",
+    "summary": "WebP画像をPDFへオンライン変換。",
+    "description": "WebP画像を添付や印刷に使えるPDFに変換します。",
     "howTo": [
       "WebPファイルを1つ以上選択します。",
       "複数ある場合は画像の順序を並べ替えます。",
@@ -165,14 +168,14 @@
     "keywords": [
       "webp pdf",
       "webp to pdf",
-      "webP 画像 pdf"
+      "converter webp em pdf"
     ]
   },
   "gif-to-pdf": {
-    "name": "GIFをPDFに",
+    "name": "GIFをPDFに変換",
     "shortName": "GIF → PDF",
-    "summary": "GIF画像を印刷可能なPDFにします。",
-    "description": "GIFのフレームや静止画を記録・共有用のPDFに配置します。処理はブラウザ内で行われ、アニメーションGIFも端末上に留まります。",
+    "summary": "GIF画像をPDFへオンライン変換。",
+    "description": "GIFのフレームや静止画を記録・共有用のPDFに配置します。",
     "howTo": [
       "GIF画像ファイルをアップロードします。",
       "複数ファイルの場合はページ順を並べます。",
@@ -185,36 +188,39 @@
     ]
   },
   "bmp-to-pdf": {
-    "name": "BMPをPDFに",
+    "name": "BMP PDF変換 オンライン無料",
     "shortName": "BMP → PDF",
-    "summary": "ビットマップ（BMP）をPDFページに変換します。",
-    "description": "古いBMPスキャンやエクスポートを共有しやすいPDFにします。複数枚を1ファイルにまとめ、印刷や提出に使えます。",
+    "summary": "BMPをブラウザでPDFに変換。ソフト不要・登録不要の無料オンライン変換。",
+    "description": "BMPスキャンやエクスポートを共有しやすいPDFへ。複数枚を1ファイルにまとめ、Windowsでもフリーソフトなしで変換できます。処理は端末内のみ。",
     "howTo": [
       "BMPファイルを選択します。",
       "必要ならサムネイルの順序を並べ替えます。",
       "PDFをダウンロードします。"
     ],
     "keywords": [
-      "bmp pdf",
-      "bitmap pdf",
-      "bmp to pdf"
+      "bmp pdf 変換 オンライン",
+      "bmp pdf 変換 フリーソフト",
+      "bmpをpdfに変換",
+      "bmp pdf 変換 windows",
+      "bmp pdf変換"
     ]
   },
   "images-to-pdf": {
-    "name": "画像をPDFに",
+    "name": "画像をPDFに結合 オンライン",
     "shortName": "Images → PDF",
-    "summary": "複数形式の画像を1つのPDFにまとめます。",
-    "description": "PNG、JPG、WebP、GIF、BMPなど対応画像を、並べた順どおりに1つのPDFにします。スキャン束や写真セットに最適です。",
+    "summary": "複数画像を1つのPDFに結合。JPG・PNG・BMP対応の無料変換。",
+    "description": "PNG、JPG、WebP、GIF、BMPなど対応画像を並べた順どおりに1つのPDFへ。画像PDF結合に最適。",
     "howTo": [
       "対応形式の画像を複数追加します。",
       "ドラッグでページ順を設定します。",
       "結合したPDFをダウンロードします。"
     ],
     "keywords": [
-      "画像 pdf 結合",
-      "写真 pdf",
-      "images to pdf",
-      "複数画像 pdf"
+      "画像をpdfに結合",
+      "画像を結合してpdfに",
+      "複数画像 1つのpdf結合方法",
+      "画像 pdf結合",
+      "写真 1つのpdf 結合"
     ]
   },
   "pdf-to-jpg": {
@@ -235,19 +241,21 @@
     ]
   },
   "pdf-to-png": {
-    "name": "PDFをPNGに",
+    "name": "PDF PNG変換 オンライン",
     "shortName": "PDF → PNG",
-    "summary": "PDFページを可逆PNG画像として保存します。",
-    "description": "透過に近い用途やロスレス保存向けに、PDFページから鮮明なPNGを取得できます。",
+    "summary": "PDFをPNGに無料オンライン変換。",
+    "description": "PDFページから鮮明なPNGを取得。pdf png オンライン変換に対応。",
     "howTo": [
       "PDFをPNG変換で開きます。",
       "解像度やページ範囲を選べる場合は設定します。",
       "PNGをダウンロードします。"
     ],
     "keywords": [
-      "pdf png",
-      "pdf to png",
-      "pdf 画像 書き出し"
+      "pdf png オンライン変換",
+      "pdfをpngに変換 無料",
+      "無料でpdfをpngに変換",
+      "pdf png 変換 オンライン",
+      "pdfをpngとして保存"
     ]
   },
   "pdf-to-word": {
@@ -302,20 +310,22 @@
     ]
   },
   "edit-pdf": {
-    "name": "PDFエディター",
+    "name": "オンラインPDF編集 無料",
     "shortName": "Edit PDF",
-    "summary": "ブラウザでPDFのページ・テキスト・マークアップを編集します。",
-    "description": "myonlinepdfeditor.com PDF Editorで文書をアップロードし、ローカルで作業できます。ページ移動、内容の配置、書き出しまで、ファイルは端末から離れません。",
+    "summary": "ブラウザでPDFテキスト追加・編集。登録不要の無料オンラインPDFエディター。",
+    "description": "オンラインでPDFを編集。テキスト追加、注釈、ページ操作までローカル処理。無料PDFエディターとしてファイルは端末から出ません。",
     "howTo": [
       "編集したいPDFをアップロードします。",
       "ツールバーで内容を追加・変更します。",
       "更新したPDFをダウンロードします。"
     ],
     "keywords": [
-      "pdf 編集",
-      "pdf editor",
-      "無料 pdf 編集",
-      "オンライン pdf 編集"
+      "オンラインpdf編集",
+      "pdf オンライン 編集",
+      "pdf テキスト追加",
+      "pdf テキスト編集 オンライン",
+      "pdf エディター オンライン",
+      "無料 pdf 編集"
     ]
   },
   "create-pdf": {
@@ -336,37 +346,39 @@
     ]
   },
   "add-fillable-fields": {
-    "name": "入力フィールドを追加",
+    "name": "PDF編集可能フィールド追加",
     "shortName": "Fillable Fields",
-    "summary": "テキスト・チェック・署名欄をPDFに配置します。",
-    "description": "フラットなPDFにフィールドを置いて入力可能なフォームにできます。準備した文書をデータ収集に再利用できます。",
+    "summary": "テキスト・チェック・署名欄を追加し、入力可能PDFフォームを作成。",
+    "description": "フラットなPDFに入力可能フィールドやチェックボックスを配置。編集可能フィールド追加から入力可能フォーム作成まで、ブラウザ完結・無料。",
     "howTo": [
       "エディターでPDFを開きます。",
       "入力・署名位置にフィールドを追加します。",
       "入力可能なPDFをダウンロードします。"
     ],
     "keywords": [
-      "pdf フォーム",
-      "入力欄 pdf",
-      "fillable pdf",
-      "pdf フォーム 作成"
+      "pdf 編集可能フィールド追加",
+      "pdfチェックボックス追加",
+      "pdf テキストボックス 追加",
+      "pdf 入力可能テキストボックス追加",
+      "pdfフィールド追加",
+      "入力可能pdfフォーム"
     ]
   },
   "flatten-fields": {
-    "name": "フィールドをフラット化",
+    "name": "PDFフラット化",
     "shortName": "Flatten Fields",
-    "summary": "フォーム欄と注釈をページ内容に焼き付けます。",
-    "description": "インタラクティブなフィールドやマークアップをフラット化し、誤編集を防ぎます。保管・印刷・署名済み最終版の送付前に便利です。",
+    "summary": "PDFフォームをフラット化して編集できない最終版に。",
+    "description": "インタラクティブなフィールドをページ内容に焼き付け、誤編集を防ぎます。",
     "howTo": [
       "フィールドまたは注釈付きPDFをアップロードします。",
       "フラット化を実行してレイヤーをページに統合します。",
       "フラット化したPDFをダウンロードします。"
     ],
     "keywords": [
-      "pdf フラット化",
+      "pdf フラット化 方法",
+      "pdf フラット化方法",
       "flatten pdf",
-      "フォーム 焼き付け",
-      "flatten form"
+      "フィールドをフラット化"
     ]
   },
   "split-pdf": {
@@ -421,20 +433,21 @@
     ]
   },
   "reorder-pdf": {
-    "name": "ページ順を変更",
+    "name": "PDFページ複製・並べ替え",
     "shortName": "Reorder Pages",
-    "summary": "サムネイルをドラッグして順序を入れ替えます。",
-    "description": "別紙を先頭に、署名を末尾に、混ざったスキャン順を直すなど、視覚的にページを並べ替えてから書き出せます。",
+    "summary": "PDFページの複製や並べ替えをオンラインで。",
+    "description": "ページ順の変更に加え、同じシートの複製にも使える整理ツール。サムネイルで視覚的に操作して書き出せます。",
     "howTo": [
       "PDFをアップロードします。",
       "サムネイルをドラッグして新しい順序にします。",
       "並べ替えたファイルをダウンロードします。"
     ],
     "keywords": [
-      "pdf ページ 順序",
-      "reorder pdf",
-      "ページ 並べ替え",
-      "pdf 並び替え"
+      "pdf ページ複製",
+      "pdfページ複製方法",
+      "pdf ページ複製方法",
+      "duplicate pdf page",
+      "ページ 並べ替え"
     ]
   },
   "delete-pages": {
@@ -572,20 +585,21 @@
     ]
   },
   "grayscale-pdf": {
-    "name": "PDFをグレースケール",
+    "name": "PDFを白黒・グレースケールに変換",
     "shortName": "Grayscale",
-    "summary": "カラーページをグレーにして印刷コストを抑えます。",
-    "description": "カラースキャンや写真をグレースケールPDFに変換し、トナー使用量を減らしたり、白黒提出が必要な手続きに対応できます。",
+    "summary": "カラーPDFを白黒（グレースケール）にオンライン変換。",
+    "description": "カラーページをグレースケール化し、トナー節約や白黒提出ルールに対応。",
     "howTo": [
       "カラーPDFを選択します。",
       "全ページにグレースケールを適用します。",
       "グレー版PDFをダウンロードします。"
     ],
     "keywords": [
-      "pdf 白黒",
-      "grayscale pdf",
-      "pdf モノクロ",
-      "カラー pdf 変換"
+      "pdfをグレースケールに変換",
+      "pdf 白黒 変換",
+      "カラーpdfを白黒に変換",
+      "pdfを白黒にする方法",
+      "pdf 白黒"
     ]
   },
   "remove-metadata": {
@@ -605,37 +619,38 @@
     ]
   },
   "sign-pdf": {
-    "name": "PDFに署名",
+    "name": "PDFオンライン署名",
     "shortName": "Sign PDF",
-    "summary": "PC上で描画または入力して契約書・フォームに署名します。",
-    "description": "マウス、スタylus、入力文字でPDFに署名を追加し、すぐに署名済みコピーを書き出せます。対面や同一端末での署名に適しています。",
+    "summary": "PDF文書に自分の署名をオンライン追加。無料。",
+    "description": "マウスや入力文字でPDFに署名を追加し、すぐに署名済みコピーを書き出せます。",
     "howTo": [
       "署名するPDFをアップロードします。",
       "ページ上に署名を作成・配置します。",
       "署名済み文書をダウンロードします。"
     ],
     "keywords": [
-      "pdf 署名",
-      "sign pdf",
-      "電子署名 pdf",
-      "pdf サイン"
+      "pdf文書 オンライン署名",
+      "pdf 署名追加 オンライン",
+      "pdf 自分の署名 追加",
+      "オンラインでpdfに署名",
+      "pdf 署名"
     ]
   },
   "send-for-signature": {
-    "name": "署名準備",
+    "name": "PDF署名欄を追加して送信準備",
     "shortName": "Send to Sign",
-    "summary": "署名欄を配置し、署名用パケットを書き出します。",
-    "description": "署名者が書く位置・日付・イニシャル欄をマークし、相手が記入できるPDFを準備します。myonlinepdfeditor.comはブラウザ上の欄設定に特化し、配信はご自身で行います。",
+    "summary": "署名欄を追加し、署名依頼用PDFを無料で準備。",
+    "description": "署名者が書く位置・日付・イニシャル欄をマークし、相手が記入できるPDFを準備します。",
     "howTo": [
       "契約書などをアップロードします。",
       "署名者ごとに署名欄・日付欄を追加します。",
       "準備したPDFをダウンロードして共有します。"
     ],
     "keywords": [
+      "pdf 署名欄 追加",
+      "send pdf for signature free",
       "署名 依頼 pdf",
-      "send for signature",
-      "署名欄 pdf",
-      "電子署名 準備"
+      "send for signature"
     ]
   },
   "send-envelopes": {
@@ -792,37 +807,38 @@
     ]
   },
   "create-templates": {
-    "name": "テンプレート作成",
+    "name": "PDFテンプレート生成",
     "shortName": "Templates",
-    "summary": "ラベルとフィールド付きの再利用可能なフォームレイアウトを作ります。",
-    "description": "固定テキスト、フィールド、ブランド要素をマスターテンプレートにまとめ、複製して繰り返し送付できます。設計はすべてmyonlinepdfeditor.com内でローカルに行われます。",
+    "summary": "再利用できるPDFフォームテンプレートをオンライン生成。",
+    "description": "固定テキスト、フィールド、ブランド要素をマスターテンプレートにまとめ、複製して繰り返し送付できます。",
     "howTo": [
       "PDFまたは空のエディターから開始します。",
       "ラベル・フィールド・レイアウトを追加します。",
       "再利用用にテンプレートを保存します。"
     ],
     "keywords": [
+      "pdf テンプレート生成",
       "pdf テンプレート",
       "フォーム テンプレート",
-      "再利用 pdf",
-      "template pdf"
+      "generar plantillas"
     ]
   },
   "create-fillable-forms": {
-    "name": "入力フォームを作成・記入",
+    "name": "入力可能PDFフォーム作成・入力",
     "shortName": "Fillable Forms",
-    "summary": "ブラウザで既存フォームに回答を入力します。",
-    "description": "印刷せずにインタラクティブPDFフォームを記入できます。テキストボックスやチェックに入力し、完了後に保存またはフラット化します。",
+    "summary": "入力可能PDFの作成とフォーム入力をオンラインで無料。",
+    "description": "入力可能PDFフォームを作成・記入。印刷不要でテキストやチェックに回答し、完了後に保存またはフラット化できます。",
     "howTo": [
       "入力可能なPDFをアップロードします。",
       "各フィールドをクリックして回答します。",
       "記入済みフォームをダウンロードします。"
     ],
     "keywords": [
-      "入力 pdf",
-      "fillable pdf",
-      "pdf フォーム 入力",
-      "フォーム 記入"
+      "入力可能pdf 作成",
+      "pdf フォーム作成",
+      "pdf フォーム入力",
+      "pdf 入力可能フォーム作成方法",
+      "入力可能pdfフォーム作成"
     ]
   },
   "document-assistant": {
@@ -1047,35 +1063,36 @@
     ]
   },
   "compare-pdf": {
-    "name": "PDFを比較",
+    "name": "PDF比較 オンライン",
     "shortName": "Compare PDF",
-    "summary": "2つのPDF版を並べて差分を確認します。",
-    "description": "原版と改訂版を読み込み、ページごとにテキストやレイアウトの変更を確認できます。契約のレッドラインやコンプライアンスレビューに便利です。",
+    "summary": "2つのPDFファイルをオンラインで比較・差分確認。",
+    "description": "原版と改訂版を読み込み、ページごとにテキストやレイアウトの変更を確認できます。",
     "howTo": [
       "比較するPDFを2つアップロードします。",
       "版を揃えて比較を実行します。",
       "差分を確認し、利用可能なら要約を書き出します。"
     ],
     "keywords": [
+      "pdf 比較 オンライン",
+      "2つのpdfファイル比較方法",
       "pdf 比較",
-      "compare pdf",
-      "pdf 差分",
-      "pdf diff"
+      "pdf比較ツール",
+      "pdf 差分比較"
     ]
   },
   "heic-to-pdf": {
-    "name": "HEICをPDFに",
+    "name": "HEICをPDFに変換",
     "shortName": "HEIC to PDF",
-    "summary": "iPhoneのHEIC写真をブラウザでPDFにします。",
-    "description": "HEIC/HEIF画像からPDFを作成します。ブラウザのデコーダに依存します。HEIC非対応の場合は写真アプリからJPEGを書き出してください。",
+    "summary": "iPhoneのHEIC写真をPDFへオンライン変換。",
+    "description": "HEIC/HEIF画像からPDFを作成。ブラウザ対応時は登録不要で変換できます。",
     "howTo": [
       ".heicを1枚以上アップロードします。",
       "ローカル変換を待ちます。",
       "PDFをダウンロードします。"
     ],
     "keywords": [
-      "heic pdf",
       "heic to pdf",
+      "heic pdf",
       "iphone 写真 pdf",
       "heif pdf"
     ]
@@ -1132,9 +1149,9 @@
     ]
   },
   "zip-to-pdf": {
-    "name": "ZIPをPDFに",
+    "name": "ZIP PDF変換ツール",
     "shortName": "ZIP to PDF",
-    "summary": "ZIP内の画像/PDFを1つのPDFにまとめます。",
+    "summary": "ZIP内の画像/PDFを1つのPDFに変換・結合。",
     "description": "画像やPDFを含む.zipをアップロードすると、対応ファイルをローカルで展開・結合して1つのPDFにします。",
     "howTo": [
       ".zipをアップロードします。",
@@ -1142,10 +1159,10 @@
       "結合PDFをダウンロードします。"
     ],
     "keywords": [
+      "zip pdf変換ツール",
       "zip pdf",
       "zip to pdf",
-      "フォルダ pdf",
-      "解凍 pdf 結合"
+      "フォルダ pdf"
     ]
   },
   "scan-pdf": {
@@ -1166,27 +1183,28 @@
     ]
   },
   "redact-pdf": {
-    "name": "PDFを墨消し",
+    "name": "PDF墨消し オンライン無料",
     "shortName": "Redact PDF",
-    "summary": "共有前にページ全体を黒を黒塗りで隠します。",
-    "description": "選択ページを不透明な黒矩形で覆い、機密ページを丸ごと非表示にします。領域単位の精密墨消しは、その後PDF編集の注釈もご検討ください。",
+    "summary": "PDFを無料で墨消し。オンラインでページを黒塗りし共有前に秘匿。",
+    "description": "選択ページを不透明な黒で墨消し。無料・オンライン・登録不要。領域単位の精密墨消しはPDF編集の注釈も併用できます。",
     "howTo": [
       "PDFをアップロードします。",
       "完全に墨消しするページ番号を入力します。",
       "墨消し後のPDFをダウンロードします。"
     ],
     "keywords": [
+      "pdfで墨消しする方法",
+      "無料 pdf 墨消し",
+      "pdf 墨消し オンライン 無料",
       "pdf 墨消し",
-      "redact pdf",
-      "pdf 黒塗り",
-      "pdf 秘匿"
+      "pdf墨消しツール"
     ]
   },
   "invert-pdf": {
-    "name": "PDFを反転",
+    "name": "PDF反転（水平・印刷向け）",
     "shortName": "Invert PDF",
-    "summary": "ページ色を反転して夜間閲覧や印刷実験に使います。",
-    "description": "各ページをラスタライズして色を反転します。ダーク背景化やアクセシビリティのコントラスト試験に使えます。",
+    "summary": "PDFページの色や向きを反転。印刷前チェックにも。",
+    "description": "各ページをラスタライズして色を反転します。反転印刷やコントラスト試験に使えます。",
     "howTo": [
       "PDFをアップロードします。",
       "反転を実行します。",
@@ -1194,9 +1212,10 @@
     ],
     "keywords": [
       "pdf 反転",
-      "invert pdf",
-      "pdf ネガ",
-      "ダークモード pdf"
+      "pdf 反転 印刷",
+      "pdfを反転させる方法",
+      "pdf 水平反転",
+      "invert pdf"
     ]
   },
   "n-up-pdf": {
@@ -1251,20 +1270,21 @@
     ]
   },
   "change-page-size": {
-    "name": "ページサイズ変更",
+    "name": "PDFページサイズ変更 オンライン",
     "shortName": "Page Size",
-    "summary": "Letter・A4・Legalにページを合わせます。",
-    "description": "デスクトップ印刷ダイアログなしで、各ページを指定用紙サイズに拡大縮小・中央配置します。",
+    "summary": "PDFのページサイズをA4・Letterなどに変更・拡大縮小。",
+    "description": "デスクトップ印刷ダイアログなしで、各ページを指定用紙サイズに拡大縮小・中央配置。無料オンライン。",
     "howTo": [
       "PDFをアップロードします。",
       "Letter、A4、Legalから選びます。",
       "ダウンロードします。"
     ],
     "keywords": [
-      "pdf 用紙サイズ",
-      "a4 letter 変換",
-      "pdf ページ サイズ",
-      "paper size pdf"
+      "pdf ページサイズ変更",
+      "pdf サイズ変更 オンライン",
+      "pdfページサイズ 拡大縮小",
+      "pdfサイズ変換",
+      "オンラインpdfサイズ変更"
     ]
   },
   "rasterize-pdf": {
@@ -1448,10 +1468,10 @@
     ]
   },
   "odt-to-pdf": {
-    "name": "ODTをPDFに",
+    "name": "ODTをPDFに変換",
     "shortName": "ODT to PDF",
-    "summary": "LibreOffice Writer（.odt）をPDFに変換します。",
-    "description": "OpenDocumentのテキストを抽出しローカルでPDFを作成します。複雑なレイアウトはテキストフローに簡略化されます。",
+    "summary": "LibreOffice Writer（ODT）をPDFへ変換。",
+    "description": "OpenDocumentのテキストを抽出しローカルでPDFを作成します。",
     "howTo": [
       ".odtをアップロードします。",
       "変換します。",
@@ -1461,7 +1481,7 @@
       "odt pdf",
       "odt to pdf",
       "libreoffice writer pdf",
-      "オープンドキュメント pdf"
+      "odt in pdf"
     ]
   },
   "ods-to-pdf": {
@@ -1763,9 +1783,9 @@
     ]
   },
   "print-pdf-as-poster": {
-    "name": "PDFをポスター印刷",
+    "name": "PDFポスター印刷",
     "shortName": "Poster",
-    "summary": "先頭ページをタイル状に分割して大判印刷します。",
+    "summary": "PDFをポスター印刷用にタイル分割。オンライン無料。",
     "description": "1ページ目を複数シートに分割し、壁貼りポスター向けの大判出力を準備します。",
     "howTo": [
       "PDFをアップロードします。",
@@ -1773,10 +1793,10 @@
       "ダウンロードしたページを印刷します。"
     ],
     "keywords": [
-      "pdf ポスター",
-      "poster pdf",
-      "タイル 印刷 pdf",
-      "pdf 拡大 印刷"
+      "pdf ポスター印刷方法",
+      "pdf ポスター印刷",
+      "pdf poster",
+      "ポスター印刷 pdf"
     ]
   },
   "generate-password": {
@@ -1879,20 +1899,21 @@
     ]
   },
   "validate-pdfa": {
-    "name": "PDF/Aを検証",
+    "name": "PDFチェッカー・PDF/A検証",
     "shortName": "Validate PDF/A",
-    "summary": "PDF/A準備後の検証手順を案内します。",
-    "description": "PDF to PDF/A準備の後、外部チェッカーでのPDF/A検証方法を説明します。",
+    "summary": "PDFの検証・チェック手順を案内するオンラインツール。",
+    "description": "PDF/A準備や検証のチェックリストを提供。pdfチェッカーとして次のステップを案内します。",
     "howTo": [
       "PDFをアップロードします。",
       "検証手順を読みます。",
       "外部PDF/Aバリデーターを実行します。"
     ],
     "keywords": [
-      "pdf/a 検証",
-      "validate pdfa",
-      "pdfa validation",
-      "アーカイブ pdf 検証"
+      "pdf チェック",
+      "pdf チェッカー",
+      "pdf 検証",
+      "pdf checker online",
+      "validador de pdf"
     ]
   },
   "verify-pdf-signatures": {
